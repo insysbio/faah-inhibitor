@@ -1,0 +1,95 @@
+// === NAT parameters ===
+Vmax_NAT @Const = 300 {units: nM/h}; // [nM /h]                           ==to fit==
+p_A @Const = 0.051 {units: UL};   // [-] FA composition Rat testis
+p_O @Const = 0.098 {units: UL};
+p_P @Const = 0.615 {units: UL};
+p_L @Const = 0.016 {units: UL};
+p_S @Const = 0.191 {units: UL};
+a_NAT_A @Const = 1 {units: UL};   // [-] for A always =1
+a_NAT_O @Const = 13 {units: UL};                                      //==to fit==
+a_NAT_P @Const = 0.42 {units: UL};                                     //==to fit==
+a_NAT_L @Const = 8.6 {units: UL};                                      //==to fit==
+a_NAT_S @Const = 1 {units: UL};
+b_NAT_Brain @Const = 1.667 {units: UL};
+b_NAT_Pancreas @Const = 0.333 {units: UL};
+b_NAT_Kidney @Const = 0.667 {units: UL};
+b_NAT_Heart @Const = 1 {units: UL};   // [-] for Heart always =1
+b_NAT_Lungs @Const = 0.033 {units: UL};
+b_NAT_Muscles @Const = 0.333 {units: UL};
+b_NAT_Testis @Const = 0.667 {units: UL};
+b_NAT_Leucocytes @Const = 0 {units: UL};
+
+//************************** PLD parameters **************
+k_NA_PE @Const = 2.02e2 {units: 1/h};
+k_NO_PE @Const = 2.30e2 {units: 1/h};
+k_NP_PE @Const = 2.70e2 {units: 1/h};
+k_NL_PE @Const = 1e2 {units: 1/h};
+k_NS_PE @Const = 2.80e2 {units: 1/h};
+Km_NA_PE @Const = 2.8e3 {units: nM};  // [nM] liter
+Km_NO_PE @Const = 2.9e3 {units: nM};  // [nM] liter
+Km_NP_PE @Const = 3.3e3 {units: nM};  // [nM] liter
+Km_NL_PE @Const = 1e3 {units: nM};  // [nM] ???
+Km_NS_PE @Const = 3.4e3 {units: nM};  // [nM] liter
+Ki_A @Const = 0.23e3 {units: nM};  // [nM] liter
+Ki_O @Const = 0.24e3 {units: nM};  // [nM] liter
+Ki_P @Const = 6.7e3 {units: nM};   // [nM] liter
+Ki_L @Const = 1e3 {units: nM};  // [nM] ???
+Ki_S @Const = 0.84e3 {units: nM};  // [nM] liter
+
+// === FAAH parameters ===
+kcat_FAAH @Const = 1.8e4 {units: 1/h};  // [h-1] rattus norvegicus, brain, 5 1/s, Biochemistry 38, 9804-9812
+FAAH_t @Const = 78 {units: nM};       // [nM]                       //==to fit==
+a_FAAH_A @Const = 1 {units: UL};   // [-] for A always =1
+a_FAAH_O @Const = 5.7 {units: UL};                                //==to fit==
+a_FAAH_P @Const = 37.8 {units: UL};                               //==to fit==
+a_FAAH_L @Const = 1.15 {units: UL};                                //==to fit==
+a_FAAH_S @Const = 1 {units: UL};
+
+b_FAAH_Liver @Const = 1 {units: UL}; // [-] for Liver always =1
+b_FAAH_Brain @Const = 0.197 {units: UL};
+b_FAAH_Gut @Const = 0.034 {units: UL};
+b_FAAH_Spleen @Const = 0.030 {units: UL};
+b_FAAH_Kidney @Const = 0.069 {units: UL};
+b_FAAH_Lungs @Const = 0.032 {units: UL};
+b_FAAH_Testis @Const = 0.126 {units: UL};
+b_FAAH_MEC @Const = 0.137 {units: UL};
+b_FAAH_Leucocytes @Const = 0.0 {units: UL};
+
+Km_FAAH_A @Const = 8.20e3 {units: nM};      // [nM]
+Km_FAAH_O @Const = 5.22e4 {units: nM};      // [nM]
+Km_FAAH_P @Const = 5.43e5 {units: nM};      // [nM]
+Km_FAAH_L @Const = 1.08e4 {units: nM};      // [nM]
+Km_FAAH_S @Const = 1.00e4 {units: nM};      // ??? [nM]
+
+// === FAAH metabolism ===
+k_deg_FAAH @Const = 0.0051 {units: 1/h};  //  [h-1], MAN estimated by Pfizer from CT I
+k_inh @Const = 1.1 {units: 1/h/nM};//40;    // ==to fit==
+
+// === Unknown Enzyme ===
+kcl_A @Const = 1.74 {units: 1/h};           // fitted to CTI   [h-1]
+kcl_O @Const = 2.5 {units: 1/h};          // fitted to CTI    [h-1]
+kcl_P @Const = 2.61 {units: 1/h};         // fitted to CTI     [h-1]
+kcl_L @Const = 1.25 {units: 1/h};          // fitted to CTI    [h-1]
+kcl_S @Const = 1.2 {units: 1/h};          // fitted to CTI    [h-1]
+b_NAAA_Liver @Const = 1 {units: UL}; // always =1
+b_NAAA_Gut @Const = 0.2 {units: UL};
+b_NAAA_Spleen @Const = 8 {units: UL};
+b_NAAA_Kidney @Const = 0.6 {units: UL};
+b_NAAA_Heart @Const = 0.2 {units: UL};
+b_NAAA_Lungs @Const = 14 {units: UL};
+b_NAAA_Thymus @Const = 4 {units: UL};
+b_NAAA_Testis @Const = 0.6 {units: UL};
+b_NAAA_Brain @Const = 0.6 {units: UL};
+
+// ======
+M_PF @Const = 455.4 {units: g/mole};
+M_A @Const = 347.5 {units: g/mole};
+M_O @Const = 325.5 {units: g/mole};
+M_P @Const = 299.5 {units: g/mole};
+M_L @Const = 323.5 {units: g/mole};
+M_S @Const = 321.5 {units: g/mole};
+
+// === receptor properties ===
+Kd_CB1_A @Const = 239.2 {units: nM};
+Kd_AG2 @Const = 3.424e3 {units: nM}; // [nM]
+AG2_b @Const = 0; //100;

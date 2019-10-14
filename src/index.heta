@@ -1,0 +1,131 @@
+/* 
+    This model is described in the article:
+    A systems pharmacology perspective on the clinical development of Fatty Acid amide hydrolase inhibitors for pain.
+    Benson N, Metelkin E, Demin O, Li GL, Nichols D, van der Graaf PH.
+    CPT Pharmacometrics Syst Pharmacol. 2014 Jan 15;3:e91.
+
+    Notes:
+    - Time unit is h
+    - rate units nmole/h
+    - concentrations in nM
+*/
+
+description @Page { content: "
+    # A systems pharmacology perspective on the clinical development
+    of Fatty Acid amide hydrolase inhibitors for pain.
+
+    CPT Pharmacometrics Syst Pharmacol 2014; 3: e91
+
+    Benson N, Metelkin E, Demin O, Li GL, Nichols D, van der Graaf PH.
+
+    The level of the endocannabinoid anandamide is controlled by fatty acid 
+    amide hydrolase (FAAH). In 2011, PF-04457845, an irreversible inhibitor of 
+    FAAH, was progressed to phase II clinical trials for osteoarthritic pain. 
+    This article discusses a prospective, integrated systems pharmacology model 
+    evaluation of FAAH as a target for pain in humans, using physiologically based 
+    pharmacokinetic and systems biology approaches. The model integrated physiological 
+    compartments; endocannabinoid production, degradation, and disposition data; 
+    PF-04457845 pharmacokinetics and pharmacodynamics, and cannabinoid receptor 
+    CB1-binding kinetics. The modeling identified clear gaps in our understanding 
+    and highlighted key risks going forward, in particular relating to whether methods 
+    are in place to demonstrate target engagement and pharmacological effect. The value 
+    of this modeling exercise will be discussed in detail and in the context of the 
+    clinical phase II data, together with recommendations to enable optimal future 
+    evaluation of FAAH inhibitors.
+    
+    CPT: Pharmacometrics Systems Pharmacology (2014) 3, e91; 
+    doi:10.1038/psp.2013.72; published online 15 January 2014.
+" };
+
+#import { source: ./pk.heta, type: heta };
+#import { source: ./brain.heta, type: heta };
+#import { source: ./rob.heta, type: heta };
+#import { source: ./mec.heta, type: heta };
+#import { source: ./plasma.heta, type: heta };
+#import { source: ./constants.heta, type: heta };
+
+// === TRANSPORT ===
+// From MEC to Plasma, Brain to MEC
+ktr_m_p_A @Const = 1.5e2 {units: nM/h};
+Ktr_p_m_A @Const = 1.89 {units: UL};
+Km_p_m_A @Const = 1.0 {units: nM};
+
+ktr_m_p_O @Const = 1e1 {units: nM/h};
+Ktr_p_m_O @Const = 9.07 {units: UL};
+//Km_p_m_O @Const = 1.0;
+
+ktr_m_p_P @Const = 1e1 {units: nM/h};
+Ktr_p_m_P @Const = 2.65 {units: UL};
+//Km_p_m_P=1.0;
+
+ktr_m_p_L @Const = 0 {units: nM/h};
+Ktr_p_m_L @Const = 2.77 {units: UL};
+//Km_p_m_L @Const = 1.0;
+
+ktr_m_p_S @Const = 1e1 {units: nM/h};
+Ktr_p_m_S @Const = 30.01 {units: UL};
+//Km_p_m_S @Const = 1.0;
+// From ROB to PLASMA
+ktr_r_p @Const = 1e2 {units: nM/h};
+Ktr_p_r_A @Const = 0.62 {units: UL};
+Ktr_p_r_O @Const = 2.80 {units: UL};
+Ktr_p_r_P @Const = 0.85 {units: UL};
+Ktr_p_r_L @Const = 0.89 {units: UL};
+Ktr_p_r_S @Const = 9.19 {units: UL};
+
+namespace human begin
+    // from MEC to PLASMA
+    vA_m_p @Reaction { actors: A_m <=> A_p };
+    vA_m_p := MEC*ktr_m_p_A*(A_m-A_p*Ktr_p_m_A)/(A_m+A_p+Km_p_m_A);
+
+    vO_m_p @Reaction { actors: O_m <=> O_p };
+    vO_m_p := MEC*ktr_m_p_O*(O_m-O_p*Ktr_p_m_O);
+
+    vP_m_p @Reaction { actors: P_m <=> P_p };
+    vP_m_p := MEC*ktr_m_p_P*(P_m-P_p*Ktr_p_m_P);
+
+    vL_m_p @Reaction { actors: L_m <=> L_p };
+    vL_m_p := MEC*ktr_m_p_L*(L_m-L_p*Ktr_p_m_L);
+
+    vS_m_p @Reaction { actors: S_m <=> S_p };
+    vS_m_p := MEC*ktr_m_p_S*(S_m-S_p*Ktr_p_m_S);
+
+    // from BRAIN to MEC
+    vA_b_m @Reaction { actors: A_b <=> A_m };
+    vA_b_m := MEC*ktr_m_p_A*(A_b-A_m)/(A_m+A_b+Km_p_m_A);
+
+    vO_b_m @Reaction { actors: O_b <=> O_m };
+    vO_b_m := MEC*ktr_m_p_O*(O_b-O_m);
+
+    vP_b_m @Reaction { actors: P_b <=> P_m };
+    vP_b_m := MEC*ktr_m_p_P*(P_b-P_m);
+
+    vL_b_m @Reaction { actors: L_b <=> L_m };
+    vL_b_m := MEC*ktr_m_p_L*(L_b-L_m);
+
+    vS_b_m @Reaction { actors: S_b <=> S_m };
+    vS_b_m := MEC*ktr_m_p_S*(S_b-S_m);
+
+    // from ROB to PLASMA
+    vA_r_p @Reaction { actors: A_r <=> A_p };
+    vA_r_p := PLASMA*ktr_r_p*(A_r-A_p*Ktr_p_r_A)/(A_r+A_p+Km_p_m_A);
+
+    vO_r_p @Reaction { actors: O_r <=> O_p };
+    vO_r_p := PLASMA*ktr_r_p*(O_r-O_p*Ktr_p_r_O);
+
+    vP_r_p @Reaction { actors: P_r <=> P_p };
+    vP_r_p := PLASMA*ktr_r_p*(P_r-P_p*Ktr_p_r_P);
+
+    vL_r_p @Reaction { actors: L_r <=> L_p };
+    vL_r_p := PLASMA*ktr_r_p*(L_r-L_p*Ktr_p_r_L);
+
+    vS_r_p @Reaction { actors: S_r <=> S_p };
+    vS_r_p := PLASMA*ktr_r_p*(S_r-S_p*Ktr_p_r_S);
+end
+
+sbml @SBMLExport { model: human, skipMathChecking: false };
+//mrg @MrgsolveExport { model: one };
+slv @SLVExport { model: human };
+//simbio @SimbioExport { model: one};
+json @JSONExport;
+yaml @YAMLExport;

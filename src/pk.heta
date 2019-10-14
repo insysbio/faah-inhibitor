@@ -1,0 +1,65 @@
+/*
+    DRUG PK
+*/
+
+// constants
+Dose @Const = 10 {units: mg};
+M_PF @Const = 455.4 {units: g/mole};
+Vss_PFM @Const = 58.328 {units: L};
+Emax_PFM @Const = 0.773 {units: UL};
+ED50 @Const = 0.53 {units: mg};
+kabs_PFM @Const = 2.2 {units: 1/h};
+kout_PFM @Const = 0.18 {units: 1/h};
+kin_PFM @Const = 0.117 {units: 1/h};
+klinear_PFM @Const = 0.0803 {units: 1/h};
+Vm_PFM @Const = 1511 {units: ng/h};
+Km_PFM @Const = 26.1 {units: ng/L};
+
+R_PF @Const = 0.6 {units: UL}; // blood/plasma concentration ratio
+Kp_b_PF @Const = 1.3 {units: UL}; //   free
+Kp_m_PF @Const = 1.3 {units: UL}; //   free
+Kp_r_PF @Const = 1.5 {units: UL}; //  free
+
+namespace human begin
+  '''Gut compartment'''
+  GUT @Compartment;
+  PLASMA @Compartment;
+  ROB @Compartment;
+
+  // species
+  PFM_gut @Species { compartment: GUT, isAmount: true };
+  PFM_p @Species { compartment: PLASMA, isAmount: true };
+  PFM_r @Species { compartment: ROB, isAmount: true };
+  PFM_gut .= 0 {units: ng};
+  PFM_p .= 0 {units: ng};
+  PFM_r .= 0 {units: ng};
+  
+  // rules
+  // F_PFM @Record .= Emax_PFM * Dose / (ED50 + Dose) {units: UL}; // not compartible with SLV
+  F_PFM @Record := Emax_PFM * Dose / (ED50 + Dose) {units: UL};
+  //MD @Record := PFM_gut + 1e6 * Dose * F_PFM {units: ng}; // original version
+  dose_amount @Record := F_PFM * 1e6 * Dose * F_PFM {units: ng};
+  PF_p @Record := PFM_p / M_PF / Vss_PFM {units: nM};
+  PF_b @Record := PF_p*Kp_b_PF {units: nM};
+  PF_r @Record := PF_p*Kp_r_PF {units: nM};
+  PF_m @Record := PF_p*Kp_m_PF {units: nM};
+
+  // transport
+  absorp @Reaction { actors: PFM_gut => PFM_p };
+  // absorp := kabs_PFM * MD; // original version
+  absorp := kabs_PFM * PFM_gut;
+  dist @Reaction { actors: PFM_p <=> PFM_r }; // 'Drug distribution reaction between PLASMA and ROB' 
+  dist := kout_PFM * PFM_p - kin_PFM * PFM_r;
+  elim @Reaction { actors: PFM_p => };
+  elim := klinear_PFM * PFM_p + ( Vm_PFM * PFM_p / Vss_PFM ) / ( Km_PFM + PFM_p / Vss_PFM );
+end
+
+// doses
+namespace human begin
+  evt1 @TimeSwitcher {
+    start: 0,
+    period: 120,
+    repeatCount: 3
+  };
+  PFM_gut [evt1]= PFM_gut + dose_amount;
+end
