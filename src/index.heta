@@ -50,19 +50,19 @@ ktr_m_p_A @Const = 1.5e2 {units: nM/h};
 Ktr_p_m_A @Const = 1.89 {units: UL};
 Km_p_m_A @Const = 1.0 {units: nM};
 
-ktr_m_p_O @Const = 1e1 {units: nM/h};
+ktr_m_p_O @Const = 1e1 {units: 1/h};
 Ktr_p_m_O @Const = 9.07 {units: UL};
 //Km_p_m_O @Const = 1.0;
 
-ktr_m_p_P @Const = 1e1 {units: nM/h};
+ktr_m_p_P @Const = 1e1 {units: 1/h};
 Ktr_p_m_P @Const = 2.65 {units: UL};
 //Km_p_m_P=1.0;
 
-ktr_m_p_L @Const = 0 {units: nM/h};
+ktr_m_p_L @Const = 0 {units: 1/h};
 Ktr_p_m_L @Const = 2.77 {units: UL};
 //Km_p_m_L @Const = 1.0;
 
-ktr_m_p_S @Const = 1e1 {units: nM/h};
+ktr_m_p_S @Const = 1e1 {units: 1/h};
 Ktr_p_m_S @Const = 30.01 {units: UL};
 //Km_p_m_S @Const = 1.0;
 // From ROB to PLASMA
@@ -124,8 +124,8 @@ namespace human begin
 end
 
 sbml @SBMLExport { model: human, skipMathChecking: false };
-//mrg @MrgsolveExport { model: one };
+mrg @MrgsolveExport { model: human };
 slv @SLVExport { model: human };
-//simbio @SimbioExport { model: one};
+// simbio @SimbioExport { model: human }; // not tested yet
 json @JSONExport;
 yaml @YAMLExport;
