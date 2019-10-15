@@ -1,0 +1,3137 @@
+[
+  {
+    "class": "Page",
+    "id": "description",
+    "content": "\n    # A systems pharmacology perspective on the clinical development\n    of Fatty Acid amide hydrolase inhibitors for pain.\n\n    CPT Pharmacometrics Syst Pharmacol 2014; 3: e91\n\n    Benson N, Metelkin E, Demin O, Li GL, Nichols D, van der Graaf PH.\n\n    The level of the endocannabinoid anandamide is controlled by fatty acid \n    amide hydrolase (FAAH). In 2011, PF-04457845, an irreversible inhibitor of \n    FAAH, was progressed to phase II clinical trials for osteoarthritic pain. \n    This article discusses a prospective, integrated systems pharmacology model \n    evaluation of FAAH as a target for pain in humans, using physiologically based \n    pharmacokinetic and systems biology approaches. The model integrated physiological \n    compartments; endocannabinoid production, degradation, and disposition data; \n    PF-04457845 pharmacokinetics and pharmacodynamics, and cannabinoid receptor \n    CB1-binding kinetics. The modeling identified clear gaps in our understanding \n    and highlighted key risks going forward, in particular relating to whether methods \n    are in place to demonstrate target engagement and pharmacological effect. The value \n    of this modeling exercise will be discussed in detail and in the context of the \n    clinical phase II data, together with recommendations to enable optimal future \n    evaluation of FAAH inhibitors.\n    \n    CPT: Pharmacometrics Systems Pharmacology (2014) 3, e91; \n    doi:10.1038/psp.2013.72; published online 15 January 2014.\n"
+  },
+  {
+    "class": "Const",
+    "id": "Dose",
+    "num": 10,
+    "units": "mg"
+  },
+  {
+    "class": "Const",
+    "id": "M_PF",
+    "num": 455.4,
+    "units": "g/mole"
+  },
+  {
+    "class": "Const",
+    "id": "Vss_PFM",
+    "num": 58.328,
+    "units": "L"
+  },
+  {
+    "class": "Const",
+    "id": "Emax_PFM",
+    "num": 0.773,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "ED50",
+    "num": 0.53,
+    "units": "mg"
+  },
+  {
+    "class": "Const",
+    "id": "kabs_PFM",
+    "num": 2.2,
+    "units": "1/h"
+  },
+  {
+    "class": "Const",
+    "id": "kout_PFM",
+    "num": 0.18,
+    "units": "1/h"
+  },
+  {
+    "class": "Const",
+    "id": "kin_PFM",
+    "num": 0.117,
+    "units": "1/h"
+  },
+  {
+    "class": "Const",
+    "id": "klinear_PFM",
+    "num": 0.0803,
+    "units": "1/h"
+  },
+  {
+    "class": "Const",
+    "id": "Vm_PFM",
+    "num": 1511,
+    "units": "ng/h"
+  },
+  {
+    "class": "Const",
+    "id": "Km_PFM",
+    "num": 26.1,
+    "units": "ng/L"
+  },
+  {
+    "class": "Const",
+    "id": "R_PF",
+    "num": 0.6,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "Kp_b_PF",
+    "num": 1.3,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "Kp_m_PF",
+    "num": 1.3,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "Kp_r_PF",
+    "num": 1.5,
+    "units": "UL"
+  },
+  {
+    "class": "Compartment",
+    "id": "GUT",
+    "notes": "Gut compartment",
+    "space": "human"
+  },
+  {
+    "class": "Compartment",
+    "id": "PLASMA",
+    "notes": "Blood plasma compartment",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "2.649"
+      }
+    },
+    "units": "L"
+  },
+  {
+    "class": "Compartment",
+    "id": "ROB",
+    "notes": "Compartment representing \"rest of body\"",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "65.3"
+      }
+    },
+    "units": "L"
+  },
+  {
+    "class": "Species",
+    "id": "PFM_gut",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "0"
+      },
+      "evt1": {
+        "expr": "PFM_gut + dose_amount"
+      }
+    },
+    "units": "ng",
+    "compartment": "GUT",
+    "isAmount": true
+  },
+  {
+    "class": "Species",
+    "id": "PFM_p",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "0"
+      }
+    },
+    "units": "ng",
+    "compartment": "PLASMA",
+    "isAmount": true
+  },
+  {
+    "class": "Species",
+    "id": "PFM_r",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "0"
+      }
+    },
+    "units": "ng",
+    "compartment": "ROB",
+    "isAmount": true
+  },
+  {
+    "class": "Record",
+    "id": "F_PFM",
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "Emax_PFM * Dose / (ED50 + Dose)"
+      }
+    },
+    "units": "UL"
+  },
+  {
+    "class": "Record",
+    "id": "dose_amount",
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "F_PFM * 1e+6 * Dose * F_PFM"
+      }
+    },
+    "units": "ng"
+  },
+  {
+    "class": "Record",
+    "id": "PF_p",
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "PFM_p / M_PF / Vss_PFM"
+      }
+    },
+    "units": "nM"
+  },
+  {
+    "class": "Record",
+    "id": "PF_b",
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "PF_p * Kp_b_PF"
+      }
+    },
+    "units": "nM"
+  },
+  {
+    "class": "Record",
+    "id": "PF_r",
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "PF_p * Kp_r_PF"
+      }
+    },
+    "units": "nM"
+  },
+  {
+    "class": "Record",
+    "id": "PF_m",
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "PF_p * Kp_m_PF"
+      }
+    },
+    "units": "nM"
+  },
+  {
+    "class": "Reaction",
+    "id": "absorp",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "kabs_PFM * PFM_gut"
+      }
+    },
+    "actors": [
+      {
+        "target": "PFM_gut",
+        "stoichiometry": -1
+      },
+      {
+        "target": "PFM_p",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "dist",
+    "aux": {
+      "reversible": true
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "kout_PFM * PFM_p - kin_PFM * PFM_r"
+      }
+    },
+    "actors": [
+      {
+        "target": "PFM_p",
+        "stoichiometry": -1
+      },
+      {
+        "target": "PFM_r",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "elim",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "klinear_PFM * PFM_p + (Vm_PFM * PFM_p / Vss_PFM) / (Km_PFM + PFM_p / Vss_PFM)"
+      }
+    },
+    "actors": [
+      {
+        "target": "PFM_p",
+        "stoichiometry": -1
+      }
+    ]
+  },
+  {
+    "class": "TimeSwitcher",
+    "id": "evt1",
+    "space": "human",
+    "start": 0,
+    "period": 120,
+    "repeatCount": 3
+  },
+  {
+    "class": "Const",
+    "id": "PLD_b",
+    "num": 10000000,
+    "units": "nM"
+  },
+  {
+    "class": "Compartment",
+    "id": "BRAIN",
+    "notes": "Volume of brain",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "1.45"
+      }
+    },
+    "units": "L"
+  },
+  {
+    "class": "Species",
+    "id": "A_b",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "0.7493309"
+      }
+    },
+    "units": "nM",
+    "compartment": "BRAIN"
+  },
+  {
+    "class": "Species",
+    "id": "O_b",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "20.77858"
+      }
+    },
+    "units": "nM",
+    "compartment": "BRAIN"
+  },
+  {
+    "class": "Species",
+    "id": "P_b",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "6.541209"
+      }
+    },
+    "units": "nM",
+    "compartment": "BRAIN"
+  },
+  {
+    "class": "Species",
+    "id": "L_b",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "2.319571"
+      }
+    },
+    "units": "nM",
+    "compartment": "BRAIN"
+  },
+  {
+    "class": "Species",
+    "id": "S_b",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "3.427807"
+      }
+    },
+    "units": "nM",
+    "compartment": "BRAIN"
+  },
+  {
+    "class": "Species",
+    "id": "NAPE_b",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "3.879041e-5"
+      }
+    },
+    "units": "nM",
+    "compartment": "BRAIN"
+  },
+  {
+    "class": "Species",
+    "id": "NOPE_b",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "8.814287e-4"
+      }
+    },
+    "units": "nM",
+    "compartment": "BRAIN"
+  },
+  {
+    "class": "Species",
+    "id": "NPPE_b",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "1.732296e-4"
+      }
+    },
+    "units": "nM",
+    "compartment": "BRAIN"
+  },
+  {
+    "class": "Species",
+    "id": "NLPE_b",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "7.550331e-5"
+      }
+    },
+    "units": "nM",
+    "compartment": "BRAIN"
+  },
+  {
+    "class": "Species",
+    "id": "NSPE_b",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "1.272629e-4"
+      }
+    },
+    "units": "nM",
+    "compartment": "BRAIN"
+  },
+  {
+    "class": "Species",
+    "id": "FAAH_b",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "15.366"
+      }
+    },
+    "units": "nM",
+    "compartment": "BRAIN"
+  },
+  {
+    "class": "Species",
+    "id": "FAAHinh_b",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "0"
+      }
+    },
+    "units": "nM",
+    "compartment": "BRAIN"
+  },
+  {
+    "class": "Record",
+    "id": "FAAH_D_b",
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "1 + A_b / Km_FAAH_A + O_b / Km_FAAH_O + P_b / Km_FAAH_P + L_b / Km_FAAH_L + S_b / Km_FAAH_S"
+      }
+    },
+    "units": "UL"
+  },
+  {
+    "class": "Reaction",
+    "id": "vA_degr_b",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "BRAIN * FAAH_b * kcat_FAAH * a_FAAH_A * A_b / (Km_FAAH_A * FAAH_D_b)"
+      }
+    },
+    "actors": [
+      {
+        "target": "A_b",
+        "stoichiometry": -1
+      }
+    ],
+    "modifiers": [
+      {
+        "target": "FAAH_b"
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vO_degr_b",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "BRAIN * FAAH_b * kcat_FAAH * a_FAAH_O * O_b / (Km_FAAH_O * FAAH_D_b)"
+      }
+    },
+    "actors": [
+      {
+        "target": "O_b",
+        "stoichiometry": -1
+      }
+    ],
+    "modifiers": [
+      {
+        "target": "FAAH_b"
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vP_degr_b",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "BRAIN * FAAH_b * kcat_FAAH * a_FAAH_P * P_b / (Km_FAAH_P * FAAH_D_b)"
+      }
+    },
+    "actors": [
+      {
+        "target": "P_b",
+        "stoichiometry": -1
+      }
+    ],
+    "modifiers": [
+      {
+        "target": "FAAH_b"
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vL_degr_b",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "BRAIN * FAAH_b * kcat_FAAH * a_FAAH_L * L_b / (Km_FAAH_L * FAAH_D_b)"
+      }
+    },
+    "actors": [
+      {
+        "target": "L_b",
+        "stoichiometry": -1
+      }
+    ],
+    "modifiers": [
+      {
+        "target": "FAAH_b"
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vS_degr_b",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "BRAIN * FAAH_b * kcat_FAAH * a_FAAH_S * S_b / (Km_FAAH_S * FAAH_D_b)"
+      }
+    },
+    "actors": [
+      {
+        "target": "S_b",
+        "stoichiometry": -1
+      }
+    ],
+    "modifiers": [
+      {
+        "target": "FAAH_b"
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vNAPE_syn_b",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "BRAIN * Vmax_NAT * p_A * a_NAT_A * b_NAT_Brain"
+      }
+    },
+    "actors": [
+      {
+        "target": "NAPE_b",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vNOPE_syn_b",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "BRAIN * Vmax_NAT * p_O * a_NAT_O * b_NAT_Brain"
+      }
+    },
+    "actors": [
+      {
+        "target": "NOPE_b",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vNPPE_syn_b",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "BRAIN * Vmax_NAT * p_P * a_NAT_P * b_NAT_Brain"
+      }
+    },
+    "actors": [
+      {
+        "target": "NPPE_b",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vNLPE_syn_b",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "BRAIN * Vmax_NAT * p_L * a_NAT_L * b_NAT_Brain"
+      }
+    },
+    "actors": [
+      {
+        "target": "NLPE_b",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vNSPE_syn_b",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "BRAIN * Vmax_NAT * p_S * a_NAT_S * b_NAT_Brain"
+      }
+    },
+    "actors": [
+      {
+        "target": "NSPE_b",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Record",
+    "id": "slag1_b",
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "NAPE_b / Km_NA_PE + NOPE_b / Km_NO_PE + NPPE_b / Km_NP_PE + NLPE_b / Km_NL_PE + NSPE_b / Km_NS_PE"
+      }
+    },
+    "units": "UL"
+  },
+  {
+    "class": "Record",
+    "id": "slag2_b",
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "A_b / Ki_A + O_b / Ki_O + P_b / Ki_P + L_b / Ki_L + S_b / Ki_S"
+      }
+    },
+    "units": "UL"
+  },
+  {
+    "class": "Record",
+    "id": "den_b",
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "1 + slag1_b + slag2_b"
+      }
+    },
+    "units": "UL"
+  },
+  {
+    "class": "Reaction",
+    "id": "vA_syn_b",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "BRAIN * PLD_b * k_NA_PE * NAPE_b / Km_NA_PE / den_b"
+      }
+    },
+    "actors": [
+      {
+        "target": "NAPE_b",
+        "stoichiometry": -1
+      },
+      {
+        "target": "A_b",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vO_syn_b",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "BRAIN * PLD_b * k_NO_PE * NOPE_b / Km_NO_PE / den_b"
+      }
+    },
+    "actors": [
+      {
+        "target": "NOPE_b",
+        "stoichiometry": -1
+      },
+      {
+        "target": "O_b",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vP_syn_b",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "BRAIN * PLD_b * k_NP_PE * NPPE_b / Km_NP_PE / den_b"
+      }
+    },
+    "actors": [
+      {
+        "target": "NPPE_b",
+        "stoichiometry": -1
+      },
+      {
+        "target": "P_b",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vL_syn_b",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "BRAIN * PLD_b * k_NL_PE * NLPE_b / Km_NL_PE / den_b"
+      }
+    },
+    "actors": [
+      {
+        "target": "NLPE_b",
+        "stoichiometry": -1
+      },
+      {
+        "target": "L_b",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vS_syn_b",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "BRAIN * PLD_b * k_NS_PE * NSPE_b / Km_NS_PE / den_b"
+      }
+    },
+    "actors": [
+      {
+        "target": "NSPE_b",
+        "stoichiometry": -1
+      },
+      {
+        "target": "S_b",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vFAAH_syn_b",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "BRAIN * FAAH_t * b_FAAH_Brain * k_deg_FAAH"
+      }
+    },
+    "actors": [
+      {
+        "target": "FAAH_b",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vFAAH_degr_b",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "BRAIN * k_deg_FAAH * FAAH_b"
+      }
+    },
+    "actors": [
+      {
+        "target": "FAAH_b",
+        "stoichiometry": -1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vFAAH_inh_b",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "BRAIN * k_inh * FAAH_b * PF_b"
+      }
+    },
+    "actors": [
+      {
+        "target": "FAAH_b",
+        "stoichiometry": -1
+      },
+      {
+        "target": "FAAHinh_b",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vFAAH_inh_degr_b",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "BRAIN * k_deg_FAAH * FAAHinh_b"
+      }
+    },
+    "actors": [
+      {
+        "target": "FAAHinh_b",
+        "stoichiometry": -1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vA_UE_b",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "BRAIN * b_FAAH_Brain * kcl_A * A_b"
+      }
+    },
+    "actors": [
+      {
+        "target": "A_b",
+        "stoichiometry": -1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vO_UE_b",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "BRAIN * b_FAAH_Brain * kcl_O * O_b"
+      }
+    },
+    "actors": [
+      {
+        "target": "O_b",
+        "stoichiometry": -1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vP_UE_b",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "BRAIN * b_FAAH_Brain * kcl_P * P_b"
+      }
+    },
+    "actors": [
+      {
+        "target": "P_b",
+        "stoichiometry": -1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vL_UE_b",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "BRAIN * b_FAAH_Brain * kcl_L * L_b"
+      }
+    },
+    "actors": [
+      {
+        "target": "L_b",
+        "stoichiometry": -1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vS_UE_b",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "BRAIN * b_FAAH_Brain * kcl_S * S_b"
+      }
+    },
+    "actors": [
+      {
+        "target": "S_b",
+        "stoichiometry": -1
+      }
+    ]
+  },
+  {
+    "class": "Const",
+    "id": "PLD_r",
+    "num": 10000000,
+    "units": "nM"
+  },
+  {
+    "class": "Const",
+    "id": "LIVER",
+    "num": 1.69,
+    "units": "L"
+  },
+  {
+    "class": "Const",
+    "id": "Gut",
+    "num": 1.65,
+    "units": "L"
+  },
+  {
+    "class": "Const",
+    "id": "Spleen",
+    "num": 0.192,
+    "units": "L"
+  },
+  {
+    "class": "Const",
+    "id": "Kidney",
+    "num": 0.28,
+    "units": "L"
+  },
+  {
+    "class": "Const",
+    "id": "Lungs",
+    "num": 1.172,
+    "units": "L"
+  },
+  {
+    "class": "Const",
+    "id": "Testis",
+    "num": 0.036,
+    "units": "L"
+  },
+  {
+    "class": "Const",
+    "id": "Leucocytes",
+    "num": 0.025,
+    "units": "L"
+  },
+  {
+    "class": "Const",
+    "id": "Pancreas",
+    "num": 0.077,
+    "units": "L"
+  },
+  {
+    "class": "Const",
+    "id": "Heart",
+    "num": 0.31,
+    "units": "L"
+  },
+  {
+    "class": "Const",
+    "id": "Muscles",
+    "num": 35,
+    "units": "L"
+  },
+  {
+    "class": "Const",
+    "id": "Thymus",
+    "num": 0.029,
+    "units": "L"
+  },
+  {
+    "class": "Species",
+    "id": "A_r",
+    "title": "AEA in rest of body",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "0.5419204"
+      }
+    },
+    "units": "nM",
+    "compartment": "ROB"
+  },
+  {
+    "class": "Species",
+    "id": "O_r",
+    "title": "OEA in rest of body",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "14.23822"
+      }
+    },
+    "units": "nM",
+    "compartment": "ROB"
+  },
+  {
+    "class": "Species",
+    "id": "P_r",
+    "title": "PEA in rest of body",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "4.121915"
+      }
+    },
+    "units": "nM",
+    "compartment": "ROB"
+  },
+  {
+    "class": "Species",
+    "id": "L_r",
+    "title": "LEA in rest of body",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "1.705466"
+      }
+    },
+    "units": "nM",
+    "compartment": "ROB"
+  },
+  {
+    "class": "Species",
+    "id": "S_r",
+    "title": "SEA in rest of body",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "2.515968"
+      }
+    },
+    "units": "nM",
+    "compartment": "ROB"
+  },
+  {
+    "class": "Species",
+    "id": "NAPE_r",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "4.241633e-6"
+      }
+    },
+    "units": "nM",
+    "compartment": "ROB"
+  },
+  {
+    "class": "Species",
+    "id": "NOPE_r",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "9.638198e-5"
+      }
+    },
+    "units": "nM",
+    "compartment": "ROB"
+  },
+  {
+    "class": "Species",
+    "id": "NPPE_r",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "1.894222e-5"
+      }
+    },
+    "units": "nM",
+    "compartment": "ROB"
+  },
+  {
+    "class": "Species",
+    "id": "NLPE_r",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "8.256095e-6"
+      }
+    },
+    "units": "nM",
+    "compartment": "ROB"
+  },
+  {
+    "class": "Species",
+    "id": "NSPE_r",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "1.391587e-5"
+      }
+    },
+    "units": "nM",
+    "compartment": "ROB"
+  },
+  {
+    "class": "Species",
+    "id": "FAAH_r",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "2.165868"
+      }
+    },
+    "units": "nM",
+    "compartment": "ROB"
+  },
+  {
+    "class": "Species",
+    "id": "FAAHinh_r",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "0"
+      }
+    },
+    "units": "nM",
+    "compartment": "ROB"
+  },
+  {
+    "class": "Record",
+    "id": "FAAH_D_r",
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "1 + A_r / Km_FAAH_A + O_r / Km_FAAH_O + P_r / Km_FAAH_P + L_r / Km_FAAH_L + S_r / Km_FAAH_S"
+      }
+    },
+    "units": "UL"
+  },
+  {
+    "class": "Reaction",
+    "id": "vA_degr_r",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "ROB * FAAH_r * kcat_FAAH * a_FAAH_A * A_r / (Km_FAAH_A * FAAH_D_r)"
+      }
+    },
+    "actors": [
+      {
+        "target": "A_r",
+        "stoichiometry": -1
+      }
+    ],
+    "modifiers": [
+      {
+        "target": "FAAH_r"
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vO_degr_r",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "ROB * FAAH_r * kcat_FAAH * a_FAAH_O * O_r / (Km_FAAH_O * FAAH_D_r)"
+      }
+    },
+    "actors": [
+      {
+        "target": "O_r",
+        "stoichiometry": -1
+      }
+    ],
+    "modifiers": [
+      {
+        "target": "FAAH_r"
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vP_degr_r",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "ROB * FAAH_r * kcat_FAAH * a_FAAH_P * P_r / (Km_FAAH_P * FAAH_D_r)"
+      }
+    },
+    "actors": [
+      {
+        "target": "P_r",
+        "stoichiometry": -1
+      }
+    ],
+    "modifiers": [
+      {
+        "target": "FAAH_r"
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vL_degr_r",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "ROB * FAAH_r * kcat_FAAH * a_FAAH_L * L_r / (Km_FAAH_L * FAAH_D_r)"
+      }
+    },
+    "actors": [
+      {
+        "target": "L_r",
+        "stoichiometry": -1
+      }
+    ],
+    "modifiers": [
+      {
+        "target": "FAAH_r"
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vS_degr_r",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "ROB * FAAH_r * kcat_FAAH * a_FAAH_S * S_r / (Km_FAAH_S * FAAH_D_r)"
+      }
+    },
+    "actors": [
+      {
+        "target": "S_r",
+        "stoichiometry": -1
+      }
+    ],
+    "modifiers": [
+      {
+        "target": "FAAH_r"
+      }
+    ]
+  },
+  {
+    "class": "Record",
+    "id": "c_NAT_ROB",
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "Pancreas * b_NAT_Pancreas + Kidney * b_NAT_Kidney + Heart * b_NAT_Heart + Lungs * b_NAT_Lungs + Muscles * b_NAT_Muscles + Testis * b_NAT_Testis + Leucocytes * b_NAT_Leucocytes"
+      }
+    },
+    "units": "L"
+  },
+  {
+    "class": "Reaction",
+    "id": "vNAPE_syn_r",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "Vmax_NAT * p_A * a_NAT_A * c_NAT_ROB"
+      }
+    },
+    "actors": [
+      {
+        "target": "NAPE_r",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vNOPE_syn_r",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "Vmax_NAT * p_O * a_NAT_O * c_NAT_ROB"
+      }
+    },
+    "actors": [
+      {
+        "target": "NOPE_r",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vNPPE_syn_r",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "Vmax_NAT * p_P * a_NAT_P * c_NAT_ROB"
+      }
+    },
+    "actors": [
+      {
+        "target": "NPPE_r",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vNLPE_syn_r",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "Vmax_NAT * p_L * a_NAT_L * c_NAT_ROB"
+      }
+    },
+    "actors": [
+      {
+        "target": "NLPE_r",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vNSPE_syn_r",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "Vmax_NAT * p_S * a_NAT_S * c_NAT_ROB"
+      }
+    },
+    "actors": [
+      {
+        "target": "NSPE_r",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Record",
+    "id": "slag1_r",
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "NAPE_r / Km_NA_PE + NOPE_r / Km_NO_PE + NPPE_r / Km_NP_PE + NLPE_r / Km_NL_PE + NSPE_r / Km_NS_PE"
+      }
+    },
+    "units": "UL"
+  },
+  {
+    "class": "Record",
+    "id": "slag2_r",
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "A_r / Ki_A + O_r / Ki_O + P_r / Ki_P + L_r / Ki_L + S_r / Ki_S"
+      }
+    },
+    "units": "UL"
+  },
+  {
+    "class": "Record",
+    "id": "den_r",
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "1 + slag1_r + slag2_r"
+      }
+    },
+    "units": "UL"
+  },
+  {
+    "class": "Reaction",
+    "id": "vA_syn_r",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "ROB * PLD_r * k_NA_PE * NAPE_r / Km_NA_PE / den_r"
+      }
+    },
+    "actors": [
+      {
+        "target": "NAPE_r",
+        "stoichiometry": -1
+      },
+      {
+        "target": "A_r",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vO_syn_r",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "ROB * PLD_r * k_NO_PE * NOPE_r / Km_NO_PE / den_r"
+      }
+    },
+    "actors": [
+      {
+        "target": "NOPE_r",
+        "stoichiometry": -1
+      },
+      {
+        "target": "O_r",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vP_syn_r",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "ROB * PLD_r * k_NP_PE * NPPE_r / Km_NP_PE / den_r"
+      }
+    },
+    "actors": [
+      {
+        "target": "NPPE_r",
+        "stoichiometry": -1
+      },
+      {
+        "target": "P_r",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vL_syn_r",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "ROB * PLD_r * k_NL_PE * NLPE_r / Km_NL_PE / den_r"
+      }
+    },
+    "actors": [
+      {
+        "target": "NLPE_r",
+        "stoichiometry": -1
+      },
+      {
+        "target": "L_r",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vS_syn_r",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "ROB * PLD_r * k_NS_PE * NSPE_r / Km_NS_PE / den_r"
+      }
+    },
+    "actors": [
+      {
+        "target": "NSPE_r",
+        "stoichiometry": -1
+      },
+      {
+        "target": "S_r",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Record",
+    "id": "c_FAAH_ROB",
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "LIVER * b_FAAH_Liver + Gut * b_FAAH_Gut + Spleen * b_FAAH_Spleen + Kidney * b_FAAH_Kidney + Lungs * b_FAAH_Lungs + Testis * b_FAAH_Testis + Leucocytes * b_FAAH_Leucocytes"
+      }
+    },
+    "units": "L"
+  },
+  {
+    "class": "Reaction",
+    "id": "vFAAH_syn_r",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "FAAH_t * c_FAAH_ROB * k_deg_FAAH"
+      }
+    },
+    "actors": [
+      {
+        "target": "FAAH_r",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vFAAH_degr_r",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "ROB * k_deg_FAAH * FAAH_r"
+      }
+    },
+    "actors": [
+      {
+        "target": "FAAH_r",
+        "stoichiometry": -1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vFAAH_inh_r",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "ROB * k_inh * FAAH_r * PF_r"
+      }
+    },
+    "actors": [
+      {
+        "target": "FAAH_r",
+        "stoichiometry": -1
+      },
+      {
+        "target": "FAAHinh_r",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vFAAH_inh_degr_r",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "ROB * k_deg_FAAH * FAAHinh_r"
+      }
+    },
+    "actors": [
+      {
+        "target": "FAAHinh_r",
+        "stoichiometry": -1
+      }
+    ]
+  },
+  {
+    "class": "Record",
+    "id": "c_NAAA_ROB",
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "LIVER * b_NAAA_Liver + Gut * b_NAAA_Gut + Spleen * b_NAAA_Spleen + Kidney * b_NAAA_Kidney + Heart * b_NAAA_Heart + Lungs * b_NAAA_Lungs + Thymus * b_NAAA_Thymus + Testis * b_NAAA_Thymus * Testis"
+      }
+    },
+    "units": "L"
+  },
+  {
+    "class": "Reaction",
+    "id": "vA_UE_r",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "c_NAAA_ROB * kcl_A * A_r"
+      }
+    },
+    "actors": [
+      {
+        "target": "A_r",
+        "stoichiometry": -1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vO_UE_r",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "c_NAAA_ROB * kcl_O * O_r"
+      }
+    },
+    "actors": [
+      {
+        "target": "O_r",
+        "stoichiometry": -1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vP_UE_r",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "c_NAAA_ROB * kcl_P * P_r"
+      }
+    },
+    "actors": [
+      {
+        "target": "P_r",
+        "stoichiometry": -1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vL_UE_r",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "c_NAAA_ROB * kcl_L * L_r"
+      }
+    },
+    "actors": [
+      {
+        "target": "L_r",
+        "stoichiometry": -1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vS_UE_r",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "c_NAAA_ROB * kcl_S * S_r"
+      }
+    },
+    "actors": [
+      {
+        "target": "S_r",
+        "stoichiometry": -1
+      }
+    ]
+  },
+  {
+    "class": "Compartment",
+    "id": "MEC",
+    "notes": "The same as blood brain barrier (BBB)",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "1.5e-5"
+      }
+    },
+    "units": "L"
+  },
+  {
+    "class": "Species",
+    "id": "A_m",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "0.97761"
+      }
+    },
+    "units": "nM",
+    "compartment": "MEC"
+  },
+  {
+    "class": "Species",
+    "id": "O_m",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "16.3219"
+      }
+    },
+    "units": "nM",
+    "compartment": "MEC"
+  },
+  {
+    "class": "Species",
+    "id": "P_m",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "5.809415"
+      }
+    },
+    "units": "nM",
+    "compartment": "MEC"
+  },
+  {
+    "class": "Species",
+    "id": "L_m",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "0"
+      }
+    },
+    "units": "nM",
+    "compartment": "MEC"
+  },
+  {
+    "class": "Species",
+    "id": "S_m",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "2.968774"
+      }
+    },
+    "units": "nM",
+    "compartment": "MEC"
+  },
+  {
+    "class": "Species",
+    "id": "FAAH_m",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "10.686"
+      }
+    },
+    "units": "nM",
+    "compartment": "MEC"
+  },
+  {
+    "class": "Species",
+    "id": "FAAHinh_m",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "0"
+      }
+    },
+    "units": "nM",
+    "compartment": "MEC"
+  },
+  {
+    "class": "Record",
+    "id": "FAAH_D_m",
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "1 + A_m / Km_FAAH_A + O_m / Km_FAAH_O + P_m / Km_FAAH_P + L_m / Km_FAAH_L + S_m / Km_FAAH_S"
+      }
+    },
+    "units": "UL"
+  },
+  {
+    "class": "Reaction",
+    "id": "vA_degr_m",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "MEC * FAAH_m * kcat_FAAH * a_FAAH_A * A_m / (Km_FAAH_A * FAAH_D_m)"
+      }
+    },
+    "actors": [
+      {
+        "target": "A_m",
+        "stoichiometry": -1
+      }
+    ],
+    "modifiers": [
+      {
+        "target": "FAAH_m"
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vO_degr_m",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "MEC * FAAH_m * kcat_FAAH * a_FAAH_O * O_m / (Km_FAAH_O * FAAH_D_m)"
+      }
+    },
+    "actors": [
+      {
+        "target": "O_m",
+        "stoichiometry": -1
+      }
+    ],
+    "modifiers": [
+      {
+        "target": "FAAH_m"
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vP_degr_m",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "MEC * FAAH_m * kcat_FAAH * a_FAAH_P * P_m / (Km_FAAH_P * FAAH_D_m)"
+      }
+    },
+    "actors": [
+      {
+        "target": "P_m",
+        "stoichiometry": -1
+      }
+    ],
+    "modifiers": [
+      {
+        "target": "FAAH_m"
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vL_degr_m",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "MEC * FAAH_m * kcat_FAAH * a_FAAH_L * L_m / (Km_FAAH_L * FAAH_D_m)"
+      }
+    },
+    "actors": [
+      {
+        "target": "L_m",
+        "stoichiometry": -1
+      }
+    ],
+    "modifiers": [
+      {
+        "target": "FAAH_m"
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vS_degr_m",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "MEC * FAAH_m * kcat_FAAH * a_FAAH_S * S_m / (Km_FAAH_S * FAAH_D_m)"
+      }
+    },
+    "actors": [
+      {
+        "target": "S_m",
+        "stoichiometry": -1
+      }
+    ],
+    "modifiers": [
+      {
+        "target": "FAAH_m"
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vFAAH_syn_m",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "MEC * FAAH_t * b_FAAH_MEC * k_deg_FAAH"
+      }
+    },
+    "actors": [
+      {
+        "target": "FAAH_m",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vFAAH_degr_m",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "MEC * k_deg_FAAH * FAAH_m"
+      }
+    },
+    "actors": [
+      {
+        "target": "FAAH_m",
+        "stoichiometry": -1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vFAAH_inh_m",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "MEC * k_inh * FAAH_m * PF_m"
+      }
+    },
+    "actors": [
+      {
+        "target": "FAAH_m",
+        "stoichiometry": -1
+      },
+      {
+        "target": "FAAHinh_m",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vFAAH_inh_degr_m",
+    "aux": {
+      "reversible": false
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "MEC * k_deg_FAAH * FAAHinh_m"
+      }
+    },
+    "actors": [
+      {
+        "target": "FAAHinh_m",
+        "stoichiometry": -1
+      }
+    ]
+  },
+  {
+    "class": "Const",
+    "id": "H",
+    "num": 0.48
+  },
+  {
+    "class": "Species",
+    "id": "A_p",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "0.8740574"
+      }
+    },
+    "units": "nM",
+    "compartment": "PLASMA"
+  },
+  {
+    "class": "Species",
+    "id": "O_p",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "5.085073"
+      }
+    },
+    "units": "nM",
+    "compartment": "PLASMA"
+  },
+  {
+    "class": "Species",
+    "id": "P_p",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "4.849307"
+      }
+    },
+    "units": "nM",
+    "compartment": "PLASMA"
+  },
+  {
+    "class": "Species",
+    "id": "L_p",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "1.916254"
+      }
+    },
+    "units": "nM",
+    "compartment": "PLASMA"
+  },
+  {
+    "class": "Species",
+    "id": "S_p",
+    "space": "human",
+    "assignments": {
+      "start_": {
+        "expr": "0.273772"
+      }
+    },
+    "units": "nM",
+    "compartment": "PLASMA"
+  },
+  {
+    "class": "Const",
+    "id": "Vmax_NAT",
+    "num": 300,
+    "units": "nM/h"
+  },
+  {
+    "class": "Const",
+    "id": "p_A",
+    "num": 0.051,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "p_O",
+    "num": 0.098,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "p_P",
+    "num": 0.615,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "p_L",
+    "num": 0.016,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "p_S",
+    "num": 0.191,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "a_NAT_A",
+    "num": 1,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "a_NAT_O",
+    "num": 13,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "a_NAT_P",
+    "num": 0.42,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "a_NAT_L",
+    "num": 8.6,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "a_NAT_S",
+    "num": 1,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_NAT_Brain",
+    "num": 1.667,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_NAT_Pancreas",
+    "num": 0.333,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_NAT_Kidney",
+    "num": 0.667,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_NAT_Heart",
+    "num": 1,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_NAT_Lungs",
+    "num": 0.033,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_NAT_Muscles",
+    "num": 0.333,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_NAT_Testis",
+    "num": 0.667,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_NAT_Leucocytes",
+    "num": 0,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "k_NA_PE",
+    "num": 202,
+    "units": "1/h"
+  },
+  {
+    "class": "Const",
+    "id": "k_NO_PE",
+    "num": 230,
+    "units": "1/h"
+  },
+  {
+    "class": "Const",
+    "id": "k_NP_PE",
+    "num": 270,
+    "units": "1/h"
+  },
+  {
+    "class": "Const",
+    "id": "k_NL_PE",
+    "num": 100,
+    "units": "1/h"
+  },
+  {
+    "class": "Const",
+    "id": "k_NS_PE",
+    "num": 280,
+    "units": "1/h"
+  },
+  {
+    "class": "Const",
+    "id": "Km_NA_PE",
+    "num": 2800,
+    "units": "nM"
+  },
+  {
+    "class": "Const",
+    "id": "Km_NO_PE",
+    "num": 2900,
+    "units": "nM"
+  },
+  {
+    "class": "Const",
+    "id": "Km_NP_PE",
+    "num": 3300,
+    "units": "nM"
+  },
+  {
+    "class": "Const",
+    "id": "Km_NL_PE",
+    "num": 1000,
+    "units": "nM"
+  },
+  {
+    "class": "Const",
+    "id": "Km_NS_PE",
+    "num": 3400,
+    "units": "nM"
+  },
+  {
+    "class": "Const",
+    "id": "Ki_A",
+    "num": 230,
+    "units": "nM"
+  },
+  {
+    "class": "Const",
+    "id": "Ki_O",
+    "num": 240,
+    "units": "nM"
+  },
+  {
+    "class": "Const",
+    "id": "Ki_P",
+    "num": 6700,
+    "units": "nM"
+  },
+  {
+    "class": "Const",
+    "id": "Ki_L",
+    "num": 1000,
+    "units": "nM"
+  },
+  {
+    "class": "Const",
+    "id": "Ki_S",
+    "num": 840,
+    "units": "nM"
+  },
+  {
+    "class": "Const",
+    "id": "kcat_FAAH",
+    "num": 18000,
+    "units": "1/h"
+  },
+  {
+    "class": "Const",
+    "id": "FAAH_t",
+    "num": 78,
+    "units": "nM"
+  },
+  {
+    "class": "Const",
+    "id": "a_FAAH_A",
+    "num": 1,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "a_FAAH_O",
+    "num": 5.7,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "a_FAAH_P",
+    "num": 37.8,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "a_FAAH_L",
+    "num": 1.15,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "a_FAAH_S",
+    "num": 1,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_FAAH_Liver",
+    "num": 1,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_FAAH_Brain",
+    "num": 0.197,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_FAAH_Gut",
+    "num": 0.034,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_FAAH_Spleen",
+    "num": 0.03,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_FAAH_Kidney",
+    "num": 0.069,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_FAAH_Lungs",
+    "num": 0.032,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_FAAH_Testis",
+    "num": 0.126,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_FAAH_MEC",
+    "num": 0.137,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_FAAH_Leucocytes",
+    "num": 0,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "Km_FAAH_A",
+    "num": 8200,
+    "units": "nM"
+  },
+  {
+    "class": "Const",
+    "id": "Km_FAAH_O",
+    "num": 52200,
+    "units": "nM"
+  },
+  {
+    "class": "Const",
+    "id": "Km_FAAH_P",
+    "num": 543000,
+    "units": "nM"
+  },
+  {
+    "class": "Const",
+    "id": "Km_FAAH_L",
+    "num": 10800,
+    "units": "nM"
+  },
+  {
+    "class": "Const",
+    "id": "Km_FAAH_S",
+    "num": 10000,
+    "units": "nM"
+  },
+  {
+    "class": "Const",
+    "id": "k_deg_FAAH",
+    "num": 0.0051,
+    "units": "1/h"
+  },
+  {
+    "class": "Const",
+    "id": "k_inh",
+    "num": 1.1,
+    "units": "1/h/nM"
+  },
+  {
+    "class": "Const",
+    "id": "kcl_A",
+    "num": 1.74,
+    "units": "1/h"
+  },
+  {
+    "class": "Const",
+    "id": "kcl_O",
+    "num": 2.5,
+    "units": "1/h"
+  },
+  {
+    "class": "Const",
+    "id": "kcl_P",
+    "num": 2.61,
+    "units": "1/h"
+  },
+  {
+    "class": "Const",
+    "id": "kcl_L",
+    "num": 1.25,
+    "units": "1/h"
+  },
+  {
+    "class": "Const",
+    "id": "kcl_S",
+    "num": 1.2,
+    "units": "1/h"
+  },
+  {
+    "class": "Const",
+    "id": "b_NAAA_Liver",
+    "num": 1,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_NAAA_Gut",
+    "num": 0.2,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_NAAA_Spleen",
+    "num": 8,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_NAAA_Kidney",
+    "num": 0.6,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_NAAA_Heart",
+    "num": 0.2,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_NAAA_Lungs",
+    "num": 14,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_NAAA_Thymus",
+    "num": 4,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_NAAA_Testis",
+    "num": 0.6,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "b_NAAA_Brain",
+    "num": 0.6,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "M_A",
+    "num": 347.5,
+    "units": "g/mole"
+  },
+  {
+    "class": "Const",
+    "id": "M_O",
+    "num": 325.5,
+    "units": "g/mole"
+  },
+  {
+    "class": "Const",
+    "id": "M_P",
+    "num": 299.5,
+    "units": "g/mole"
+  },
+  {
+    "class": "Const",
+    "id": "M_L",
+    "num": 323.5,
+    "units": "g/mole"
+  },
+  {
+    "class": "Const",
+    "id": "M_S",
+    "num": 321.5,
+    "units": "g/mole"
+  },
+  {
+    "class": "Const",
+    "id": "Kd_CB1_A",
+    "num": 239.2,
+    "units": "nM"
+  },
+  {
+    "class": "Const",
+    "id": "Kd_AG2",
+    "num": 3424,
+    "units": "nM"
+  },
+  {
+    "class": "Const",
+    "id": "AG2_b",
+    "num": 0
+  },
+  {
+    "class": "Const",
+    "id": "ktr_m_p_A",
+    "num": 150,
+    "units": "nM/h"
+  },
+  {
+    "class": "Const",
+    "id": "Ktr_p_m_A",
+    "num": 1.89,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "Km_p_m_A",
+    "num": 1,
+    "units": "nM"
+  },
+  {
+    "class": "Const",
+    "id": "ktr_m_p_O",
+    "num": 10,
+    "units": "1/h"
+  },
+  {
+    "class": "Const",
+    "id": "Ktr_p_m_O",
+    "num": 9.07,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "ktr_m_p_P",
+    "num": 10,
+    "units": "1/h"
+  },
+  {
+    "class": "Const",
+    "id": "Ktr_p_m_P",
+    "num": 2.65,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "ktr_m_p_L",
+    "num": 0,
+    "units": "1/h"
+  },
+  {
+    "class": "Const",
+    "id": "Ktr_p_m_L",
+    "num": 2.77,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "ktr_m_p_S",
+    "num": 10,
+    "units": "1/h"
+  },
+  {
+    "class": "Const",
+    "id": "Ktr_p_m_S",
+    "num": 30.01,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "ktr_r_p",
+    "num": 100,
+    "units": "nM/h"
+  },
+  {
+    "class": "Const",
+    "id": "Ktr_p_r_A",
+    "num": 0.62,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "Ktr_p_r_O",
+    "num": 2.8,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "Ktr_p_r_P",
+    "num": 0.85,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "Ktr_p_r_L",
+    "num": 0.89,
+    "units": "UL"
+  },
+  {
+    "class": "Const",
+    "id": "Ktr_p_r_S",
+    "num": 9.19,
+    "units": "UL"
+  },
+  {
+    "class": "Reaction",
+    "id": "vA_m_p",
+    "aux": {
+      "reversible": true
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "MEC * ktr_m_p_A * (A_m - A_p * Ktr_p_m_A) / (A_m + A_p + Km_p_m_A)"
+      }
+    },
+    "actors": [
+      {
+        "target": "A_m",
+        "stoichiometry": -1
+      },
+      {
+        "target": "A_p",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vO_m_p",
+    "aux": {
+      "reversible": true
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "MEC * ktr_m_p_O * (O_m - O_p * Ktr_p_m_O)"
+      }
+    },
+    "actors": [
+      {
+        "target": "O_m",
+        "stoichiometry": -1
+      },
+      {
+        "target": "O_p",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vP_m_p",
+    "aux": {
+      "reversible": true
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "MEC * ktr_m_p_P * (P_m - P_p * Ktr_p_m_P)"
+      }
+    },
+    "actors": [
+      {
+        "target": "P_m",
+        "stoichiometry": -1
+      },
+      {
+        "target": "P_p",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vL_m_p",
+    "aux": {
+      "reversible": true
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "MEC * ktr_m_p_L * (L_m - L_p * Ktr_p_m_L)"
+      }
+    },
+    "actors": [
+      {
+        "target": "L_m",
+        "stoichiometry": -1
+      },
+      {
+        "target": "L_p",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vS_m_p",
+    "aux": {
+      "reversible": true
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "MEC * ktr_m_p_S * (S_m - S_p * Ktr_p_m_S)"
+      }
+    },
+    "actors": [
+      {
+        "target": "S_m",
+        "stoichiometry": -1
+      },
+      {
+        "target": "S_p",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vA_b_m",
+    "aux": {
+      "reversible": true
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "MEC * ktr_m_p_A * (A_b - A_m) / (A_m + A_b + Km_p_m_A)"
+      }
+    },
+    "actors": [
+      {
+        "target": "A_b",
+        "stoichiometry": -1
+      },
+      {
+        "target": "A_m",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vO_b_m",
+    "aux": {
+      "reversible": true
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "MEC * ktr_m_p_O * (O_b - O_m)"
+      }
+    },
+    "actors": [
+      {
+        "target": "O_b",
+        "stoichiometry": -1
+      },
+      {
+        "target": "O_m",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vP_b_m",
+    "aux": {
+      "reversible": true
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "MEC * ktr_m_p_P * (P_b - P_m)"
+      }
+    },
+    "actors": [
+      {
+        "target": "P_b",
+        "stoichiometry": -1
+      },
+      {
+        "target": "P_m",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vL_b_m",
+    "aux": {
+      "reversible": true
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "MEC * ktr_m_p_L * (L_b - L_m)"
+      }
+    },
+    "actors": [
+      {
+        "target": "L_b",
+        "stoichiometry": -1
+      },
+      {
+        "target": "L_m",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vS_b_m",
+    "aux": {
+      "reversible": true
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "MEC * ktr_m_p_S * (S_b - S_m)"
+      }
+    },
+    "actors": [
+      {
+        "target": "S_b",
+        "stoichiometry": -1
+      },
+      {
+        "target": "S_m",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vA_r_p",
+    "aux": {
+      "reversible": true
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "PLASMA * ktr_r_p * (A_r - A_p * Ktr_p_r_A) / (A_r + A_p + Km_p_m_A)"
+      }
+    },
+    "actors": [
+      {
+        "target": "A_r",
+        "stoichiometry": -1
+      },
+      {
+        "target": "A_p",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vO_r_p",
+    "aux": {
+      "reversible": true
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "PLASMA * ktr_r_p * (O_r - O_p * Ktr_p_r_O)"
+      }
+    },
+    "actors": [
+      {
+        "target": "O_r",
+        "stoichiometry": -1
+      },
+      {
+        "target": "O_p",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vP_r_p",
+    "aux": {
+      "reversible": true
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "PLASMA * ktr_r_p * (P_r - P_p * Ktr_p_r_P)"
+      }
+    },
+    "actors": [
+      {
+        "target": "P_r",
+        "stoichiometry": -1
+      },
+      {
+        "target": "P_p",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vL_r_p",
+    "aux": {
+      "reversible": true
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "PLASMA * ktr_r_p * (L_r - L_p * Ktr_p_r_L)"
+      }
+    },
+    "actors": [
+      {
+        "target": "L_r",
+        "stoichiometry": -1
+      },
+      {
+        "target": "L_p",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "Reaction",
+    "id": "vS_r_p",
+    "aux": {
+      "reversible": true
+    },
+    "space": "human",
+    "assignments": {
+      "ode_": {
+        "expr": "PLASMA * ktr_r_p * (S_r - S_p * Ktr_p_r_S)"
+      }
+    },
+    "actors": [
+      {
+        "target": "S_r",
+        "stoichiometry": -1
+      },
+      {
+        "target": "S_p",
+        "stoichiometry": 1
+      }
+    ]
+  },
+  {
+    "class": "SBMLExport",
+    "id": "sbml",
+    "model": "human"
+  },
+  {
+    "class": "MrgsolveExport",
+    "id": "mrg",
+    "model": "human"
+  },
+  {
+    "class": "SLVExport",
+    "id": "slv",
+    "model": "human"
+  },
+  {
+    "class": "JSONExport",
+    "id": "json"
+  },
+  {
+    "class": "YAMLExport",
+    "id": "yaml"
+  }
+]
