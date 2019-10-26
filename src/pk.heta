@@ -45,12 +45,12 @@ namespace human begin
   PF_m @Record := PF_p*Kp_m_PF {units: nM};
 
   // transport
-  absorp @Reaction { actors: PFM_gut => PFM_p };
+  absorp @Reaction { actors: PFM_gut => PFM_p, units: ng/h };
   // absorp := kabs_PFM * MD; // original version
   absorp := kabs_PFM * PFM_gut;
-  dist @Reaction { actors: PFM_p <=> PFM_r }; // 'Drug distribution reaction between PLASMA and ROB' 
+  dist @Reaction { actors: PFM_p <=> PFM_r, units: ng/h }; // 'Drug distribution reaction between PLASMA and ROB' 
   dist := kout_PFM * PFM_p - kin_PFM * PFM_r;
-  elim @Reaction { actors: PFM_p => };
+  elim @Reaction { actors: PFM_p =>, units: ng/h };
   elim := klinear_PFM * PFM_p + ( Vm_PFM * PFM_p / Vss_PFM ) / ( Km_PFM + PFM_p / Vss_PFM );
 end
 

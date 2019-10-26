@@ -30,35 +30,35 @@ namespace human begin
         + L_b/Km_FAAH_L 
         + S_b/Km_FAAH_S;
 
-    vA_degr_b @Reaction { actors: A_b =>, modifiers: [FAAH_b] };
+    vA_degr_b @Reaction { actors: A_b =>, modifiers: [FAAH_b], units: nmole/h };
     vA_degr_b := BRAIN*FAAH_b*kcat_FAAH*a_FAAH_A*A_b/(Km_FAAH_A*FAAH_D_b);
 
-    vO_degr_b @Reaction { actors: O_b =>, modifiers: [FAAH_b] };
+    vO_degr_b @Reaction { actors: O_b =>, modifiers: [FAAH_b], units: nmole/h };
     vO_degr_b := BRAIN*FAAH_b*kcat_FAAH*a_FAAH_O*O_b/(Km_FAAH_O*FAAH_D_b);
 
-    vP_degr_b @Reaction { actors: P_b =>, modifiers: [FAAH_b] };
+    vP_degr_b @Reaction { actors: P_b =>, modifiers: [FAAH_b], units: nmole/h };
     vP_degr_b := BRAIN*FAAH_b*kcat_FAAH*a_FAAH_P*P_b/(Km_FAAH_P*FAAH_D_b);
 
-    vL_degr_b @Reaction { actors: L_b =>, modifiers: [FAAH_b] };
+    vL_degr_b @Reaction { actors: L_b =>, modifiers: [FAAH_b], units: nmole/h };
     vL_degr_b := BRAIN*FAAH_b*kcat_FAAH*a_FAAH_L*L_b/(Km_FAAH_L*FAAH_D_b);
 
-    vS_degr_b @Reaction { actors: S_b =>, modifiers: [FAAH_b] };
+    vS_degr_b @Reaction { actors: S_b =>, modifiers: [FAAH_b], units: nmole/h };
     vS_degr_b := BRAIN*FAAH_b*kcat_FAAH*a_FAAH_S*S_b/(Km_FAAH_S*FAAH_D_b);
 
     // NXPE synthesis
-    vNAPE_syn_b @Reaction { actors: => NAPE_b };
+    vNAPE_syn_b @Reaction { actors: => NAPE_b, units: nmole/h };
     vNAPE_syn_b := BRAIN*Vmax_NAT*p_A*a_NAT_A*b_NAT_Brain;
 
-    vNOPE_syn_b @Reaction { actors: => NOPE_b };
+    vNOPE_syn_b @Reaction { actors: => NOPE_b, units: nmole/h };
     vNOPE_syn_b := BRAIN*Vmax_NAT*p_O*a_NAT_O*b_NAT_Brain;
 
-    vNPPE_syn_b @Reaction { actors: => NPPE_b };
+    vNPPE_syn_b @Reaction { actors: => NPPE_b, units: nmole/h };
     vNPPE_syn_b := BRAIN*Vmax_NAT*p_P*a_NAT_P*b_NAT_Brain;
 
-    vNLPE_syn_b @Reaction { actors: => NLPE_b };
+    vNLPE_syn_b @Reaction { actors: => NLPE_b, units: nmole/h };
     vNLPE_syn_b := BRAIN*Vmax_NAT*p_L*a_NAT_L*b_NAT_Brain;
 
-    vNSPE_syn_b @Reaction { actors: => NSPE_b };
+    vNSPE_syn_b @Reaction { actors: => NSPE_b, units: nmole/h };
     vNSPE_syn_b := BRAIN*Vmax_NAT*p_S*a_NAT_S*b_NAT_Brain;
 
     // XEA synthesis
@@ -74,48 +74,48 @@ namespace human begin
         + S_b/Ki_S;
     den_b @Record := 1 + slag1_b + slag2_b {units: UL};
 
-    vA_syn_b @Reaction { actors: NAPE_b => A_b };
+    vA_syn_b @Reaction { actors: NAPE_b => A_b, units: nmole/h };
     vA_syn_b := BRAIN*PLD_b*k_NA_PE*NAPE_b/Km_NA_PE/den_b;
 
-    vO_syn_b @Reaction { actors: NOPE_b => O_b };
+    vO_syn_b @Reaction { actors: NOPE_b => O_b, units: nmole/h };
     vO_syn_b := BRAIN*PLD_b*k_NO_PE*NOPE_b/Km_NO_PE/den_b;
 
-    vP_syn_b @Reaction { actors: NPPE_b => P_b };
+    vP_syn_b @Reaction { actors: NPPE_b => P_b, units: nmole/h };
     vP_syn_b := BRAIN*PLD_b*k_NP_PE*NPPE_b/Km_NP_PE/den_b;
 
-    vL_syn_b @Reaction { actors: NLPE_b => L_b };
+    vL_syn_b @Reaction { actors: NLPE_b => L_b, units: nmole/h };
     vL_syn_b := BRAIN*PLD_b*k_NL_PE*NLPE_b/Km_NL_PE/den_b;
 
-    vS_syn_b @Reaction { actors: NSPE_b => S_b };
+    vS_syn_b @Reaction { actors: NSPE_b => S_b, units: nmole/h };
     vS_syn_b := BRAIN*PLD_b*k_NS_PE*NSPE_b/Km_NS_PE/den_b;
 
     // FAAH metabolism
-    vFAAH_syn_b @Reaction { actors: => FAAH_b };
+    vFAAH_syn_b @Reaction { actors: => FAAH_b, units: nmole/h };
     vFAAH_syn_b := BRAIN*FAAH_t*b_FAAH_Brain*k_deg_FAAH;      // synthesis
 
-    vFAAH_degr_b @Reaction { actors: FAAH_b => };
+    vFAAH_degr_b @Reaction { actors: FAAH_b =>, units: nmole/h };
     vFAAH_degr_b := BRAIN*k_deg_FAAH*FAAH_b;  // degradation
 
-    vFAAH_inh_b @Reaction { actors: FAAH_b => FAAHinh_b };
+    vFAAH_inh_b @Reaction { actors: FAAH_b => FAAHinh_b, units: nmole/h };
     vFAAH_inh_b := BRAIN*k_inh*FAAH_b*PF_b;  // inhibition
 
-    vFAAH_inh_degr_b @Reaction { actors: FAAHinh_b => };
+    vFAAH_inh_degr_b @Reaction { actors: FAAHinh_b =>, units: nmole/h };
     vFAAH_inh_degr_b := BRAIN*k_deg_FAAH*FAAHinh_b;    // degradation of inhibited
     
     // UNKNOWN ENZYME
-    vA_UE_b @Reaction { actors: A_b => };
+    vA_UE_b @Reaction { actors: A_b =>, units: nmole/h };
     vA_UE_b := BRAIN*b_FAAH_Brain*kcl_A*A_b;
 
-    vO_UE_b @Reaction { actors: O_b => };
+    vO_UE_b @Reaction { actors: O_b =>, units: nmole/h };
     vO_UE_b := BRAIN*b_FAAH_Brain*kcl_O*O_b;
 
-    vP_UE_b @Reaction { actors: P_b => };
+    vP_UE_b @Reaction { actors: P_b =>, units: nmole/h };
     vP_UE_b := BRAIN*b_FAAH_Brain*kcl_P*P_b;
 
-    vL_UE_b @Reaction { actors: L_b => };
+    vL_UE_b @Reaction { actors: L_b =>, units: nmole/h };
     vL_UE_b := BRAIN*b_FAAH_Brain*kcl_L*L_b;
 
-    vS_UE_b @Reaction { actors: S_b => };
+    vS_UE_b @Reaction { actors: S_b =>, units: nmole/h };
     vS_UE_b := BRAIN*b_FAAH_Brain*kcl_S*S_b;
 
     // initial state

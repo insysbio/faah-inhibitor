@@ -22,32 +22,32 @@ namespace human begin
         + L_m/Km_FAAH_L
         + S_m/Km_FAAH_S {units: UL};
 
-    vA_degr_m @Reaction { actors: A_m =>, modifiers: [FAAH_m] };
+    vA_degr_m @Reaction { actors: A_m =>, modifiers: [FAAH_m], units: nmole/h };
     vA_degr_m := MEC*FAAH_m*kcat_FAAH*a_FAAH_A*A_m/(Km_FAAH_A*FAAH_D_m);   //AEA
 
-    vO_degr_m @Reaction { actors: O_m =>, modifiers: [FAAH_m] };
+    vO_degr_m @Reaction { actors: O_m =>, modifiers: [FAAH_m], units: nmole/h };
     vO_degr_m := MEC*FAAH_m*kcat_FAAH*a_FAAH_O*O_m/(Km_FAAH_O*FAAH_D_m);   //OEA
 
-    vP_degr_m @Reaction { actors: P_m =>, modifiers: [FAAH_m] };
+    vP_degr_m @Reaction { actors: P_m =>, modifiers: [FAAH_m], units: nmole/h };
     vP_degr_m := MEC*FAAH_m*kcat_FAAH*a_FAAH_P*P_m/(Km_FAAH_P*FAAH_D_m);   //PEA
 
-    vL_degr_m @Reaction { actors: L_m =>, modifiers: [FAAH_m] };
+    vL_degr_m @Reaction { actors: L_m =>, modifiers: [FAAH_m], units: nmole/h };
     vL_degr_m := MEC*FAAH_m*kcat_FAAH*a_FAAH_L*L_m/(Km_FAAH_L*FAAH_D_m);   //LEA
 
-    vS_degr_m @Reaction { actors: S_m =>, modifiers: [FAAH_m] };
+    vS_degr_m @Reaction { actors: S_m =>, modifiers: [FAAH_m], units: nmole/h };
     vS_degr_m := MEC*FAAH_m*kcat_FAAH*a_FAAH_S*S_m/(Km_FAAH_S*FAAH_D_m);   //PEA
     
     // FAAH IN BRAIN
-    vFAAH_syn_m @Reaction { actors: => FAAH_m };
+    vFAAH_syn_m @Reaction { actors: => FAAH_m, units: nmole/h };
     vFAAH_syn_m := MEC*FAAH_t*b_FAAH_MEC*k_deg_FAAH;      // synthesis
 
-    vFAAH_degr_m @Reaction { actors: FAAH_m => };
+    vFAAH_degr_m @Reaction { actors: FAAH_m =>, units: nmole/h };
     vFAAH_degr_m := MEC*k_deg_FAAH*FAAH_m;  // degradation
 
-    vFAAH_inh_m @Reaction { actors: FAAH_m => FAAHinh_m };
+    vFAAH_inh_m @Reaction { actors: FAAH_m => FAAHinh_m, units: nmole/h };
     vFAAH_inh_m := MEC*k_inh*FAAH_m*PF_m;  // inhibition
 
-    vFAAH_inh_degr_m @Reaction { actors: FAAHinh_m => };
+    vFAAH_inh_degr_m @Reaction { actors: FAAHinh_m =>, units: nmole/h };
     vFAAH_inh_degr_m := MEC*k_deg_FAAH*FAAHinh_m;    // degradation of inhibited
 
     // init
