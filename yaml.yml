@@ -172,6 +172,7 @@
   space: human
   assignments:
     ode_: {expr: kabs_PFM * PFM_gut}
+  units: ng/h
   actors:
     - {target: PFM_gut, stoichiometry: -1}
     - {target: PFM_p, stoichiometry: 1}
@@ -182,6 +183,7 @@
   space: human
   assignments:
     ode_: {expr: kout_PFM * PFM_p - kin_PFM * PFM_r}
+  units: ng/h
   actors:
     - {target: PFM_p, stoichiometry: -1}
     - {target: PFM_r, stoichiometry: 1}
@@ -192,6 +194,7 @@
   space: human
   assignments:
     ode_: {expr: klinear_PFM * PFM_p + (Vm_PFM * PFM_p / Vss_PFM) / (Km_PFM + PFM_p / Vss_PFM)}
+  units: ng/h
   actors:
     - {target: PFM_p, stoichiometry: -1}
 - class: TimeSwitcher
@@ -308,6 +311,7 @@
   space: human
   assignments:
     ode_: {expr: BRAIN * FAAH_b * kcat_FAAH * a_FAAH_A * A_b / (Km_FAAH_A * FAAH_D_b)}
+  units: nmole/h
   actors:
     - {target: A_b, stoichiometry: -1}
   modifiers:
@@ -319,6 +323,7 @@
   space: human
   assignments:
     ode_: {expr: BRAIN * FAAH_b * kcat_FAAH * a_FAAH_O * O_b / (Km_FAAH_O * FAAH_D_b)}
+  units: nmole/h
   actors:
     - {target: O_b, stoichiometry: -1}
   modifiers:
@@ -330,6 +335,7 @@
   space: human
   assignments:
     ode_: {expr: BRAIN * FAAH_b * kcat_FAAH * a_FAAH_P * P_b / (Km_FAAH_P * FAAH_D_b)}
+  units: nmole/h
   actors:
     - {target: P_b, stoichiometry: -1}
   modifiers:
@@ -341,6 +347,7 @@
   space: human
   assignments:
     ode_: {expr: BRAIN * FAAH_b * kcat_FAAH * a_FAAH_L * L_b / (Km_FAAH_L * FAAH_D_b)}
+  units: nmole/h
   actors:
     - {target: L_b, stoichiometry: -1}
   modifiers:
@@ -352,6 +359,7 @@
   space: human
   assignments:
     ode_: {expr: BRAIN * FAAH_b * kcat_FAAH * a_FAAH_S * S_b / (Km_FAAH_S * FAAH_D_b)}
+  units: nmole/h
   actors:
     - {target: S_b, stoichiometry: -1}
   modifiers:
@@ -363,6 +371,7 @@
   space: human
   assignments:
     ode_: {expr: BRAIN * Vmax_NAT * p_A * a_NAT_A * b_NAT_Brain}
+  units: nmole/h
   actors:
     - {target: NAPE_b, stoichiometry: 1}
 - class: Reaction
@@ -372,6 +381,7 @@
   space: human
   assignments:
     ode_: {expr: BRAIN * Vmax_NAT * p_O * a_NAT_O * b_NAT_Brain}
+  units: nmole/h
   actors:
     - {target: NOPE_b, stoichiometry: 1}
 - class: Reaction
@@ -381,6 +391,7 @@
   space: human
   assignments:
     ode_: {expr: BRAIN * Vmax_NAT * p_P * a_NAT_P * b_NAT_Brain}
+  units: nmole/h
   actors:
     - {target: NPPE_b, stoichiometry: 1}
 - class: Reaction
@@ -390,6 +401,7 @@
   space: human
   assignments:
     ode_: {expr: BRAIN * Vmax_NAT * p_L * a_NAT_L * b_NAT_Brain}
+  units: nmole/h
   actors:
     - {target: NLPE_b, stoichiometry: 1}
 - class: Reaction
@@ -399,6 +411,7 @@
   space: human
   assignments:
     ode_: {expr: BRAIN * Vmax_NAT * p_S * a_NAT_S * b_NAT_Brain}
+  units: nmole/h
   actors:
     - {target: NSPE_b, stoichiometry: 1}
 - class: Record
@@ -426,6 +439,7 @@
   space: human
   assignments:
     ode_: {expr: BRAIN * PLD_b * k_NA_PE * NAPE_b / Km_NA_PE / den_b}
+  units: nmole/h
   actors:
     - {target: NAPE_b, stoichiometry: -1}
     - {target: A_b, stoichiometry: 1}
@@ -436,6 +450,7 @@
   space: human
   assignments:
     ode_: {expr: BRAIN * PLD_b * k_NO_PE * NOPE_b / Km_NO_PE / den_b}
+  units: nmole/h
   actors:
     - {target: NOPE_b, stoichiometry: -1}
     - {target: O_b, stoichiometry: 1}
@@ -446,6 +461,7 @@
   space: human
   assignments:
     ode_: {expr: BRAIN * PLD_b * k_NP_PE * NPPE_b / Km_NP_PE / den_b}
+  units: nmole/h
   actors:
     - {target: NPPE_b, stoichiometry: -1}
     - {target: P_b, stoichiometry: 1}
@@ -456,6 +472,7 @@
   space: human
   assignments:
     ode_: {expr: BRAIN * PLD_b * k_NL_PE * NLPE_b / Km_NL_PE / den_b}
+  units: nmole/h
   actors:
     - {target: NLPE_b, stoichiometry: -1}
     - {target: L_b, stoichiometry: 1}
@@ -466,6 +483,7 @@
   space: human
   assignments:
     ode_: {expr: BRAIN * PLD_b * k_NS_PE * NSPE_b / Km_NS_PE / den_b}
+  units: nmole/h
   actors:
     - {target: NSPE_b, stoichiometry: -1}
     - {target: S_b, stoichiometry: 1}
@@ -476,6 +494,7 @@
   space: human
   assignments:
     ode_: {expr: BRAIN * FAAH_t * b_FAAH_Brain * k_deg_FAAH}
+  units: nmole/h
   actors:
     - {target: FAAH_b, stoichiometry: 1}
 - class: Reaction
@@ -485,6 +504,7 @@
   space: human
   assignments:
     ode_: {expr: BRAIN * k_deg_FAAH * FAAH_b}
+  units: nmole/h
   actors:
     - {target: FAAH_b, stoichiometry: -1}
 - class: Reaction
@@ -494,6 +514,7 @@
   space: human
   assignments:
     ode_: {expr: BRAIN * k_inh * FAAH_b * PF_b}
+  units: nmole/h
   actors:
     - {target: FAAH_b, stoichiometry: -1}
     - {target: FAAHinh_b, stoichiometry: 1}
@@ -504,6 +525,7 @@
   space: human
   assignments:
     ode_: {expr: BRAIN * k_deg_FAAH * FAAHinh_b}
+  units: nmole/h
   actors:
     - {target: FAAHinh_b, stoichiometry: -1}
 - class: Reaction
@@ -513,6 +535,7 @@
   space: human
   assignments:
     ode_: {expr: BRAIN * b_FAAH_Brain * kcl_A * A_b}
+  units: nmole/h
   actors:
     - {target: A_b, stoichiometry: -1}
 - class: Reaction
@@ -522,6 +545,7 @@
   space: human
   assignments:
     ode_: {expr: BRAIN * b_FAAH_Brain * kcl_O * O_b}
+  units: nmole/h
   actors:
     - {target: O_b, stoichiometry: -1}
 - class: Reaction
@@ -531,6 +555,7 @@
   space: human
   assignments:
     ode_: {expr: BRAIN * b_FAAH_Brain * kcl_P * P_b}
+  units: nmole/h
   actors:
     - {target: P_b, stoichiometry: -1}
 - class: Reaction
@@ -540,6 +565,7 @@
   space: human
   assignments:
     ode_: {expr: BRAIN * b_FAAH_Brain * kcl_L * L_b}
+  units: nmole/h
   actors:
     - {target: L_b, stoichiometry: -1}
 - class: Reaction
@@ -549,6 +575,7 @@
   space: human
   assignments:
     ode_: {expr: BRAIN * b_FAAH_Brain * kcl_S * S_b}
+  units: nmole/h
   actors:
     - {target: S_b, stoichiometry: -1}
 - class: Const
@@ -701,6 +728,7 @@
   space: human
   assignments:
     ode_: {expr: ROB * FAAH_r * kcat_FAAH * a_FAAH_A * A_r / (Km_FAAH_A * FAAH_D_r)}
+  units: nmole/h
   actors:
     - {target: A_r, stoichiometry: -1}
   modifiers:
@@ -712,6 +740,7 @@
   space: human
   assignments:
     ode_: {expr: ROB * FAAH_r * kcat_FAAH * a_FAAH_O * O_r / (Km_FAAH_O * FAAH_D_r)}
+  units: nmole/h
   actors:
     - {target: O_r, stoichiometry: -1}
   modifiers:
@@ -723,6 +752,7 @@
   space: human
   assignments:
     ode_: {expr: ROB * FAAH_r * kcat_FAAH * a_FAAH_P * P_r / (Km_FAAH_P * FAAH_D_r)}
+  units: nmole/h
   actors:
     - {target: P_r, stoichiometry: -1}
   modifiers:
@@ -734,6 +764,7 @@
   space: human
   assignments:
     ode_: {expr: ROB * FAAH_r * kcat_FAAH * a_FAAH_L * L_r / (Km_FAAH_L * FAAH_D_r)}
+  units: nmole/h
   actors:
     - {target: L_r, stoichiometry: -1}
   modifiers:
@@ -745,6 +776,7 @@
   space: human
   assignments:
     ode_: {expr: ROB * FAAH_r * kcat_FAAH * a_FAAH_S * S_r / (Km_FAAH_S * FAAH_D_r)}
+  units: nmole/h
   actors:
     - {target: S_r, stoichiometry: -1}
   modifiers:
@@ -762,6 +794,7 @@
   space: human
   assignments:
     ode_: {expr: Vmax_NAT * p_A * a_NAT_A * c_NAT_ROB}
+  units: nmole/h
   actors:
     - {target: NAPE_r, stoichiometry: 1}
 - class: Reaction
@@ -771,6 +804,7 @@
   space: human
   assignments:
     ode_: {expr: Vmax_NAT * p_O * a_NAT_O * c_NAT_ROB}
+  units: nmole/h
   actors:
     - {target: NOPE_r, stoichiometry: 1}
 - class: Reaction
@@ -780,6 +814,7 @@
   space: human
   assignments:
     ode_: {expr: Vmax_NAT * p_P * a_NAT_P * c_NAT_ROB}
+  units: nmole/h
   actors:
     - {target: NPPE_r, stoichiometry: 1}
 - class: Reaction
@@ -789,6 +824,7 @@
   space: human
   assignments:
     ode_: {expr: Vmax_NAT * p_L * a_NAT_L * c_NAT_ROB}
+  units: nmole/h
   actors:
     - {target: NLPE_r, stoichiometry: 1}
 - class: Reaction
@@ -798,6 +834,7 @@
   space: human
   assignments:
     ode_: {expr: Vmax_NAT * p_S * a_NAT_S * c_NAT_ROB}
+  units: nmole/h
   actors:
     - {target: NSPE_r, stoichiometry: 1}
 - class: Record
@@ -825,6 +862,7 @@
   space: human
   assignments:
     ode_: {expr: ROB * PLD_r * k_NA_PE * NAPE_r / Km_NA_PE / den_r}
+  units: nmole/h
   actors:
     - {target: NAPE_r, stoichiometry: -1}
     - {target: A_r, stoichiometry: 1}
@@ -835,6 +873,7 @@
   space: human
   assignments:
     ode_: {expr: ROB * PLD_r * k_NO_PE * NOPE_r / Km_NO_PE / den_r}
+  units: nmole/h
   actors:
     - {target: NOPE_r, stoichiometry: -1}
     - {target: O_r, stoichiometry: 1}
@@ -845,6 +884,7 @@
   space: human
   assignments:
     ode_: {expr: ROB * PLD_r * k_NP_PE * NPPE_r / Km_NP_PE / den_r}
+  units: nmole/h
   actors:
     - {target: NPPE_r, stoichiometry: -1}
     - {target: P_r, stoichiometry: 1}
@@ -855,6 +895,7 @@
   space: human
   assignments:
     ode_: {expr: ROB * PLD_r * k_NL_PE * NLPE_r / Km_NL_PE / den_r}
+  units: nmole/h
   actors:
     - {target: NLPE_r, stoichiometry: -1}
     - {target: L_r, stoichiometry: 1}
@@ -865,6 +906,7 @@
   space: human
   assignments:
     ode_: {expr: ROB * PLD_r * k_NS_PE * NSPE_r / Km_NS_PE / den_r}
+  units: nmole/h
   actors:
     - {target: NSPE_r, stoichiometry: -1}
     - {target: S_r, stoichiometry: 1}
@@ -881,6 +923,7 @@
   space: human
   assignments:
     ode_: {expr: FAAH_t * c_FAAH_ROB * k_deg_FAAH}
+  units: nmole/h
   actors:
     - {target: FAAH_r, stoichiometry: 1}
 - class: Reaction
@@ -890,6 +933,7 @@
   space: human
   assignments:
     ode_: {expr: ROB * k_deg_FAAH * FAAH_r}
+  units: nmole/h
   actors:
     - {target: FAAH_r, stoichiometry: -1}
 - class: Reaction
@@ -899,6 +943,7 @@
   space: human
   assignments:
     ode_: {expr: ROB * k_inh * FAAH_r * PF_r}
+  units: nmole/h
   actors:
     - {target: FAAH_r, stoichiometry: -1}
     - {target: FAAHinh_r, stoichiometry: 1}
@@ -909,6 +954,7 @@
   space: human
   assignments:
     ode_: {expr: ROB * k_deg_FAAH * FAAHinh_r}
+  units: nmole/h
   actors:
     - {target: FAAHinh_r, stoichiometry: -1}
 - class: Record
@@ -924,6 +970,7 @@
   space: human
   assignments:
     ode_: {expr: c_NAAA_ROB * kcl_A * A_r}
+  units: nmole/h
   actors:
     - {target: A_r, stoichiometry: -1}
 - class: Reaction
@@ -933,6 +980,7 @@
   space: human
   assignments:
     ode_: {expr: c_NAAA_ROB * kcl_O * O_r}
+  units: nmole/h
   actors:
     - {target: O_r, stoichiometry: -1}
 - class: Reaction
@@ -942,6 +990,7 @@
   space: human
   assignments:
     ode_: {expr: c_NAAA_ROB * kcl_P * P_r}
+  units: nmole/h
   actors:
     - {target: P_r, stoichiometry: -1}
 - class: Reaction
@@ -951,6 +1000,7 @@
   space: human
   assignments:
     ode_: {expr: c_NAAA_ROB * kcl_L * L_r}
+  units: nmole/h
   actors:
     - {target: L_r, stoichiometry: -1}
 - class: Reaction
@@ -960,6 +1010,7 @@
   space: human
   assignments:
     ode_: {expr: c_NAAA_ROB * kcl_S * S_r}
+  units: nmole/h
   actors:
     - {target: S_r, stoichiometry: -1}
 - class: Compartment
@@ -1031,6 +1082,7 @@
   space: human
   assignments:
     ode_: {expr: MEC * FAAH_m * kcat_FAAH * a_FAAH_A * A_m / (Km_FAAH_A * FAAH_D_m)}
+  units: nmole/h
   actors:
     - {target: A_m, stoichiometry: -1}
   modifiers:
@@ -1042,6 +1094,7 @@
   space: human
   assignments:
     ode_: {expr: MEC * FAAH_m * kcat_FAAH * a_FAAH_O * O_m / (Km_FAAH_O * FAAH_D_m)}
+  units: nmole/h
   actors:
     - {target: O_m, stoichiometry: -1}
   modifiers:
@@ -1053,6 +1106,7 @@
   space: human
   assignments:
     ode_: {expr: MEC * FAAH_m * kcat_FAAH * a_FAAH_P * P_m / (Km_FAAH_P * FAAH_D_m)}
+  units: nmole/h
   actors:
     - {target: P_m, stoichiometry: -1}
   modifiers:
@@ -1064,6 +1118,7 @@
   space: human
   assignments:
     ode_: {expr: MEC * FAAH_m * kcat_FAAH * a_FAAH_L * L_m / (Km_FAAH_L * FAAH_D_m)}
+  units: nmole/h
   actors:
     - {target: L_m, stoichiometry: -1}
   modifiers:
@@ -1075,6 +1130,7 @@
   space: human
   assignments:
     ode_: {expr: MEC * FAAH_m * kcat_FAAH * a_FAAH_S * S_m / (Km_FAAH_S * FAAH_D_m)}
+  units: nmole/h
   actors:
     - {target: S_m, stoichiometry: -1}
   modifiers:
@@ -1086,6 +1142,7 @@
   space: human
   assignments:
     ode_: {expr: MEC * FAAH_t * b_FAAH_MEC * k_deg_FAAH}
+  units: nmole/h
   actors:
     - {target: FAAH_m, stoichiometry: 1}
 - class: Reaction
@@ -1095,6 +1152,7 @@
   space: human
   assignments:
     ode_: {expr: MEC * k_deg_FAAH * FAAH_m}
+  units: nmole/h
   actors:
     - {target: FAAH_m, stoichiometry: -1}
 - class: Reaction
@@ -1104,6 +1162,7 @@
   space: human
   assignments:
     ode_: {expr: MEC * k_inh * FAAH_m * PF_m}
+  units: nmole/h
   actors:
     - {target: FAAH_m, stoichiometry: -1}
     - {target: FAAHinh_m, stoichiometry: 1}
@@ -1114,6 +1173,7 @@
   space: human
   assignments:
     ode_: {expr: MEC * k_deg_FAAH * FAAHinh_m}
+  units: nmole/h
   actors:
     - {target: FAAHinh_m, stoichiometry: -1}
 - class: Const
@@ -1544,6 +1604,7 @@
   space: human
   assignments:
     ode_: {expr: MEC * ktr_m_p_A * (A_m - A_p * Ktr_p_m_A) / (A_m + A_p + Km_p_m_A)}
+  units: nmole/h
   actors:
     - {target: A_m, stoichiometry: -1}
     - {target: A_p, stoichiometry: 1}
@@ -1554,6 +1615,7 @@
   space: human
   assignments:
     ode_: {expr: MEC * ktr_m_p_O * (O_m - O_p * Ktr_p_m_O)}
+  units: nmole/h
   actors:
     - {target: O_m, stoichiometry: -1}
     - {target: O_p, stoichiometry: 1}
@@ -1564,6 +1626,7 @@
   space: human
   assignments:
     ode_: {expr: MEC * ktr_m_p_P * (P_m - P_p * Ktr_p_m_P)}
+  units: nmole/h
   actors:
     - {target: P_m, stoichiometry: -1}
     - {target: P_p, stoichiometry: 1}
@@ -1574,6 +1637,7 @@
   space: human
   assignments:
     ode_: {expr: MEC * ktr_m_p_L * (L_m - L_p * Ktr_p_m_L)}
+  units: nmole/h
   actors:
     - {target: L_m, stoichiometry: -1}
     - {target: L_p, stoichiometry: 1}
@@ -1584,6 +1648,7 @@
   space: human
   assignments:
     ode_: {expr: MEC * ktr_m_p_S * (S_m - S_p * Ktr_p_m_S)}
+  units: nmole/h
   actors:
     - {target: S_m, stoichiometry: -1}
     - {target: S_p, stoichiometry: 1}
@@ -1594,6 +1659,7 @@
   space: human
   assignments:
     ode_: {expr: MEC * ktr_m_p_A * (A_b - A_m) / (A_m + A_b + Km_p_m_A)}
+  units: nmole/h
   actors:
     - {target: A_b, stoichiometry: -1}
     - {target: A_m, stoichiometry: 1}
@@ -1604,6 +1670,7 @@
   space: human
   assignments:
     ode_: {expr: MEC * ktr_m_p_O * (O_b - O_m)}
+  units: nmole/h
   actors:
     - {target: O_b, stoichiometry: -1}
     - {target: O_m, stoichiometry: 1}
@@ -1614,6 +1681,7 @@
   space: human
   assignments:
     ode_: {expr: MEC * ktr_m_p_P * (P_b - P_m)}
+  units: nmole/h
   actors:
     - {target: P_b, stoichiometry: -1}
     - {target: P_m, stoichiometry: 1}
@@ -1624,6 +1692,7 @@
   space: human
   assignments:
     ode_: {expr: MEC * ktr_m_p_L * (L_b - L_m)}
+  units: nmole/h
   actors:
     - {target: L_b, stoichiometry: -1}
     - {target: L_m, stoichiometry: 1}
@@ -1634,6 +1703,7 @@
   space: human
   assignments:
     ode_: {expr: MEC * ktr_m_p_S * (S_b - S_m)}
+  units: nmole/h
   actors:
     - {target: S_b, stoichiometry: -1}
     - {target: S_m, stoichiometry: 1}
@@ -1644,6 +1714,7 @@
   space: human
   assignments:
     ode_: {expr: PLASMA * ktr_r_p * (A_r - A_p * Ktr_p_r_A) / (A_r + A_p + Km_p_m_A)}
+  units: nmole/h
   actors:
     - {target: A_r, stoichiometry: -1}
     - {target: A_p, stoichiometry: 1}
@@ -1654,6 +1725,7 @@
   space: human
   assignments:
     ode_: {expr: PLASMA * ktr_r_p * (O_r - O_p * Ktr_p_r_O)}
+  units: nmole/h
   actors:
     - {target: O_r, stoichiometry: -1}
     - {target: O_p, stoichiometry: 1}
@@ -1664,6 +1736,7 @@
   space: human
   assignments:
     ode_: {expr: PLASMA * ktr_r_p * (P_r - P_p * Ktr_p_r_P)}
+  units: nmole/h
   actors:
     - {target: P_r, stoichiometry: -1}
     - {target: P_p, stoichiometry: 1}
@@ -1674,6 +1747,7 @@
   space: human
   assignments:
     ode_: {expr: PLASMA * ktr_r_p * (L_r - L_p * Ktr_p_r_L)}
+  units: nmole/h
   actors:
     - {target: L_r, stoichiometry: -1}
     - {target: L_p, stoichiometry: 1}
@@ -1684,6 +1758,7 @@
   space: human
   assignments:
     ode_: {expr: PLASMA * ktr_r_p * (S_r - S_p * Ktr_p_r_S)}
+  units: nmole/h
   actors:
     - {target: S_r, stoichiometry: -1}
     - {target: S_p, stoichiometry: 1}

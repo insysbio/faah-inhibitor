@@ -680,9 +680,9 @@ PF_p :  (nM)
 PF_b :  (nM)
 PF_r :  (nM)
 PF_m :  (nM)
-absorp :  
-dist :  
-elim :  
+absorp :  (ng/h)
+dist :  (ng/h)
+elim :  (ng/h)
 BRAIN :  (L)
 A_b :  (nM)
 O_b :  (nM)
@@ -697,33 +697,33 @@ NSPE_b :  (nM)
 FAAH_b :  (nM)
 FAAHinh_b :  (nM)
 FAAH_D_b :  (UL)
-vA_degr_b :  
-vO_degr_b :  
-vP_degr_b :  
-vL_degr_b :  
-vS_degr_b :  
-vNAPE_syn_b :  
-vNOPE_syn_b :  
-vNPPE_syn_b :  
-vNLPE_syn_b :  
-vNSPE_syn_b :  
+vA_degr_b :  (nmole/h)
+vO_degr_b :  (nmole/h)
+vP_degr_b :  (nmole/h)
+vL_degr_b :  (nmole/h)
+vS_degr_b :  (nmole/h)
+vNAPE_syn_b :  (nmole/h)
+vNOPE_syn_b :  (nmole/h)
+vNPPE_syn_b :  (nmole/h)
+vNLPE_syn_b :  (nmole/h)
+vNSPE_syn_b :  (nmole/h)
 slag1_b :  (UL)
 slag2_b :  (UL)
 den_b :  (UL)
-vA_syn_b :  
-vO_syn_b :  
-vP_syn_b :  
-vL_syn_b :  
-vS_syn_b :  
-vFAAH_syn_b :  
-vFAAH_degr_b :  
-vFAAH_inh_b :  
-vFAAH_inh_degr_b :  
-vA_UE_b :  
-vO_UE_b :  
-vP_UE_b :  
-vL_UE_b :  
-vS_UE_b :  
+vA_syn_b :  (nmole/h)
+vO_syn_b :  (nmole/h)
+vP_syn_b :  (nmole/h)
+vL_syn_b :  (nmole/h)
+vS_syn_b :  (nmole/h)
+vFAAH_syn_b :  (nmole/h)
+vFAAH_degr_b :  (nmole/h)
+vFAAH_inh_b :  (nmole/h)
+vFAAH_inh_degr_b :  (nmole/h)
+vA_UE_b :  (nmole/h)
+vO_UE_b :  (nmole/h)
+vP_UE_b :  (nmole/h)
+vL_UE_b :  (nmole/h)
+vS_UE_b :  (nmole/h)
 A_r : AEA in rest of body (nM)
 O_r : OEA in rest of body (nM)
 P_r : PEA in rest of body (nM)
@@ -737,36 +737,36 @@ NSPE_r :  (nM)
 FAAH_r :  (nM)
 FAAHinh_r :  (nM)
 FAAH_D_r :  (UL)
-vA_degr_r :  
-vO_degr_r :  
-vP_degr_r :  
-vL_degr_r :  
-vS_degr_r :  
+vA_degr_r :  (nmole/h)
+vO_degr_r :  (nmole/h)
+vP_degr_r :  (nmole/h)
+vL_degr_r :  (nmole/h)
+vS_degr_r :  (nmole/h)
 c_NAT_ROB :  (L)
-vNAPE_syn_r :  
-vNOPE_syn_r :  
-vNPPE_syn_r :  
-vNLPE_syn_r :  
-vNSPE_syn_r :  
+vNAPE_syn_r :  (nmole/h)
+vNOPE_syn_r :  (nmole/h)
+vNPPE_syn_r :  (nmole/h)
+vNLPE_syn_r :  (nmole/h)
+vNSPE_syn_r :  (nmole/h)
 slag1_r :  (UL)
 slag2_r :  (UL)
 den_r :  (UL)
-vA_syn_r :  
-vO_syn_r :  
-vP_syn_r :  
-vL_syn_r :  
-vS_syn_r :  
+vA_syn_r :  (nmole/h)
+vO_syn_r :  (nmole/h)
+vP_syn_r :  (nmole/h)
+vL_syn_r :  (nmole/h)
+vS_syn_r :  (nmole/h)
 c_FAAH_ROB :  (L)
-vFAAH_syn_r :  
-vFAAH_degr_r :  
-vFAAH_inh_r :  
-vFAAH_inh_degr_r :  
+vFAAH_syn_r :  (nmole/h)
+vFAAH_degr_r :  (nmole/h)
+vFAAH_inh_r :  (nmole/h)
+vFAAH_inh_degr_r :  (nmole/h)
 c_NAAA_ROB :  (L)
-vA_UE_r :  
-vO_UE_r :  
-vP_UE_r :  
-vL_UE_r :  
-vS_UE_r :  
+vA_UE_r :  (nmole/h)
+vO_UE_r :  (nmole/h)
+vP_UE_r :  (nmole/h)
+vL_UE_r :  (nmole/h)
+vS_UE_r :  (nmole/h)
 MEC :  (L)
 A_m :  (nM)
 O_m :  (nM)
@@ -776,32 +776,32 @@ S_m :  (nM)
 FAAH_m :  (nM)
 FAAHinh_m :  (nM)
 FAAH_D_m :  (UL)
-vA_degr_m :  
-vO_degr_m :  
-vP_degr_m :  
-vL_degr_m :  
-vS_degr_m :  
-vFAAH_syn_m :  
-vFAAH_degr_m :  
-vFAAH_inh_m :  
-vFAAH_inh_degr_m :  
+vA_degr_m :  (nmole/h)
+vO_degr_m :  (nmole/h)
+vP_degr_m :  (nmole/h)
+vL_degr_m :  (nmole/h)
+vS_degr_m :  (nmole/h)
+vFAAH_syn_m :  (nmole/h)
+vFAAH_degr_m :  (nmole/h)
+vFAAH_inh_m :  (nmole/h)
+vFAAH_inh_degr_m :  (nmole/h)
 A_p :  (nM)
 O_p :  (nM)
 P_p :  (nM)
 L_p :  (nM)
 S_p :  (nM)
-vA_m_p :  
-vO_m_p :  
-vP_m_p :  
-vL_m_p :  
-vS_m_p :  
-vA_b_m :  
-vO_b_m :  
-vP_b_m :  
-vL_b_m :  
-vS_b_m :  
-vA_r_p :  
-vO_r_p :  
-vP_r_p :  
-vL_r_p :  
-vS_r_p :  
+vA_m_p :  (nmole/h)
+vO_m_p :  (nmole/h)
+vP_m_p :  (nmole/h)
+vL_m_p :  (nmole/h)
+vS_m_p :  (nmole/h)
+vA_b_m :  (nmole/h)
+vO_b_m :  (nmole/h)
+vP_b_m :  (nmole/h)
+vL_b_m :  (nmole/h)
+vS_b_m :  (nmole/h)
+vA_r_p :  (nmole/h)
+vO_r_p :  (nmole/h)
+vP_r_p :  (nmole/h)
+vL_r_p :  (nmole/h)
+vS_r_p :  (nmole/h)

@@ -1446,33 +1446,33 @@ F_PFM = Emax_PFM * Dose / (ED50 + Dose); // @Record {units: UL}
 
 dose_amount = F_PFM * 1e+6 * Dose * F_PFM; // @Record {units: ng}
 
-absorp = kabs_PFM * PFM_gut; // @Reaction {units: ?}
+absorp = kabs_PFM * PFM_gut; // @Reaction {units: ng/h}
 
-dist = kout_PFM * PFM_p - kin_PFM * PFM_r; // @Reaction {units: ?}
+dist = kout_PFM * PFM_p - kin_PFM * PFM_r; // @Reaction {units: ng/h}
 
-elim = klinear_PFM * PFM_p + (Vm_PFM * PFM_p / Vss_PFM) / (Km_PFM + PFM_p / Vss_PFM); // @Reaction {units: ?}
+elim = klinear_PFM * PFM_p + (Vm_PFM * PFM_p / Vss_PFM) / (Km_PFM + PFM_p / Vss_PFM); // @Reaction {units: ng/h}
 
 FAAH_D_b = 1 + A_b / Km_FAAH_A + O_b / Km_FAAH_O + P_b / Km_FAAH_P + L_b / Km_FAAH_L + S_b / Km_FAAH_S; // @Record {units: UL}
 
-vA_degr_b = BRAIN * FAAH_b * kcat_FAAH * a_FAAH_A * A_b / (Km_FAAH_A * FAAH_D_b); // @Reaction {units: ?}
+vA_degr_b = BRAIN * FAAH_b * kcat_FAAH * a_FAAH_A * A_b / (Km_FAAH_A * FAAH_D_b); // @Reaction {units: nmole/h}
 
-vO_degr_b = BRAIN * FAAH_b * kcat_FAAH * a_FAAH_O * O_b / (Km_FAAH_O * FAAH_D_b); // @Reaction {units: ?}
+vO_degr_b = BRAIN * FAAH_b * kcat_FAAH * a_FAAH_O * O_b / (Km_FAAH_O * FAAH_D_b); // @Reaction {units: nmole/h}
 
-vP_degr_b = BRAIN * FAAH_b * kcat_FAAH * a_FAAH_P * P_b / (Km_FAAH_P * FAAH_D_b); // @Reaction {units: ?}
+vP_degr_b = BRAIN * FAAH_b * kcat_FAAH * a_FAAH_P * P_b / (Km_FAAH_P * FAAH_D_b); // @Reaction {units: nmole/h}
 
-vL_degr_b = BRAIN * FAAH_b * kcat_FAAH * a_FAAH_L * L_b / (Km_FAAH_L * FAAH_D_b); // @Reaction {units: ?}
+vL_degr_b = BRAIN * FAAH_b * kcat_FAAH * a_FAAH_L * L_b / (Km_FAAH_L * FAAH_D_b); // @Reaction {units: nmole/h}
 
-vS_degr_b = BRAIN * FAAH_b * kcat_FAAH * a_FAAH_S * S_b / (Km_FAAH_S * FAAH_D_b); // @Reaction {units: ?}
+vS_degr_b = BRAIN * FAAH_b * kcat_FAAH * a_FAAH_S * S_b / (Km_FAAH_S * FAAH_D_b); // @Reaction {units: nmole/h}
 
-vNAPE_syn_b = BRAIN * Vmax_NAT * p_A * a_NAT_A * b_NAT_Brain; // @Reaction {units: ?}
+vNAPE_syn_b = BRAIN * Vmax_NAT * p_A * a_NAT_A * b_NAT_Brain; // @Reaction {units: nmole/h}
 
-vNOPE_syn_b = BRAIN * Vmax_NAT * p_O * a_NAT_O * b_NAT_Brain; // @Reaction {units: ?}
+vNOPE_syn_b = BRAIN * Vmax_NAT * p_O * a_NAT_O * b_NAT_Brain; // @Reaction {units: nmole/h}
 
-vNPPE_syn_b = BRAIN * Vmax_NAT * p_P * a_NAT_P * b_NAT_Brain; // @Reaction {units: ?}
+vNPPE_syn_b = BRAIN * Vmax_NAT * p_P * a_NAT_P * b_NAT_Brain; // @Reaction {units: nmole/h}
 
-vNLPE_syn_b = BRAIN * Vmax_NAT * p_L * a_NAT_L * b_NAT_Brain; // @Reaction {units: ?}
+vNLPE_syn_b = BRAIN * Vmax_NAT * p_L * a_NAT_L * b_NAT_Brain; // @Reaction {units: nmole/h}
 
-vNSPE_syn_b = BRAIN * Vmax_NAT * p_S * a_NAT_S * b_NAT_Brain; // @Reaction {units: ?}
+vNSPE_syn_b = BRAIN * Vmax_NAT * p_S * a_NAT_S * b_NAT_Brain; // @Reaction {units: nmole/h}
 
 slag1_b = NAPE_b / Km_NA_PE + NOPE_b / Km_NO_PE + NPPE_b / Km_NP_PE + NLPE_b / Km_NL_PE + NSPE_b / Km_NS_PE; // @Record {units: UL}
 
@@ -1480,61 +1480,61 @@ slag2_b = A_b / Ki_A + O_b / Ki_O + P_b / Ki_P + L_b / Ki_L + S_b / Ki_S; // @Re
 
 den_b = 1 + slag1_b + slag2_b; // @Record {units: UL}
 
-vA_syn_b = BRAIN * PLD_b * k_NA_PE * NAPE_b / Km_NA_PE / den_b; // @Reaction {units: ?}
+vA_syn_b = BRAIN * PLD_b * k_NA_PE * NAPE_b / Km_NA_PE / den_b; // @Reaction {units: nmole/h}
 
-vO_syn_b = BRAIN * PLD_b * k_NO_PE * NOPE_b / Km_NO_PE / den_b; // @Reaction {units: ?}
+vO_syn_b = BRAIN * PLD_b * k_NO_PE * NOPE_b / Km_NO_PE / den_b; // @Reaction {units: nmole/h}
 
-vP_syn_b = BRAIN * PLD_b * k_NP_PE * NPPE_b / Km_NP_PE / den_b; // @Reaction {units: ?}
+vP_syn_b = BRAIN * PLD_b * k_NP_PE * NPPE_b / Km_NP_PE / den_b; // @Reaction {units: nmole/h}
 
-vL_syn_b = BRAIN * PLD_b * k_NL_PE * NLPE_b / Km_NL_PE / den_b; // @Reaction {units: ?}
+vL_syn_b = BRAIN * PLD_b * k_NL_PE * NLPE_b / Km_NL_PE / den_b; // @Reaction {units: nmole/h}
 
-vS_syn_b = BRAIN * PLD_b * k_NS_PE * NSPE_b / Km_NS_PE / den_b; // @Reaction {units: ?}
+vS_syn_b = BRAIN * PLD_b * k_NS_PE * NSPE_b / Km_NS_PE / den_b; // @Reaction {units: nmole/h}
 
-vFAAH_syn_b = BRAIN * FAAH_t * b_FAAH_Brain * k_deg_FAAH; // @Reaction {units: ?}
+vFAAH_syn_b = BRAIN * FAAH_t * b_FAAH_Brain * k_deg_FAAH; // @Reaction {units: nmole/h}
 
-vFAAH_degr_b = BRAIN * k_deg_FAAH * FAAH_b; // @Reaction {units: ?}
+vFAAH_degr_b = BRAIN * k_deg_FAAH * FAAH_b; // @Reaction {units: nmole/h}
 
 PF_p = PFM_p / M_PF / Vss_PFM; // @Record {units: nM}
 
 PF_b = PF_p * Kp_b_PF; // @Record {units: nM}
 
-vFAAH_inh_b = BRAIN * k_inh * FAAH_b * PF_b; // @Reaction {units: ?}
+vFAAH_inh_b = BRAIN * k_inh * FAAH_b * PF_b; // @Reaction {units: nmole/h}
 
-vFAAH_inh_degr_b = BRAIN * k_deg_FAAH * FAAHinh_b; // @Reaction {units: ?}
+vFAAH_inh_degr_b = BRAIN * k_deg_FAAH * FAAHinh_b; // @Reaction {units: nmole/h}
 
-vA_UE_b = BRAIN * b_FAAH_Brain * kcl_A * A_b; // @Reaction {units: ?}
+vA_UE_b = BRAIN * b_FAAH_Brain * kcl_A * A_b; // @Reaction {units: nmole/h}
 
-vO_UE_b = BRAIN * b_FAAH_Brain * kcl_O * O_b; // @Reaction {units: ?}
+vO_UE_b = BRAIN * b_FAAH_Brain * kcl_O * O_b; // @Reaction {units: nmole/h}
 
-vP_UE_b = BRAIN * b_FAAH_Brain * kcl_P * P_b; // @Reaction {units: ?}
+vP_UE_b = BRAIN * b_FAAH_Brain * kcl_P * P_b; // @Reaction {units: nmole/h}
 
-vL_UE_b = BRAIN * b_FAAH_Brain * kcl_L * L_b; // @Reaction {units: ?}
+vL_UE_b = BRAIN * b_FAAH_Brain * kcl_L * L_b; // @Reaction {units: nmole/h}
 
-vS_UE_b = BRAIN * b_FAAH_Brain * kcl_S * S_b; // @Reaction {units: ?}
+vS_UE_b = BRAIN * b_FAAH_Brain * kcl_S * S_b; // @Reaction {units: nmole/h}
 
 FAAH_D_r = 1 + A_r / Km_FAAH_A + O_r / Km_FAAH_O + P_r / Km_FAAH_P + L_r / Km_FAAH_L + S_r / Km_FAAH_S; // @Record {units: UL}
 
-vA_degr_r = ROB * FAAH_r * kcat_FAAH * a_FAAH_A * A_r / (Km_FAAH_A * FAAH_D_r); // @Reaction {units: ?}
+vA_degr_r = ROB * FAAH_r * kcat_FAAH * a_FAAH_A * A_r / (Km_FAAH_A * FAAH_D_r); // @Reaction {units: nmole/h}
 
-vO_degr_r = ROB * FAAH_r * kcat_FAAH * a_FAAH_O * O_r / (Km_FAAH_O * FAAH_D_r); // @Reaction {units: ?}
+vO_degr_r = ROB * FAAH_r * kcat_FAAH * a_FAAH_O * O_r / (Km_FAAH_O * FAAH_D_r); // @Reaction {units: nmole/h}
 
-vP_degr_r = ROB * FAAH_r * kcat_FAAH * a_FAAH_P * P_r / (Km_FAAH_P * FAAH_D_r); // @Reaction {units: ?}
+vP_degr_r = ROB * FAAH_r * kcat_FAAH * a_FAAH_P * P_r / (Km_FAAH_P * FAAH_D_r); // @Reaction {units: nmole/h}
 
-vL_degr_r = ROB * FAAH_r * kcat_FAAH * a_FAAH_L * L_r / (Km_FAAH_L * FAAH_D_r); // @Reaction {units: ?}
+vL_degr_r = ROB * FAAH_r * kcat_FAAH * a_FAAH_L * L_r / (Km_FAAH_L * FAAH_D_r); // @Reaction {units: nmole/h}
 
-vS_degr_r = ROB * FAAH_r * kcat_FAAH * a_FAAH_S * S_r / (Km_FAAH_S * FAAH_D_r); // @Reaction {units: ?}
+vS_degr_r = ROB * FAAH_r * kcat_FAAH * a_FAAH_S * S_r / (Km_FAAH_S * FAAH_D_r); // @Reaction {units: nmole/h}
 
 c_NAT_ROB = Pancreas * b_NAT_Pancreas + Kidney * b_NAT_Kidney + Heart * b_NAT_Heart + Lungs * b_NAT_Lungs + Muscles * b_NAT_Muscles + Testis * b_NAT_Testis + Leucocytes * b_NAT_Leucocytes; // @Record {units: L}
 
-vNAPE_syn_r = Vmax_NAT * p_A * a_NAT_A * c_NAT_ROB; // @Reaction {units: ?}
+vNAPE_syn_r = Vmax_NAT * p_A * a_NAT_A * c_NAT_ROB; // @Reaction {units: nmole/h}
 
-vNOPE_syn_r = Vmax_NAT * p_O * a_NAT_O * c_NAT_ROB; // @Reaction {units: ?}
+vNOPE_syn_r = Vmax_NAT * p_O * a_NAT_O * c_NAT_ROB; // @Reaction {units: nmole/h}
 
-vNPPE_syn_r = Vmax_NAT * p_P * a_NAT_P * c_NAT_ROB; // @Reaction {units: ?}
+vNPPE_syn_r = Vmax_NAT * p_P * a_NAT_P * c_NAT_ROB; // @Reaction {units: nmole/h}
 
-vNLPE_syn_r = Vmax_NAT * p_L * a_NAT_L * c_NAT_ROB; // @Reaction {units: ?}
+vNLPE_syn_r = Vmax_NAT * p_L * a_NAT_L * c_NAT_ROB; // @Reaction {units: nmole/h}
 
-vNSPE_syn_r = Vmax_NAT * p_S * a_NAT_S * c_NAT_ROB; // @Reaction {units: ?}
+vNSPE_syn_r = Vmax_NAT * p_S * a_NAT_S * c_NAT_ROB; // @Reaction {units: nmole/h}
 
 slag1_r = NAPE_r / Km_NA_PE + NOPE_r / Km_NO_PE + NPPE_r / Km_NP_PE + NLPE_r / Km_NL_PE + NSPE_r / Km_NS_PE; // @Record {units: UL}
 
@@ -1542,91 +1542,91 @@ slag2_r = A_r / Ki_A + O_r / Ki_O + P_r / Ki_P + L_r / Ki_L + S_r / Ki_S; // @Re
 
 den_r = 1 + slag1_r + slag2_r; // @Record {units: UL}
 
-vA_syn_r = ROB * PLD_r * k_NA_PE * NAPE_r / Km_NA_PE / den_r; // @Reaction {units: ?}
+vA_syn_r = ROB * PLD_r * k_NA_PE * NAPE_r / Km_NA_PE / den_r; // @Reaction {units: nmole/h}
 
-vO_syn_r = ROB * PLD_r * k_NO_PE * NOPE_r / Km_NO_PE / den_r; // @Reaction {units: ?}
+vO_syn_r = ROB * PLD_r * k_NO_PE * NOPE_r / Km_NO_PE / den_r; // @Reaction {units: nmole/h}
 
-vP_syn_r = ROB * PLD_r * k_NP_PE * NPPE_r / Km_NP_PE / den_r; // @Reaction {units: ?}
+vP_syn_r = ROB * PLD_r * k_NP_PE * NPPE_r / Km_NP_PE / den_r; // @Reaction {units: nmole/h}
 
-vL_syn_r = ROB * PLD_r * k_NL_PE * NLPE_r / Km_NL_PE / den_r; // @Reaction {units: ?}
+vL_syn_r = ROB * PLD_r * k_NL_PE * NLPE_r / Km_NL_PE / den_r; // @Reaction {units: nmole/h}
 
-vS_syn_r = ROB * PLD_r * k_NS_PE * NSPE_r / Km_NS_PE / den_r; // @Reaction {units: ?}
+vS_syn_r = ROB * PLD_r * k_NS_PE * NSPE_r / Km_NS_PE / den_r; // @Reaction {units: nmole/h}
 
 c_FAAH_ROB = LIVER * b_FAAH_Liver + Gut * b_FAAH_Gut + Spleen * b_FAAH_Spleen + Kidney * b_FAAH_Kidney + Lungs * b_FAAH_Lungs + Testis * b_FAAH_Testis + Leucocytes * b_FAAH_Leucocytes; // @Record {units: L}
 
-vFAAH_syn_r = FAAH_t * c_FAAH_ROB * k_deg_FAAH; // @Reaction {units: ?}
+vFAAH_syn_r = FAAH_t * c_FAAH_ROB * k_deg_FAAH; // @Reaction {units: nmole/h}
 
-vFAAH_degr_r = ROB * k_deg_FAAH * FAAH_r; // @Reaction {units: ?}
+vFAAH_degr_r = ROB * k_deg_FAAH * FAAH_r; // @Reaction {units: nmole/h}
 
 PF_r = PF_p * Kp_r_PF; // @Record {units: nM}
 
-vFAAH_inh_r = ROB * k_inh * FAAH_r * PF_r; // @Reaction {units: ?}
+vFAAH_inh_r = ROB * k_inh * FAAH_r * PF_r; // @Reaction {units: nmole/h}
 
-vFAAH_inh_degr_r = ROB * k_deg_FAAH * FAAHinh_r; // @Reaction {units: ?}
+vFAAH_inh_degr_r = ROB * k_deg_FAAH * FAAHinh_r; // @Reaction {units: nmole/h}
 
 c_NAAA_ROB = LIVER * b_NAAA_Liver + Gut * b_NAAA_Gut + Spleen * b_NAAA_Spleen + Kidney * b_NAAA_Kidney + Heart * b_NAAA_Heart + Lungs * b_NAAA_Lungs + Thymus * b_NAAA_Thymus + Testis * b_NAAA_Thymus * Testis; // @Record {units: L}
 
-vA_UE_r = c_NAAA_ROB * kcl_A * A_r; // @Reaction {units: ?}
+vA_UE_r = c_NAAA_ROB * kcl_A * A_r; // @Reaction {units: nmole/h}
 
-vO_UE_r = c_NAAA_ROB * kcl_O * O_r; // @Reaction {units: ?}
+vO_UE_r = c_NAAA_ROB * kcl_O * O_r; // @Reaction {units: nmole/h}
 
-vP_UE_r = c_NAAA_ROB * kcl_P * P_r; // @Reaction {units: ?}
+vP_UE_r = c_NAAA_ROB * kcl_P * P_r; // @Reaction {units: nmole/h}
 
-vL_UE_r = c_NAAA_ROB * kcl_L * L_r; // @Reaction {units: ?}
+vL_UE_r = c_NAAA_ROB * kcl_L * L_r; // @Reaction {units: nmole/h}
 
-vS_UE_r = c_NAAA_ROB * kcl_S * S_r; // @Reaction {units: ?}
+vS_UE_r = c_NAAA_ROB * kcl_S * S_r; // @Reaction {units: nmole/h}
 
 FAAH_D_m = 1 + A_m / Km_FAAH_A + O_m / Km_FAAH_O + P_m / Km_FAAH_P + L_m / Km_FAAH_L + S_m / Km_FAAH_S; // @Record {units: UL}
 
-vA_degr_m = MEC * FAAH_m * kcat_FAAH * a_FAAH_A * A_m / (Km_FAAH_A * FAAH_D_m); // @Reaction {units: ?}
+vA_degr_m = MEC * FAAH_m * kcat_FAAH * a_FAAH_A * A_m / (Km_FAAH_A * FAAH_D_m); // @Reaction {units: nmole/h}
 
-vO_degr_m = MEC * FAAH_m * kcat_FAAH * a_FAAH_O * O_m / (Km_FAAH_O * FAAH_D_m); // @Reaction {units: ?}
+vO_degr_m = MEC * FAAH_m * kcat_FAAH * a_FAAH_O * O_m / (Km_FAAH_O * FAAH_D_m); // @Reaction {units: nmole/h}
 
-vP_degr_m = MEC * FAAH_m * kcat_FAAH * a_FAAH_P * P_m / (Km_FAAH_P * FAAH_D_m); // @Reaction {units: ?}
+vP_degr_m = MEC * FAAH_m * kcat_FAAH * a_FAAH_P * P_m / (Km_FAAH_P * FAAH_D_m); // @Reaction {units: nmole/h}
 
-vL_degr_m = MEC * FAAH_m * kcat_FAAH * a_FAAH_L * L_m / (Km_FAAH_L * FAAH_D_m); // @Reaction {units: ?}
+vL_degr_m = MEC * FAAH_m * kcat_FAAH * a_FAAH_L * L_m / (Km_FAAH_L * FAAH_D_m); // @Reaction {units: nmole/h}
 
-vS_degr_m = MEC * FAAH_m * kcat_FAAH * a_FAAH_S * S_m / (Km_FAAH_S * FAAH_D_m); // @Reaction {units: ?}
+vS_degr_m = MEC * FAAH_m * kcat_FAAH * a_FAAH_S * S_m / (Km_FAAH_S * FAAH_D_m); // @Reaction {units: nmole/h}
 
-vFAAH_syn_m = MEC * FAAH_t * b_FAAH_MEC * k_deg_FAAH; // @Reaction {units: ?}
+vFAAH_syn_m = MEC * FAAH_t * b_FAAH_MEC * k_deg_FAAH; // @Reaction {units: nmole/h}
 
-vFAAH_degr_m = MEC * k_deg_FAAH * FAAH_m; // @Reaction {units: ?}
+vFAAH_degr_m = MEC * k_deg_FAAH * FAAH_m; // @Reaction {units: nmole/h}
 
 PF_m = PF_p * Kp_m_PF; // @Record {units: nM}
 
-vFAAH_inh_m = MEC * k_inh * FAAH_m * PF_m; // @Reaction {units: ?}
+vFAAH_inh_m = MEC * k_inh * FAAH_m * PF_m; // @Reaction {units: nmole/h}
 
-vFAAH_inh_degr_m = MEC * k_deg_FAAH * FAAHinh_m; // @Reaction {units: ?}
+vFAAH_inh_degr_m = MEC * k_deg_FAAH * FAAHinh_m; // @Reaction {units: nmole/h}
 
-vA_m_p = MEC * ktr_m_p_A * (A_m - A_p * Ktr_p_m_A) / (A_m + A_p + Km_p_m_A); // @Reaction {units: ?}
+vA_m_p = MEC * ktr_m_p_A * (A_m - A_p * Ktr_p_m_A) / (A_m + A_p + Km_p_m_A); // @Reaction {units: nmole/h}
 
-vO_m_p = MEC * ktr_m_p_O * (O_m - O_p * Ktr_p_m_O); // @Reaction {units: ?}
+vO_m_p = MEC * ktr_m_p_O * (O_m - O_p * Ktr_p_m_O); // @Reaction {units: nmole/h}
 
-vP_m_p = MEC * ktr_m_p_P * (P_m - P_p * Ktr_p_m_P); // @Reaction {units: ?}
+vP_m_p = MEC * ktr_m_p_P * (P_m - P_p * Ktr_p_m_P); // @Reaction {units: nmole/h}
 
-vL_m_p = MEC * ktr_m_p_L * (L_m - L_p * Ktr_p_m_L); // @Reaction {units: ?}
+vL_m_p = MEC * ktr_m_p_L * (L_m - L_p * Ktr_p_m_L); // @Reaction {units: nmole/h}
 
-vS_m_p = MEC * ktr_m_p_S * (S_m - S_p * Ktr_p_m_S); // @Reaction {units: ?}
+vS_m_p = MEC * ktr_m_p_S * (S_m - S_p * Ktr_p_m_S); // @Reaction {units: nmole/h}
 
-vA_b_m = MEC * ktr_m_p_A * (A_b - A_m) / (A_m + A_b + Km_p_m_A); // @Reaction {units: ?}
+vA_b_m = MEC * ktr_m_p_A * (A_b - A_m) / (A_m + A_b + Km_p_m_A); // @Reaction {units: nmole/h}
 
-vO_b_m = MEC * ktr_m_p_O * (O_b - O_m); // @Reaction {units: ?}
+vO_b_m = MEC * ktr_m_p_O * (O_b - O_m); // @Reaction {units: nmole/h}
 
-vP_b_m = MEC * ktr_m_p_P * (P_b - P_m); // @Reaction {units: ?}
+vP_b_m = MEC * ktr_m_p_P * (P_b - P_m); // @Reaction {units: nmole/h}
 
-vL_b_m = MEC * ktr_m_p_L * (L_b - L_m); // @Reaction {units: ?}
+vL_b_m = MEC * ktr_m_p_L * (L_b - L_m); // @Reaction {units: nmole/h}
 
-vS_b_m = MEC * ktr_m_p_S * (S_b - S_m); // @Reaction {units: ?}
+vS_b_m = MEC * ktr_m_p_S * (S_b - S_m); // @Reaction {units: nmole/h}
 
-vA_r_p = PLASMA * ktr_r_p * (A_r - A_p * Ktr_p_r_A) / (A_r + A_p + Km_p_m_A); // @Reaction {units: ?}
+vA_r_p = PLASMA * ktr_r_p * (A_r - A_p * Ktr_p_r_A) / (A_r + A_p + Km_p_m_A); // @Reaction {units: nmole/h}
 
-vO_r_p = PLASMA * ktr_r_p * (O_r - O_p * Ktr_p_r_O); // @Reaction {units: ?}
+vO_r_p = PLASMA * ktr_r_p * (O_r - O_p * Ktr_p_r_O); // @Reaction {units: nmole/h}
 
-vP_r_p = PLASMA * ktr_r_p * (P_r - P_p * Ktr_p_r_P); // @Reaction {units: ?}
+vP_r_p = PLASMA * ktr_r_p * (P_r - P_p * Ktr_p_r_P); // @Reaction {units: nmole/h}
 
-vL_r_p = PLASMA * ktr_r_p * (L_r - L_p * Ktr_p_r_L); // @Reaction {units: ?}
+vL_r_p = PLASMA * ktr_r_p * (L_r - L_p * Ktr_p_r_L); // @Reaction {units: nmole/h}
 
-vS_r_p = PLASMA * ktr_r_p * (S_r - S_p * Ktr_p_r_S); // @Reaction {units: ?}
+vS_r_p = PLASMA * ktr_r_p * (S_r - S_p * Ktr_p_r_S); // @Reaction {units: nmole/h}
 
 //! Differential equations, count: 39
 
