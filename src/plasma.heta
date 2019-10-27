@@ -2,12 +2,12 @@
     PLASMA
 */
 
-H @Const = 0.48;              // [--]
+H @Const = 0.48; // average human hematocrit value
 
 namespace human begin
     // compartment
     '''Blood plasma compartment'''
-    PLASMA @Compartment .= 2.649 {units: L};
+    PLASMA @Compartment .= 2.649 {units: L};  // measured J Pharmacokinet Pharmacodyn (2008) v35 p1-30
 
     // species
     A_p @Species { compartment: PLASMA, units: nM };

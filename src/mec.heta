@@ -3,7 +3,7 @@
 */
 namespace human begin
     ''' The same as blood brain barrier (BBB) '''
-    MEC @Compartment .= 1.5e-5 {units: L};
+    MEC @Compartment .= 1.5e-5 {units: L};  // calculated J Pharmacokinet Pharmacodyn (2008) v35 p1-30
 
     // species
     A_m @Species { compartment: MEC, units: nM };

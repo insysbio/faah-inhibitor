@@ -46,32 +46,32 @@ description @Page { content: "
 
 // === TRANSPORT ===
 // From MEC to Plasma, Brain to MEC
-ktr_m_p_A @Const = 1.5e2 {units: nM/h};
-Ktr_p_m_A @Const = 1.89 {units: UL};
-Km_p_m_A @Const = 1.0 {units: nM};
+ktr_m_p_A @Const = 1.5e2 {units: nM/h}; // fitted Thromb Haemost 2006; 95: 117–127
+Ktr_p_m_A @Const = 1.89 {units: UL}; // calculated on the base of LogP by Pfizer
+Km_p_m_A @Const = 1.0 {units: nM}; // fitted Thromb Haemost 2006; 95: 117–127
 
-ktr_m_p_O @Const = 1e1 {units: 1/h};
-Ktr_p_m_O @Const = 9.07 {units: UL};
+ktr_m_p_O @Const = 1e1 {units: 1/h}; // fitted to provide rapid-equilibrium transport
+Ktr_p_m_O @Const = 9.07 {units: UL}; // calculated on the base of LogP by Pfizer
 //Km_p_m_O @Const = 1.0;
 
-ktr_m_p_P @Const = 1e1 {units: 1/h};
-Ktr_p_m_P @Const = 2.65 {units: UL};
+ktr_m_p_P @Const = 1e1 {units: 1/h}; // fitted to provide rapid-equilibrium transport
+Ktr_p_m_P @Const = 2.65 {units: UL}; // calculated on the base of LogP by Pfizer
 //Km_p_m_P=1.0;
 
-ktr_m_p_L @Const = 0 {units: 1/h};
-Ktr_p_m_L @Const = 2.77 {units: UL};
+ktr_m_p_L @Const = 0 {units: 1/h}; // fitted to provide rapid-equilibrium transport
+Ktr_p_m_L @Const = 2.77 {units: UL}; // calculated on the base of LogP by Pfizer
 //Km_p_m_L @Const = 1.0;
 
-ktr_m_p_S @Const = 1e1 {units: 1/h};
-Ktr_p_m_S @Const = 30.01 {units: UL};
+ktr_m_p_S @Const = 1e1 {units: 1/h}; // fitted to provide rapid-equilibrium transport
+Ktr_p_m_S @Const = 30.01 {units: UL}; // calculated on the base of LogP by Pfizer
 //Km_p_m_S @Const = 1.0;
 // From ROB to PLASMA
-ktr_r_p @Const = 1e2 {units: nM/h};
-Ktr_p_r_A @Const = 0.62 {units: UL};
-Ktr_p_r_O @Const = 2.80 {units: UL};
-Ktr_p_r_P @Const = 0.85 {units: UL};
-Ktr_p_r_L @Const = 0.89 {units: UL};
-Ktr_p_r_S @Const = 9.19 {units: UL};
+ktr_r_p @Const = 1e2 {units: nM/h}; // fitted to provide rapid-equilibrium transport
+Ktr_p_r_A @Const = 0.62 {units: UL}; // calculated on the base of LogP by Pfizer
+Ktr_p_r_O @Const = 2.80 {units: UL}; // calculated on the base of LogP by Pfizer
+Ktr_p_r_P @Const = 0.85 {units: UL}; // calculated on the base of LogP by Pfizer
+Ktr_p_r_L @Const = 0.89 {units: UL}; // calculated on the base of LogP by Pfizer
+Ktr_p_r_S @Const = 9.19 {units: UL}; // calculated on the base of LogP by Pfizer
 
 namespace human begin
     // from MEC to PLASMA

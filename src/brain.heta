@@ -6,7 +6,7 @@ PLD_b @Const = 1e7 {units: nM};
 
 namespace human begin
     ''' Volume of brain '''
-    BRAIN @Compartment .= 1.45 {units: L};
+    BRAIN @Compartment .= 1.45 {units: L, aux : {source: measured} }; // measured J Pharmacokinet Pharmacodyn (2008) v35 p1-30
 
     // species
     A_b @Species { compartment: BRAIN, units: nM };

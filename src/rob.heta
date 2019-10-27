@@ -2,18 +2,18 @@
     REST OF BODY
 */
 PLD_r @Const = 1e7 {units: nM};
-LIVER @Const = 1.69 {units: L};
-Gut @Const = 1.65 {units: L};
-Spleen @Const = 0.192 {units: L};
-Kidney @Const = 0.28 {units: L};
-Lungs @Const = 1.172 {units: L};
-Testis @Const = 0.036 {units: L};
-Leucocytes @Const = 0.025 {units: L};
-Pancreas @Const = 0.077 {units: L};
-Heart @Const = 0.31 {units: L};
-Lungs @Const = 1.172 {units: L};
-Muscles @Const = 35 {units: L};
-Thymus @Const = 0.029 {units: L};
+LIVER @Const = 1.69 {units: L};   // measured J Pharmacokinet Pharmacodyn (2008) v35 p1-30
+Gut @Const = 1.65 {units: L};     // measured J Pharmacokinet Pharmacodyn (2008) v35 p1-30
+Spleen @Const = 0.192 {units: L}; // measured J Pharmacokinet Pharmacodyn (2008) v35 p1-30
+Kidney @Const = 0.28 {units: L};  // measured J Pharmacokinet Pharmacodyn (2008) v35 p1-30
+Lungs @Const = 1.172 {units: L};      // measured J Pharmacokinet Pharmacodyn (2008) v35 p1-30
+Testis @Const = 0.036 {units: L};     // measured J Pharmacokinet Pharmacodyn (2008) v35 p1-30
+Leucocytes @Const = 0.025 {units: L}; // calculated Canadian Medical Association journal. 1967;97(13):793-6.
+Pancreas @Const = 0.077 {units: L};   // measured J Pharmacokinet Pharmacodyn (2008) v35 p1-30
+Heart @Const = 0.31 {units: L};   // measured J Pharmacokinet Pharmacodyn (2008) v35 p1-30
+Lungs @Const = 1.172 {units: L};  // measured J Pharmacokinet Pharmacodyn (2008) v35 p1-30
+Muscles @Const = 35 {units: L};   // measured J Pharmacokinet Pharmacodyn (2008) v35 p1-30
+Thymus @Const = 0.029 {units: L}; // measured J Pharmacokinet Pharmacodyn (2008) v35 p1-30
 
 namespace human begin
     ''' Compartment representing "rest of body" '''
