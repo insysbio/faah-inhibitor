@@ -72,6 +72,7 @@
   units: ng/L
 - class: Const
   id: R_PF
+  title: blood/plasma
   num: 0.6
   units: UL
 - class: Const
@@ -210,6 +211,8 @@
 - class: Compartment
   id: BRAIN
   notes: Volume of brain
+  aux:
+    source: measured
   space: human
   assignments:
     start_: {expr: '1.45'}
