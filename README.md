@@ -7,7 +7,7 @@
 
 # FAAH inhibitor
 
-*This is part of [heta-lang](https://insysbio.github.io/heta-lang/) project.*
+*This is part of [heta-lang](https://hetalang.github.io/) project.*
 
 This is Quantitative Systems Pharmacology (QSP) modeling platform describing Fatty Acid Amide Hydrolase inhibition in human.
 
