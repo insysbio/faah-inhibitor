@@ -18,7 +18,8 @@ before_install:
   - node -v
   - Rscript --version
 install:
-  - npm install -g git+https://${GL_TOKEN}@gitlab.insysbio.com/metelkin/qs3p-js.git
+  - npm install -g git+https://${GL_TOKEN}@gitlab.insysbio.com/metelkin/qs3p-js.git#v0.3.1
+  - qs3p -v
 script:
   - qs3p build
   - R -e "install.packages('mrgsolve');"
