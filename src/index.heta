@@ -37,12 +37,14 @@ description @Page { content: "
     doi:10.1038/psp.2013.72; published online 15 January 2014.
 " };
 
-#import { source: ./pk.heta, type: heta };
-#import { source: ./brain.heta, type: heta };
-#import { source: ./rob.heta, type: heta };
-#import { source: ./mec.heta, type: heta };
-#import { source: ./plasma.heta, type: heta };
-#import { source: ./constants.heta, type: heta };
+include ./qsp-units.heta
+
+include ./constants.heta
+include ./pk.heta
+include ./brain.heta
+include ./rob.heta
+include ./mec.heta
+include ./plasma.heta
 
 // === TRANSPORT ===
 // From MEC to Plasma, Brain to MEC
@@ -73,55 +75,54 @@ Ktr_p_r_P @Const = 0.85 {units: UL}; // calculated on the base of LogP by Pfizer
 Ktr_p_r_L @Const = 0.89 {units: UL}; // calculated on the base of LogP by Pfizer
 Ktr_p_r_S @Const = 9.19 {units: UL}; // calculated on the base of LogP by Pfizer
 
-namespace human begin
-    // from MEC to PLASMA
-    vA_m_p @Reaction { actors: A_m <=> A_p, units: nmole/h };
-    vA_m_p := MEC*ktr_m_p_A*(A_m-A_p*Ktr_p_m_A)/(A_m+A_p+Km_p_m_A);
+// from MEC to PLASMA
+vA_m_p @Reaction { actors: A_m <=> A_p, units: nmole/h };
+vA_m_p := MEC*ktr_m_p_A*(A_m-A_p*Ktr_p_m_A)/(A_m+A_p+Km_p_m_A);
 
-    vO_m_p @Reaction { actors: O_m <=> O_p, units: nmole/h };
-    vO_m_p := MEC*ktr_m_p_O*(O_m-O_p*Ktr_p_m_O);
+vO_m_p @Reaction { actors: O_m <=> O_p, units: nmole/h };
+vO_m_p := MEC*ktr_m_p_O*(O_m-O_p*Ktr_p_m_O);
 
-    vP_m_p @Reaction { actors: P_m <=> P_p, units: nmole/h };
-    vP_m_p := MEC*ktr_m_p_P*(P_m-P_p*Ktr_p_m_P);
+vP_m_p @Reaction { actors: P_m <=> P_p, units: nmole/h };
+vP_m_p := MEC*ktr_m_p_P*(P_m-P_p*Ktr_p_m_P);
 
-    vL_m_p @Reaction { actors: L_m <=> L_p, units: nmole/h };
-    vL_m_p := MEC*ktr_m_p_L*(L_m-L_p*Ktr_p_m_L);
+vL_m_p @Reaction { actors: L_m <=> L_p, units: nmole/h };
+vL_m_p := MEC*ktr_m_p_L*(L_m-L_p*Ktr_p_m_L);
 
-    vS_m_p @Reaction { actors: S_m <=> S_p, units: nmole/h };
-    vS_m_p := MEC*ktr_m_p_S*(S_m-S_p*Ktr_p_m_S);
+vS_m_p @Reaction { actors: S_m <=> S_p, units: nmole/h };
+vS_m_p := MEC*ktr_m_p_S*(S_m-S_p*Ktr_p_m_S);
 
-    // from BRAIN to MEC
-    vA_b_m @Reaction { actors: A_b <=> A_m, units: nmole/h };
-    vA_b_m := MEC*ktr_m_p_A*(A_b-A_m)/(A_m+A_b+Km_p_m_A);
+// from BRAIN to MEC
+vA_b_m @Reaction { actors: A_b <=> A_m, units: nmole/h };
+vA_b_m := MEC*ktr_m_p_A*(A_b-A_m)/(A_m+A_b+Km_p_m_A);
 
-    vO_b_m @Reaction { actors: O_b <=> O_m, units: nmole/h };
-    vO_b_m := MEC*ktr_m_p_O*(O_b-O_m);
+vO_b_m @Reaction { actors: O_b <=> O_m, units: nmole/h };
+vO_b_m := MEC*ktr_m_p_O*(O_b-O_m);
 
-    vP_b_m @Reaction { actors: P_b <=> P_m, units: nmole/h };
-    vP_b_m := MEC*ktr_m_p_P*(P_b-P_m);
+vP_b_m @Reaction { actors: P_b <=> P_m, units: nmole/h };
+vP_b_m := MEC*ktr_m_p_P*(P_b-P_m);
 
-    vL_b_m @Reaction { actors: L_b <=> L_m, units: nmole/h };
-    vL_b_m := MEC*ktr_m_p_L*(L_b-L_m);
+vL_b_m @Reaction { actors: L_b <=> L_m, units: nmole/h };
+vL_b_m := MEC*ktr_m_p_L*(L_b-L_m);
 
-    vS_b_m @Reaction { actors: S_b <=> S_m, units: nmole/h };
-    vS_b_m := MEC*ktr_m_p_S*(S_b-S_m);
+vS_b_m @Reaction { actors: S_b <=> S_m, units: nmole/h };
+vS_b_m := MEC*ktr_m_p_S*(S_b-S_m);
 
-    // from ROB to PLASMA
-    vA_r_p @Reaction { actors: A_r <=> A_p, units: nmole/h };
-    vA_r_p := PLASMA*ktr_r_p*(A_r-A_p*Ktr_p_r_A)/(A_r+A_p+Km_p_m_A);
+// from ROB to PLASMA
+vA_r_p @Reaction { actors: A_r <=> A_p, units: nmole/h };
+vA_r_p := PLASMA*ktr_r_p*(A_r-A_p*Ktr_p_r_A)/(A_r+A_p+Km_p_m_A);
 
-    vO_r_p @Reaction { actors: O_r <=> O_p, units: nmole/h };
-    vO_r_p := PLASMA*ktr_r_p*(O_r-O_p*Ktr_p_r_O);
+vO_r_p @Reaction { actors: O_r <=> O_p, units: nmole/h };
+vO_r_p := PLASMA*ktr_r_p*(O_r-O_p*Ktr_p_r_O);
 
-    vP_r_p @Reaction { actors: P_r <=> P_p, units: nmole/h };
-    vP_r_p := PLASMA*ktr_r_p*(P_r-P_p*Ktr_p_r_P);
+vP_r_p @Reaction { actors: P_r <=> P_p, units: nmole/h };
+vP_r_p := PLASMA*ktr_r_p*(P_r-P_p*Ktr_p_r_P);
 
-    vL_r_p @Reaction { actors: L_r <=> L_p, units: nmole/h };
-    vL_r_p := PLASMA*ktr_r_p*(L_r-L_p*Ktr_p_r_L);
+vL_r_p @Reaction { actors: L_r <=> L_p, units: nmole/h };
+vL_r_p := PLASMA*ktr_r_p*(L_r-L_p*Ktr_p_r_L);
 
-    vS_r_p @Reaction { actors: S_r <=> S_p, units: nmole/h };
-    vS_r_p := PLASMA*ktr_r_p*(S_r-S_p*Ktr_p_r_S);
-end
+vS_r_p @Reaction { actors: S_r <=> S_p, units: nmole/h };
+vS_r_p := PLASMA*ktr_r_p*(S_r-S_p*Ktr_p_r_S);
+
 
 sbml @SBMLExport { model: human, skipMathChecking: false };
 mrg @MrgsolveExport { model: human };

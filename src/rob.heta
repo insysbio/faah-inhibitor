@@ -15,155 +15,154 @@ Lungs @Const = 1.172 {units: L};  // measured J Pharmacokinet Pharmacodyn (2008)
 Muscles @Const = 35 {units: L};   // measured J Pharmacokinet Pharmacodyn (2008) v35 p1-30
 Thymus @Const = 0.029 {units: L}; // measured J Pharmacokinet Pharmacodyn (2008) v35 p1-30
 
-namespace human begin
-    ''' Compartment representing "rest of body" '''
-    ROB @Compartment .= 65.3 {units: L};
-    //species
-    A_r @Species 'AEA in rest of body' { compartment: ROB, units: nM };
-    O_r @Species 'OEA in rest of body' { compartment: ROB, units: nM };
-    P_r @Species 'PEA in rest of body' { compartment: ROB, units: nM };
-    L_r @Species 'LEA in rest of body' { compartment: ROB, units: nM };
-    S_r @Species 'SEA in rest of body' { compartment: ROB, units: nM };
-    NAPE_r @Species { compartment: ROB, units: nM };
-    NOPE_r @Species { compartment: ROB, units: nM };
-    NPPE_r @Species { compartment: ROB, units: nM };
-    NLPE_r @Species { compartment: ROB, units: nM };
-    NSPE_r @Species { compartment: ROB, units: nM };
-    FAAH_r @Species { compartment: ROB, units: nM };
-    FAAHinh_r @Species { compartment: ROB, units: nM };
+''' Compartment representing "rest of body" '''
+ROB @Compartment .= 65.3 {units: L};
+//species
+A_r @Species 'AEA in rest of body' { compartment: ROB, units: nM };
+O_r @Species 'OEA in rest of body' { compartment: ROB, units: nM };
+P_r @Species 'PEA in rest of body' { compartment: ROB, units: nM };
+L_r @Species 'LEA in rest of body' { compartment: ROB, units: nM };
+S_r @Species 'SEA in rest of body' { compartment: ROB, units: nM };
+NAPE_r @Species { compartment: ROB, units: nM };
+NOPE_r @Species { compartment: ROB, units: nM };
+NPPE_r @Species { compartment: ROB, units: nM };
+NLPE_r @Species { compartment: ROB, units: nM };
+NSPE_r @Species { compartment: ROB, units: nM };
+FAAH_r @Species { compartment: ROB, units: nM };
+FAAHinh_r @Species { compartment: ROB, units: nM };
 
-    // degradation of XEA by FAAH
-    FAAH_D_r @Record := 1 
-        + A_r/Km_FAAH_A 
-        + O_r/Km_FAAH_O 
-        + P_r/Km_FAAH_P 
-        + L_r/Km_FAAH_L 
-        + S_r/Km_FAAH_S {units: UL};
-    
-    vA_degr_r @Reaction { actors: A_r =>, modifiers: [FAAH_r], units: nmole/h };
-    vA_degr_r := ROB*FAAH_r*kcat_FAAH*a_FAAH_A*A_r/(Km_FAAH_A*FAAH_D_r);
+// degradation of XEA by FAAH
+FAAH_D_r @Record := 1 
+    + A_r/Km_FAAH_A 
+    + O_r/Km_FAAH_O 
+    + P_r/Km_FAAH_P 
+    + L_r/Km_FAAH_L 
+    + S_r/Km_FAAH_S {units: UL};
 
-    vO_degr_r @Reaction { actors: O_r =>, modifiers: [FAAH_r], units: nmole/h };
-    vO_degr_r := ROB*FAAH_r*kcat_FAAH*a_FAAH_O*O_r/(Km_FAAH_O*FAAH_D_r);
+vA_degr_r @Reaction { actors: A_r =>, modifiers: [FAAH_r], units: nmole/h };
+vA_degr_r := ROB*FAAH_r*kcat_FAAH*a_FAAH_A*A_r/(Km_FAAH_A*FAAH_D_r);
 
-    vP_degr_r @Reaction { actors: P_r =>, modifiers: [FAAH_r], units: nmole/h };
-    vP_degr_r := ROB*FAAH_r*kcat_FAAH*a_FAAH_P*P_r/(Km_FAAH_P*FAAH_D_r);
+vO_degr_r @Reaction { actors: O_r =>, modifiers: [FAAH_r], units: nmole/h };
+vO_degr_r := ROB*FAAH_r*kcat_FAAH*a_FAAH_O*O_r/(Km_FAAH_O*FAAH_D_r);
 
-    vL_degr_r @Reaction { actors: L_r =>, modifiers: [FAAH_r], units: nmole/h };
-    vL_degr_r := ROB*FAAH_r*kcat_FAAH*a_FAAH_L*L_r/(Km_FAAH_L*FAAH_D_r);
+vP_degr_r @Reaction { actors: P_r =>, modifiers: [FAAH_r], units: nmole/h };
+vP_degr_r := ROB*FAAH_r*kcat_FAAH*a_FAAH_P*P_r/(Km_FAAH_P*FAAH_D_r);
 
-    vS_degr_r @Reaction { actors: S_r =>, modifiers: [FAAH_r], units: nmole/h };
-    vS_degr_r := ROB*FAAH_r*kcat_FAAH*a_FAAH_S*S_r/(Km_FAAH_S*FAAH_D_r); 
+vL_degr_r @Reaction { actors: L_r =>, modifiers: [FAAH_r], units: nmole/h };
+vL_degr_r := ROB*FAAH_r*kcat_FAAH*a_FAAH_L*L_r/(Km_FAAH_L*FAAH_D_r);
 
-    // NXPE synthesis by NAT
-    c_NAT_ROB @Record := Pancreas*b_NAT_Pancreas 
-        + Kidney*b_NAT_Kidney 
-        + Heart*b_NAT_Heart 
-        + Lungs*b_NAT_Lungs 
-        + Muscles*b_NAT_Muscles 
-        + Testis*b_NAT_Testis 
-        + Leucocytes*b_NAT_Leucocytes {units: L};
+vS_degr_r @Reaction { actors: S_r =>, modifiers: [FAAH_r], units: nmole/h };
+vS_degr_r := ROB*FAAH_r*kcat_FAAH*a_FAAH_S*S_r/(Km_FAAH_S*FAAH_D_r); 
 
-    vNAPE_syn_r @Reaction { actors: => NAPE_r, units: nmole/h };
-    vNAPE_syn_r := Vmax_NAT*p_A*a_NAT_A*c_NAT_ROB; 
+// NXPE synthesis by NAT
+c_NAT_ROB @Record := Pancreas*b_NAT_Pancreas 
+    + Kidney*b_NAT_Kidney 
+    + Heart*b_NAT_Heart 
+    + Lungs*b_NAT_Lungs 
+    + Muscles*b_NAT_Muscles 
+    + Testis*b_NAT_Testis 
+    + Leucocytes*b_NAT_Leucocytes {units: L};
 
-    vNOPE_syn_r @Reaction { actors: => NOPE_r, units: nmole/h };
-    vNOPE_syn_r := Vmax_NAT*p_O*a_NAT_O*c_NAT_ROB;
+vNAPE_syn_r @Reaction { actors: => NAPE_r, units: nmole/h };
+vNAPE_syn_r := Vmax_NAT*p_A*a_NAT_A*c_NAT_ROB; 
 
-    vNPPE_syn_r @Reaction { actors: => NPPE_r, units: nmole/h };
-    vNPPE_syn_r := Vmax_NAT*p_P*a_NAT_P*c_NAT_ROB; 
+vNOPE_syn_r @Reaction { actors: => NOPE_r, units: nmole/h };
+vNOPE_syn_r := Vmax_NAT*p_O*a_NAT_O*c_NAT_ROB;
 
-    vNLPE_syn_r @Reaction { actors: => NLPE_r, units: nmole/h };
-    vNLPE_syn_r := Vmax_NAT*p_L*a_NAT_L*c_NAT_ROB;
+vNPPE_syn_r @Reaction { actors: => NPPE_r, units: nmole/h };
+vNPPE_syn_r := Vmax_NAT*p_P*a_NAT_P*c_NAT_ROB; 
 
-    vNSPE_syn_r @Reaction { actors: => NSPE_r, units: nmole/h };
-    vNSPE_syn_r := Vmax_NAT*p_S*a_NAT_S*c_NAT_ROB;
+vNLPE_syn_r @Reaction { actors: => NLPE_r, units: nmole/h };
+vNLPE_syn_r := Vmax_NAT*p_L*a_NAT_L*c_NAT_ROB;
 
-    // XEA synthesis
-    slag1_r @Record := NAPE_r/Km_NA_PE 
-        + NOPE_r/Km_NO_PE 
-        + NPPE_r/Km_NP_PE 
-        + NLPE_r/Km_NL_PE 
-        + NSPE_r/Km_NS_PE {units: UL};
-    slag2_r @Record := A_r/Ki_A 
-        + O_r/Ki_O 
-        + P_r/Ki_P 
-        + L_r/Ki_L 
-        + S_r/Ki_S {units: UL};
-    den_r @Record := 1 + slag1_r + slag2_r {units: UL};
+vNSPE_syn_r @Reaction { actors: => NSPE_r, units: nmole/h };
+vNSPE_syn_r := Vmax_NAT*p_S*a_NAT_S*c_NAT_ROB;
 
-    vA_syn_r @Reaction { actors: NAPE_r => A_r, units: nmole/h };
-    vA_syn_r := ROB*PLD_r*k_NA_PE*NAPE_r/Km_NA_PE/den_r;
+// XEA synthesis
+slag1_r @Record := NAPE_r/Km_NA_PE 
+    + NOPE_r/Km_NO_PE 
+    + NPPE_r/Km_NP_PE 
+    + NLPE_r/Km_NL_PE 
+    + NSPE_r/Km_NS_PE {units: UL};
+slag2_r @Record := A_r/Ki_A 
+    + O_r/Ki_O 
+    + P_r/Ki_P 
+    + L_r/Ki_L 
+    + S_r/Ki_S {units: UL};
+den_r @Record := 1 + slag1_r + slag2_r {units: UL};
 
-    vO_syn_r @Reaction { actors: NOPE_r => O_r, units: nmole/h };
-    vO_syn_r := ROB*PLD_r*k_NO_PE*NOPE_r/Km_NO_PE/den_r;
+vA_syn_r @Reaction { actors: NAPE_r => A_r, units: nmole/h };
+vA_syn_r := ROB*PLD_r*k_NA_PE*NAPE_r/Km_NA_PE/den_r;
 
-    vP_syn_r @Reaction { actors: NPPE_r => P_r, units: nmole/h };
-    vP_syn_r := ROB*PLD_r*k_NP_PE*NPPE_r/Km_NP_PE/den_r;
+vO_syn_r @Reaction { actors: NOPE_r => O_r, units: nmole/h };
+vO_syn_r := ROB*PLD_r*k_NO_PE*NOPE_r/Km_NO_PE/den_r;
 
-    vL_syn_r @Reaction { actors: NLPE_r => L_r, units: nmole/h };
-    vL_syn_r := ROB*PLD_r*k_NL_PE*NLPE_r/Km_NL_PE/den_r;
+vP_syn_r @Reaction { actors: NPPE_r => P_r, units: nmole/h };
+vP_syn_r := ROB*PLD_r*k_NP_PE*NPPE_r/Km_NP_PE/den_r;
 
-    vS_syn_r @Reaction { actors: NSPE_r => S_r, units: nmole/h };
-    vS_syn_r := ROB*PLD_r*k_NS_PE*NSPE_r/Km_NS_PE/den_r;
+vL_syn_r @Reaction { actors: NLPE_r => L_r, units: nmole/h };
+vL_syn_r := ROB*PLD_r*k_NL_PE*NLPE_r/Km_NL_PE/den_r;
 
-    // FAAH metabolism
-    c_FAAH_ROB @Record := LIVER*b_FAAH_Liver 
-        + Gut*b_FAAH_Gut 
-        + Spleen*b_FAAH_Spleen 
-        + Kidney*b_FAAH_Kidney 
-        + Lungs*b_FAAH_Lungs 
-        + Testis*b_FAAH_Testis 
-        + Leucocytes*b_FAAH_Leucocytes {units: L};
+vS_syn_r @Reaction { actors: NSPE_r => S_r, units: nmole/h };
+vS_syn_r := ROB*PLD_r*k_NS_PE*NSPE_r/Km_NS_PE/den_r;
 
-    vFAAH_syn_r @Reaction { actors: => FAAH_r, units: nmole/h };
-    vFAAH_syn_r  := FAAH_t*c_FAAH_ROB*k_deg_FAAH; // synthesis
+// FAAH metabolism
+c_FAAH_ROB @Record := LIVER*b_FAAH_Liver 
+    + Gut*b_FAAH_Gut 
+    + Spleen*b_FAAH_Spleen 
+    + Kidney*b_FAAH_Kidney 
+    + Lungs*b_FAAH_Lungs 
+    + Testis*b_FAAH_Testis 
+    + Leucocytes*b_FAAH_Leucocytes {units: L};
 
-    vFAAH_degr_r @Reaction { actors: FAAH_r =>, units: nmole/h };
-    vFAAH_degr_r := ROB*k_deg_FAAH*FAAH_r; // degradation
+vFAAH_syn_r @Reaction { actors: => FAAH_r, units: nmole/h };
+vFAAH_syn_r  := FAAH_t*c_FAAH_ROB*k_deg_FAAH; // synthesis
 
-    vFAAH_inh_r @Reaction { actors: FAAH_r => FAAHinh_r, units: nmole/h };
-    vFAAH_inh_r := ROB*k_inh*FAAH_r*PF_r; // inhibition
+vFAAH_degr_r @Reaction { actors: FAAH_r =>, units: nmole/h };
+vFAAH_degr_r := ROB*k_deg_FAAH*FAAH_r; // degradation
 
-    vFAAH_inh_degr_r @Reaction { actors: FAAHinh_r =>, units: nmole/h };
-    vFAAH_inh_degr_r := ROB*k_deg_FAAH*FAAHinh_r; // degradation of inhibited
+vFAAH_inh_r @Reaction { actors: FAAH_r => FAAHinh_r, units: nmole/h };
+vFAAH_inh_r := ROB*k_inh*FAAH_r*PF_r; // inhibition
 
-    // UNKNOWN ENZYME
-    c_NAAA_ROB @Record := LIVER*b_NAAA_Liver 
-        + Gut*b_NAAA_Gut 
-        + Spleen*b_NAAA_Spleen 
-        + Kidney*b_NAAA_Kidney 
-        + Heart*b_NAAA_Heart 
-        + Lungs*b_NAAA_Lungs 
-        + Thymus*b_NAAA_Thymus 
-        + Testis*b_NAAA_Thymus*Testis {units: L};
+vFAAH_inh_degr_r @Reaction { actors: FAAHinh_r =>, units: nmole/h };
+vFAAH_inh_degr_r := ROB*k_deg_FAAH*FAAHinh_r; // degradation of inhibited
 
-    vA_UE_r @Reaction { actors: A_r =>, units: nmole/h };
-    vA_UE_r := c_NAAA_ROB*kcl_A*A_r;
+// UNKNOWN ENZYME
+c_NAAA_ROB @Record := LIVER*b_NAAA_Liver 
+    + Gut*b_NAAA_Gut 
+    + Spleen*b_NAAA_Spleen 
+    + Kidney*b_NAAA_Kidney 
+    + Heart*b_NAAA_Heart 
+    + Lungs*b_NAAA_Lungs 
+    + Thymus*b_NAAA_Thymus 
+    + Testis*b_NAAA_Thymus*Testis {units: L};
 
-    vO_UE_r @Reaction { actors: O_r =>, units: nmole/h };
-    vO_UE_r := c_NAAA_ROB*kcl_O*O_r;
+vA_UE_r @Reaction { actors: A_r =>, units: nmole/h };
+vA_UE_r := c_NAAA_ROB*kcl_A*A_r;
 
-    vP_UE_r @Reaction { actors: P_r =>, units: nmole/h };
-    vP_UE_r := c_NAAA_ROB*kcl_P*P_r;
+vO_UE_r @Reaction { actors: O_r =>, units: nmole/h };
+vO_UE_r := c_NAAA_ROB*kcl_O*O_r;
 
-    vL_UE_r @Reaction { actors: L_r =>, units: nmole/h };
-    vL_UE_r := c_NAAA_ROB*kcl_L*L_r;
+vP_UE_r @Reaction { actors: P_r =>, units: nmole/h };
+vP_UE_r := c_NAAA_ROB*kcl_P*P_r;
 
-    vS_UE_r @Reaction { actors: S_r =>, units: nmole/h };
-    vS_UE_r := c_NAAA_ROB*kcl_S*S_r;
+vL_UE_r @Reaction { actors: L_r =>, units: nmole/h };
+vL_UE_r := c_NAAA_ROB*kcl_L*L_r;
 
-    // initial state
-    A_r .= 0.5419204;
-    O_r .= 14.23822;
-    P_r .= 4.121915;
-    L_r .= 1.705466;
-    S_r .= 2.515968;
-    NAPE_r .= 4.241633E-6;
-    NOPE_r .= 9.638198E-5;
-    NPPE_r .= 1.894222E-5;
-    NLPE_r .= 8.256095E-6;
-    NSPE_r .= 1.391587E-5;
-    FAAH_r .= 2.165868;
-    FAAHinh_r .= 0;
-end
+vS_UE_r @Reaction { actors: S_r =>, units: nmole/h };
+vS_UE_r := c_NAAA_ROB*kcl_S*S_r;
+
+// initial state
+A_r .= 0.5419204;
+O_r .= 14.23822;
+P_r .= 4.121915;
+L_r .= 1.705466;
+S_r .= 2.515968;
+NAPE_r .= 4.241633E-6;
+NOPE_r .= 9.638198E-5;
+NPPE_r .= 1.894222E-5;
+NLPE_r .= 8.256095E-6;
+NSPE_r .= 1.391587E-5;
+FAAH_r .= 2.165868;
+FAAHinh_r .= 0;
+

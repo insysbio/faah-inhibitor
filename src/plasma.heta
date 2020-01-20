@@ -4,22 +4,20 @@
 
 H @Const = 0.48; // average human hematocrit value
 
-namespace human begin
-    // compartment
-    '''Blood plasma compartment'''
-    PLASMA @Compartment .= 2.649 {units: L};  // measured J Pharmacokinet Pharmacodyn (2008) v35 p1-30
+// compartment
+'''Blood plasma compartment'''
+PLASMA @Compartment .= 2.649 {units: L};  // measured J Pharmacokinet Pharmacodyn (2008) v35 p1-30
 
-    // species
-    A_p @Species { compartment: PLASMA, units: nM };
-    O_p @Species { compartment: PLASMA, units: nM };
-    P_p @Species { compartment: PLASMA, units: nM };
-    L_p @Species { compartment: PLASMA, units: nM };
-    S_p @Species { compartment: PLASMA, units: nM };
+// species
+A_p @Species { compartment: PLASMA, units: nM };
+O_p @Species { compartment: PLASMA, units: nM };
+P_p @Species { compartment: PLASMA, units: nM };
+L_p @Species { compartment: PLASMA, units: nM };
+S_p @Species { compartment: PLASMA, units: nM };
 
-    // init
-    A_p .= 0.8740574;
-    O_p .= 5.085073;
-    P_p .= 4.849307;
-    L_p .= 1.916254;
-    S_p .= 0.273772;
-end
+// init
+A_p .= 0.8740574;
+O_p .= 5.085073;
+P_p .= 4.849307;
+L_p .= 1.916254;
+S_p .= 0.273772;

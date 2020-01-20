@@ -20,7 +20,7 @@ Kp_b_PF @Const = 1.3 {units: UL}; // unknown
 Kp_m_PF @Const = 1.3 {units: UL}; // unknown
 Kp_r_PF @Const = 1.5 {units: UL}; // unknown
 
-namespace human begin
+
   '''Gut compartment'''
   GUT @Compartment;
   PLASMA @Compartment;
@@ -52,14 +52,11 @@ namespace human begin
   dist := kout_PFM * PFM_p - kin_PFM * PFM_r;
   elim @Reaction { actors: PFM_p =>, units: ng/h };
   elim := klinear_PFM * PFM_p + ( Vm_PFM * PFM_p / Vss_PFM ) / ( Km_PFM + PFM_p / Vss_PFM );
-end
 
 // doses
-namespace human begin
-  evt1 @TimeSwitcher {
-    start: 0,
-    period: 120,
-    repeatCount: 3
-  };
-  PFM_gut [evt1]= PFM_gut + dose_amount;
-end
+evt1 @TimeSwitcher {
+  start: 0,
+  period: 120,
+  repeatCount: 3
+};
+PFM_gut [evt1]= PFM_gut + dose_amount;
