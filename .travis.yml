@@ -18,7 +18,7 @@ before_install:
   - node -v
   - Rscript --version
 install:
-  - npm install -g git+https://${GL_TOKEN}@gitlab.insysbio.com/metelkin/qs3p-js.git#v0.4.17
+  - npm install -g git+https://${GL_TOKEN}@gitlab.insysbio.com/metelkin/qs3p-js.git#v0.4
   - qs3p -v
 script:
   - qs3p build

@@ -29,4 +29,4 @@ This is Quantitative Systems Pharmacology (QSP) modeling platform describing Fat
 
 ## Copyright
 
-(c) InSysBio 2019
+(c) InSysBio 2019-2020
