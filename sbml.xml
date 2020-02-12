@@ -9,7 +9,7 @@
         constant="false"
         
         
-        metaid="human::GUT"
+        metaid="GUT"
         >
         <notes><html xmlns="http://www.w3.org/1999/xhtml"><p>Gut compartment</p></html></notes>
       </compartment>
@@ -19,7 +19,7 @@
         constant="false"
         size="2.649"
         units="L"
-        metaid="human::PLASMA"
+        metaid="PLASMA"
         >
         <notes><html xmlns="http://www.w3.org/1999/xhtml"><p>Blood plasma compartment</p></html></notes>
       </compartment>
@@ -29,7 +29,7 @@
         constant="false"
         size="65.3"
         units="L"
-        metaid="human::ROB"
+        metaid="ROB"
         >
         <notes><html xmlns="http://www.w3.org/1999/xhtml"><p>Compartment representing &quot;rest of body&quot;</p></html></notes>
       </compartment>
@@ -39,7 +39,7 @@
         constant="false"
         size="1.45"
         units="L"
-        metaid="human::BRAIN"
+        metaid="BRAIN"
         >
         <notes><html xmlns="http://www.w3.org/1999/xhtml"><p>Volume of brain</p></html></notes>
       </compartment>
@@ -49,7 +49,7 @@
         constant="false"
         size="0.000015"
         units="L"
-        metaid="human::MEC"
+        metaid="MEC"
         >
         <notes><html xmlns="http://www.w3.org/1999/xhtml"><p>The same as blood brain barrier (BBB)</p></html></notes>
       </compartment>
@@ -65,7 +65,7 @@
         hasOnlySubstanceUnits="true"
         initialAmount="0"
         substanceUnits="ng"
-        metaid="human::PFM_gut"
+        metaid="PFM_gut"
         >
         
       </species>
@@ -78,7 +78,7 @@
         hasOnlySubstanceUnits="true"
         initialAmount="0"
         substanceUnits="ng"
-        metaid="human::PFM_p"
+        metaid="PFM_p"
         >
         
       </species>
@@ -91,7 +91,7 @@
         hasOnlySubstanceUnits="true"
         initialAmount="0"
         substanceUnits="ng"
-        metaid="human::PFM_r"
+        metaid="PFM_r"
         >
         
       </species>
@@ -104,7 +104,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="0.7493309"
         substanceUnits="nM_L"
-        metaid="human::A_b"
+        metaid="A_b"
         >
         
       </species>
@@ -117,7 +117,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="20.77858"
         substanceUnits="nM_L"
-        metaid="human::O_b"
+        metaid="O_b"
         >
         
       </species>
@@ -130,7 +130,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="6.541209"
         substanceUnits="nM_L"
-        metaid="human::P_b"
+        metaid="P_b"
         >
         
       </species>
@@ -143,7 +143,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="2.319571"
         substanceUnits="nM_L"
-        metaid="human::L_b"
+        metaid="L_b"
         >
         
       </species>
@@ -156,7 +156,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="3.427807"
         substanceUnits="nM_L"
-        metaid="human::S_b"
+        metaid="S_b"
         >
         
       </species>
@@ -169,7 +169,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="0.00003879041"
         substanceUnits="nM_L"
-        metaid="human::NAPE_b"
+        metaid="NAPE_b"
         >
         
       </species>
@@ -182,7 +182,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="0.0008814287"
         substanceUnits="nM_L"
-        metaid="human::NOPE_b"
+        metaid="NOPE_b"
         >
         
       </species>
@@ -195,7 +195,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="0.0001732296"
         substanceUnits="nM_L"
-        metaid="human::NPPE_b"
+        metaid="NPPE_b"
         >
         
       </species>
@@ -208,7 +208,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="0.00007550331"
         substanceUnits="nM_L"
-        metaid="human::NLPE_b"
+        metaid="NLPE_b"
         >
         
       </species>
@@ -221,7 +221,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="0.0001272629"
         substanceUnits="nM_L"
-        metaid="human::NSPE_b"
+        metaid="NSPE_b"
         >
         
       </species>
@@ -234,7 +234,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="15.366"
         substanceUnits="nM_L"
-        metaid="human::FAAH_b"
+        metaid="FAAH_b"
         >
         
       </species>
@@ -247,7 +247,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="0"
         substanceUnits="nM_L"
-        metaid="human::FAAHinh_b"
+        metaid="FAAHinh_b"
         >
         
       </species>
@@ -260,7 +260,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="0.5419204"
         substanceUnits="nM_L"
-        metaid="human::A_r"
+        metaid="A_r"
         >
         
       </species>
@@ -273,7 +273,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="14.23822"
         substanceUnits="nM_L"
-        metaid="human::O_r"
+        metaid="O_r"
         >
         
       </species>
@@ -286,7 +286,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="4.121915"
         substanceUnits="nM_L"
-        metaid="human::P_r"
+        metaid="P_r"
         >
         
       </species>
@@ -299,7 +299,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="1.705466"
         substanceUnits="nM_L"
-        metaid="human::L_r"
+        metaid="L_r"
         >
         
       </species>
@@ -312,7 +312,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="2.515968"
         substanceUnits="nM_L"
-        metaid="human::S_r"
+        metaid="S_r"
         >
         
       </species>
@@ -325,7 +325,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="0.000004241633"
         substanceUnits="nM_L"
-        metaid="human::NAPE_r"
+        metaid="NAPE_r"
         >
         
       </species>
@@ -338,7 +338,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="0.00009638198"
         substanceUnits="nM_L"
-        metaid="human::NOPE_r"
+        metaid="NOPE_r"
         >
         
       </species>
@@ -351,7 +351,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="0.00001894222"
         substanceUnits="nM_L"
-        metaid="human::NPPE_r"
+        metaid="NPPE_r"
         >
         
       </species>
@@ -364,7 +364,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="0.000008256095"
         substanceUnits="nM_L"
-        metaid="human::NLPE_r"
+        metaid="NLPE_r"
         >
         
       </species>
@@ -377,7 +377,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="0.00001391587"
         substanceUnits="nM_L"
-        metaid="human::NSPE_r"
+        metaid="NSPE_r"
         >
         
       </species>
@@ -390,7 +390,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="2.165868"
         substanceUnits="nM_L"
-        metaid="human::FAAH_r"
+        metaid="FAAH_r"
         >
         
       </species>
@@ -403,7 +403,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="0"
         substanceUnits="nM_L"
-        metaid="human::FAAHinh_r"
+        metaid="FAAHinh_r"
         >
         
       </species>
@@ -416,7 +416,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="0.97761"
         substanceUnits="nM_L"
-        metaid="human::A_m"
+        metaid="A_m"
         >
         
       </species>
@@ -429,7 +429,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="16.3219"
         substanceUnits="nM_L"
-        metaid="human::O_m"
+        metaid="O_m"
         >
         
       </species>
@@ -442,7 +442,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="5.809415"
         substanceUnits="nM_L"
-        metaid="human::P_m"
+        metaid="P_m"
         >
         
       </species>
@@ -455,7 +455,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="0"
         substanceUnits="nM_L"
-        metaid="human::L_m"
+        metaid="L_m"
         >
         
       </species>
@@ -468,7 +468,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="2.968774"
         substanceUnits="nM_L"
-        metaid="human::S_m"
+        metaid="S_m"
         >
         
       </species>
@@ -481,7 +481,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="10.686"
         substanceUnits="nM_L"
-        metaid="human::FAAH_m"
+        metaid="FAAH_m"
         >
         
       </species>
@@ -494,7 +494,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="0"
         substanceUnits="nM_L"
-        metaid="human::FAAHinh_m"
+        metaid="FAAHinh_m"
         >
         
       </species>
@@ -507,7 +507,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="0.8740574"
         substanceUnits="nM_L"
-        metaid="human::A_p"
+        metaid="A_p"
         >
         
       </species>
@@ -520,7 +520,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="5.085073"
         substanceUnits="nM_L"
-        metaid="human::O_p"
+        metaid="O_p"
         >
         
       </species>
@@ -533,7 +533,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="4.849307"
         substanceUnits="nM_L"
-        metaid="human::P_p"
+        metaid="P_p"
         >
         
       </species>
@@ -546,7 +546,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="1.916254"
         substanceUnits="nM_L"
-        metaid="human::L_p"
+        metaid="L_p"
         >
         
       </species>
@@ -559,7 +559,7 @@
         hasOnlySubstanceUnits="false"
         initialConcentration="0.273772"
         substanceUnits="nM_L"
-        metaid="human::S_p"
+        metaid="S_p"
         >
         
       </species>
@@ -572,7 +572,7 @@
         constant="false"
         
         units="UL"
-        metaid="human::F_PFM"
+        metaid="F_PFM"
         >
         
       </parameter>
@@ -582,7 +582,7 @@
         constant="false"
         
         units="ng"
-        metaid="human::dose_amount"
+        metaid="dose_amount"
         >
         
       </parameter>
@@ -592,7 +592,7 @@
         constant="false"
         
         units="nM"
-        metaid="human::PF_p"
+        metaid="PF_p"
         >
         
       </parameter>
@@ -602,7 +602,7 @@
         constant="false"
         
         units="nM"
-        metaid="human::PF_b"
+        metaid="PF_b"
         >
         
       </parameter>
@@ -612,7 +612,7 @@
         constant="false"
         
         units="nM"
-        metaid="human::PF_r"
+        metaid="PF_r"
         >
         
       </parameter>
@@ -622,7 +622,7 @@
         constant="false"
         
         units="nM"
-        metaid="human::PF_m"
+        metaid="PF_m"
         >
         
       </parameter>
@@ -632,7 +632,7 @@
         constant="false"
         
         units="UL"
-        metaid="human::FAAH_D_b"
+        metaid="FAAH_D_b"
         >
         
       </parameter>
@@ -642,7 +642,7 @@
         constant="false"
         
         units="UL"
-        metaid="human::slag1_b"
+        metaid="slag1_b"
         >
         
       </parameter>
@@ -652,7 +652,7 @@
         constant="false"
         
         units="UL"
-        metaid="human::slag2_b"
+        metaid="slag2_b"
         >
         
       </parameter>
@@ -662,7 +662,7 @@
         constant="false"
         
         units="UL"
-        metaid="human::den_b"
+        metaid="den_b"
         >
         
       </parameter>
@@ -672,7 +672,7 @@
         constant="false"
         
         units="UL"
-        metaid="human::FAAH_D_r"
+        metaid="FAAH_D_r"
         >
         
       </parameter>
@@ -682,7 +682,7 @@
         constant="false"
         
         units="L"
-        metaid="human::c_NAT_ROB"
+        metaid="c_NAT_ROB"
         >
         
       </parameter>
@@ -692,7 +692,7 @@
         constant="false"
         
         units="UL"
-        metaid="human::slag1_r"
+        metaid="slag1_r"
         >
         
       </parameter>
@@ -702,7 +702,7 @@
         constant="false"
         
         units="UL"
-        metaid="human::slag2_r"
+        metaid="slag2_r"
         >
         
       </parameter>
@@ -712,7 +712,7 @@
         constant="false"
         
         units="UL"
-        metaid="human::den_r"
+        metaid="den_r"
         >
         
       </parameter>
@@ -722,7 +722,7 @@
         constant="false"
         
         units="L"
-        metaid="human::c_FAAH_ROB"
+        metaid="c_FAAH_ROB"
         >
         
       </parameter>
@@ -732,7 +732,7 @@
         constant="false"
         
         units="L"
-        metaid="human::c_NAAA_ROB"
+        metaid="c_NAAA_ROB"
         >
         
       </parameter>
@@ -742,257 +742,7 @@
         constant="false"
         
         units="UL"
-        metaid="human::FAAH_D_m"
-        >
-        
-      </parameter>
-      <parameter
-        id="Emax_PFM"
-        
-        constant="true"
-        value="0.773"
-        units="UL"
-        metaid="Emax_PFM"
-        >
-        
-      </parameter>
-      <parameter
-        id="Dose"
-        
-        constant="true"
-        value="10"
-        units="mg"
-        metaid="Dose"
-        >
-        
-      </parameter>
-      <parameter
-        id="ED50"
-        
-        constant="true"
-        value="0.53"
-        units="mg"
-        metaid="ED50"
-        >
-        
-      </parameter>
-      <parameter
-        id="M_PF"
-        
-        constant="true"
-        value="455.4"
-        units="__mole_g"
-        metaid="M_PF"
-        >
-        
-      </parameter>
-      <parameter
-        id="Vss_PFM"
-        
-        constant="true"
-        value="58.328"
-        units="L"
-        metaid="Vss_PFM"
-        >
-        
-      </parameter>
-      <parameter
-        id="Kp_b_PF"
-        
-        constant="true"
-        value="1.3"
-        units="UL"
-        metaid="Kp_b_PF"
-        >
-        
-      </parameter>
-      <parameter
-        id="Kp_r_PF"
-        
-        constant="true"
-        value="1.5"
-        units="UL"
-        metaid="Kp_r_PF"
-        >
-        
-      </parameter>
-      <parameter
-        id="Kp_m_PF"
-        
-        constant="true"
-        value="1.3"
-        units="UL"
-        metaid="Kp_m_PF"
-        >
-        
-      </parameter>
-      <parameter
-        id="kabs_PFM"
-        
-        constant="true"
-        value="2.2"
-        units="__h"
-        metaid="kabs_PFM"
-        >
-        
-      </parameter>
-      <parameter
-        id="kout_PFM"
-        
-        constant="true"
-        value="0.18"
-        units="__h"
-        metaid="kout_PFM"
-        >
-        
-      </parameter>
-      <parameter
-        id="kin_PFM"
-        
-        constant="true"
-        value="0.117"
-        units="__h"
-        metaid="kin_PFM"
-        >
-        
-      </parameter>
-      <parameter
-        id="klinear_PFM"
-        
-        constant="true"
-        value="0.0803"
-        units="__h"
-        metaid="klinear_PFM"
-        >
-        
-      </parameter>
-      <parameter
-        id="Vm_PFM"
-        
-        constant="true"
-        value="1511"
-        units="ng__h"
-        metaid="Vm_PFM"
-        >
-        
-      </parameter>
-      <parameter
-        id="Km_PFM"
-        
-        constant="true"
-        value="26.1"
-        units="ng__L"
-        metaid="Km_PFM"
-        >
-        
-      </parameter>
-      <parameter
-        id="Km_FAAH_A"
-        
-        constant="true"
-        value="8200"
-        units="nM"
-        metaid="Km_FAAH_A"
-        >
-        
-      </parameter>
-      <parameter
-        id="Km_FAAH_O"
-        
-        constant="true"
-        value="52200"
-        units="nM"
-        metaid="Km_FAAH_O"
-        >
-        
-      </parameter>
-      <parameter
-        id="Km_FAAH_P"
-        
-        constant="true"
-        value="543000"
-        units="nM"
-        metaid="Km_FAAH_P"
-        >
-        
-      </parameter>
-      <parameter
-        id="Km_FAAH_L"
-        
-        constant="true"
-        value="10800"
-        units="nM"
-        metaid="Km_FAAH_L"
-        >
-        
-      </parameter>
-      <parameter
-        id="Km_FAAH_S"
-        
-        constant="true"
-        value="10000"
-        units="nM"
-        metaid="Km_FAAH_S"
-        >
-        
-      </parameter>
-      <parameter
-        id="kcat_FAAH"
-        
-        constant="true"
-        value="18000"
-        units="__h"
-        metaid="kcat_FAAH"
-        >
-        
-      </parameter>
-      <parameter
-        id="a_FAAH_A"
-        
-        constant="true"
-        value="1"
-        units="UL"
-        metaid="a_FAAH_A"
-        >
-        
-      </parameter>
-      <parameter
-        id="a_FAAH_O"
-        
-        constant="true"
-        value="5.7"
-        units="UL"
-        metaid="a_FAAH_O"
-        >
-        
-      </parameter>
-      <parameter
-        id="a_FAAH_P"
-        
-        constant="true"
-        value="37.8"
-        units="UL"
-        metaid="a_FAAH_P"
-        >
-        
-      </parameter>
-      <parameter
-        id="a_FAAH_L"
-        
-        constant="true"
-        value="1.15"
-        units="UL"
-        metaid="a_FAAH_L"
-        >
-        
-      </parameter>
-      <parameter
-        id="a_FAAH_S"
-        
-        constant="true"
-        value="1"
-        units="UL"
-        metaid="a_FAAH_S"
+        metaid="FAAH_D_m"
         >
         
       </parameter>
@@ -1017,42 +767,12 @@
         
       </parameter>
       <parameter
-        id="a_NAT_A"
-        
-        constant="true"
-        value="1"
-        units="UL"
-        metaid="a_NAT_A"
-        >
-        
-      </parameter>
-      <parameter
-        id="b_NAT_Brain"
-        
-        constant="true"
-        value="1.667"
-        units="UL"
-        metaid="b_NAT_Brain"
-        >
-        
-      </parameter>
-      <parameter
         id="p_O"
         
         constant="true"
         value="0.098"
         units="UL"
         metaid="p_O"
-        >
-        
-      </parameter>
-      <parameter
-        id="a_NAT_O"
-        
-        constant="true"
-        value="13"
-        units="UL"
-        metaid="a_NAT_O"
         >
         
       </parameter>
@@ -1067,32 +787,12 @@
         
       </parameter>
       <parameter
-        id="a_NAT_P"
-        
-        constant="true"
-        value="0.42"
-        units="UL"
-        metaid="a_NAT_P"
-        >
-        
-      </parameter>
-      <parameter
         id="p_L"
         
         constant="true"
         value="0.016"
         units="UL"
         metaid="p_L"
-        >
-        
-      </parameter>
-      <parameter
-        id="a_NAT_L"
-        
-        constant="true"
-        value="8.6"
-        units="UL"
-        metaid="a_NAT_L"
         >
         
       </parameter>
@@ -1107,12 +807,182 @@
         
       </parameter>
       <parameter
+        id="a_NAT_A"
+        
+        constant="true"
+        value="1"
+        units="UL"
+        metaid="a_NAT_A"
+        >
+        
+      </parameter>
+      <parameter
+        id="a_NAT_O"
+        
+        constant="true"
+        value="13"
+        units="UL"
+        metaid="a_NAT_O"
+        >
+        
+      </parameter>
+      <parameter
+        id="a_NAT_P"
+        
+        constant="true"
+        value="0.42"
+        units="UL"
+        metaid="a_NAT_P"
+        >
+        
+      </parameter>
+      <parameter
+        id="a_NAT_L"
+        
+        constant="true"
+        value="8.6"
+        units="UL"
+        metaid="a_NAT_L"
+        >
+        
+      </parameter>
+      <parameter
         id="a_NAT_S"
         
         constant="true"
         value="1"
         units="UL"
         metaid="a_NAT_S"
+        >
+        
+      </parameter>
+      <parameter
+        id="b_NAT_Brain"
+        
+        constant="true"
+        value="1.667"
+        units="UL"
+        metaid="b_NAT_Brain"
+        >
+        
+      </parameter>
+      <parameter
+        id="b_NAT_Pancreas"
+        
+        constant="true"
+        value="0.333"
+        units="UL"
+        metaid="b_NAT_Pancreas"
+        >
+        
+      </parameter>
+      <parameter
+        id="b_NAT_Kidney"
+        
+        constant="true"
+        value="0.667"
+        units="UL"
+        metaid="b_NAT_Kidney"
+        >
+        
+      </parameter>
+      <parameter
+        id="b_NAT_Heart"
+        
+        constant="true"
+        value="1"
+        units="UL"
+        metaid="b_NAT_Heart"
+        >
+        
+      </parameter>
+      <parameter
+        id="b_NAT_Lungs"
+        
+        constant="true"
+        value="0.033"
+        units="UL"
+        metaid="b_NAT_Lungs"
+        >
+        
+      </parameter>
+      <parameter
+        id="b_NAT_Muscles"
+        
+        constant="true"
+        value="0.333"
+        units="UL"
+        metaid="b_NAT_Muscles"
+        >
+        
+      </parameter>
+      <parameter
+        id="b_NAT_Testis"
+        
+        constant="true"
+        value="0.667"
+        units="UL"
+        metaid="b_NAT_Testis"
+        >
+        
+      </parameter>
+      <parameter
+        id="b_NAT_Leucocytes"
+        
+        constant="true"
+        value="0"
+        units="UL"
+        metaid="b_NAT_Leucocytes"
+        >
+        
+      </parameter>
+      <parameter
+        id="k_NA_PE"
+        
+        constant="true"
+        value="202"
+        units="__h"
+        metaid="k_NA_PE"
+        >
+        
+      </parameter>
+      <parameter
+        id="k_NO_PE"
+        
+        constant="true"
+        value="230"
+        units="__h"
+        metaid="k_NO_PE"
+        >
+        
+      </parameter>
+      <parameter
+        id="k_NP_PE"
+        
+        constant="true"
+        value="270"
+        units="__h"
+        metaid="k_NP_PE"
+        >
+        
+      </parameter>
+      <parameter
+        id="k_NL_PE"
+        
+        constant="true"
+        value="100"
+        units="__h"
+        metaid="k_NL_PE"
+        >
+        
+      </parameter>
+      <parameter
+        id="k_NS_PE"
+        
+        constant="true"
+        value="280"
+        units="__h"
+        metaid="k_NS_PE"
         >
         
       </parameter>
@@ -1217,62 +1087,12 @@
         
       </parameter>
       <parameter
-        id="PLD_b"
+        id="kcat_FAAH"
         
         constant="true"
-        value="10000000"
-        units="nM"
-        metaid="PLD_b"
-        >
-        
-      </parameter>
-      <parameter
-        id="k_NA_PE"
-        
-        constant="true"
-        value="202"
+        value="18000"
         units="__h"
-        metaid="k_NA_PE"
-        >
-        
-      </parameter>
-      <parameter
-        id="k_NO_PE"
-        
-        constant="true"
-        value="230"
-        units="__h"
-        metaid="k_NO_PE"
-        >
-        
-      </parameter>
-      <parameter
-        id="k_NP_PE"
-        
-        constant="true"
-        value="270"
-        units="__h"
-        metaid="k_NP_PE"
-        >
-        
-      </parameter>
-      <parameter
-        id="k_NL_PE"
-        
-        constant="true"
-        value="100"
-        units="__h"
-        metaid="k_NL_PE"
-        >
-        
-      </parameter>
-      <parameter
-        id="k_NS_PE"
-        
-        constant="true"
-        value="280"
-        units="__h"
-        metaid="k_NS_PE"
+        metaid="kcat_FAAH"
         >
         
       </parameter>
@@ -1287,12 +1107,192 @@
         
       </parameter>
       <parameter
+        id="a_FAAH_A"
+        
+        constant="true"
+        value="1"
+        units="UL"
+        metaid="a_FAAH_A"
+        >
+        
+      </parameter>
+      <parameter
+        id="a_FAAH_O"
+        
+        constant="true"
+        value="5.7"
+        units="UL"
+        metaid="a_FAAH_O"
+        >
+        
+      </parameter>
+      <parameter
+        id="a_FAAH_P"
+        
+        constant="true"
+        value="37.8"
+        units="UL"
+        metaid="a_FAAH_P"
+        >
+        
+      </parameter>
+      <parameter
+        id="a_FAAH_L"
+        
+        constant="true"
+        value="1.15"
+        units="UL"
+        metaid="a_FAAH_L"
+        >
+        
+      </parameter>
+      <parameter
+        id="a_FAAH_S"
+        
+        constant="true"
+        value="1"
+        units="UL"
+        metaid="a_FAAH_S"
+        >
+        
+      </parameter>
+      <parameter
+        id="b_FAAH_Liver"
+        
+        constant="true"
+        value="1"
+        units="UL"
+        metaid="b_FAAH_Liver"
+        >
+        
+      </parameter>
+      <parameter
         id="b_FAAH_Brain"
         
         constant="true"
         value="0.197"
         units="UL"
         metaid="b_FAAH_Brain"
+        >
+        
+      </parameter>
+      <parameter
+        id="b_FAAH_Gut"
+        
+        constant="true"
+        value="0.034"
+        units="UL"
+        metaid="b_FAAH_Gut"
+        >
+        
+      </parameter>
+      <parameter
+        id="b_FAAH_Spleen"
+        
+        constant="true"
+        value="0.03"
+        units="UL"
+        metaid="b_FAAH_Spleen"
+        >
+        
+      </parameter>
+      <parameter
+        id="b_FAAH_Kidney"
+        
+        constant="true"
+        value="0.069"
+        units="UL"
+        metaid="b_FAAH_Kidney"
+        >
+        
+      </parameter>
+      <parameter
+        id="b_FAAH_Lungs"
+        
+        constant="true"
+        value="0.032"
+        units="UL"
+        metaid="b_FAAH_Lungs"
+        >
+        
+      </parameter>
+      <parameter
+        id="b_FAAH_Testis"
+        
+        constant="true"
+        value="0.126"
+        units="UL"
+        metaid="b_FAAH_Testis"
+        >
+        
+      </parameter>
+      <parameter
+        id="b_FAAH_MEC"
+        
+        constant="true"
+        value="0.137"
+        units="UL"
+        metaid="b_FAAH_MEC"
+        >
+        
+      </parameter>
+      <parameter
+        id="b_FAAH_Leucocytes"
+        
+        constant="true"
+        value="0"
+        units="UL"
+        metaid="b_FAAH_Leucocytes"
+        >
+        
+      </parameter>
+      <parameter
+        id="Km_FAAH_A"
+        
+        constant="true"
+        value="8200"
+        units="nM"
+        metaid="Km_FAAH_A"
+        >
+        
+      </parameter>
+      <parameter
+        id="Km_FAAH_O"
+        
+        constant="true"
+        value="52200"
+        units="nM"
+        metaid="Km_FAAH_O"
+        >
+        
+      </parameter>
+      <parameter
+        id="Km_FAAH_P"
+        
+        constant="true"
+        value="543000"
+        units="nM"
+        metaid="Km_FAAH_P"
+        >
+        
+      </parameter>
+      <parameter
+        id="Km_FAAH_L"
+        
+        constant="true"
+        value="10800"
+        units="nM"
+        metaid="Km_FAAH_L"
+        >
+        
+      </parameter>
+      <parameter
+        id="Km_FAAH_S"
+        
+        constant="true"
+        value="10000"
+        units="nM"
+        metaid="Km_FAAH_S"
         >
         
       </parameter>
@@ -1367,256 +1367,6 @@
         
       </parameter>
       <parameter
-        id="Pancreas"
-        
-        constant="true"
-        value="0.077"
-        units="L"
-        metaid="Pancreas"
-        >
-        
-      </parameter>
-      <parameter
-        id="b_NAT_Pancreas"
-        
-        constant="true"
-        value="0.333"
-        units="UL"
-        metaid="b_NAT_Pancreas"
-        >
-        
-      </parameter>
-      <parameter
-        id="Kidney"
-        
-        constant="true"
-        value="0.28"
-        units="L"
-        metaid="Kidney"
-        >
-        
-      </parameter>
-      <parameter
-        id="b_NAT_Kidney"
-        
-        constant="true"
-        value="0.667"
-        units="UL"
-        metaid="b_NAT_Kidney"
-        >
-        
-      </parameter>
-      <parameter
-        id="Heart"
-        
-        constant="true"
-        value="0.31"
-        units="L"
-        metaid="Heart"
-        >
-        
-      </parameter>
-      <parameter
-        id="b_NAT_Heart"
-        
-        constant="true"
-        value="1"
-        units="UL"
-        metaid="b_NAT_Heart"
-        >
-        
-      </parameter>
-      <parameter
-        id="Lungs"
-        
-        constant="true"
-        value="1.172"
-        units="L"
-        metaid="Lungs"
-        >
-        
-      </parameter>
-      <parameter
-        id="b_NAT_Lungs"
-        
-        constant="true"
-        value="0.033"
-        units="UL"
-        metaid="b_NAT_Lungs"
-        >
-        
-      </parameter>
-      <parameter
-        id="Muscles"
-        
-        constant="true"
-        value="35"
-        units="L"
-        metaid="Muscles"
-        >
-        
-      </parameter>
-      <parameter
-        id="b_NAT_Muscles"
-        
-        constant="true"
-        value="0.333"
-        units="UL"
-        metaid="b_NAT_Muscles"
-        >
-        
-      </parameter>
-      <parameter
-        id="Testis"
-        
-        constant="true"
-        value="0.036"
-        units="L"
-        metaid="Testis"
-        >
-        
-      </parameter>
-      <parameter
-        id="b_NAT_Testis"
-        
-        constant="true"
-        value="0.667"
-        units="UL"
-        metaid="b_NAT_Testis"
-        >
-        
-      </parameter>
-      <parameter
-        id="Leucocytes"
-        
-        constant="true"
-        value="0.025"
-        units="L"
-        metaid="Leucocytes"
-        >
-        
-      </parameter>
-      <parameter
-        id="b_NAT_Leucocytes"
-        
-        constant="true"
-        value="0"
-        units="UL"
-        metaid="b_NAT_Leucocytes"
-        >
-        
-      </parameter>
-      <parameter
-        id="PLD_r"
-        
-        constant="true"
-        value="10000000"
-        units="nM"
-        metaid="PLD_r"
-        >
-        
-      </parameter>
-      <parameter
-        id="LIVER"
-        
-        constant="true"
-        value="1.69"
-        units="L"
-        metaid="LIVER"
-        >
-        
-      </parameter>
-      <parameter
-        id="b_FAAH_Liver"
-        
-        constant="true"
-        value="1"
-        units="UL"
-        metaid="b_FAAH_Liver"
-        >
-        
-      </parameter>
-      <parameter
-        id="Gut"
-        
-        constant="true"
-        value="1.65"
-        units="L"
-        metaid="Gut"
-        >
-        
-      </parameter>
-      <parameter
-        id="b_FAAH_Gut"
-        
-        constant="true"
-        value="0.034"
-        units="UL"
-        metaid="b_FAAH_Gut"
-        >
-        
-      </parameter>
-      <parameter
-        id="Spleen"
-        
-        constant="true"
-        value="0.192"
-        units="L"
-        metaid="Spleen"
-        >
-        
-      </parameter>
-      <parameter
-        id="b_FAAH_Spleen"
-        
-        constant="true"
-        value="0.03"
-        units="UL"
-        metaid="b_FAAH_Spleen"
-        >
-        
-      </parameter>
-      <parameter
-        id="b_FAAH_Kidney"
-        
-        constant="true"
-        value="0.069"
-        units="UL"
-        metaid="b_FAAH_Kidney"
-        >
-        
-      </parameter>
-      <parameter
-        id="b_FAAH_Lungs"
-        
-        constant="true"
-        value="0.032"
-        units="UL"
-        metaid="b_FAAH_Lungs"
-        >
-        
-      </parameter>
-      <parameter
-        id="b_FAAH_Testis"
-        
-        constant="true"
-        value="0.126"
-        units="UL"
-        metaid="b_FAAH_Testis"
-        >
-        
-      </parameter>
-      <parameter
-        id="b_FAAH_Leucocytes"
-        
-        constant="true"
-        value="0"
-        units="UL"
-        metaid="b_FAAH_Leucocytes"
-        >
-        
-      </parameter>
-      <parameter
         id="b_NAAA_Liver"
         
         constant="true"
@@ -1677,16 +1427,6 @@
         
       </parameter>
       <parameter
-        id="Thymus"
-        
-        constant="true"
-        value="0.029"
-        units="L"
-        metaid="Thymus"
-        >
-        
-      </parameter>
-      <parameter
         id="b_NAAA_Thymus"
         
         constant="true"
@@ -1697,12 +1437,392 @@
         
       </parameter>
       <parameter
-        id="b_FAAH_MEC"
+        id="b_NAAA_Testis"
         
         constant="true"
-        value="0.137"
+        value="0.6"
         units="UL"
-        metaid="b_FAAH_MEC"
+        metaid="b_NAAA_Testis"
+        >
+        
+      </parameter>
+      <parameter
+        id="b_NAAA_Brain"
+        
+        constant="true"
+        value="0.6"
+        units="UL"
+        metaid="b_NAAA_Brain"
+        >
+        
+      </parameter>
+      <parameter
+        id="M_A"
+        
+        constant="true"
+        value="347.5"
+        units="__mole_g"
+        metaid="M_A"
+        >
+        
+      </parameter>
+      <parameter
+        id="M_O"
+        
+        constant="true"
+        value="325.5"
+        units="__mole_g"
+        metaid="M_O"
+        >
+        
+      </parameter>
+      <parameter
+        id="M_P"
+        
+        constant="true"
+        value="299.5"
+        units="__mole_g"
+        metaid="M_P"
+        >
+        
+      </parameter>
+      <parameter
+        id="M_L"
+        
+        constant="true"
+        value="323.5"
+        units="__mole_g"
+        metaid="M_L"
+        >
+        
+      </parameter>
+      <parameter
+        id="M_S"
+        
+        constant="true"
+        value="321.5"
+        units="__mole_g"
+        metaid="M_S"
+        >
+        
+      </parameter>
+      <parameter
+        id="Kd_CB1_A"
+        
+        constant="true"
+        value="239.2"
+        units="nM"
+        metaid="Kd_CB1_A"
+        >
+        
+      </parameter>
+      <parameter
+        id="Kd_AG2"
+        
+        constant="true"
+        value="3424"
+        units="nM"
+        metaid="Kd_AG2"
+        >
+        
+      </parameter>
+      <parameter
+        id="AG2_b"
+        
+        constant="true"
+        value="0"
+        
+        metaid="AG2_b"
+        >
+        
+      </parameter>
+      <parameter
+        id="Dose"
+        
+        constant="true"
+        value="10"
+        units="mg"
+        metaid="Dose"
+        >
+        
+      </parameter>
+      <parameter
+        id="M_PF"
+        
+        constant="true"
+        value="455.4"
+        units="__mole_g"
+        metaid="M_PF"
+        >
+        
+      </parameter>
+      <parameter
+        id="Vss_PFM"
+        
+        constant="true"
+        value="58.328"
+        units="L"
+        metaid="Vss_PFM"
+        >
+        
+      </parameter>
+      <parameter
+        id="Emax_PFM"
+        
+        constant="true"
+        value="0.773"
+        units="UL"
+        metaid="Emax_PFM"
+        >
+        
+      </parameter>
+      <parameter
+        id="ED50"
+        
+        constant="true"
+        value="0.53"
+        units="mg"
+        metaid="ED50"
+        >
+        
+      </parameter>
+      <parameter
+        id="kabs_PFM"
+        
+        constant="true"
+        value="2.2"
+        units="__h"
+        metaid="kabs_PFM"
+        >
+        
+      </parameter>
+      <parameter
+        id="kout_PFM"
+        
+        constant="true"
+        value="0.18"
+        units="__h"
+        metaid="kout_PFM"
+        >
+        
+      </parameter>
+      <parameter
+        id="kin_PFM"
+        
+        constant="true"
+        value="0.117"
+        units="__h"
+        metaid="kin_PFM"
+        >
+        
+      </parameter>
+      <parameter
+        id="klinear_PFM"
+        
+        constant="true"
+        value="0.0803"
+        units="__h"
+        metaid="klinear_PFM"
+        >
+        
+      </parameter>
+      <parameter
+        id="Vm_PFM"
+        
+        constant="true"
+        value="1511"
+        units="ng__h"
+        metaid="Vm_PFM"
+        >
+        
+      </parameter>
+      <parameter
+        id="Km_PFM"
+        
+        constant="true"
+        value="26.1"
+        units="ng__L"
+        metaid="Km_PFM"
+        >
+        
+      </parameter>
+      <parameter
+        id="R_PF"
+        
+        constant="true"
+        value="0.6"
+        units="UL"
+        metaid="R_PF"
+        >
+        
+      </parameter>
+      <parameter
+        id="Kp_b_PF"
+        
+        constant="true"
+        value="1.3"
+        units="UL"
+        metaid="Kp_b_PF"
+        >
+        
+      </parameter>
+      <parameter
+        id="Kp_m_PF"
+        
+        constant="true"
+        value="1.3"
+        units="UL"
+        metaid="Kp_m_PF"
+        >
+        
+      </parameter>
+      <parameter
+        id="Kp_r_PF"
+        
+        constant="true"
+        value="1.5"
+        units="UL"
+        metaid="Kp_r_PF"
+        >
+        
+      </parameter>
+      <parameter
+        id="PLD_b"
+        
+        constant="true"
+        value="10000000"
+        units="nM"
+        metaid="PLD_b"
+        >
+        
+      </parameter>
+      <parameter
+        id="PLD_r"
+        
+        constant="true"
+        value="10000000"
+        units="nM"
+        metaid="PLD_r"
+        >
+        
+      </parameter>
+      <parameter
+        id="LIVER"
+        
+        constant="true"
+        value="1.69"
+        units="L"
+        metaid="LIVER"
+        >
+        
+      </parameter>
+      <parameter
+        id="Gut"
+        
+        constant="true"
+        value="1.65"
+        units="L"
+        metaid="Gut"
+        >
+        
+      </parameter>
+      <parameter
+        id="Spleen"
+        
+        constant="true"
+        value="0.192"
+        units="L"
+        metaid="Spleen"
+        >
+        
+      </parameter>
+      <parameter
+        id="Kidney"
+        
+        constant="true"
+        value="0.28"
+        units="L"
+        metaid="Kidney"
+        >
+        
+      </parameter>
+      <parameter
+        id="Lungs"
+        
+        constant="true"
+        value="1.172"
+        units="L"
+        metaid="Lungs"
+        >
+        
+      </parameter>
+      <parameter
+        id="Testis"
+        
+        constant="true"
+        value="0.036"
+        units="L"
+        metaid="Testis"
+        >
+        
+      </parameter>
+      <parameter
+        id="Leucocytes"
+        
+        constant="true"
+        value="0.025"
+        units="L"
+        metaid="Leucocytes"
+        >
+        
+      </parameter>
+      <parameter
+        id="Pancreas"
+        
+        constant="true"
+        value="0.077"
+        units="L"
+        metaid="Pancreas"
+        >
+        
+      </parameter>
+      <parameter
+        id="Heart"
+        
+        constant="true"
+        value="0.31"
+        units="L"
+        metaid="Heart"
+        >
+        
+      </parameter>
+      <parameter
+        id="Muscles"
+        
+        constant="true"
+        value="35"
+        units="L"
+        metaid="Muscles"
+        >
+        
+      </parameter>
+      <parameter
+        id="Thymus"
+        
+        constant="true"
+        value="0.029"
+        units="L"
+        metaid="Thymus"
+        >
+        
+      </parameter>
+      <parameter
+        id="H"
+        
+        constant="true"
+        value="0.48"
+        
+        metaid="H"
         >
         
       </parameter>
@@ -1884,7 +2004,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::absorp"
+        metaid="absorp"
         >
         
         <listOfReactants>
@@ -1906,7 +2026,7 @@
         
         reversible="true"
         fast="false"
-        metaid="human::dist"
+        metaid="dist"
         >
         
         <listOfReactants>
@@ -1928,7 +2048,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::elim"
+        metaid="elim"
         >
         
         <listOfReactants>
@@ -1948,7 +2068,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vA_degr_b"
+        metaid="vA_degr_b"
         >
         
         <listOfReactants>
@@ -1969,7 +2089,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vO_degr_b"
+        metaid="vO_degr_b"
         >
         
         <listOfReactants>
@@ -1990,7 +2110,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vP_degr_b"
+        metaid="vP_degr_b"
         >
         
         <listOfReactants>
@@ -2011,7 +2131,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vL_degr_b"
+        metaid="vL_degr_b"
         >
         
         <listOfReactants>
@@ -2032,7 +2152,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vS_degr_b"
+        metaid="vS_degr_b"
         >
         
         <listOfReactants>
@@ -2053,7 +2173,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vNAPE_syn_b"
+        metaid="vNAPE_syn_b"
         >
         
         <listOfReactants>
@@ -2073,7 +2193,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vNOPE_syn_b"
+        metaid="vNOPE_syn_b"
         >
         
         <listOfReactants>
@@ -2093,7 +2213,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vNPPE_syn_b"
+        metaid="vNPPE_syn_b"
         >
         
         <listOfReactants>
@@ -2113,7 +2233,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vNLPE_syn_b"
+        metaid="vNLPE_syn_b"
         >
         
         <listOfReactants>
@@ -2133,7 +2253,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vNSPE_syn_b"
+        metaid="vNSPE_syn_b"
         >
         
         <listOfReactants>
@@ -2153,7 +2273,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vA_syn_b"
+        metaid="vA_syn_b"
         >
         
         <listOfReactants>
@@ -2175,7 +2295,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vO_syn_b"
+        metaid="vO_syn_b"
         >
         
         <listOfReactants>
@@ -2197,7 +2317,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vP_syn_b"
+        metaid="vP_syn_b"
         >
         
         <listOfReactants>
@@ -2219,7 +2339,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vL_syn_b"
+        metaid="vL_syn_b"
         >
         
         <listOfReactants>
@@ -2241,7 +2361,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vS_syn_b"
+        metaid="vS_syn_b"
         >
         
         <listOfReactants>
@@ -2263,7 +2383,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vFAAH_syn_b"
+        metaid="vFAAH_syn_b"
         >
         
         <listOfReactants>
@@ -2283,7 +2403,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vFAAH_degr_b"
+        metaid="vFAAH_degr_b"
         >
         
         <listOfReactants>
@@ -2303,7 +2423,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vFAAH_inh_b"
+        metaid="vFAAH_inh_b"
         >
         
         <listOfReactants>
@@ -2325,7 +2445,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vFAAH_inh_degr_b"
+        metaid="vFAAH_inh_degr_b"
         >
         
         <listOfReactants>
@@ -2345,7 +2465,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vA_UE_b"
+        metaid="vA_UE_b"
         >
         
         <listOfReactants>
@@ -2365,7 +2485,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vO_UE_b"
+        metaid="vO_UE_b"
         >
         
         <listOfReactants>
@@ -2385,7 +2505,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vP_UE_b"
+        metaid="vP_UE_b"
         >
         
         <listOfReactants>
@@ -2405,7 +2525,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vL_UE_b"
+        metaid="vL_UE_b"
         >
         
         <listOfReactants>
@@ -2425,7 +2545,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vS_UE_b"
+        metaid="vS_UE_b"
         >
         
         <listOfReactants>
@@ -2445,7 +2565,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vA_degr_r"
+        metaid="vA_degr_r"
         >
         
         <listOfReactants>
@@ -2466,7 +2586,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vO_degr_r"
+        metaid="vO_degr_r"
         >
         
         <listOfReactants>
@@ -2487,7 +2607,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vP_degr_r"
+        metaid="vP_degr_r"
         >
         
         <listOfReactants>
@@ -2508,7 +2628,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vL_degr_r"
+        metaid="vL_degr_r"
         >
         
         <listOfReactants>
@@ -2529,7 +2649,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vS_degr_r"
+        metaid="vS_degr_r"
         >
         
         <listOfReactants>
@@ -2550,7 +2670,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vNAPE_syn_r"
+        metaid="vNAPE_syn_r"
         >
         
         <listOfReactants>
@@ -2570,7 +2690,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vNOPE_syn_r"
+        metaid="vNOPE_syn_r"
         >
         
         <listOfReactants>
@@ -2590,7 +2710,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vNPPE_syn_r"
+        metaid="vNPPE_syn_r"
         >
         
         <listOfReactants>
@@ -2610,7 +2730,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vNLPE_syn_r"
+        metaid="vNLPE_syn_r"
         >
         
         <listOfReactants>
@@ -2630,7 +2750,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vNSPE_syn_r"
+        metaid="vNSPE_syn_r"
         >
         
         <listOfReactants>
@@ -2650,7 +2770,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vA_syn_r"
+        metaid="vA_syn_r"
         >
         
         <listOfReactants>
@@ -2672,7 +2792,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vO_syn_r"
+        metaid="vO_syn_r"
         >
         
         <listOfReactants>
@@ -2694,7 +2814,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vP_syn_r"
+        metaid="vP_syn_r"
         >
         
         <listOfReactants>
@@ -2716,7 +2836,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vL_syn_r"
+        metaid="vL_syn_r"
         >
         
         <listOfReactants>
@@ -2738,7 +2858,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vS_syn_r"
+        metaid="vS_syn_r"
         >
         
         <listOfReactants>
@@ -2760,7 +2880,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vFAAH_syn_r"
+        metaid="vFAAH_syn_r"
         >
         
         <listOfReactants>
@@ -2780,7 +2900,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vFAAH_degr_r"
+        metaid="vFAAH_degr_r"
         >
         
         <listOfReactants>
@@ -2800,7 +2920,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vFAAH_inh_r"
+        metaid="vFAAH_inh_r"
         >
         
         <listOfReactants>
@@ -2822,7 +2942,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vFAAH_inh_degr_r"
+        metaid="vFAAH_inh_degr_r"
         >
         
         <listOfReactants>
@@ -2842,7 +2962,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vA_UE_r"
+        metaid="vA_UE_r"
         >
         
         <listOfReactants>
@@ -2862,7 +2982,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vO_UE_r"
+        metaid="vO_UE_r"
         >
         
         <listOfReactants>
@@ -2882,7 +3002,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vP_UE_r"
+        metaid="vP_UE_r"
         >
         
         <listOfReactants>
@@ -2902,7 +3022,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vL_UE_r"
+        metaid="vL_UE_r"
         >
         
         <listOfReactants>
@@ -2922,7 +3042,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vS_UE_r"
+        metaid="vS_UE_r"
         >
         
         <listOfReactants>
@@ -2942,7 +3062,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vA_degr_m"
+        metaid="vA_degr_m"
         >
         
         <listOfReactants>
@@ -2963,7 +3083,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vO_degr_m"
+        metaid="vO_degr_m"
         >
         
         <listOfReactants>
@@ -2984,7 +3104,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vP_degr_m"
+        metaid="vP_degr_m"
         >
         
         <listOfReactants>
@@ -3005,7 +3125,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vL_degr_m"
+        metaid="vL_degr_m"
         >
         
         <listOfReactants>
@@ -3026,7 +3146,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vS_degr_m"
+        metaid="vS_degr_m"
         >
         
         <listOfReactants>
@@ -3047,7 +3167,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vFAAH_syn_m"
+        metaid="vFAAH_syn_m"
         >
         
         <listOfReactants>
@@ -3067,7 +3187,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vFAAH_degr_m"
+        metaid="vFAAH_degr_m"
         >
         
         <listOfReactants>
@@ -3087,7 +3207,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vFAAH_inh_m"
+        metaid="vFAAH_inh_m"
         >
         
         <listOfReactants>
@@ -3109,7 +3229,7 @@
         
         reversible="false"
         fast="false"
-        metaid="human::vFAAH_inh_degr_m"
+        metaid="vFAAH_inh_degr_m"
         >
         
         <listOfReactants>
@@ -3129,7 +3249,7 @@
         
         reversible="true"
         fast="false"
-        metaid="human::vA_m_p"
+        metaid="vA_m_p"
         >
         
         <listOfReactants>
@@ -3151,7 +3271,7 @@
         
         reversible="true"
         fast="false"
-        metaid="human::vO_m_p"
+        metaid="vO_m_p"
         >
         
         <listOfReactants>
@@ -3173,7 +3293,7 @@
         
         reversible="true"
         fast="false"
-        metaid="human::vP_m_p"
+        metaid="vP_m_p"
         >
         
         <listOfReactants>
@@ -3195,7 +3315,7 @@
         
         reversible="true"
         fast="false"
-        metaid="human::vL_m_p"
+        metaid="vL_m_p"
         >
         
         <listOfReactants>
@@ -3217,7 +3337,7 @@
         
         reversible="true"
         fast="false"
-        metaid="human::vS_m_p"
+        metaid="vS_m_p"
         >
         
         <listOfReactants>
@@ -3239,7 +3359,7 @@
         
         reversible="true"
         fast="false"
-        metaid="human::vA_b_m"
+        metaid="vA_b_m"
         >
         
         <listOfReactants>
@@ -3261,7 +3381,7 @@
         
         reversible="true"
         fast="false"
-        metaid="human::vO_b_m"
+        metaid="vO_b_m"
         >
         
         <listOfReactants>
@@ -3283,7 +3403,7 @@
         
         reversible="true"
         fast="false"
-        metaid="human::vP_b_m"
+        metaid="vP_b_m"
         >
         
         <listOfReactants>
@@ -3305,7 +3425,7 @@
         
         reversible="true"
         fast="false"
-        metaid="human::vL_b_m"
+        metaid="vL_b_m"
         >
         
         <listOfReactants>
@@ -3327,7 +3447,7 @@
         
         reversible="true"
         fast="false"
-        metaid="human::vS_b_m"
+        metaid="vS_b_m"
         >
         
         <listOfReactants>
@@ -3349,7 +3469,7 @@
         
         reversible="true"
         fast="false"
-        metaid="human::vA_r_p"
+        metaid="vA_r_p"
         >
         
         <listOfReactants>
@@ -3371,7 +3491,7 @@
         
         reversible="true"
         fast="false"
-        metaid="human::vO_r_p"
+        metaid="vO_r_p"
         >
         
         <listOfReactants>
@@ -3393,7 +3513,7 @@
         
         reversible="true"
         fast="false"
-        metaid="human::vP_r_p"
+        metaid="vP_r_p"
         >
         
         <listOfReactants>
@@ -3415,7 +3535,7 @@
         
         reversible="true"
         fast="false"
-        metaid="human::vL_r_p"
+        metaid="vL_r_p"
         >
         
         <listOfReactants>
@@ -3437,7 +3557,7 @@
         
         reversible="true"
         fast="false"
-        metaid="human::vS_r_p"
+        metaid="vS_r_p"
         >
         
         <listOfReactants>
@@ -3460,126 +3580,126 @@
     <assignmentRule
       variable="F_PFM"
       
-      metaid="human::F_PFM::ode_"
+      metaid="F_PFM::ode_"
       >
       <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><divide/><apply><times/><ci>Emax_PFM</ci><ci>Dose</ci></apply><apply><plus/><ci>ED50</ci><ci>Dose</ci></apply></apply></math>
     </assignmentRule>
     <assignmentRule
       variable="dose_amount"
       
-      metaid="human::dose_amount::ode_"
+      metaid="dose_amount::ode_"
       >
       <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><times/><apply><times/><apply><times/><ci>F_PFM</ci><cn>1000000</cn></apply><ci>Dose</ci></apply><ci>F_PFM</ci></apply></math>
     </assignmentRule>
     <assignmentRule
       variable="PF_p"
       
-      metaid="human::PF_p::ode_"
+      metaid="PF_p::ode_"
       >
       <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><divide/><apply><divide/><ci>PFM_p</ci><ci>M_PF</ci></apply><ci>Vss_PFM</ci></apply></math>
     </assignmentRule>
     <assignmentRule
       variable="PF_b"
       
-      metaid="human::PF_b::ode_"
+      metaid="PF_b::ode_"
       >
       <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><times/><ci>PF_p</ci><ci>Kp_b_PF</ci></apply></math>
     </assignmentRule>
     <assignmentRule
       variable="PF_r"
       
-      metaid="human::PF_r::ode_"
+      metaid="PF_r::ode_"
       >
       <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><times/><ci>PF_p</ci><ci>Kp_r_PF</ci></apply></math>
     </assignmentRule>
     <assignmentRule
       variable="PF_m"
       
-      metaid="human::PF_m::ode_"
+      metaid="PF_m::ode_"
       >
       <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><times/><ci>PF_p</ci><ci>Kp_m_PF</ci></apply></math>
     </assignmentRule>
     <assignmentRule
       variable="FAAH_D_b"
       
-      metaid="human::FAAH_D_b::ode_"
+      metaid="FAAH_D_b::ode_"
       >
       <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><cn>1</cn><apply><divide/><ci>A_b</ci><ci>Km_FAAH_A</ci></apply></apply><apply><divide/><ci>O_b</ci><ci>Km_FAAH_O</ci></apply></apply><apply><divide/><ci>P_b</ci><ci>Km_FAAH_P</ci></apply></apply><apply><divide/><ci>L_b</ci><ci>Km_FAAH_L</ci></apply></apply><apply><divide/><ci>S_b</ci><ci>Km_FAAH_S</ci></apply></apply></math>
     </assignmentRule>
     <assignmentRule
       variable="slag1_b"
       
-      metaid="human::slag1_b::ode_"
+      metaid="slag1_b::ode_"
       >
       <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><divide/><ci>NAPE_b</ci><ci>Km_NA_PE</ci></apply><apply><divide/><ci>NOPE_b</ci><ci>Km_NO_PE</ci></apply></apply><apply><divide/><ci>NPPE_b</ci><ci>Km_NP_PE</ci></apply></apply><apply><divide/><ci>NLPE_b</ci><ci>Km_NL_PE</ci></apply></apply><apply><divide/><ci>NSPE_b</ci><ci>Km_NS_PE</ci></apply></apply></math>
     </assignmentRule>
     <assignmentRule
       variable="slag2_b"
       
-      metaid="human::slag2_b::ode_"
+      metaid="slag2_b::ode_"
       >
       <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><divide/><ci>A_b</ci><ci>Ki_A</ci></apply><apply><divide/><ci>O_b</ci><ci>Ki_O</ci></apply></apply><apply><divide/><ci>P_b</ci><ci>Ki_P</ci></apply></apply><apply><divide/><ci>L_b</ci><ci>Ki_L</ci></apply></apply><apply><divide/><ci>S_b</ci><ci>Ki_S</ci></apply></apply></math>
     </assignmentRule>
     <assignmentRule
       variable="den_b"
       
-      metaid="human::den_b::ode_"
+      metaid="den_b::ode_"
       >
       <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><cn>1</cn><ci>slag1_b</ci></apply><ci>slag2_b</ci></apply></math>
     </assignmentRule>
     <assignmentRule
       variable="FAAH_D_r"
       
-      metaid="human::FAAH_D_r::ode_"
+      metaid="FAAH_D_r::ode_"
       >
       <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><cn>1</cn><apply><divide/><ci>A_r</ci><ci>Km_FAAH_A</ci></apply></apply><apply><divide/><ci>O_r</ci><ci>Km_FAAH_O</ci></apply></apply><apply><divide/><ci>P_r</ci><ci>Km_FAAH_P</ci></apply></apply><apply><divide/><ci>L_r</ci><ci>Km_FAAH_L</ci></apply></apply><apply><divide/><ci>S_r</ci><ci>Km_FAAH_S</ci></apply></apply></math>
     </assignmentRule>
     <assignmentRule
       variable="c_NAT_ROB"
       
-      metaid="human::c_NAT_ROB::ode_"
+      metaid="c_NAT_ROB::ode_"
       >
       <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><times/><ci>Pancreas</ci><ci>b_NAT_Pancreas</ci></apply><apply><times/><ci>Kidney</ci><ci>b_NAT_Kidney</ci></apply></apply><apply><times/><ci>Heart</ci><ci>b_NAT_Heart</ci></apply></apply><apply><times/><ci>Lungs</ci><ci>b_NAT_Lungs</ci></apply></apply><apply><times/><ci>Muscles</ci><ci>b_NAT_Muscles</ci></apply></apply><apply><times/><ci>Testis</ci><ci>b_NAT_Testis</ci></apply></apply><apply><times/><ci>Leucocytes</ci><ci>b_NAT_Leucocytes</ci></apply></apply></math>
     </assignmentRule>
     <assignmentRule
       variable="slag1_r"
       
-      metaid="human::slag1_r::ode_"
+      metaid="slag1_r::ode_"
       >
       <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><divide/><ci>NAPE_r</ci><ci>Km_NA_PE</ci></apply><apply><divide/><ci>NOPE_r</ci><ci>Km_NO_PE</ci></apply></apply><apply><divide/><ci>NPPE_r</ci><ci>Km_NP_PE</ci></apply></apply><apply><divide/><ci>NLPE_r</ci><ci>Km_NL_PE</ci></apply></apply><apply><divide/><ci>NSPE_r</ci><ci>Km_NS_PE</ci></apply></apply></math>
     </assignmentRule>
     <assignmentRule
       variable="slag2_r"
       
-      metaid="human::slag2_r::ode_"
+      metaid="slag2_r::ode_"
       >
       <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><divide/><ci>A_r</ci><ci>Ki_A</ci></apply><apply><divide/><ci>O_r</ci><ci>Ki_O</ci></apply></apply><apply><divide/><ci>P_r</ci><ci>Ki_P</ci></apply></apply><apply><divide/><ci>L_r</ci><ci>Ki_L</ci></apply></apply><apply><divide/><ci>S_r</ci><ci>Ki_S</ci></apply></apply></math>
     </assignmentRule>
     <assignmentRule
       variable="den_r"
       
-      metaid="human::den_r::ode_"
+      metaid="den_r::ode_"
       >
       <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><cn>1</cn><ci>slag1_r</ci></apply><ci>slag2_r</ci></apply></math>
     </assignmentRule>
     <assignmentRule
       variable="c_FAAH_ROB"
       
-      metaid="human::c_FAAH_ROB::ode_"
+      metaid="c_FAAH_ROB::ode_"
       >
       <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><times/><ci>LIVER</ci><ci>b_FAAH_Liver</ci></apply><apply><times/><ci>Gut</ci><ci>b_FAAH_Gut</ci></apply></apply><apply><times/><ci>Spleen</ci><ci>b_FAAH_Spleen</ci></apply></apply><apply><times/><ci>Kidney</ci><ci>b_FAAH_Kidney</ci></apply></apply><apply><times/><ci>Lungs</ci><ci>b_FAAH_Lungs</ci></apply></apply><apply><times/><ci>Testis</ci><ci>b_FAAH_Testis</ci></apply></apply><apply><times/><ci>Leucocytes</ci><ci>b_FAAH_Leucocytes</ci></apply></apply></math>
     </assignmentRule>
     <assignmentRule
       variable="c_NAAA_ROB"
       
-      metaid="human::c_NAAA_ROB::ode_"
+      metaid="c_NAAA_ROB::ode_"
       >
       <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><times/><ci>LIVER</ci><ci>b_NAAA_Liver</ci></apply><apply><times/><ci>Gut</ci><ci>b_NAAA_Gut</ci></apply></apply><apply><times/><ci>Spleen</ci><ci>b_NAAA_Spleen</ci></apply></apply><apply><times/><ci>Kidney</ci><ci>b_NAAA_Kidney</ci></apply></apply><apply><times/><ci>Heart</ci><ci>b_NAAA_Heart</ci></apply></apply><apply><times/><ci>Lungs</ci><ci>b_NAAA_Lungs</ci></apply></apply><apply><times/><ci>Thymus</ci><ci>b_NAAA_Thymus</ci></apply></apply><apply><times/><apply><times/><ci>Testis</ci><ci>b_NAAA_Thymus</ci></apply><ci>Testis</ci></apply></apply></math>
     </assignmentRule>
     <assignmentRule
       variable="FAAH_D_m"
       
-      metaid="human::FAAH_D_m::ode_"
+      metaid="FAAH_D_m::ode_"
       >
       <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><cn>1</cn><apply><divide/><ci>A_m</ci><ci>Km_FAAH_A</ci></apply></apply><apply><divide/><ci>O_m</ci><ci>Km_FAAH_O</ci></apply></apply><apply><divide/><ci>P_m</ci><ci>Km_FAAH_P</ci></apply></apply><apply><divide/><ci>L_m</ci><ci>Km_FAAH_L</ci></apply></apply><apply><divide/><ci>S_m</ci><ci>Km_FAAH_S</ci></apply></apply></math>
     </assignmentRule>
@@ -3588,7 +3708,7 @@
   
     <listOfEvents>
       <event
-        id="evt1" metaid="human::evt1"
+        id="evt1" metaid="evt1"
         >
         <trigger>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -3603,7 +3723,7 @@
           
           <eventAssignment
             variable="PFM_gut"
-            metaid="human::PFM_gut::evt1">
+            metaid="PFM_gut::evt1">
             <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><ci>PFM_gut</ci><ci>dose_amount</ci></apply></math>
           </eventAssignment>
           
@@ -3619,7 +3739,7 @@
 </unitDefinition>
       <unitDefinition id="ng" name="ng">
   <listOfUnits>
-    <unit kind="gram" exponent="1" scale="-9" multiplier="1"/>
+    <unit kind="kilogram" exponent="1" scale="-12" multiplier="1"/>
   </listOfUnits>
 </unitDefinition>
       <unitDefinition id="UL" name="UL">
@@ -3635,8 +3755,8 @@
 </unitDefinition>
       <unitDefinition id="ng__h" name="ng/h">
   <listOfUnits>
-    <unit kind="gram" exponent="1" scale="-9" multiplier="1"/>
-    <unit kind="second" exponent="-1" scale="0" multiplier="3600"/>
+    <unit kind="kilogram" exponent="1" scale="-12" multiplier="1"/>
+    <unit kind="second" exponent="-1" scale="3" multiplier="3.6"/>
   </listOfUnits>
 </unitDefinition>
       <unitDefinition id="nM_L" name="nM*L">
@@ -3647,43 +3767,43 @@
       <unitDefinition id="nmole__h" name="nmole/h">
   <listOfUnits>
     <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
-    <unit kind="second" exponent="-1" scale="0" multiplier="3600"/>
-  </listOfUnits>
-</unitDefinition>
-      <unitDefinition id="mg" name="mg">
-  <listOfUnits>
-    <unit kind="gram" exponent="1" scale="-3" multiplier="1"/>
-  </listOfUnits>
-</unitDefinition>
-      <unitDefinition id="__mole_g" name="g/mole">
-  <listOfUnits>
-    <unit kind="gram" exponent="1" scale="0" multiplier="1"/>
-    <unit kind="mole" exponent="-1" scale="0" multiplier="1"/>
-  </listOfUnits>
-</unitDefinition>
-      <unitDefinition id="__h" name="1/h">
-  <listOfUnits>
-    <unit kind="second" exponent="-1" scale="0" multiplier="3600"/>
-  </listOfUnits>
-</unitDefinition>
-      <unitDefinition id="ng__L" name="ng/L">
-  <listOfUnits>
-    <unit kind="gram" exponent="1" scale="-9" multiplier="1"/>
-    <unit kind="litre" exponent="-1" scale="0" multiplier="1"/>
+    <unit kind="second" exponent="-1" scale="3" multiplier="3.6"/>
   </listOfUnits>
 </unitDefinition>
       <unitDefinition id="nM__h" name="nM/h">
   <listOfUnits>
     <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
     <unit kind="litre" exponent="-1" scale="0" multiplier="1"/>
-    <unit kind="second" exponent="-1" scale="0" multiplier="3600"/>
+    <unit kind="second" exponent="-1" scale="3" multiplier="3.6"/>
+  </listOfUnits>
+</unitDefinition>
+      <unitDefinition id="__h" name="1/h">
+  <listOfUnits>
+    <unit kind="second" exponent="-1" scale="3" multiplier="3.6"/>
   </listOfUnits>
 </unitDefinition>
       <unitDefinition id="__nM__h" name="1/h/nM">
   <listOfUnits>
-    <unit kind="second" exponent="-1" scale="0" multiplier="3600"/>
+    <unit kind="second" exponent="-1" scale="3" multiplier="3.6"/>
     <unit kind="mole" exponent="-1" scale="-9" multiplier="1"/>
     <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
+  </listOfUnits>
+</unitDefinition>
+      <unitDefinition id="__mole_g" name="g/mole">
+  <listOfUnits>
+    <unit kind="kilogram" exponent="1" scale="-3" multiplier="1"/>
+    <unit kind="mole" exponent="-1" scale="0" multiplier="1"/>
+  </listOfUnits>
+</unitDefinition>
+      <unitDefinition id="mg" name="mg">
+  <listOfUnits>
+    <unit kind="kilogram" exponent="1" scale="-6" multiplier="1"/>
+  </listOfUnits>
+</unitDefinition>
+      <unitDefinition id="ng__L" name="ng/L">
+  <listOfUnits>
+    <unit kind="kilogram" exponent="1" scale="-12" multiplier="1"/>
+    <unit kind="litre" exponent="-1" scale="0" multiplier="1"/>
   </listOfUnits>
 </unitDefinition>
   </listOfUnitDefinitions>

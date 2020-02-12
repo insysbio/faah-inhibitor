@@ -1442,385 +1442,385 @@ InteractionNetwork
 
 //! Initialization at ode, count: 93
 
-F_PFM = Emax_PFM * Dose / (ED50 + Dose); // @Record {units: UL}
+F_PFM = Emax_PFM * Dose / (ED50 + Dose); // @Record  {units: UL}
 
-dose_amount = F_PFM * 1e+6 * Dose * F_PFM; // @Record {units: ng}
+dose_amount = F_PFM * 1e+6 * Dose * F_PFM; // @Record  {units: ng}
 
-absorp = kabs_PFM * PFM_gut; // @Reaction {units: ng/h}
+absorp = kabs_PFM * PFM_gut; // @Reaction  {units: ng/h}
 
-dist = kout_PFM * PFM_p - kin_PFM * PFM_r; // @Reaction {units: ng/h}
+dist = kout_PFM * PFM_p - kin_PFM * PFM_r; // @Reaction  {units: ng/h}
 
-elim = klinear_PFM * PFM_p + (Vm_PFM * PFM_p / Vss_PFM) / (Km_PFM + PFM_p / Vss_PFM); // @Reaction {units: ng/h}
+elim = klinear_PFM * PFM_p + (Vm_PFM * PFM_p / Vss_PFM) / (Km_PFM + PFM_p / Vss_PFM); // @Reaction  {units: ng/h}
 
-FAAH_D_b = 1 + A_b / Km_FAAH_A + O_b / Km_FAAH_O + P_b / Km_FAAH_P + L_b / Km_FAAH_L + S_b / Km_FAAH_S; // @Record {units: UL}
+FAAH_D_b = 1 + A_b / Km_FAAH_A + O_b / Km_FAAH_O + P_b / Km_FAAH_P + L_b / Km_FAAH_L + S_b / Km_FAAH_S; // @Record  {units: UL}
 
-vA_degr_b = BRAIN * FAAH_b * kcat_FAAH * a_FAAH_A * A_b / (Km_FAAH_A * FAAH_D_b); // @Reaction {units: nmole/h}
+vA_degr_b = BRAIN * FAAH_b * kcat_FAAH * a_FAAH_A * A_b / (Km_FAAH_A * FAAH_D_b); // @Reaction  {units: nmole/h}
 
-vO_degr_b = BRAIN * FAAH_b * kcat_FAAH * a_FAAH_O * O_b / (Km_FAAH_O * FAAH_D_b); // @Reaction {units: nmole/h}
+vO_degr_b = BRAIN * FAAH_b * kcat_FAAH * a_FAAH_O * O_b / (Km_FAAH_O * FAAH_D_b); // @Reaction  {units: nmole/h}
 
-vP_degr_b = BRAIN * FAAH_b * kcat_FAAH * a_FAAH_P * P_b / (Km_FAAH_P * FAAH_D_b); // @Reaction {units: nmole/h}
+vP_degr_b = BRAIN * FAAH_b * kcat_FAAH * a_FAAH_P * P_b / (Km_FAAH_P * FAAH_D_b); // @Reaction  {units: nmole/h}
 
-vL_degr_b = BRAIN * FAAH_b * kcat_FAAH * a_FAAH_L * L_b / (Km_FAAH_L * FAAH_D_b); // @Reaction {units: nmole/h}
+vL_degr_b = BRAIN * FAAH_b * kcat_FAAH * a_FAAH_L * L_b / (Km_FAAH_L * FAAH_D_b); // @Reaction  {units: nmole/h}
 
-vS_degr_b = BRAIN * FAAH_b * kcat_FAAH * a_FAAH_S * S_b / (Km_FAAH_S * FAAH_D_b); // @Reaction {units: nmole/h}
+vS_degr_b = BRAIN * FAAH_b * kcat_FAAH * a_FAAH_S * S_b / (Km_FAAH_S * FAAH_D_b); // @Reaction  {units: nmole/h}
 
-vNAPE_syn_b = BRAIN * Vmax_NAT * p_A * a_NAT_A * b_NAT_Brain; // @Reaction {units: nmole/h}
+vNAPE_syn_b = BRAIN * Vmax_NAT * p_A * a_NAT_A * b_NAT_Brain; // @Reaction  {units: nmole/h}
 
-vNOPE_syn_b = BRAIN * Vmax_NAT * p_O * a_NAT_O * b_NAT_Brain; // @Reaction {units: nmole/h}
+vNOPE_syn_b = BRAIN * Vmax_NAT * p_O * a_NAT_O * b_NAT_Brain; // @Reaction  {units: nmole/h}
 
-vNPPE_syn_b = BRAIN * Vmax_NAT * p_P * a_NAT_P * b_NAT_Brain; // @Reaction {units: nmole/h}
+vNPPE_syn_b = BRAIN * Vmax_NAT * p_P * a_NAT_P * b_NAT_Brain; // @Reaction  {units: nmole/h}
 
-vNLPE_syn_b = BRAIN * Vmax_NAT * p_L * a_NAT_L * b_NAT_Brain; // @Reaction {units: nmole/h}
+vNLPE_syn_b = BRAIN * Vmax_NAT * p_L * a_NAT_L * b_NAT_Brain; // @Reaction  {units: nmole/h}
 
-vNSPE_syn_b = BRAIN * Vmax_NAT * p_S * a_NAT_S * b_NAT_Brain; // @Reaction {units: nmole/h}
+vNSPE_syn_b = BRAIN * Vmax_NAT * p_S * a_NAT_S * b_NAT_Brain; // @Reaction  {units: nmole/h}
 
-slag1_b = NAPE_b / Km_NA_PE + NOPE_b / Km_NO_PE + NPPE_b / Km_NP_PE + NLPE_b / Km_NL_PE + NSPE_b / Km_NS_PE; // @Record {units: UL}
+slag1_b = NAPE_b / Km_NA_PE + NOPE_b / Km_NO_PE + NPPE_b / Km_NP_PE + NLPE_b / Km_NL_PE + NSPE_b / Km_NS_PE; // @Record  {units: UL}
 
-slag2_b = A_b / Ki_A + O_b / Ki_O + P_b / Ki_P + L_b / Ki_L + S_b / Ki_S; // @Record {units: UL}
+slag2_b = A_b / Ki_A + O_b / Ki_O + P_b / Ki_P + L_b / Ki_L + S_b / Ki_S; // @Record  {units: UL}
 
-den_b = 1 + slag1_b + slag2_b; // @Record {units: UL}
+den_b = 1 + slag1_b + slag2_b; // @Record  {units: UL}
 
-vA_syn_b = BRAIN * PLD_b * k_NA_PE * NAPE_b / Km_NA_PE / den_b; // @Reaction {units: nmole/h}
+vA_syn_b = BRAIN * PLD_b * k_NA_PE * NAPE_b / Km_NA_PE / den_b; // @Reaction  {units: nmole/h}
 
-vO_syn_b = BRAIN * PLD_b * k_NO_PE * NOPE_b / Km_NO_PE / den_b; // @Reaction {units: nmole/h}
+vO_syn_b = BRAIN * PLD_b * k_NO_PE * NOPE_b / Km_NO_PE / den_b; // @Reaction  {units: nmole/h}
 
-vP_syn_b = BRAIN * PLD_b * k_NP_PE * NPPE_b / Km_NP_PE / den_b; // @Reaction {units: nmole/h}
+vP_syn_b = BRAIN * PLD_b * k_NP_PE * NPPE_b / Km_NP_PE / den_b; // @Reaction  {units: nmole/h}
 
-vL_syn_b = BRAIN * PLD_b * k_NL_PE * NLPE_b / Km_NL_PE / den_b; // @Reaction {units: nmole/h}
+vL_syn_b = BRAIN * PLD_b * k_NL_PE * NLPE_b / Km_NL_PE / den_b; // @Reaction  {units: nmole/h}
 
-vS_syn_b = BRAIN * PLD_b * k_NS_PE * NSPE_b / Km_NS_PE / den_b; // @Reaction {units: nmole/h}
+vS_syn_b = BRAIN * PLD_b * k_NS_PE * NSPE_b / Km_NS_PE / den_b; // @Reaction  {units: nmole/h}
 
-vFAAH_syn_b = BRAIN * FAAH_t * b_FAAH_Brain * k_deg_FAAH; // @Reaction {units: nmole/h}
+vFAAH_syn_b = BRAIN * FAAH_t * b_FAAH_Brain * k_deg_FAAH; // @Reaction  {units: nmole/h}
 
-vFAAH_degr_b = BRAIN * k_deg_FAAH * FAAH_b; // @Reaction {units: nmole/h}
+vFAAH_degr_b = BRAIN * k_deg_FAAH * FAAH_b; // @Reaction  {units: nmole/h}
 
-PF_p = PFM_p / M_PF / Vss_PFM; // @Record {units: nM}
+PF_p = PFM_p / M_PF / Vss_PFM; // @Record  {units: nM}
 
-PF_b = PF_p * Kp_b_PF; // @Record {units: nM}
+PF_b = PF_p * Kp_b_PF; // @Record  {units: nM}
 
-vFAAH_inh_b = BRAIN * k_inh * FAAH_b * PF_b; // @Reaction {units: nmole/h}
+vFAAH_inh_b = BRAIN * k_inh * FAAH_b * PF_b; // @Reaction  {units: nmole/h}
 
-vFAAH_inh_degr_b = BRAIN * k_deg_FAAH * FAAHinh_b; // @Reaction {units: nmole/h}
+vFAAH_inh_degr_b = BRAIN * k_deg_FAAH * FAAHinh_b; // @Reaction  {units: nmole/h}
 
-vA_UE_b = BRAIN * b_FAAH_Brain * kcl_A * A_b; // @Reaction {units: nmole/h}
+vA_UE_b = BRAIN * b_FAAH_Brain * kcl_A * A_b; // @Reaction  {units: nmole/h}
 
-vO_UE_b = BRAIN * b_FAAH_Brain * kcl_O * O_b; // @Reaction {units: nmole/h}
+vO_UE_b = BRAIN * b_FAAH_Brain * kcl_O * O_b; // @Reaction  {units: nmole/h}
 
-vP_UE_b = BRAIN * b_FAAH_Brain * kcl_P * P_b; // @Reaction {units: nmole/h}
+vP_UE_b = BRAIN * b_FAAH_Brain * kcl_P * P_b; // @Reaction  {units: nmole/h}
 
-vL_UE_b = BRAIN * b_FAAH_Brain * kcl_L * L_b; // @Reaction {units: nmole/h}
+vL_UE_b = BRAIN * b_FAAH_Brain * kcl_L * L_b; // @Reaction  {units: nmole/h}
 
-vS_UE_b = BRAIN * b_FAAH_Brain * kcl_S * S_b; // @Reaction {units: nmole/h}
+vS_UE_b = BRAIN * b_FAAH_Brain * kcl_S * S_b; // @Reaction  {units: nmole/h}
 
-FAAH_D_r = 1 + A_r / Km_FAAH_A + O_r / Km_FAAH_O + P_r / Km_FAAH_P + L_r / Km_FAAH_L + S_r / Km_FAAH_S; // @Record {units: UL}
+FAAH_D_r = 1 + A_r / Km_FAAH_A + O_r / Km_FAAH_O + P_r / Km_FAAH_P + L_r / Km_FAAH_L + S_r / Km_FAAH_S; // @Record  {units: UL}
 
-vA_degr_r = ROB * FAAH_r * kcat_FAAH * a_FAAH_A * A_r / (Km_FAAH_A * FAAH_D_r); // @Reaction {units: nmole/h}
+vA_degr_r = ROB * FAAH_r * kcat_FAAH * a_FAAH_A * A_r / (Km_FAAH_A * FAAH_D_r); // @Reaction  {units: nmole/h}
 
-vO_degr_r = ROB * FAAH_r * kcat_FAAH * a_FAAH_O * O_r / (Km_FAAH_O * FAAH_D_r); // @Reaction {units: nmole/h}
+vO_degr_r = ROB * FAAH_r * kcat_FAAH * a_FAAH_O * O_r / (Km_FAAH_O * FAAH_D_r); // @Reaction  {units: nmole/h}
 
-vP_degr_r = ROB * FAAH_r * kcat_FAAH * a_FAAH_P * P_r / (Km_FAAH_P * FAAH_D_r); // @Reaction {units: nmole/h}
+vP_degr_r = ROB * FAAH_r * kcat_FAAH * a_FAAH_P * P_r / (Km_FAAH_P * FAAH_D_r); // @Reaction  {units: nmole/h}
 
-vL_degr_r = ROB * FAAH_r * kcat_FAAH * a_FAAH_L * L_r / (Km_FAAH_L * FAAH_D_r); // @Reaction {units: nmole/h}
+vL_degr_r = ROB * FAAH_r * kcat_FAAH * a_FAAH_L * L_r / (Km_FAAH_L * FAAH_D_r); // @Reaction  {units: nmole/h}
 
-vS_degr_r = ROB * FAAH_r * kcat_FAAH * a_FAAH_S * S_r / (Km_FAAH_S * FAAH_D_r); // @Reaction {units: nmole/h}
+vS_degr_r = ROB * FAAH_r * kcat_FAAH * a_FAAH_S * S_r / (Km_FAAH_S * FAAH_D_r); // @Reaction  {units: nmole/h}
 
-c_NAT_ROB = Pancreas * b_NAT_Pancreas + Kidney * b_NAT_Kidney + Heart * b_NAT_Heart + Lungs * b_NAT_Lungs + Muscles * b_NAT_Muscles + Testis * b_NAT_Testis + Leucocytes * b_NAT_Leucocytes; // @Record {units: L}
+c_NAT_ROB = Pancreas * b_NAT_Pancreas + Kidney * b_NAT_Kidney + Heart * b_NAT_Heart + Lungs * b_NAT_Lungs + Muscles * b_NAT_Muscles + Testis * b_NAT_Testis + Leucocytes * b_NAT_Leucocytes; // @Record  {units: L}
 
-vNAPE_syn_r = Vmax_NAT * p_A * a_NAT_A * c_NAT_ROB; // @Reaction {units: nmole/h}
+vNAPE_syn_r = Vmax_NAT * p_A * a_NAT_A * c_NAT_ROB; // @Reaction  {units: nmole/h}
 
-vNOPE_syn_r = Vmax_NAT * p_O * a_NAT_O * c_NAT_ROB; // @Reaction {units: nmole/h}
+vNOPE_syn_r = Vmax_NAT * p_O * a_NAT_O * c_NAT_ROB; // @Reaction  {units: nmole/h}
 
-vNPPE_syn_r = Vmax_NAT * p_P * a_NAT_P * c_NAT_ROB; // @Reaction {units: nmole/h}
+vNPPE_syn_r = Vmax_NAT * p_P * a_NAT_P * c_NAT_ROB; // @Reaction  {units: nmole/h}
 
-vNLPE_syn_r = Vmax_NAT * p_L * a_NAT_L * c_NAT_ROB; // @Reaction {units: nmole/h}
+vNLPE_syn_r = Vmax_NAT * p_L * a_NAT_L * c_NAT_ROB; // @Reaction  {units: nmole/h}
 
-vNSPE_syn_r = Vmax_NAT * p_S * a_NAT_S * c_NAT_ROB; // @Reaction {units: nmole/h}
+vNSPE_syn_r = Vmax_NAT * p_S * a_NAT_S * c_NAT_ROB; // @Reaction  {units: nmole/h}
 
-slag1_r = NAPE_r / Km_NA_PE + NOPE_r / Km_NO_PE + NPPE_r / Km_NP_PE + NLPE_r / Km_NL_PE + NSPE_r / Km_NS_PE; // @Record {units: UL}
+slag1_r = NAPE_r / Km_NA_PE + NOPE_r / Km_NO_PE + NPPE_r / Km_NP_PE + NLPE_r / Km_NL_PE + NSPE_r / Km_NS_PE; // @Record  {units: UL}
 
-slag2_r = A_r / Ki_A + O_r / Ki_O + P_r / Ki_P + L_r / Ki_L + S_r / Ki_S; // @Record {units: UL}
+slag2_r = A_r / Ki_A + O_r / Ki_O + P_r / Ki_P + L_r / Ki_L + S_r / Ki_S; // @Record  {units: UL}
 
-den_r = 1 + slag1_r + slag2_r; // @Record {units: UL}
+den_r = 1 + slag1_r + slag2_r; // @Record  {units: UL}
 
-vA_syn_r = ROB * PLD_r * k_NA_PE * NAPE_r / Km_NA_PE / den_r; // @Reaction {units: nmole/h}
+vA_syn_r = ROB * PLD_r * k_NA_PE * NAPE_r / Km_NA_PE / den_r; // @Reaction  {units: nmole/h}
 
-vO_syn_r = ROB * PLD_r * k_NO_PE * NOPE_r / Km_NO_PE / den_r; // @Reaction {units: nmole/h}
+vO_syn_r = ROB * PLD_r * k_NO_PE * NOPE_r / Km_NO_PE / den_r; // @Reaction  {units: nmole/h}
 
-vP_syn_r = ROB * PLD_r * k_NP_PE * NPPE_r / Km_NP_PE / den_r; // @Reaction {units: nmole/h}
+vP_syn_r = ROB * PLD_r * k_NP_PE * NPPE_r / Km_NP_PE / den_r; // @Reaction  {units: nmole/h}
 
-vL_syn_r = ROB * PLD_r * k_NL_PE * NLPE_r / Km_NL_PE / den_r; // @Reaction {units: nmole/h}
+vL_syn_r = ROB * PLD_r * k_NL_PE * NLPE_r / Km_NL_PE / den_r; // @Reaction  {units: nmole/h}
 
-vS_syn_r = ROB * PLD_r * k_NS_PE * NSPE_r / Km_NS_PE / den_r; // @Reaction {units: nmole/h}
+vS_syn_r = ROB * PLD_r * k_NS_PE * NSPE_r / Km_NS_PE / den_r; // @Reaction  {units: nmole/h}
 
-c_FAAH_ROB = LIVER * b_FAAH_Liver + Gut * b_FAAH_Gut + Spleen * b_FAAH_Spleen + Kidney * b_FAAH_Kidney + Lungs * b_FAAH_Lungs + Testis * b_FAAH_Testis + Leucocytes * b_FAAH_Leucocytes; // @Record {units: L}
+c_FAAH_ROB = LIVER * b_FAAH_Liver + Gut * b_FAAH_Gut + Spleen * b_FAAH_Spleen + Kidney * b_FAAH_Kidney + Lungs * b_FAAH_Lungs + Testis * b_FAAH_Testis + Leucocytes * b_FAAH_Leucocytes; // @Record  {units: L}
 
-vFAAH_syn_r = FAAH_t * c_FAAH_ROB * k_deg_FAAH; // @Reaction {units: nmole/h}
+vFAAH_syn_r = FAAH_t * c_FAAH_ROB * k_deg_FAAH; // @Reaction  {units: nmole/h}
 
-vFAAH_degr_r = ROB * k_deg_FAAH * FAAH_r; // @Reaction {units: nmole/h}
+vFAAH_degr_r = ROB * k_deg_FAAH * FAAH_r; // @Reaction  {units: nmole/h}
 
-PF_r = PF_p * Kp_r_PF; // @Record {units: nM}
+PF_r = PF_p * Kp_r_PF; // @Record  {units: nM}
 
-vFAAH_inh_r = ROB * k_inh * FAAH_r * PF_r; // @Reaction {units: nmole/h}
+vFAAH_inh_r = ROB * k_inh * FAAH_r * PF_r; // @Reaction  {units: nmole/h}
 
-vFAAH_inh_degr_r = ROB * k_deg_FAAH * FAAHinh_r; // @Reaction {units: nmole/h}
+vFAAH_inh_degr_r = ROB * k_deg_FAAH * FAAHinh_r; // @Reaction  {units: nmole/h}
 
-c_NAAA_ROB = LIVER * b_NAAA_Liver + Gut * b_NAAA_Gut + Spleen * b_NAAA_Spleen + Kidney * b_NAAA_Kidney + Heart * b_NAAA_Heart + Lungs * b_NAAA_Lungs + Thymus * b_NAAA_Thymus + Testis * b_NAAA_Thymus * Testis; // @Record {units: L}
+c_NAAA_ROB = LIVER * b_NAAA_Liver + Gut * b_NAAA_Gut + Spleen * b_NAAA_Spleen + Kidney * b_NAAA_Kidney + Heart * b_NAAA_Heart + Lungs * b_NAAA_Lungs + Thymus * b_NAAA_Thymus + Testis * b_NAAA_Thymus * Testis; // @Record  {units: L}
 
-vA_UE_r = c_NAAA_ROB * kcl_A * A_r; // @Reaction {units: nmole/h}
+vA_UE_r = c_NAAA_ROB * kcl_A * A_r; // @Reaction  {units: nmole/h}
 
-vO_UE_r = c_NAAA_ROB * kcl_O * O_r; // @Reaction {units: nmole/h}
+vO_UE_r = c_NAAA_ROB * kcl_O * O_r; // @Reaction  {units: nmole/h}
 
-vP_UE_r = c_NAAA_ROB * kcl_P * P_r; // @Reaction {units: nmole/h}
+vP_UE_r = c_NAAA_ROB * kcl_P * P_r; // @Reaction  {units: nmole/h}
 
-vL_UE_r = c_NAAA_ROB * kcl_L * L_r; // @Reaction {units: nmole/h}
+vL_UE_r = c_NAAA_ROB * kcl_L * L_r; // @Reaction  {units: nmole/h}
 
-vS_UE_r = c_NAAA_ROB * kcl_S * S_r; // @Reaction {units: nmole/h}
+vS_UE_r = c_NAAA_ROB * kcl_S * S_r; // @Reaction  {units: nmole/h}
 
-FAAH_D_m = 1 + A_m / Km_FAAH_A + O_m / Km_FAAH_O + P_m / Km_FAAH_P + L_m / Km_FAAH_L + S_m / Km_FAAH_S; // @Record {units: UL}
+FAAH_D_m = 1 + A_m / Km_FAAH_A + O_m / Km_FAAH_O + P_m / Km_FAAH_P + L_m / Km_FAAH_L + S_m / Km_FAAH_S; // @Record  {units: UL}
 
-vA_degr_m = MEC * FAAH_m * kcat_FAAH * a_FAAH_A * A_m / (Km_FAAH_A * FAAH_D_m); // @Reaction {units: nmole/h}
+vA_degr_m = MEC * FAAH_m * kcat_FAAH * a_FAAH_A * A_m / (Km_FAAH_A * FAAH_D_m); // @Reaction  {units: nmole/h}
 
-vO_degr_m = MEC * FAAH_m * kcat_FAAH * a_FAAH_O * O_m / (Km_FAAH_O * FAAH_D_m); // @Reaction {units: nmole/h}
+vO_degr_m = MEC * FAAH_m * kcat_FAAH * a_FAAH_O * O_m / (Km_FAAH_O * FAAH_D_m); // @Reaction  {units: nmole/h}
 
-vP_degr_m = MEC * FAAH_m * kcat_FAAH * a_FAAH_P * P_m / (Km_FAAH_P * FAAH_D_m); // @Reaction {units: nmole/h}
+vP_degr_m = MEC * FAAH_m * kcat_FAAH * a_FAAH_P * P_m / (Km_FAAH_P * FAAH_D_m); // @Reaction  {units: nmole/h}
 
-vL_degr_m = MEC * FAAH_m * kcat_FAAH * a_FAAH_L * L_m / (Km_FAAH_L * FAAH_D_m); // @Reaction {units: nmole/h}
+vL_degr_m = MEC * FAAH_m * kcat_FAAH * a_FAAH_L * L_m / (Km_FAAH_L * FAAH_D_m); // @Reaction  {units: nmole/h}
 
-vS_degr_m = MEC * FAAH_m * kcat_FAAH * a_FAAH_S * S_m / (Km_FAAH_S * FAAH_D_m); // @Reaction {units: nmole/h}
+vS_degr_m = MEC * FAAH_m * kcat_FAAH * a_FAAH_S * S_m / (Km_FAAH_S * FAAH_D_m); // @Reaction  {units: nmole/h}
 
-vFAAH_syn_m = MEC * FAAH_t * b_FAAH_MEC * k_deg_FAAH; // @Reaction {units: nmole/h}
+vFAAH_syn_m = MEC * FAAH_t * b_FAAH_MEC * k_deg_FAAH; // @Reaction  {units: nmole/h}
 
-vFAAH_degr_m = MEC * k_deg_FAAH * FAAH_m; // @Reaction {units: nmole/h}
+vFAAH_degr_m = MEC * k_deg_FAAH * FAAH_m; // @Reaction  {units: nmole/h}
 
-PF_m = PF_p * Kp_m_PF; // @Record {units: nM}
+PF_m = PF_p * Kp_m_PF; // @Record  {units: nM}
 
-vFAAH_inh_m = MEC * k_inh * FAAH_m * PF_m; // @Reaction {units: nmole/h}
+vFAAH_inh_m = MEC * k_inh * FAAH_m * PF_m; // @Reaction  {units: nmole/h}
 
-vFAAH_inh_degr_m = MEC * k_deg_FAAH * FAAHinh_m; // @Reaction {units: nmole/h}
+vFAAH_inh_degr_m = MEC * k_deg_FAAH * FAAHinh_m; // @Reaction  {units: nmole/h}
 
-vA_m_p = MEC * ktr_m_p_A * (A_m - A_p * Ktr_p_m_A) / (A_m + A_p + Km_p_m_A); // @Reaction {units: nmole/h}
+vA_m_p = MEC * ktr_m_p_A * (A_m - A_p * Ktr_p_m_A) / (A_m + A_p + Km_p_m_A); // @Reaction  {units: nmole/h}
 
-vO_m_p = MEC * ktr_m_p_O * (O_m - O_p * Ktr_p_m_O); // @Reaction {units: nmole/h}
+vO_m_p = MEC * ktr_m_p_O * (O_m - O_p * Ktr_p_m_O); // @Reaction  {units: nmole/h}
 
-vP_m_p = MEC * ktr_m_p_P * (P_m - P_p * Ktr_p_m_P); // @Reaction {units: nmole/h}
+vP_m_p = MEC * ktr_m_p_P * (P_m - P_p * Ktr_p_m_P); // @Reaction  {units: nmole/h}
 
-vL_m_p = MEC * ktr_m_p_L * (L_m - L_p * Ktr_p_m_L); // @Reaction {units: nmole/h}
+vL_m_p = MEC * ktr_m_p_L * (L_m - L_p * Ktr_p_m_L); // @Reaction  {units: nmole/h}
 
-vS_m_p = MEC * ktr_m_p_S * (S_m - S_p * Ktr_p_m_S); // @Reaction {units: nmole/h}
+vS_m_p = MEC * ktr_m_p_S * (S_m - S_p * Ktr_p_m_S); // @Reaction  {units: nmole/h}
 
-vA_b_m = MEC * ktr_m_p_A * (A_b - A_m) / (A_m + A_b + Km_p_m_A); // @Reaction {units: nmole/h}
+vA_b_m = MEC * ktr_m_p_A * (A_b - A_m) / (A_m + A_b + Km_p_m_A); // @Reaction  {units: nmole/h}
 
-vO_b_m = MEC * ktr_m_p_O * (O_b - O_m); // @Reaction {units: nmole/h}
+vO_b_m = MEC * ktr_m_p_O * (O_b - O_m); // @Reaction  {units: nmole/h}
 
-vP_b_m = MEC * ktr_m_p_P * (P_b - P_m); // @Reaction {units: nmole/h}
+vP_b_m = MEC * ktr_m_p_P * (P_b - P_m); // @Reaction  {units: nmole/h}
 
-vL_b_m = MEC * ktr_m_p_L * (L_b - L_m); // @Reaction {units: nmole/h}
+vL_b_m = MEC * ktr_m_p_L * (L_b - L_m); // @Reaction  {units: nmole/h}
 
-vS_b_m = MEC * ktr_m_p_S * (S_b - S_m); // @Reaction {units: nmole/h}
+vS_b_m = MEC * ktr_m_p_S * (S_b - S_m); // @Reaction  {units: nmole/h}
 
-vA_r_p = PLASMA * ktr_r_p * (A_r - A_p * Ktr_p_r_A) / (A_r + A_p + Km_p_m_A); // @Reaction {units: nmole/h}
+vA_r_p = PLASMA * ktr_r_p * (A_r - A_p * Ktr_p_r_A) / (A_r + A_p + Km_p_m_A); // @Reaction  {units: nmole/h}
 
-vO_r_p = PLASMA * ktr_r_p * (O_r - O_p * Ktr_p_r_O); // @Reaction {units: nmole/h}
+vO_r_p = PLASMA * ktr_r_p * (O_r - O_p * Ktr_p_r_O); // @Reaction  {units: nmole/h}
 
-vP_r_p = PLASMA * ktr_r_p * (P_r - P_p * Ktr_p_r_P); // @Reaction {units: nmole/h}
+vP_r_p = PLASMA * ktr_r_p * (P_r - P_p * Ktr_p_r_P); // @Reaction  {units: nmole/h}
 
-vL_r_p = PLASMA * ktr_r_p * (L_r - L_p * Ktr_p_r_L); // @Reaction {units: nmole/h}
+vL_r_p = PLASMA * ktr_r_p * (L_r - L_p * Ktr_p_r_L); // @Reaction  {units: nmole/h}
 
-vS_r_p = PLASMA * ktr_r_p * (S_r - S_p * Ktr_p_r_S); // @Reaction {units: nmole/h}
+vS_r_p = PLASMA * ktr_r_p * (S_r - S_p * Ktr_p_r_S); // @Reaction  {units: nmole/h}
 
 //! Differential equations, count: 39
 
-//!! PFM_gut  @Species {units: ng}
+//!! PFM_gut  @Species  {units: ng}
 
 F[1] = -1*absorp;
 
 
-//!! PFM_p  @Species {units: ng}
+//!! PFM_p  @Species  {units: ng}
 
 F[2] = 1*absorp-1*dist-1*elim;
 
 
-//!! PFM_r  @Species {units: ng}
+//!! PFM_r  @Species  {units: ng}
 
 F[3] = 1*dist;
 
 
-//!! A_b  @Species {units: nM}
+//!! A_b  @Species  {units: nM}
 
 F[4] = ( -1*vA_degr_b+1*vA_syn_b-1*vA_UE_b-1*vA_b_m ) / BRAIN;
 
 
-//!! O_b  @Species {units: nM}
+//!! O_b  @Species  {units: nM}
 
 F[5] = ( -1*vO_degr_b+1*vO_syn_b-1*vO_UE_b-1*vO_b_m ) / BRAIN;
 
 
-//!! P_b  @Species {units: nM}
+//!! P_b  @Species  {units: nM}
 
 F[6] = ( -1*vP_degr_b+1*vP_syn_b-1*vP_UE_b-1*vP_b_m ) / BRAIN;
 
 
-//!! L_b  @Species {units: nM}
+//!! L_b  @Species  {units: nM}
 
 F[7] = ( -1*vL_degr_b+1*vL_syn_b-1*vL_UE_b-1*vL_b_m ) / BRAIN;
 
 
-//!! S_b  @Species {units: nM}
+//!! S_b  @Species  {units: nM}
 
 F[8] = ( -1*vS_degr_b+1*vS_syn_b-1*vS_UE_b-1*vS_b_m ) / BRAIN;
 
 
-//!! NAPE_b  @Species {units: nM}
+//!! NAPE_b  @Species  {units: nM}
 
 F[9] = ( 1*vNAPE_syn_b-1*vA_syn_b ) / BRAIN;
 
 
-//!! NOPE_b  @Species {units: nM}
+//!! NOPE_b  @Species  {units: nM}
 
 F[10] = ( 1*vNOPE_syn_b-1*vO_syn_b ) / BRAIN;
 
 
-//!! NPPE_b  @Species {units: nM}
+//!! NPPE_b  @Species  {units: nM}
 
 F[11] = ( 1*vNPPE_syn_b-1*vP_syn_b ) / BRAIN;
 
 
-//!! NLPE_b  @Species {units: nM}
+//!! NLPE_b  @Species  {units: nM}
 
 F[12] = ( 1*vNLPE_syn_b-1*vL_syn_b ) / BRAIN;
 
 
-//!! NSPE_b  @Species {units: nM}
+//!! NSPE_b  @Species  {units: nM}
 
 F[13] = ( 1*vNSPE_syn_b-1*vS_syn_b ) / BRAIN;
 
 
-//!! FAAH_b  @Species {units: nM}
+//!! FAAH_b  @Species  {units: nM}
 
 F[14] = ( 1*vFAAH_syn_b-1*vFAAH_degr_b-1*vFAAH_inh_b ) / BRAIN;
 
 
-//!! FAAHinh_b  @Species {units: nM}
+//!! FAAHinh_b  @Species  {units: nM}
 
 F[15] = ( 1*vFAAH_inh_b-1*vFAAH_inh_degr_b ) / BRAIN;
 
 
-//!! A_r  @Species {units: nM}
+//!! A_r  @Species 'AEA in rest of body' {units: nM}
 
 F[16] = ( -1*vA_degr_r+1*vA_syn_r-1*vA_UE_r-1*vA_r_p ) / ROB;
 
 
-//!! O_r  @Species {units: nM}
+//!! O_r  @Species 'OEA in rest of body' {units: nM}
 
 F[17] = ( -1*vO_degr_r+1*vO_syn_r-1*vO_UE_r-1*vO_r_p ) / ROB;
 
 
-//!! P_r  @Species {units: nM}
+//!! P_r  @Species 'PEA in rest of body' {units: nM}
 
 F[18] = ( -1*vP_degr_r+1*vP_syn_r-1*vP_UE_r-1*vP_r_p ) / ROB;
 
 
-//!! L_r  @Species {units: nM}
+//!! L_r  @Species 'LEA in rest of body' {units: nM}
 
 F[19] = ( -1*vL_degr_r+1*vL_syn_r-1*vL_UE_r-1*vL_r_p ) / ROB;
 
 
-//!! S_r  @Species {units: nM}
+//!! S_r  @Species 'SEA in rest of body' {units: nM}
 
 F[20] = ( -1*vS_degr_r+1*vS_syn_r-1*vS_UE_r-1*vS_r_p ) / ROB;
 
 
-//!! NAPE_r  @Species {units: nM}
+//!! NAPE_r  @Species  {units: nM}
 
 F[21] = ( 1*vNAPE_syn_r-1*vA_syn_r ) / ROB;
 
 
-//!! NOPE_r  @Species {units: nM}
+//!! NOPE_r  @Species  {units: nM}
 
 F[22] = ( 1*vNOPE_syn_r-1*vO_syn_r ) / ROB;
 
 
-//!! NPPE_r  @Species {units: nM}
+//!! NPPE_r  @Species  {units: nM}
 
 F[23] = ( 1*vNPPE_syn_r-1*vP_syn_r ) / ROB;
 
 
-//!! NLPE_r  @Species {units: nM}
+//!! NLPE_r  @Species  {units: nM}
 
 F[24] = ( 1*vNLPE_syn_r-1*vL_syn_r ) / ROB;
 
 
-//!! NSPE_r  @Species {units: nM}
+//!! NSPE_r  @Species  {units: nM}
 
 F[25] = ( 1*vNSPE_syn_r-1*vS_syn_r ) / ROB;
 
 
-//!! FAAH_r  @Species {units: nM}
+//!! FAAH_r  @Species  {units: nM}
 
 F[26] = ( 1*vFAAH_syn_r-1*vFAAH_degr_r-1*vFAAH_inh_r ) / ROB;
 
 
-//!! FAAHinh_r  @Species {units: nM}
+//!! FAAHinh_r  @Species  {units: nM}
 
 F[27] = ( 1*vFAAH_inh_r-1*vFAAH_inh_degr_r ) / ROB;
 
 
-//!! A_m  @Species {units: nM}
+//!! A_m  @Species  {units: nM}
 
 F[28] = ( -1*vA_degr_m-1*vA_m_p+1*vA_b_m ) / MEC;
 
 
-//!! O_m  @Species {units: nM}
+//!! O_m  @Species  {units: nM}
 
 F[29] = ( -1*vO_degr_m-1*vO_m_p+1*vO_b_m ) / MEC;
 
 
-//!! P_m  @Species {units: nM}
+//!! P_m  @Species  {units: nM}
 
 F[30] = ( -1*vP_degr_m-1*vP_m_p+1*vP_b_m ) / MEC;
 
 
-//!! L_m  @Species {units: nM}
+//!! L_m  @Species  {units: nM}
 
 F[31] = ( -1*vL_degr_m-1*vL_m_p+1*vL_b_m ) / MEC;
 
 
-//!! S_m  @Species {units: nM}
+//!! S_m  @Species  {units: nM}
 
 F[32] = ( -1*vS_degr_m-1*vS_m_p+1*vS_b_m ) / MEC;
 
 
-//!! FAAH_m  @Species {units: nM}
+//!! FAAH_m  @Species  {units: nM}
 
 F[33] = ( 1*vFAAH_syn_m-1*vFAAH_degr_m-1*vFAAH_inh_m ) / MEC;
 
 
-//!! FAAHinh_m  @Species {units: nM}
+//!! FAAHinh_m  @Species  {units: nM}
 
 F[34] = ( 1*vFAAH_inh_m-1*vFAAH_inh_degr_m ) / MEC;
 
 
-//!! A_p  @Species {units: nM}
+//!! A_p  @Species  {units: nM}
 
 F[35] = ( 1*vA_m_p+1*vA_r_p ) / PLASMA;
 
 
-//!! O_p  @Species {units: nM}
+//!! O_p  @Species  {units: nM}
 
 F[36] = ( 1*vO_m_p+1*vO_r_p ) / PLASMA;
 
 
-//!! P_p  @Species {units: nM}
+//!! P_p  @Species  {units: nM}
 
 F[37] = ( 1*vP_m_p+1*vP_r_p ) / PLASMA;
 
 
-//!! L_p  @Species {units: nM}
+//!! L_p  @Species  {units: nM}
 
 F[38] = ( 1*vL_m_p+1*vL_r_p ) / PLASMA;
 
 
-//!! S_p  @Species {units: nM}
+//!! S_p  @Species  {units: nM}
 
 F[39] = ( 1*vS_m_p+1*vS_r_p ) / PLASMA;
 
@@ -1851,166 +1851,185 @@ F[39] = ( 1*vS_m_p+1*vS_r_p ) / PLASMA;
 */
 
 
-//! Constants, count: 113
-Emax_PFM = 0.773; // @Const;
-Dose = 10; // @Const;
-ED50 = 0.53; // @Const;
-M_PF = 455.4; // @Const;
-Vss_PFM = 58.328; // @Const;
-Kp_b_PF = 1.3; // @Const;
-Kp_r_PF = 1.5; // @Const;
-Kp_m_PF = 1.3; // @Const;
-kabs_PFM = 2.2; // @Const;
-kout_PFM = 0.18; // @Const;
-kin_PFM = 0.117; // @Const;
-klinear_PFM = 0.0803; // @Const;
-Vm_PFM = 1511; // @Const;
-Km_PFM = 26.1; // @Const;
-Km_FAAH_A = 8200; // @Const;
-Km_FAAH_O = 52200; // @Const;
-Km_FAAH_P = 543000; // @Const;
-Km_FAAH_L = 10800; // @Const;
-Km_FAAH_S = 10000; // @Const;
-kcat_FAAH = 18000; // @Const;
-a_FAAH_A = 1; // @Const;
-a_FAAH_O = 5.7; // @Const;
-a_FAAH_P = 37.8; // @Const;
-a_FAAH_L = 1.15; // @Const;
-a_FAAH_S = 1; // @Const;
-Vmax_NAT = 300; // @Const;
-p_A = 0.051; // @Const;
-a_NAT_A = 1; // @Const;
-b_NAT_Brain = 1.667; // @Const;
-p_O = 0.098; // @Const;
-a_NAT_O = 13; // @Const;
-p_P = 0.615; // @Const;
-a_NAT_P = 0.42; // @Const;
-p_L = 0.016; // @Const;
-a_NAT_L = 8.6; // @Const;
-p_S = 0.191; // @Const;
-a_NAT_S = 1; // @Const;
-Km_NA_PE = 2800; // @Const;
-Km_NO_PE = 2900; // @Const;
-Km_NP_PE = 3300; // @Const;
-Km_NL_PE = 1000; // @Const;
-Km_NS_PE = 3400; // @Const;
-Ki_A = 230; // @Const;
-Ki_O = 240; // @Const;
-Ki_P = 6700; // @Const;
-Ki_L = 1000; // @Const;
-Ki_S = 840; // @Const;
-PLD_b = 10000000; // @Const;
-k_NA_PE = 202; // @Const;
-k_NO_PE = 230; // @Const;
-k_NP_PE = 270; // @Const;
-k_NL_PE = 100; // @Const;
-k_NS_PE = 280; // @Const;
-FAAH_t = 78; // @Const;
-b_FAAH_Brain = 0.197; // @Const;
-k_deg_FAAH = 0.0051; // @Const;
-k_inh = 1.1; // @Const;
-kcl_A = 1.74; // @Const;
-kcl_O = 2.5; // @Const;
-kcl_P = 2.61; // @Const;
-kcl_L = 1.25; // @Const;
-kcl_S = 1.2; // @Const;
-Pancreas = 0.077; // @Const;
-b_NAT_Pancreas = 0.333; // @Const;
-Kidney = 0.28; // @Const;
-b_NAT_Kidney = 0.667; // @Const;
-Heart = 0.31; // @Const;
-b_NAT_Heart = 1; // @Const;
-Lungs = 1.172; // @Const;
-b_NAT_Lungs = 0.033; // @Const;
-Muscles = 35; // @Const;
-b_NAT_Muscles = 0.333; // @Const;
-Testis = 0.036; // @Const;
-b_NAT_Testis = 0.667; // @Const;
-Leucocytes = 0.025; // @Const;
-b_NAT_Leucocytes = 0; // @Const;
-PLD_r = 10000000; // @Const;
-LIVER = 1.69; // @Const;
-b_FAAH_Liver = 1; // @Const;
-Gut = 1.65; // @Const;
-b_FAAH_Gut = 0.034; // @Const;
-Spleen = 0.192; // @Const;
-b_FAAH_Spleen = 0.03; // @Const;
-b_FAAH_Kidney = 0.069; // @Const;
-b_FAAH_Lungs = 0.032; // @Const;
-b_FAAH_Testis = 0.126; // @Const;
-b_FAAH_Leucocytes = 0; // @Const;
-b_NAAA_Liver = 1; // @Const;
-b_NAAA_Gut = 0.2; // @Const;
-b_NAAA_Spleen = 8; // @Const;
-b_NAAA_Kidney = 0.6; // @Const;
-b_NAAA_Heart = 0.2; // @Const;
-b_NAAA_Lungs = 14; // @Const;
-Thymus = 0.029; // @Const;
-b_NAAA_Thymus = 4; // @Const;
-b_FAAH_MEC = 0.137; // @Const;
-ktr_m_p_A = 150; // @Const;
-Ktr_p_m_A = 1.89; // @Const;
-Km_p_m_A = 1; // @Const;
-ktr_m_p_O = 10; // @Const;
-Ktr_p_m_O = 9.07; // @Const;
-ktr_m_p_P = 10; // @Const;
-Ktr_p_m_P = 2.65; // @Const;
-ktr_m_p_L = 0; // @Const;
-Ktr_p_m_L = 2.77; // @Const;
-ktr_m_p_S = 10; // @Const;
-Ktr_p_m_S = 30.01; // @Const;
-ktr_r_p = 100; // @Const;
-Ktr_p_r_A = 0.62; // @Const;
-Ktr_p_r_O = 2.8; // @Const;
-Ktr_p_r_P = 0.85; // @Const;
-Ktr_p_r_L = 0.89; // @Const;
-Ktr_p_r_S = 9.19; // @Const;
+//! Constants, count: 125
+Vmax_NAT = 300; // @Const  {units: nM/h};
+p_A = 0.051; // @Const  {units: UL};
+p_O = 0.098; // @Const  {units: UL};
+p_P = 0.615; // @Const  {units: UL};
+p_L = 0.016; // @Const  {units: UL};
+p_S = 0.191; // @Const  {units: UL};
+a_NAT_A = 1; // @Const  {units: UL};
+a_NAT_O = 13; // @Const  {units: UL};
+a_NAT_P = 0.42; // @Const  {units: UL};
+a_NAT_L = 8.6; // @Const  {units: UL};
+a_NAT_S = 1; // @Const  {units: UL};
+b_NAT_Brain = 1.667; // @Const  {units: UL};
+b_NAT_Pancreas = 0.333; // @Const  {units: UL};
+b_NAT_Kidney = 0.667; // @Const  {units: UL};
+b_NAT_Heart = 1; // @Const  {units: UL};
+b_NAT_Lungs = 0.033; // @Const  {units: UL};
+b_NAT_Muscles = 0.333; // @Const  {units: UL};
+b_NAT_Testis = 0.667; // @Const  {units: UL};
+b_NAT_Leucocytes = 0; // @Const  {units: UL};
+k_NA_PE = 202; // @Const  {units: 1/h};
+k_NO_PE = 230; // @Const  {units: 1/h};
+k_NP_PE = 270; // @Const  {units: 1/h};
+k_NL_PE = 100; // @Const  {units: 1/h};
+k_NS_PE = 280; // @Const  {units: 1/h};
+Km_NA_PE = 2800; // @Const  {units: nM};
+Km_NO_PE = 2900; // @Const  {units: nM};
+Km_NP_PE = 3300; // @Const  {units: nM};
+Km_NL_PE = 1000; // @Const  {units: nM};
+Km_NS_PE = 3400; // @Const  {units: nM};
+Ki_A = 230; // @Const  {units: nM};
+Ki_O = 240; // @Const  {units: nM};
+Ki_P = 6700; // @Const  {units: nM};
+Ki_L = 1000; // @Const  {units: nM};
+Ki_S = 840; // @Const  {units: nM};
+kcat_FAAH = 18000; // @Const  {units: 1/h};
+FAAH_t = 78; // @Const  {units: nM};
+a_FAAH_A = 1; // @Const  {units: UL};
+a_FAAH_O = 5.7; // @Const  {units: UL};
+a_FAAH_P = 37.8; // @Const  {units: UL};
+a_FAAH_L = 1.15; // @Const  {units: UL};
+a_FAAH_S = 1; // @Const  {units: UL};
+b_FAAH_Liver = 1; // @Const  {units: UL};
+b_FAAH_Brain = 0.197; // @Const  {units: UL};
+b_FAAH_Gut = 0.034; // @Const  {units: UL};
+b_FAAH_Spleen = 0.03; // @Const  {units: UL};
+b_FAAH_Kidney = 0.069; // @Const  {units: UL};
+b_FAAH_Lungs = 0.032; // @Const  {units: UL};
+b_FAAH_Testis = 0.126; // @Const  {units: UL};
+b_FAAH_MEC = 0.137; // @Const  {units: UL};
+b_FAAH_Leucocytes = 0; // @Const  {units: UL};
+Km_FAAH_A = 8200; // @Const  {units: nM};
+Km_FAAH_O = 52200; // @Const  {units: nM};
+Km_FAAH_P = 543000; // @Const  {units: nM};
+Km_FAAH_L = 10800; // @Const  {units: nM};
+Km_FAAH_S = 10000; // @Const  {units: nM};
+k_deg_FAAH = 0.0051; // @Const  {units: 1/h};
+k_inh = 1.1; // @Const  {units: 1/h/nM};
+kcl_A = 1.74; // @Const  {units: 1/h};
+kcl_O = 2.5; // @Const  {units: 1/h};
+kcl_P = 2.61; // @Const  {units: 1/h};
+kcl_L = 1.25; // @Const  {units: 1/h};
+kcl_S = 1.2; // @Const  {units: 1/h};
+b_NAAA_Liver = 1; // @Const  {units: UL};
+b_NAAA_Gut = 0.2; // @Const  {units: UL};
+b_NAAA_Spleen = 8; // @Const  {units: UL};
+b_NAAA_Kidney = 0.6; // @Const  {units: UL};
+b_NAAA_Heart = 0.2; // @Const  {units: UL};
+b_NAAA_Lungs = 14; // @Const  {units: UL};
+b_NAAA_Thymus = 4; // @Const  {units: UL};
+b_NAAA_Testis = 0.6; // @Const  {units: UL};
+b_NAAA_Brain = 0.6; // @Const  {units: UL};
+M_A = 347.5; // @Const  {units: g/mole};
+M_O = 325.5; // @Const  {units: g/mole};
+M_P = 299.5; // @Const  {units: g/mole};
+M_L = 323.5; // @Const  {units: g/mole};
+M_S = 321.5; // @Const  {units: g/mole};
+Kd_CB1_A = 239.2; // @Const  {units: nM};
+Kd_AG2 = 3424; // @Const  {units: nM};
+AG2_b = 0; // @Const  {units: ?};
+Dose = 10; // @Const  {units: mg};
+M_PF = 455.4; // @Const  {units: g/mole};
+Vss_PFM = 58.328; // @Const  {units: L};
+Emax_PFM = 0.773; // @Const  {units: UL};
+ED50 = 0.53; // @Const  {units: mg};
+kabs_PFM = 2.2; // @Const  {units: 1/h};
+kout_PFM = 0.18; // @Const  {units: 1/h};
+kin_PFM = 0.117; // @Const  {units: 1/h};
+klinear_PFM = 0.0803; // @Const  {units: 1/h};
+Vm_PFM = 1511; // @Const  {units: ng/h};
+Km_PFM = 26.1; // @Const  {units: ng/L};
+R_PF = 0.6; // @Const 'blood/plasma' {units: UL};
+Kp_b_PF = 1.3; // @Const  {units: UL};
+Kp_m_PF = 1.3; // @Const  {units: UL};
+Kp_r_PF = 1.5; // @Const  {units: UL};
+PLD_b = 10000000; // @Const  {units: nM};
+PLD_r = 10000000; // @Const  {units: nM};
+LIVER = 1.69; // @Const  {units: L};
+Gut = 1.65; // @Const  {units: L};
+Spleen = 0.192; // @Const  {units: L};
+Kidney = 0.28; // @Const  {units: L};
+Lungs = 1.172; // @Const  {units: L};
+Testis = 0.036; // @Const  {units: L};
+Leucocytes = 0.025; // @Const  {units: L};
+Pancreas = 0.077; // @Const  {units: L};
+Heart = 0.31; // @Const  {units: L};
+Muscles = 35; // @Const  {units: L};
+Thymus = 0.029; // @Const  {units: L};
+H = 0.48; // @Const  {units: ?};
+ktr_m_p_A = 150; // @Const  {units: nM/h};
+Ktr_p_m_A = 1.89; // @Const  {units: UL};
+Km_p_m_A = 1; // @Const  {units: nM};
+ktr_m_p_O = 10; // @Const  {units: 1/h};
+Ktr_p_m_O = 9.07; // @Const  {units: UL};
+ktr_m_p_P = 10; // @Const  {units: 1/h};
+Ktr_p_m_P = 2.65; // @Const  {units: UL};
+ktr_m_p_L = 0; // @Const  {units: 1/h};
+Ktr_p_m_L = 2.77; // @Const  {units: UL};
+ktr_m_p_S = 10; // @Const  {units: 1/h};
+Ktr_p_m_S = 30.01; // @Const  {units: UL};
+ktr_r_p = 100; // @Const  {units: nM/h};
+Ktr_p_r_A = 0.62; // @Const  {units: UL};
+Ktr_p_r_O = 2.8; // @Const  {units: UL};
+Ktr_p_r_P = 0.85; // @Const  {units: UL};
+Ktr_p_r_L = 0.89; // @Const  {units: UL};
+Ktr_p_r_S = 9.19; // @Const  {units: UL};
 
 //! Initialization at start, count: 44
-PLASMA = 2.649; // @Compartment {units: L}
-ROB = 65.3; // @Compartment {units: L}
-PFM_gut = 0; // @Species {units: ng}
-PFM_p = 0; // @Species {units: ng}
-PFM_r = 0; // @Species {units: ng}
-BRAIN = 1.45; // @Compartment {units: L}
-A_b = 0.7493309; // @Species {units: nM}
-O_b = 20.77858; // @Species {units: nM}
-P_b = 6.541209; // @Species {units: nM}
-L_b = 2.319571; // @Species {units: nM}
-S_b = 3.427807; // @Species {units: nM}
-NAPE_b = 0.00003879041; // @Species {units: nM}
-NOPE_b = 0.0008814287; // @Species {units: nM}
-NPPE_b = 0.0001732296; // @Species {units: nM}
-NLPE_b = 0.00007550331; // @Species {units: nM}
-NSPE_b = 0.0001272629; // @Species {units: nM}
-FAAH_b = 15.366; // @Species {units: nM}
-FAAHinh_b = 0; // @Species {units: nM}
-A_r = 0.5419204; // @Species {units: nM}
-O_r = 14.23822; // @Species {units: nM}
-P_r = 4.121915; // @Species {units: nM}
-L_r = 1.705466; // @Species {units: nM}
-S_r = 2.515968; // @Species {units: nM}
-NAPE_r = 0.000004241633; // @Species {units: nM}
-NOPE_r = 0.00009638198; // @Species {units: nM}
-NPPE_r = 0.00001894222; // @Species {units: nM}
-NLPE_r = 0.000008256095; // @Species {units: nM}
-NSPE_r = 0.00001391587; // @Species {units: nM}
-FAAH_r = 2.165868; // @Species {units: nM}
-FAAHinh_r = 0; // @Species {units: nM}
-MEC = 0.000015; // @Compartment {units: L}
-A_m = 0.97761; // @Species {units: nM}
-O_m = 16.3219; // @Species {units: nM}
-P_m = 5.809415; // @Species {units: nM}
-L_m = 0; // @Species {units: nM}
-S_m = 2.968774; // @Species {units: nM}
-FAAH_m = 10.686; // @Species {units: nM}
-FAAHinh_m = 0; // @Species {units: nM}
-A_p = 0.8740574; // @Species {units: nM}
-O_p = 5.085073; // @Species {units: nM}
-P_p = 4.849307; // @Species {units: nM}
-L_p = 1.916254; // @Species {units: nM}
-S_p = 0.273772; // @Species {units: nM}
-default_compartment_ = 1; // @Compartment {units: UL}
+PLASMA = 2.649; // @Compartment  {units: L}
+ROB = 65.3; // @Compartment  {units: L}
+PFM_gut = 0; // @Species  {units: ng}
+PFM_p = 0; // @Species  {units: ng}
+PFM_r = 0; // @Species  {units: ng}
+BRAIN = 1.45; // @Compartment  {units: L}
+A_b = 0.7493309; // @Species  {units: nM}
+O_b = 20.77858; // @Species  {units: nM}
+P_b = 6.541209; // @Species  {units: nM}
+L_b = 2.319571; // @Species  {units: nM}
+S_b = 3.427807; // @Species  {units: nM}
+NAPE_b = 0.00003879041; // @Species  {units: nM}
+NOPE_b = 0.0008814287; // @Species  {units: nM}
+NPPE_b = 0.0001732296; // @Species  {units: nM}
+NLPE_b = 0.00007550331; // @Species  {units: nM}
+NSPE_b = 0.0001272629; // @Species  {units: nM}
+FAAH_b = 15.366; // @Species  {units: nM}
+FAAHinh_b = 0; // @Species  {units: nM}
+A_r = 0.5419204; // @Species 'AEA in rest of body' {units: nM}
+O_r = 14.23822; // @Species 'OEA in rest of body' {units: nM}
+P_r = 4.121915; // @Species 'PEA in rest of body' {units: nM}
+L_r = 1.705466; // @Species 'LEA in rest of body' {units: nM}
+S_r = 2.515968; // @Species 'SEA in rest of body' {units: nM}
+NAPE_r = 0.000004241633; // @Species  {units: nM}
+NOPE_r = 0.00009638198; // @Species  {units: nM}
+NPPE_r = 0.00001894222; // @Species  {units: nM}
+NLPE_r = 0.000008256095; // @Species  {units: nM}
+NSPE_r = 0.00001391587; // @Species  {units: nM}
+FAAH_r = 2.165868; // @Species  {units: nM}
+FAAHinh_r = 0; // @Species  {units: nM}
+MEC = 0.000015; // @Compartment  {units: L}
+A_m = 0.97761; // @Species  {units: nM}
+O_m = 16.3219; // @Species  {units: nM}
+P_m = 5.809415; // @Species  {units: nM}
+L_m = 0; // @Species  {units: nM}
+S_m = 2.968774; // @Species  {units: nM}
+FAAH_m = 10.686; // @Species  {units: nM}
+FAAHinh_m = 0; // @Species  {units: nM}
+A_p = 0.8740574; // @Species  {units: nM}
+O_p = 5.085073; // @Species  {units: nM}
+P_p = 4.849307; // @Species  {units: nM}
+L_p = 1.916254; // @Species  {units: nM}
+S_p = 0.273772; // @Species  {units: nM}
+default_compartment_ = 1; // {units: UL} This is fake compartment to support compounds without compartment.
+
+
+//! Switchers for time events, count 1
+
+evt1_ = 1; // @TimeSwitcher {  }
+
+
 
 #
 
@@ -2309,45 +2328,39 @@ Maximize objective function
 0
 0
 0
-6
+5
 GUT
 PLASMA
 ROB
 BRAIN
 MEC
-default_compartment_
 0
-6
+5
 0
 1
 2
 3
 4
 5
-6
 
 
 
 
 
-
-6
-false
+5
 false
 false
 false
 false
 false
 0
-6
+5
 1.00
 1.00
 1.00
 1.00
 1.00
-1.00
-6
-3
+5
 3
 3
 3
@@ -2704,7 +2717,7 @@ PFM_gut
 dose_amount
 0
 120
-1
+evt1_
 <listModelData>
    <item>
       <name></name>
