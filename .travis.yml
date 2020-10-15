@@ -34,6 +34,10 @@ after_success:
   - rm -rf *
   - cp -rf ../dist/* ./
   - cp -rf ../static/* ./
+  - tar -zcf julia.tar.gz -C julia .
+  - tar -zcf matlab.tar.gz -C matlab .
+  - tar -zcf mrg.tar.gz -C mrg .
+  - tar -zcf simbio.tar.gz -C simbio .
   - git add --all
   - git commit --allow-empty -m "Travis build $TRAVIS_BUILD_NUMBER"
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then git push https://${GH_TOKEN}@github.com/insysbio/faah-inhibitor HEAD:gh-pages; fi

@@ -14,10 +14,10 @@ in [master branch](https://github.com/insysbio/faah-inhibitor).
 - SLV [.SLV file](./slv.slv)
 - DBSolve [.SLV file](./dbsolve/model.slv)
 - **SBML V2L4** [.XML file](./sbml.xml), [ SbmlViewer](http://sv.insysbio.com/online/?https://insysbio.github.io/faah-inhibitor/sbml.xml)
-- Simbio [.M file](./simbio/model.m)
-- Mrgsolve [.CPP file](./mrg/model.cpp)
-- Julia [.JL file](./julia/model.jl)
-- Matlab [.M file](./matlab/model.m)
+- Simbio [.tar.gz file](./simbio.tar.gz)
+- Mrgsolve [.tar.gz file](./mrg.tar.gz)
+- Julia [.tar.gz file](./julia.tar.gz)
+- Matlab [.tar.gz file](./matlab.tar.gz)
 
 ## Results of simulations
 
