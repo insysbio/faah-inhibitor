@@ -22,7 +22,7 @@ Kp_r_PF @Const = 1.5 {units: UL}; // unknown
 
 
   '''Gut compartment'''
-  GUT @Compartment;
+  GUT @Compartment .= 1 { units: L }; // value is not used
   PLASMA @Compartment;
   ROB @Compartment;
 

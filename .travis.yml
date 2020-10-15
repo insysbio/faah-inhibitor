@@ -18,10 +18,11 @@ before_install:
   - node -v
   - Rscript --version
 install:
-  - npm install -g git+https://${GL_TOKEN}@gitlab.insysbio.com/metelkin/qs3p-js.git#v0.4
-  - qs3p -v
+#  - npm install -g git+https://${GL_TOKEN}@gitlab.insysbio.com/metelkin/qs3p-js.git#v0.4
+  - npm i -g heta-compiler
+  - heta -v
 script:
-  - qs3p build
+  - heta build
   - R -e "install.packages('mrgsolve');"
   - Rscript ./R/run-mrgsolve.R
 after_success:

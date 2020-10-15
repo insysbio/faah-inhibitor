@@ -43,7 +43,7 @@ include ./constants.heta
 include ./pk.heta
 include ./brain.heta
 include ./rob.heta
-include ./mec.heta
+include ./core.heta
 include ./plasma.heta
 
 // === TRANSPORT ===
@@ -124,9 +124,8 @@ vS_r_p @Reaction { actors: S_r <=> S_p, units: nmole/h };
 vS_r_p := PLASMA*ktr_r_p*(S_r-S_p*Ktr_p_r_S);
 
 
-sbml @SBMLExport { model: human, skipMathChecking: false };
-mrg @MrgsolveExport { model: human };
-slv @SLVExport { model: human };
-// simbio @SimbioExport { model: human }; // not tested yet
-json @JSONExport;
-yaml @YAMLExport;
+#export { format: SBML, filepath: sbml, model: human, skipMathChecking: false };
+#export { format: Mrgsolve, filepath: mrg, model: human };
+#export { format: SLV, filepath: slv, model: human };
+#export { format: Simbio, filepath: simbio, model: human };
+#export {format: YAML, filepath: yaml };

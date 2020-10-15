@@ -1,3 +1,4 @@
+[![Heta project](https://img.shields.io/badge/%CD%B1-Heta_project-blue)](https://hetalang.github.io/)
 [![Travis](https://travis-ci.org/insysbio/faah-inhibitor.svg?branch=master)](https://travis-ci.org/insysbio/faah-inhibitor)
 [![gh-pages](https://img.shields.io/badge/gh.pages-ready-blue.svg)](https://insysbio.github.io/faah-inhibitor/)
 [![sbml-viewer](https://img.shields.io/badge/SbmlViewer-ready-blue.svg)](http://sv.insysbio.com/online/?https://insysbio.github.io/faah-inhibitor/sbml.xml)
