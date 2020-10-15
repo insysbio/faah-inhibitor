@@ -22,7 +22,6 @@ install:
   - npm i -g heta-compiler
   - heta -v
 script:
-  - rm -r *
   - heta build
   - R -e "install.packages('mrgsolve');"
   - Rscript ./R/run-mrgsolve.R
@@ -32,6 +31,7 @@ after_success:
   - git config --global user.name "Travis CI"
   - git clone -b gh-pages --single-branch https://github.com/insysbio/faah-inhibitor tmp
   - cd tmp
+  - rm -r *
   - cp -rf ../dist/* ./
   - cp -rf ../static/* ./
   - git add --all
