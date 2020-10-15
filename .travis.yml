@@ -22,6 +22,7 @@ install:
   - npm i -g heta-compiler
   - heta -v
 script:
+  - rm -r *
   - heta build
   - R -e "install.packages('mrgsolve');"
   - Rscript ./R/run-mrgsolve.R
