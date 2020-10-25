@@ -8,9 +8,9 @@ using SimSolver
 
 ### create default constants
 nameless_constants_ = NamedTuple{(
-  :Vmax_NAT,:p_A,:p_O,:p_P,:p_L,:p_S,:a_NAT_A,:a_NAT_O,:a_NAT_P,:a_NAT_L,:a_NAT_S,:b_NAT_Brain,:b_NAT_Pancreas,:b_NAT_Kidney,:b_NAT_Heart,:b_NAT_Lungs,:b_NAT_Muscles,:b_NAT_Testis,:b_NAT_Leucocytes,:k_NA_PE,:k_NO_PE,:k_NP_PE,:k_NL_PE,:k_NS_PE,:Km_NA_PE,:Km_NO_PE,:Km_NP_PE,:Km_NL_PE,:Km_NS_PE,:Ki_A,:Ki_O,:Ki_P,:Ki_L,:Ki_S,:kcat_FAAH,:FAAH_t,:a_FAAH_A,:a_FAAH_O,:a_FAAH_P,:a_FAAH_L,:a_FAAH_S,:b_FAAH_Liver,:b_FAAH_Brain,:b_FAAH_Gut,:b_FAAH_Spleen,:b_FAAH_Kidney,:b_FAAH_Lungs,:b_FAAH_Testis,:b_FAAH_MEC,:b_FAAH_Leucocytes,:Km_FAAH_A,:Km_FAAH_O,:Km_FAAH_P,:Km_FAAH_L,:Km_FAAH_S,:k_deg_FAAH,:k_inh,:kcl_A,:kcl_O,:kcl_P,:kcl_L,:kcl_S,:b_NAAA_Liver,:b_NAAA_Gut,:b_NAAA_Spleen,:b_NAAA_Kidney,:b_NAAA_Heart,:b_NAAA_Lungs,:b_NAAA_Thymus,:b_NAAA_Testis,:b_NAAA_Brain,:M_A,:M_O,:M_P,:M_L,:M_S,:Kd_CB1_A,:Kd_AG2,:AG2_b,:Dose,:M_PF,:Vss_PFM,:Emax_PFM,:ED50,:kabs_PFM,:kout_PFM,:kin_PFM,:klinear_PFM,:Vm_PFM,:Km_PFM,:R_PF,:Kp_b_PF,:Kp_m_PF,:Kp_r_PF,:PLD_b,:PLD_r,:LIVER,:Gut,:Spleen,:Kidney,:Lungs,:Testis,:Leucocytes,:Pancreas,:Heart,:Muscles,:Thymus,:H,:ktr_m_p_A,:Ktr_p_m_A,:Km_p_m_A,:ktr_m_p_O,:Ktr_p_m_O,:ktr_m_p_P,:Ktr_p_m_P,:ktr_m_p_L,:Ktr_p_m_L,:ktr_m_p_S,:Ktr_p_m_S,:ktr_r_p,:Ktr_p_r_A,:Ktr_p_r_O,:Ktr_p_r_P,:Ktr_p_r_L,:Ktr_p_r_S,
+  :Vmax_NAT,:p_A,:p_O,:p_P,:p_L,:p_S,:a_NAT_A,:a_NAT_O,:a_NAT_P,:a_NAT_L,:a_NAT_S,:b_NAT_Brain,:b_NAT_Pancreas,:b_NAT_Kidney,:b_NAT_Heart,:b_NAT_Lungs,:b_NAT_Muscles,:b_NAT_Testis,:b_NAT_Leucocytes,:k_NA_PE,:k_NO_PE,:k_NP_PE,:k_NL_PE,:k_NS_PE,:Km_NA_PE,:Km_NO_PE,:Km_NP_PE,:Km_NL_PE,:Km_NS_PE,:Ki_A,:Ki_O,:Ki_P,:Ki_L,:Ki_S,:kcat_FAAH,:FAAH_t,:a_FAAH_A,:a_FAAH_O,:a_FAAH_P,:a_FAAH_L,:a_FAAH_S,:b_FAAH_Liver,:b_FAAH_Brain,:b_FAAH_Gut,:b_FAAH_Spleen,:b_FAAH_Kidney,:b_FAAH_Lungs,:b_FAAH_Testis,:b_FAAH_MEC,:b_FAAH_Leucocytes,:Km_FAAH_A,:Km_FAAH_O,:Km_FAAH_P,:Km_FAAH_L,:Km_FAAH_S,:k_deg_FAAH,:k_inh,:kcl_A,:kcl_O,:kcl_P,:kcl_L,:kcl_S,:b_NAAA_Liver,:b_NAAA_Gut,:b_NAAA_Spleen,:b_NAAA_Kidney,:b_NAAA_Heart,:b_NAAA_Lungs,:b_NAAA_Thymus,:b_NAAA_Testis,:b_NAAA_Brain,:M_A,:M_O,:M_P,:M_L,:M_S,:Kd_CB1_A,:Kd_AG2,:AG2_b,:Dose,:M_PF,:Vss_PFM,:Emax_PFM,:ED50,:kabs_PFM,:kout_PFM,:kin_PFM,:klinear_PFM,:Vm_PFM,:Km_PFM,:R_PF,:Kp_b_PF,:Kp_m_PF,:Kp_r_PF,:PLD_b,:PLD_r,:LIVER,:Gut,:Spleen,:Kidney,:Lungs,:Testis,:Leucocytes,:Pancreas,:Heart,:Muscles,:Thymus,:H,:ktr_m_p_A,:Ktr_p_m_A,:Km_p_m_A,:ktr_m_p_O,:Ktr_p_m_O,:ktr_m_p_P,:Ktr_p_m_P,:ktr_m_p_L,:Ktr_p_m_L,:ktr_m_p_S,:Ktr_p_m_S,:ktr_r_p_A,:ktr_r_p,:Ktr_p_r_A,:Ktr_p_r_O,:Ktr_p_r_P,:Ktr_p_r_L,:Ktr_p_r_S,
 )}(Float64[
-  300,0.051,0.098,0.615,0.016,0.191,1,13,0.42,8.6,1,1.667,0.333,0.667,1,0.033,0.333,0.667,0,202,230,270,100,280,2800,2900,3300,1000,3400,230,240,6700,1000,840,18000,78,1,5.7,37.8,1.15,1,1,0.197,0.034,0.03,0.069,0.032,0.126,0.137,0,8200,52200,543000,10800,10000,0.0051,1.1,1.74,2.5,2.61,1.25,1.2,1,0.2,8,0.6,0.2,14,4,0.6,0.6,347.5,325.5,299.5,323.5,321.5,239.2,3424,0,10,455.4,58.328,0.773,0.53,2.2,0.18,0.117,0.0803,1511,26.1,0.6,1.3,1.3,1.5,10000000,10000000,1.69,1.65,0.192,0.28,1.172,0.036,0.025,0.077,0.31,35,0.029,0.48,150,1.89,1,10,9.07,10,2.65,0,2.77,10,30.01,100,0.62,2.8,0.85,0.89,9.19,
+  300,0.051,0.098,0.615,0.016,0.191,1,13,0.42,8.6,1,1.667,0.333,0.667,1,0.033,0.333,0.667,0,202,230,270,100,280,2800,2900,3300,1000,3400,230,240,6700,1000,840,18000,78,1,5.7,37.8,1.15,1,1,0.197,0.034,0.03,0.069,0.032,0.126,0.137,0,8200,52200,543000,10800,10000,0.0051,1.1,1.74,2.5,2.61,1.25,1.2,1,0.2,8,0.6,0.2,14,4,0.6,0.6,347.5,325.5,299.5,323.5,321.5,239.2,3424,0,10,455.4,58.328,0.773,0.53,2.2,0.18,0.117,0.0803,1511,26.1,0.6,1.3,1.3,1.5,10000000,10000000,1.69,1.65,0.192,0.28,1.172,0.036,0.025,0.077,0.31,35,0.029,0.48,150,1.89,1,10,9.07,10,2.65,0,2.77,10,30.01,100,100,0.62,2.8,0.85,0.89,9.19,
 ])
 
 ### create default output
@@ -20,7 +20,7 @@ nameless_output_ = (
 
 ### initialization of ODE variables and Records
 function nameless_start_(cons)
-    #(Vmax_NAT,p_A,p_O,p_P,p_L,p_S,a_NAT_A,a_NAT_O,a_NAT_P,a_NAT_L,a_NAT_S,b_NAT_Brain,b_NAT_Pancreas,b_NAT_Kidney,b_NAT_Heart,b_NAT_Lungs,b_NAT_Muscles,b_NAT_Testis,b_NAT_Leucocytes,k_NA_PE,k_NO_PE,k_NP_PE,k_NL_PE,k_NS_PE,Km_NA_PE,Km_NO_PE,Km_NP_PE,Km_NL_PE,Km_NS_PE,Ki_A,Ki_O,Ki_P,Ki_L,Ki_S,kcat_FAAH,FAAH_t,a_FAAH_A,a_FAAH_O,a_FAAH_P,a_FAAH_L,a_FAAH_S,b_FAAH_Liver,b_FAAH_Brain,b_FAAH_Gut,b_FAAH_Spleen,b_FAAH_Kidney,b_FAAH_Lungs,b_FAAH_Testis,b_FAAH_MEC,b_FAAH_Leucocytes,Km_FAAH_A,Km_FAAH_O,Km_FAAH_P,Km_FAAH_L,Km_FAAH_S,k_deg_FAAH,k_inh,kcl_A,kcl_O,kcl_P,kcl_L,kcl_S,b_NAAA_Liver,b_NAAA_Gut,b_NAAA_Spleen,b_NAAA_Kidney,b_NAAA_Heart,b_NAAA_Lungs,b_NAAA_Thymus,b_NAAA_Testis,b_NAAA_Brain,M_A,M_O,M_P,M_L,M_S,Kd_CB1_A,Kd_AG2,AG2_b,Dose,M_PF,Vss_PFM,Emax_PFM,ED50,kabs_PFM,kout_PFM,kin_PFM,klinear_PFM,Vm_PFM,Km_PFM,R_PF,Kp_b_PF,Kp_m_PF,Kp_r_PF,PLD_b,PLD_r,LIVER,Gut,Spleen,Kidney,Lungs,Testis,Leucocytes,Pancreas,Heart,Muscles,Thymus,H,ktr_m_p_A,Ktr_p_m_A,Km_p_m_A,ktr_m_p_O,Ktr_p_m_O,ktr_m_p_P,Ktr_p_m_P,ktr_m_p_L,Ktr_p_m_L,ktr_m_p_S,Ktr_p_m_S,ktr_r_p,Ktr_p_r_A,Ktr_p_r_O,Ktr_p_r_P,Ktr_p_r_L,Ktr_p_r_S,) = cons
+    #(Vmax_NAT,p_A,p_O,p_P,p_L,p_S,a_NAT_A,a_NAT_O,a_NAT_P,a_NAT_L,a_NAT_S,b_NAT_Brain,b_NAT_Pancreas,b_NAT_Kidney,b_NAT_Heart,b_NAT_Lungs,b_NAT_Muscles,b_NAT_Testis,b_NAT_Leucocytes,k_NA_PE,k_NO_PE,k_NP_PE,k_NL_PE,k_NS_PE,Km_NA_PE,Km_NO_PE,Km_NP_PE,Km_NL_PE,Km_NS_PE,Ki_A,Ki_O,Ki_P,Ki_L,Ki_S,kcat_FAAH,FAAH_t,a_FAAH_A,a_FAAH_O,a_FAAH_P,a_FAAH_L,a_FAAH_S,b_FAAH_Liver,b_FAAH_Brain,b_FAAH_Gut,b_FAAH_Spleen,b_FAAH_Kidney,b_FAAH_Lungs,b_FAAH_Testis,b_FAAH_MEC,b_FAAH_Leucocytes,Km_FAAH_A,Km_FAAH_O,Km_FAAH_P,Km_FAAH_L,Km_FAAH_S,k_deg_FAAH,k_inh,kcl_A,kcl_O,kcl_P,kcl_L,kcl_S,b_NAAA_Liver,b_NAAA_Gut,b_NAAA_Spleen,b_NAAA_Kidney,b_NAAA_Heart,b_NAAA_Lungs,b_NAAA_Thymus,b_NAAA_Testis,b_NAAA_Brain,M_A,M_O,M_P,M_L,M_S,Kd_CB1_A,Kd_AG2,AG2_b,Dose,M_PF,Vss_PFM,Emax_PFM,ED50,kabs_PFM,kout_PFM,kin_PFM,klinear_PFM,Vm_PFM,Km_PFM,R_PF,Kp_b_PF,Kp_m_PF,Kp_r_PF,PLD_b,PLD_r,LIVER,Gut,Spleen,Kidney,Lungs,Testis,Leucocytes,Pancreas,Heart,Muscles,Thymus,H,ktr_m_p_A,Ktr_p_m_A,Km_p_m_A,ktr_m_p_O,Ktr_p_m_O,ktr_m_p_P,Ktr_p_m_P,ktr_m_p_L,Ktr_p_m_L,ktr_m_p_S,Ktr_p_m_S,ktr_r_p_A,ktr_r_p,Ktr_p_r_A,Ktr_p_r_O,Ktr_p_r_P,Ktr_p_r_L,Ktr_p_r_S,) = cons
 
     # Heta initialize
     t = 0.0 # initial time
@@ -115,7 +115,7 @@ function nameless_start_(cons)
     vFAAH_inh_r = ROB * cons[57] * FAAH_r * PF_r
     FAAHinh_r = 0.0
     vFAAH_inh_degr_r = ROB * cons[56] * FAAHinh_r
-    c_NAAA_ROB = cons[97] * cons[63] + cons[98] * cons[64] + cons[99] * cons[65] + cons[100] * cons[66] + cons[105] * cons[67] + cons[101] * cons[68] + cons[107] * cons[69] + cons[102] * cons[69] * cons[102]
+    c_NAAA_ROB = cons[97] * cons[63] + cons[98] * cons[64] + cons[99] * cons[65] + cons[100] * cons[66] + cons[105] * cons[67] + cons[101] * cons[68] + cons[107] * cons[69] + cons[102] * cons[70]
     vA_UE_r = c_NAAA_ROB * cons[58] * A_r
     vO_UE_r = c_NAAA_ROB * cons[59] * O_r
     vP_UE_r = c_NAAA_ROB * cons[60] * P_r
@@ -156,11 +156,11 @@ function nameless_start_(cons)
     vL_b_m = MEC * cons[116] * (L_b - L_m)
     vS_b_m = MEC * cons[118] * (S_b - S_m)
     PLASMA = 2.649
-    vA_r_p = PLASMA * cons[120] * (A_r - A_p * cons[121]) / (A_r + A_p + cons[111])
-    vO_r_p = PLASMA * cons[120] * (O_r - O_p * cons[122])
-    vP_r_p = PLASMA * cons[120] * (P_r - P_p * cons[123])
-    vL_r_p = PLASMA * cons[120] * (L_r - L_p * cons[124])
-    vS_r_p = PLASMA * cons[120] * (S_r - S_p * cons[125])
+    vA_r_p = PLASMA * cons[120] * (A_r - A_p * cons[122]) / (A_r + A_p + cons[111])
+    vO_r_p = PLASMA * cons[121] * (O_r - O_p * cons[123])
+    vP_r_p = PLASMA * cons[121] * (P_r - P_p * cons[124])
+    vL_r_p = PLASMA * cons[121] * (L_r - L_p * cons[125])
+    vS_r_p = PLASMA * cons[121] * (S_r - S_p * cons[126])
     
     # save results
 
@@ -308,7 +308,7 @@ function nameless_ode_(du, u, p, t)
     vFAAH_inh_r = ROB * cons[57] * FAAH_r * PF_r
     FAAHinh_r = FAAHinh_r_ / ROB
     vFAAH_inh_degr_r = ROB * cons[56] * FAAHinh_r
-    c_NAAA_ROB = cons[97] * cons[63] + cons[98] * cons[64] + cons[99] * cons[65] + cons[100] * cons[66] + cons[105] * cons[67] + cons[101] * cons[68] + cons[107] * cons[69] + cons[102] * cons[69] * cons[102]
+    c_NAAA_ROB = cons[97] * cons[63] + cons[98] * cons[64] + cons[99] * cons[65] + cons[100] * cons[66] + cons[105] * cons[67] + cons[101] * cons[68] + cons[107] * cons[69] + cons[102] * cons[70]
     vA_UE_r = c_NAAA_ROB * cons[58] * A_r
     vO_UE_r = c_NAAA_ROB * cons[59] * O_r
     vP_UE_r = c_NAAA_ROB * cons[60] * P_r
@@ -347,11 +347,11 @@ function nameless_ode_(du, u, p, t)
     vP_b_m = MEC * cons[114] * (P_b - P_m)
     vL_b_m = MEC * cons[116] * (L_b - L_m)
     vS_b_m = MEC * cons[118] * (S_b - S_m)
-    vA_r_p = PLASMA * cons[120] * (A_r - A_p * cons[121]) / (A_r + A_p + cons[111])
-    vO_r_p = PLASMA * cons[120] * (O_r - O_p * cons[122])
-    vP_r_p = PLASMA * cons[120] * (P_r - P_p * cons[123])
-    vL_r_p = PLASMA * cons[120] * (L_r - L_p * cons[124])
-    vS_r_p = PLASMA * cons[120] * (S_r - S_p * cons[125])
+    vA_r_p = PLASMA * cons[120] * (A_r - A_p * cons[122]) / (A_r + A_p + cons[111])
+    vO_r_p = PLASMA * cons[121] * (O_r - O_p * cons[123])
+    vP_r_p = PLASMA * cons[121] * (P_r - P_p * cons[124])
+    vL_r_p = PLASMA * cons[121] * (L_r - L_p * cons[125])
+    vS_r_p = PLASMA * cons[121] * (S_r - S_p * cons[126])
     
     #p.static .= [GUT,PLASMA,ROB,BRAIN,MEC,]
     du .= [
@@ -490,7 +490,7 @@ function nameless_make_saving_(outputIds::Vector{Symbol})
         vFAAH_inh_r = ROB * cons[57] * FAAH_r * PF_r
         FAAHinh_r = FAAHinh_r_ / ROB
         vFAAH_inh_degr_r = ROB * cons[56] * FAAHinh_r
-        c_NAAA_ROB = cons[97] * cons[63] + cons[98] * cons[64] + cons[99] * cons[65] + cons[100] * cons[66] + cons[105] * cons[67] + cons[101] * cons[68] + cons[107] * cons[69] + cons[102] * cons[69] * cons[102]
+        c_NAAA_ROB = cons[97] * cons[63] + cons[98] * cons[64] + cons[99] * cons[65] + cons[100] * cons[66] + cons[105] * cons[67] + cons[101] * cons[68] + cons[107] * cons[69] + cons[102] * cons[70]
         vA_UE_r = c_NAAA_ROB * cons[58] * A_r
         vO_UE_r = c_NAAA_ROB * cons[59] * O_r
         vP_UE_r = c_NAAA_ROB * cons[60] * P_r
@@ -529,11 +529,11 @@ function nameless_make_saving_(outputIds::Vector{Symbol})
         vP_b_m = MEC * cons[114] * (P_b - P_m)
         vL_b_m = MEC * cons[116] * (L_b - L_m)
         vS_b_m = MEC * cons[118] * (S_b - S_m)
-        vA_r_p = PLASMA * cons[120] * (A_r - A_p * cons[121]) / (A_r + A_p + cons[111])
-        vO_r_p = PLASMA * cons[120] * (O_r - O_p * cons[122])
-        vP_r_p = PLASMA * cons[120] * (P_r - P_p * cons[123])
-        vL_r_p = PLASMA * cons[120] * (L_r - L_p * cons[124])
-        vS_r_p = PLASMA * cons[120] * (S_r - S_p * cons[125])
+        vA_r_p = PLASMA * cons[120] * (A_r - A_p * cons[122]) / (A_r + A_p + cons[111])
+        vO_r_p = PLASMA * cons[121] * (O_r - O_p * cons[123])
+        vP_r_p = PLASMA * cons[121] * (P_r - P_p * cons[124])
+        vL_r_p = PLASMA * cons[121] * (L_r - L_p * cons[125])
+        vS_r_p = PLASMA * cons[121] * (S_r - S_p * cons[126])
         
         # force amount
         PFM_gut_ = PFM_gut
@@ -547,7 +547,7 @@ end
 
 ### time events
 function nameless_evt1_times_(cons, times = [0.0, 100.0])
-    return 120.0 > 0.0 ? collect(range(0.0, times[2]; step=120.0)) : [0.0]
+    return [0.0]
 end
 
 ### discrete events
@@ -647,7 +647,7 @@ function nameless_evt1_assignment_(integrator)
     vFAAH_inh_r = ROB * cons[57] * FAAH_r * PF_r
     FAAHinh_r = FAAHinh_r_ / ROB
     vFAAH_inh_degr_r = ROB * cons[56] * FAAHinh_r
-    c_NAAA_ROB = cons[97] * cons[63] + cons[98] * cons[64] + cons[99] * cons[65] + cons[100] * cons[66] + cons[105] * cons[67] + cons[101] * cons[68] + cons[107] * cons[69] + cons[102] * cons[69] * cons[102]
+    c_NAAA_ROB = cons[97] * cons[63] + cons[98] * cons[64] + cons[99] * cons[65] + cons[100] * cons[66] + cons[105] * cons[67] + cons[101] * cons[68] + cons[107] * cons[69] + cons[102] * cons[70]
     vA_UE_r = c_NAAA_ROB * cons[58] * A_r
     vO_UE_r = c_NAAA_ROB * cons[59] * O_r
     vP_UE_r = c_NAAA_ROB * cons[60] * P_r
@@ -686,11 +686,11 @@ function nameless_evt1_assignment_(integrator)
     vP_b_m = MEC * cons[114] * (P_b - P_m)
     vL_b_m = MEC * cons[116] * (L_b - L_m)
     vS_b_m = MEC * cons[118] * (S_b - S_m)
-    vA_r_p = PLASMA * cons[120] * (A_r - A_p * cons[121]) / (A_r + A_p + cons[111])
-    vO_r_p = PLASMA * cons[120] * (O_r - O_p * cons[122])
-    vP_r_p = PLASMA * cons[120] * (P_r - P_p * cons[123])
-    vL_r_p = PLASMA * cons[120] * (L_r - L_p * cons[124])
-    vS_r_p = PLASMA * cons[120] * (S_r - S_p * cons[125])
+    vA_r_p = PLASMA * cons[120] * (A_r - A_p * cons[122]) / (A_r + A_p + cons[111])
+    vO_r_p = PLASMA * cons[121] * (O_r - O_p * cons[123])
+    vP_r_p = PLASMA * cons[121] * (P_r - P_p * cons[124])
+    vL_r_p = PLASMA * cons[121] * (L_r - L_p * cons[125])
+    vS_r_p = PLASMA * cons[121] * (S_r - S_p * cons[126])
     
     # recalculated values
     (PFM_gut,) = (PFM_gut + dose_amount,)

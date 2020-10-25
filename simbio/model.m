@@ -197,7 +197,8 @@ nameless.parameter.ktr_m_p_L = addparameter(nameless_model, 'ktr_m_p_L', 'Consta
 nameless.parameter.Ktr_p_m_L = addparameter(nameless_model, 'Ktr_p_m_L', 'ConstantValue', true, 'Value', 2.77, 'ValueUnits', 'dimensionless', 'Notes', '', 'Tag', '');
 nameless.parameter.ktr_m_p_S = addparameter(nameless_model, 'ktr_m_p_S', 'ConstantValue', true, 'Value', 10, 'ValueUnits', '1/hour', 'Notes', '', 'Tag', '');
 nameless.parameter.Ktr_p_m_S = addparameter(nameless_model, 'Ktr_p_m_S', 'ConstantValue', true, 'Value', 30.01, 'ValueUnits', 'dimensionless', 'Notes', '', 'Tag', '');
-nameless.parameter.ktr_r_p = addparameter(nameless_model, 'ktr_r_p', 'ConstantValue', true, 'Value', 100, 'ValueUnits', 'nanomole/litre/hour', 'Notes', '', 'Tag', '');
+nameless.parameter.ktr_r_p_A = addparameter(nameless_model, 'ktr_r_p_A', 'ConstantValue', true, 'Value', 100, 'ValueUnits', 'nanomole/litre/hour', 'Notes', '', 'Tag', '');
+nameless.parameter.ktr_r_p = addparameter(nameless_model, 'ktr_r_p', 'ConstantValue', true, 'Value', 100, 'ValueUnits', '1/hour', 'Notes', '', 'Tag', '');
 nameless.parameter.Ktr_p_r_A = addparameter(nameless_model, 'Ktr_p_r_A', 'ConstantValue', true, 'Value', 0.62, 'ValueUnits', 'dimensionless', 'Notes', '', 'Tag', '');
 nameless.parameter.Ktr_p_r_O = addparameter(nameless_model, 'Ktr_p_r_O', 'ConstantValue', true, 'Value', 2.8, 'ValueUnits', 'dimensionless', 'Notes', '', 'Tag', '');
 nameless.parameter.Ktr_p_r_P = addparameter(nameless_model, 'Ktr_p_r_P', 'ConstantValue', true, 'Value', 0.85, 'ValueUnits', 'dimensionless', 'Notes', '', 'Tag', '');
@@ -385,7 +386,7 @@ nameless.reaction.vL_b_m = addreaction(nameless_model, 'null -> null', 'Name', '
 nameless.reaction.vS_b_m = addreaction(nameless_model, 'null -> null', 'Name', 'vS_b_m', 'Active', true, 'Reversible', true, 'ReactionRate', 'MEC * ktr_m_p_S * (S_b - S_m)', 'Notes', '', 'Tag', '');
   addreactant(nameless.reaction.vS_b_m, [nameless.species.S_b, ], [1, ]);
   addproduct(nameless.reaction.vS_b_m, [nameless.species.S_m, ], [1, ]);
-nameless.reaction.vA_r_p = addreaction(nameless_model, 'null -> null', 'Name', 'vA_r_p', 'Active', true, 'Reversible', true, 'ReactionRate', 'PLASMA * ktr_r_p * (A_r - A_p * Ktr_p_r_A) / (A_r + A_p + Km_p_m_A)', 'Notes', '', 'Tag', '');
+nameless.reaction.vA_r_p = addreaction(nameless_model, 'null -> null', 'Name', 'vA_r_p', 'Active', true, 'Reversible', true, 'ReactionRate', 'PLASMA * ktr_r_p_A * (A_r - A_p * Ktr_p_r_A) / (A_r + A_p + Km_p_m_A)', 'Notes', '', 'Tag', '');
   addreactant(nameless.reaction.vA_r_p, [nameless.species.A_r, ], [1, ]);
   addproduct(nameless.reaction.vA_r_p, [nameless.species.A_p, ], [1, ]);
 nameless.reaction.vO_r_p = addreaction(nameless_model, 'null -> null', 'Name', 'vO_r_p', 'Active', true, 'Reversible', true, 'ReactionRate', 'PLASMA * ktr_r_p * (O_r - O_p * Ktr_p_r_O)', 'Notes', '', 'Tag', '');
@@ -418,7 +419,7 @@ addrule(nameless_model, 'slag1_r = NAPE_r / Km_NA_PE + NOPE_r / Km_NO_PE + NPPE_
 addrule(nameless_model, 'slag2_r = A_r / Ki_A + O_r / Ki_O + P_r / Ki_P + L_r / Ki_L + S_r / Ki_S', 'repeatedAssignment');
 addrule(nameless_model, 'den_r = 1 + slag1_r + slag2_r', 'repeatedAssignment');
 addrule(nameless_model, 'c_FAAH_ROB = LIVER * b_FAAH_Liver + Gut * b_FAAH_Gut + Spleen * b_FAAH_Spleen + Kidney * b_FAAH_Kidney + Lungs * b_FAAH_Lungs + Testis * b_FAAH_Testis + Leucocytes * b_FAAH_Leucocytes', 'repeatedAssignment');
-addrule(nameless_model, 'c_NAAA_ROB = LIVER * b_NAAA_Liver + Gut * b_NAAA_Gut + Spleen * b_NAAA_Spleen + Kidney * b_NAAA_Kidney + Heart * b_NAAA_Heart + Lungs * b_NAAA_Lungs + Thymus * b_NAAA_Thymus + Testis * b_NAAA_Thymus * Testis', 'repeatedAssignment');
+addrule(nameless_model, 'c_NAAA_ROB = LIVER * b_NAAA_Liver + Gut * b_NAAA_Gut + Spleen * b_NAAA_Spleen + Kidney * b_NAAA_Kidney + Heart * b_NAAA_Heart + Lungs * b_NAAA_Lungs + Thymus * b_NAAA_Thymus + Testis * b_NAAA_Testis', 'repeatedAssignment');
 addrule(nameless_model, 'FAAH_D_m = 1 + A_m / Km_FAAH_A + O_m / Km_FAAH_O + P_m / Km_FAAH_P + L_m / Km_FAAH_L + S_m / Km_FAAH_S', 'repeatedAssignment');
 
 

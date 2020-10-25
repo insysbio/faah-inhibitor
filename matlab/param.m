@@ -3,7 +3,7 @@
 
 function p = nameless_Param()
 
-p = zeros(125, 1);
+p = zeros(126, 1);
 %%% parameter annotation
 p(1) = 300; % Vmax_NAT,  (nM/h) 
 p(2) = 0.051; % p_A,  (UL) 
@@ -124,11 +124,12 @@ p(116) = 0; % ktr_m_p_L,  (1/h)
 p(117) = 2.77; % Ktr_p_m_L,  (UL) 
 p(118) = 10; % ktr_m_p_S,  (1/h) 
 p(119) = 30.01; % Ktr_p_m_S,  (UL) 
-p(120) = 100; % ktr_r_p,  (nM/h) 
-p(121) = 0.62; % Ktr_p_r_A,  (UL) 
-p(122) = 2.8; % Ktr_p_r_O,  (UL) 
-p(123) = 0.85; % Ktr_p_r_P,  (UL) 
-p(124) = 0.89; % Ktr_p_r_L,  (UL) 
-p(125) = 9.19; % Ktr_p_r_S,  (UL) 
+p(120) = 100; % ktr_r_p_A,  (nM/h) 
+p(121) = 100; % ktr_r_p,  (1/h) 
+p(122) = 0.62; % Ktr_p_r_A,  (UL) 
+p(123) = 2.8; % Ktr_p_r_O,  (UL) 
+p(124) = 0.85; % Ktr_p_r_P,  (UL) 
+p(125) = 0.89; % Ktr_p_r_L,  (UL) 
+p(126) = 9.19; % Ktr_p_r_S,  (UL) 
 
 end

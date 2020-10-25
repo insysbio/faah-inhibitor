@@ -976,8 +976,7 @@
   {
     "class": "TimeSwitcher",
     "id": "evt1",
-    "start": 0,
-    "period": 120
+    "start": 0
   },
   {
     "class": "Const",
@@ -2204,7 +2203,7 @@
     "id": "c_NAAA_ROB",
     "units": "L",
     "assignments": {
-      "ode_": "LIVER * b_NAAA_Liver + Gut * b_NAAA_Gut + Spleen * b_NAAA_Spleen + Kidney * b_NAAA_Kidney + Heart * b_NAAA_Heart + Lungs * b_NAAA_Lungs + Thymus * b_NAAA_Thymus + Testis * b_NAAA_Thymus * Testis"
+      "ode_": "LIVER * b_NAAA_Liver + Gut * b_NAAA_Gut + Spleen * b_NAAA_Spleen + Kidney * b_NAAA_Kidney + Heart * b_NAAA_Heart + Lungs * b_NAAA_Lungs + Thymus * b_NAAA_Thymus + Testis * b_NAAA_Testis"
     }
   },
   {
@@ -2672,8 +2671,14 @@
   },
   {
     "class": "Const",
-    "id": "ktr_r_p",
+    "id": "ktr_r_p_A",
     "units": "nM/h",
+    "num": 100
+  },
+  {
+    "class": "Const",
+    "id": "ktr_r_p",
+    "units": "1/h",
     "num": 100
   },
   {
@@ -2924,7 +2929,7 @@
     },
     "units": "nmole/h",
     "assignments": {
-      "ode_": "PLASMA * ktr_r_p * (A_r - A_p * Ktr_p_r_A) / (A_r + A_p + Km_p_m_A)"
+      "ode_": "PLASMA * ktr_r_p_A * (A_r - A_p * Ktr_p_r_A) / (A_r + A_p + Km_p_m_A)"
     },
     "actors": [
       {

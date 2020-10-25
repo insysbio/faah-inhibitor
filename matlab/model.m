@@ -118,7 +118,7 @@ function [ode_func, out_func, y0_, events_conditions, events_affects] = nameless
         vFAAH_inh_r = ROB * p(57) * FAAH_r * PF_r; % vFAAH_inh_r,  (nmole/h)
         FAAHinh_r = 0; % FAAHinh_r,  (nM)
         vFAAH_inh_degr_r = ROB * p(56) * FAAHinh_r; % vFAAH_inh_degr_r,  (nmole/h)
-        c_NAAA_ROB = p(97) * p(63) + p(98) * p(64) + p(99) * p(65) + p(100) * p(66) + p(105) * p(67) + p(101) * p(68) + p(107) * p(69) + p(102) * p(69) * p(102); % c_NAAA_ROB,  (L)
+        c_NAAA_ROB = p(97) * p(63) + p(98) * p(64) + p(99) * p(65) + p(100) * p(66) + p(105) * p(67) + p(101) * p(68) + p(107) * p(69) + p(102) * p(70); % c_NAAA_ROB,  (L)
         vA_UE_r = c_NAAA_ROB * p(58) * A_r; % vA_UE_r,  (nmole/h)
         vO_UE_r = c_NAAA_ROB * p(59) * O_r; % vO_UE_r,  (nmole/h)
         vP_UE_r = c_NAAA_ROB * p(60) * P_r; % vP_UE_r,  (nmole/h)
@@ -159,11 +159,11 @@ function [ode_func, out_func, y0_, events_conditions, events_affects] = nameless
         vL_b_m = MEC * p(116) * (L_b - L_m); % vL_b_m,  (nmole/h)
         vS_b_m = MEC * p(118) * (S_b - S_m); % vS_b_m,  (nmole/h)
         PLASMA = 2.649; % PLASMA,  (L)
-        vA_r_p = PLASMA * p(120) * (A_r - A_p * p(121)) / (A_r + A_p + p(111)); % vA_r_p,  (nmole/h)
-        vO_r_p = PLASMA * p(120) * (O_r - O_p * p(122)); % vO_r_p,  (nmole/h)
-        vP_r_p = PLASMA * p(120) * (P_r - P_p * p(123)); % vP_r_p,  (nmole/h)
-        vL_r_p = PLASMA * p(120) * (L_r - L_p * p(124)); % vL_r_p,  (nmole/h)
-        vS_r_p = PLASMA * p(120) * (S_r - S_p * p(125)); % vS_r_p,  (nmole/h)
+        vA_r_p = PLASMA * p(120) * (A_r - A_p * p(122)) / (A_r + A_p + p(111)); % vA_r_p,  (nmole/h)
+        vO_r_p = PLASMA * p(121) * (O_r - O_p * p(123)); % vO_r_p,  (nmole/h)
+        vP_r_p = PLASMA * p(121) * (P_r - P_p * p(124)); % vP_r_p,  (nmole/h)
+        vL_r_p = PLASMA * p(121) * (L_r - L_p * p(125)); % vL_r_p,  (nmole/h)
+        vS_r_p = PLASMA * p(121) * (S_r - S_p * p(126)); % vS_r_p,  (nmole/h)
 
         % before reinitialization
         y0__ = [GUT; PLASMA; ROB; PFM_gut; PFM_p; PFM_r; BRAIN; A_b * BRAIN; O_b * BRAIN; P_b * BRAIN; L_b * BRAIN; S_b * BRAIN; NAPE_b * BRAIN; NOPE_b * BRAIN; NPPE_b * BRAIN; NLPE_b * BRAIN; NSPE_b * BRAIN; FAAH_b * BRAIN; FAAHinh_b * BRAIN; A_r * ROB; O_r * ROB; P_r * ROB; L_r * ROB; S_r * ROB; NAPE_r * ROB; NOPE_r * ROB; NPPE_r * ROB; NLPE_r * ROB; NSPE_r * ROB; FAAH_r * ROB; FAAHinh_r * ROB; MEC; A_m * MEC; O_m * MEC; P_m * MEC; L_m * MEC; S_m * MEC; FAAH_m * MEC; FAAHinh_m * MEC; A_p * PLASMA; O_p * PLASMA; P_p * PLASMA; L_p * PLASMA; S_p * PLASMA];
@@ -434,7 +434,7 @@ function [ode_func, out_func, y0_, events_conditions, events_affects] = nameless
         %  (nmole/h) 
         vFAAH_inh_degr_r = ROB * p(56) * FAAHinh_r;
         %  (L) 
-        c_NAAA_ROB = p(97) * p(63) + p(98) * p(64) + p(99) * p(65) + p(100) * p(66) + p(105) * p(67) + p(101) * p(68) + p(107) * p(69) + p(102) * p(69) * p(102);
+        c_NAAA_ROB = p(97) * p(63) + p(98) * p(64) + p(99) * p(65) + p(100) * p(66) + p(105) * p(67) + p(101) * p(68) + p(107) * p(69) + p(102) * p(70);
         %  (nmole/h) 
         vA_UE_r = c_NAAA_ROB * p(58) * A_r;
         %  (nmole/h) 
@@ -516,15 +516,15 @@ function [ode_func, out_func, y0_, events_conditions, events_affects] = nameless
         %  (nmole/h) 
         vS_b_m = MEC * p(118) * (S_b - S_m);
         %  (nmole/h) 
-        vA_r_p = PLASMA * p(120) * (A_r - A_p * p(121)) / (A_r + A_p + p(111));
+        vA_r_p = PLASMA * p(120) * (A_r - A_p * p(122)) / (A_r + A_p + p(111));
         %  (nmole/h) 
-        vO_r_p = PLASMA * p(120) * (O_r - O_p * p(122));
+        vO_r_p = PLASMA * p(121) * (O_r - O_p * p(123));
         %  (nmole/h) 
-        vP_r_p = PLASMA * p(120) * (P_r - P_p * p(123));
+        vP_r_p = PLASMA * p(121) * (P_r - P_p * p(124));
         %  (nmole/h) 
-        vL_r_p = PLASMA * p(120) * (L_r - L_p * p(124));
+        vL_r_p = PLASMA * p(121) * (L_r - L_p * p(125));
         %  (nmole/h) 
-        vS_r_p = PLASMA * p(120) * (S_r - S_p * p(125));
+        vS_r_p = PLASMA * p(121) * (S_r - S_p * p(126));
         shared_values = [GUT, F_PFM, dose_amount, PFM_gut, absorp, PFM_p, PFM_r, dist, elim, BRAIN, FAAH_b, A_b, O_b, P_b, L_b, S_b, FAAH_D_b, vA_degr_b, vO_degr_b, vP_degr_b, vL_degr_b, vS_degr_b, vNAPE_syn_b, vNOPE_syn_b, vNPPE_syn_b, vNLPE_syn_b, vNSPE_syn_b, NAPE_b, NOPE_b, NPPE_b, NLPE_b, NSPE_b, slag1_b, slag2_b, den_b, vA_syn_b, vO_syn_b, vP_syn_b, vL_syn_b, vS_syn_b, vFAAH_syn_b, vFAAH_degr_b, PF_p, PF_b, vFAAH_inh_b, FAAHinh_b, vFAAH_inh_degr_b, vA_UE_b, vO_UE_b, vP_UE_b, vL_UE_b, vS_UE_b, ROB, FAAH_r, A_r, O_r, P_r, L_r, S_r, FAAH_D_r, vA_degr_r, vO_degr_r, vP_degr_r, vL_degr_r, vS_degr_r, c_NAT_ROB, vNAPE_syn_r, vNOPE_syn_r, vNPPE_syn_r, vNLPE_syn_r, vNSPE_syn_r, NAPE_r, NOPE_r, NPPE_r, NLPE_r, NSPE_r, slag1_r, slag2_r, den_r, vA_syn_r, vO_syn_r, vP_syn_r, vL_syn_r, vS_syn_r, c_FAAH_ROB, vFAAH_syn_r, vFAAH_degr_r, PF_r, vFAAH_inh_r, FAAHinh_r, vFAAH_inh_degr_r, c_NAAA_ROB, vA_UE_r, vO_UE_r, vP_UE_r, vL_UE_r, vS_UE_r, MEC, FAAH_m, A_m, O_m, P_m, L_m, S_m, FAAH_D_m, vA_degr_m, vO_degr_m, vP_degr_m, vL_degr_m, vS_degr_m, vFAAH_syn_m, vFAAH_degr_m, PF_m, vFAAH_inh_m, FAAHinh_m, vFAAH_inh_degr_m, PLASMA, A_p, vA_m_p, O_p, vO_m_p, P_p, vP_m_p, L_p, vL_m_p, S_p, vS_m_p, vA_b_m, vO_b_m, vP_b_m, vL_b_m, vS_b_m, vA_r_p, vO_r_p, vP_r_p, vL_r_p, vS_r_p];
 
         %%% Differential equations
@@ -577,13 +577,7 @@ function [ode_func, out_func, y0_, events_conditions, events_affects] = nameless
     
     function res = evt1_condition(time, y)
 
-        if (time - 0.0 <= 0.) || (120.0 <= 0)
-            res = time - 0.0;
-        elseif (0. < time - 0.0) && (time < Inf)
-            res = (time - 0.0) - floor((time - 0.0)/120.0 + 0.5)*120.0;
-        else
-            res = time - Inf;
-        end
+        res = time - 0.0;
     end
     function y = evt1_affect(time, y)
 
@@ -771,7 +765,7 @@ function [ode_func, out_func, y0_, events_conditions, events_affects] = nameless
         %  (nmole/h) 
         vFAAH_inh_degr_r = ROB * p(56) * FAAHinh_r;
         %  (L) 
-        c_NAAA_ROB = p(97) * p(63) + p(98) * p(64) + p(99) * p(65) + p(100) * p(66) + p(105) * p(67) + p(101) * p(68) + p(107) * p(69) + p(102) * p(69) * p(102);
+        c_NAAA_ROB = p(97) * p(63) + p(98) * p(64) + p(99) * p(65) + p(100) * p(66) + p(105) * p(67) + p(101) * p(68) + p(107) * p(69) + p(102) * p(70);
         %  (nmole/h) 
         vA_UE_r = c_NAAA_ROB * p(58) * A_r;
         %  (nmole/h) 
@@ -853,15 +847,15 @@ function [ode_func, out_func, y0_, events_conditions, events_affects] = nameless
         %  (nmole/h) 
         vS_b_m = MEC * p(118) * (S_b - S_m);
         %  (nmole/h) 
-        vA_r_p = PLASMA * p(120) * (A_r - A_p * p(121)) / (A_r + A_p + p(111));
+        vA_r_p = PLASMA * p(120) * (A_r - A_p * p(122)) / (A_r + A_p + p(111));
         %  (nmole/h) 
-        vO_r_p = PLASMA * p(120) * (O_r - O_p * p(122));
+        vO_r_p = PLASMA * p(121) * (O_r - O_p * p(123));
         %  (nmole/h) 
-        vP_r_p = PLASMA * p(120) * (P_r - P_p * p(123));
+        vP_r_p = PLASMA * p(121) * (P_r - P_p * p(124));
         %  (nmole/h) 
-        vL_r_p = PLASMA * p(120) * (L_r - L_p * p(124));
+        vL_r_p = PLASMA * p(121) * (L_r - L_p * p(125));
         %  (nmole/h) 
-        vS_r_p = PLASMA * p(120) * (S_r - S_p * p(125));
+        vS_r_p = PLASMA * p(121) * (S_r - S_p * p(126));
 
         if time ~= 0
             shared_values = [GUT, F_PFM, dose_amount, PFM_gut, absorp, PFM_p, PFM_r, dist, elim, BRAIN, FAAH_b, A_b, O_b, P_b, L_b, S_b, FAAH_D_b, vA_degr_b, vO_degr_b, vP_degr_b, vL_degr_b, vS_degr_b, vNAPE_syn_b, vNOPE_syn_b, vNPPE_syn_b, vNLPE_syn_b, vNSPE_syn_b, NAPE_b, NOPE_b, NPPE_b, NLPE_b, NSPE_b, slag1_b, slag2_b, den_b, vA_syn_b, vO_syn_b, vP_syn_b, vL_syn_b, vS_syn_b, vFAAH_syn_b, vFAAH_degr_b, PF_p, PF_b, vFAAH_inh_b, FAAHinh_b, vFAAH_inh_degr_b, vA_UE_b, vO_UE_b, vP_UE_b, vL_UE_b, vS_UE_b, ROB, FAAH_r, A_r, O_r, P_r, L_r, S_r, FAAH_D_r, vA_degr_r, vO_degr_r, vP_degr_r, vL_degr_r, vS_degr_r, c_NAT_ROB, vNAPE_syn_r, vNOPE_syn_r, vNPPE_syn_r, vNLPE_syn_r, vNSPE_syn_r, NAPE_r, NOPE_r, NPPE_r, NLPE_r, NSPE_r, slag1_r, slag2_r, den_r, vA_syn_r, vO_syn_r, vP_syn_r, vL_syn_r, vS_syn_r, c_FAAH_ROB, vFAAH_syn_r, vFAAH_degr_r, PF_r, vFAAH_inh_r, FAAHinh_r, vFAAH_inh_degr_r, c_NAAA_ROB, vA_UE_r, vO_UE_r, vP_UE_r, vL_UE_r, vS_UE_r, MEC, FAAH_m, A_m, O_m, P_m, L_m, S_m, FAAH_D_m, vA_degr_m, vO_degr_m, vP_degr_m, vL_degr_m, vS_degr_m, vFAAH_syn_m, vFAAH_degr_m, PF_m, vFAAH_inh_m, FAAHinh_m, vFAAH_inh_degr_m, PLASMA, A_p, vA_m_p, O_p, vO_m_p, P_p, vP_m_p, L_p, vL_m_p, S_p, vS_m_p, vA_b_m, vO_b_m, vP_b_m, vL_b_m, vS_b_m, vA_r_p, vO_r_p, vP_r_p, vL_r_p, vS_r_p];

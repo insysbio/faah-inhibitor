@@ -1593,10 +1593,18 @@
         >
       </parameter>
       <parameter
-        id="ktr_r_p"
+        id="ktr_r_p_A"
         constant="true"
         value="100"
         units="_nM__h"
+        metaid="ktr_r_p_A"
+        >
+      </parameter>
+      <parameter
+        id="ktr_r_p"
+        constant="true"
+        value="100"
+        units="__h"
         metaid="ktr_r_p"
         >
       </parameter>
@@ -2888,7 +2896,7 @@
         <listOfModifiers>
         </listOfModifiers>
         <kineticLaw>
-          <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><divide/><apply><times/><apply><times/><ci>PLASMA</ci><ci>ktr_r_p</ci></apply><apply><minus/><ci>A_r</ci><apply><times/><ci>A_p</ci><ci>Ktr_p_r_A</ci></apply></apply></apply><apply><plus/><apply><plus/><ci>A_r</ci><ci>A_p</ci></apply><ci>Km_p_m_A</ci></apply></apply></math>
+          <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><divide/><apply><times/><apply><times/><ci>PLASMA</ci><ci>ktr_r_p_A</ci></apply><apply><minus/><ci>A_r</ci><apply><times/><ci>A_p</ci><ci>Ktr_p_r_A</ci></apply></apply></apply><apply><plus/><apply><plus/><ci>A_r</ci><ci>A_p</ci></apply><ci>Km_p_m_A</ci></apply></apply></math>
         </kineticLaw>
       </reaction>
       <reaction
@@ -3066,7 +3074,7 @@
       variable="c_NAAA_ROB"
       metaid="c_NAAA_ROB::ode_"
       >
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><times/><ci>LIVER</ci><ci>b_NAAA_Liver</ci></apply><apply><times/><ci>Gut</ci><ci>b_NAAA_Gut</ci></apply></apply><apply><times/><ci>Spleen</ci><ci>b_NAAA_Spleen</ci></apply></apply><apply><times/><ci>Kidney</ci><ci>b_NAAA_Kidney</ci></apply></apply><apply><times/><ci>Heart</ci><ci>b_NAAA_Heart</ci></apply></apply><apply><times/><ci>Lungs</ci><ci>b_NAAA_Lungs</ci></apply></apply><apply><times/><ci>Thymus</ci><ci>b_NAAA_Thymus</ci></apply></apply><apply><times/><apply><times/><ci>Testis</ci><ci>b_NAAA_Thymus</ci></apply><ci>Testis</ci></apply></apply></math>
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><times/><ci>LIVER</ci><ci>b_NAAA_Liver</ci></apply><apply><times/><ci>Gut</ci><ci>b_NAAA_Gut</ci></apply></apply><apply><times/><ci>Spleen</ci><ci>b_NAAA_Spleen</ci></apply></apply><apply><times/><ci>Kidney</ci><ci>b_NAAA_Kidney</ci></apply></apply><apply><times/><ci>Heart</ci><ci>b_NAAA_Heart</ci></apply></apply><apply><times/><ci>Lungs</ci><ci>b_NAAA_Lungs</ci></apply></apply><apply><times/><ci>Thymus</ci><ci>b_NAAA_Thymus</ci></apply></apply><apply><times/><ci>Testis</ci><ci>b_NAAA_Testis</ci></apply></apply></math>
     </assignmentRule>
     <assignmentRule
       variable="FAAH_D_m"

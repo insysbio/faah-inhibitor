@@ -251,7 +251,9 @@ ktr_m_p_S : 10 : (1/h)
 // @Const ''
 Ktr_p_m_S : 30.01 : (UL)
 // @Const ''
-ktr_r_p : 100 : (nM/h)
+ktr_r_p_A : 100 : (nM/h)
+// @Const ''
+ktr_r_p : 100 : (1/h)
 // @Const ''
 Ktr_p_r_A : 0.62 : (UL)
 // @Const ''
@@ -592,7 +594,7 @@ double vFAAH_inh_r = ROB * k_inh * FAAH_r * PF_r;
 // @Reaction ''
 double vFAAH_inh_degr_r = ROB * k_deg_FAAH * FAAHinh_r;
 // @Record ''
-double c_NAAA_ROB = LIVER * b_NAAA_Liver + Gut * b_NAAA_Gut + Spleen * b_NAAA_Spleen + Kidney * b_NAAA_Kidney + Heart * b_NAAA_Heart + Lungs * b_NAAA_Lungs + Thymus * b_NAAA_Thymus + Testis * b_NAAA_Thymus * Testis;
+double c_NAAA_ROB = LIVER * b_NAAA_Liver + Gut * b_NAAA_Gut + Spleen * b_NAAA_Spleen + Kidney * b_NAAA_Kidney + Heart * b_NAAA_Heart + Lungs * b_NAAA_Lungs + Thymus * b_NAAA_Thymus + Testis * b_NAAA_Testis;
 // @Reaction ''
 double vA_UE_r = c_NAAA_ROB * kcl_A * A_r;
 // @Reaction ''
@@ -646,7 +648,7 @@ double vL_b_m = MEC * ktr_m_p_L * (L_b - L_m);
 // @Reaction ''
 double vS_b_m = MEC * ktr_m_p_S * (S_b - S_m);
 // @Reaction ''
-double vA_r_p = PLASMA * ktr_r_p * (A_r - A_p * Ktr_p_r_A) / (A_r + A_p + Km_p_m_A);
+double vA_r_p = PLASMA * ktr_r_p_A * (A_r - A_p * Ktr_p_r_A) / (A_r + A_p + Km_p_m_A);
 // @Reaction ''
 double vO_r_p = PLASMA * ktr_r_p * (O_r - O_p * Ktr_p_r_O);
 // @Reaction ''
