@@ -135,7 +135,7 @@ c_NAAA_ROB @Record := LIVER*b_NAAA_Liver
     + Heart*b_NAAA_Heart 
     + Lungs*b_NAAA_Lungs 
     + Thymus*b_NAAA_Thymus 
-    + Testis*b_NAAA_Thymus*Testis {units: L};
+    + Testis*b_NAAA_Testis {units: L};
 
 vA_UE_r @Reaction { actors: A_r =>, units: nmole/h };
 vA_UE_r := c_NAAA_ROB*kcl_A*A_r;

@@ -68,7 +68,8 @@ ktr_m_p_S @Const = 1e1 {units: 1/h}; // fitted to provide rapid-equilibrium tran
 Ktr_p_m_S @Const = 30.01 {units: UL}; // calculated on the base of LogP by Pfizer
 //Km_p_m_S @Const = 1.0;
 // From ROB to PLASMA
-ktr_r_p @Const = 1e2 {units: nM/h}; // fitted to provide rapid-equilibrium transport
+ktr_r_p_A @Const = 1e2 {units: nM/h}; // fitted to provide rapid-equilibrium transport
+ktr_r_p @Const = 1e2 {units: 1/h}; // fitted to provide rapid-equilibrium transport
 Ktr_p_r_A @Const = 0.62 {units: UL}; // calculated on the base of LogP by Pfizer
 Ktr_p_r_O @Const = 2.80 {units: UL}; // calculated on the base of LogP by Pfizer
 Ktr_p_r_P @Const = 0.85 {units: UL}; // calculated on the base of LogP by Pfizer
@@ -109,7 +110,7 @@ vS_b_m := MEC*ktr_m_p_S*(S_b-S_m);
 
 // from ROB to PLASMA
 vA_r_p @Reaction { actors: A_r <=> A_p, units: nmole/h };
-vA_r_p := PLASMA*ktr_r_p*(A_r-A_p*Ktr_p_r_A)/(A_r+A_p+Km_p_m_A);
+vA_r_p := PLASMA*ktr_r_p_A*(A_r-A_p*Ktr_p_r_A)/(A_r+A_p+Km_p_m_A);
 
 vO_r_p @Reaction { actors: O_r <=> O_p, units: nmole/h };
 vO_r_p := PLASMA*ktr_r_p*(O_r-O_p*Ktr_p_r_O);

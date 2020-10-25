@@ -54,9 +54,5 @@ Kp_r_PF @Const = 1.5 {units: UL}; // unknown
   elim := klinear_PFM * PFM_p + ( Vm_PFM * PFM_p / Vss_PFM ) / ( Km_PFM + PFM_p / Vss_PFM );
 
 // doses
-evt1 @TimeSwitcher {
-  start: 0,
-  period: 120,
-  repeatCount: 3
-};
+evt1 @TimeSwitcher { start: 0 };
 PFM_gut [evt1]= PFM_gut + dose_amount;
