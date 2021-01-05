@@ -31,8 +31,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: |
-      npm i -g heta-compiler@${{ matrix.heta-version }}
-      heta -v
-    - name: Clean and build
-      run: heta build
+    - name: Install and build
+      run: |
+        npm i -g heta-compiler@${{ matrix.heta-version }}
+        heta -v
+        heta build
