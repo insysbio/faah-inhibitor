@@ -425,7 +425,7 @@ addrule(nameless_model, 'FAAH_D_m = 1 + A_m / Km_FAAH_A + O_m / Km_FAAH_O + P_m 
 
 
 % Time Switchers
-nameless.event.evt1 = addevent(nameless_model, 'time >= 0', {'PFM_gut = PFM_gut + dose_amount', }, 'Notes', '', 'Tag', '');
+nameless.event.evt1 = addevent(nameless_model, 'time > 0', {'PFM_gut = PFM_gut + dose_amount', }, 'Notes', '', 'Tag', '');
 
 
 

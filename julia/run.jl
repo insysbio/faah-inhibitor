@@ -3,14 +3,10 @@
 =#
 using SimSolver, Plots
 
-# This loads SimSolverPlatform Module
-include("model.jl")
-using Main.SimSolverPlatform
+include("./model.jl"); # if working directory includes model.jl
+using Main.SimSolverPlatform: models
 
-### use first model in platform
-nameless = models.nameless
-nameless_default = tasks.nameless_default
-
-### solve and plot default
-solution = solve_task(nameless_default)
-plot(solution)
+### default simulations for nameless namespace
+SimpleSTask(models.nameless) |>
+  solve_task |> 
+  plot
