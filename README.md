@@ -1,5 +1,6 @@
 [![Heta project](https://img.shields.io/badge/%CD%B1-Heta_project-blue)](https://hetalang.github.io/)
-[![Travis](https://travis-ci.org/insysbio/faah-inhibitor.svg?branch=master)](https://travis-ci.org/insysbio/faah-inhibitor)
+[![GH Build](https://github.com/insysbio/faah-inhibitor/workflows/Build/badge.svg)](https://github.com/insysbio/faah-inhibitor/actions?query=workflow%3ABuild)
+[![Build and Share](https://github.com/insysbio/faah-inhibitor/workflows/Build%20and%20Share/badge.svg)](https://github.com/insysbio/faah-inhibitor/actions?query=workflow%3A%22Build+and+Share%22)
 [![gh-pages](https://img.shields.io/badge/gh.pages-ready-blue.svg)](https://insysbio.github.io/faah-inhibitor/)
 [![sbml-viewer](https://img.shields.io/badge/SbmlViewer-ready-blue.svg)](http://sv.insysbio.com/online/?https://insysbio.github.io/faah-inhibitor/sbml.xml)
 [![GitHub release](https://img.shields.io/github/release/insysbio/faah-inhibitor.svg)](https://github.com/insysbio/faah-inhibitor/releases/)
@@ -30,4 +31,4 @@ This is Quantitative Systems Pharmacology (QSP) modeling platform describing Fat
 
 ## Copyright
 
-(c) InSysBio 2019-2020
+(c) InSysBio 2019-2021

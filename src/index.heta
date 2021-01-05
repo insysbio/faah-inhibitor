@@ -133,5 +133,5 @@ vS_r_p := PLASMA*ktr_r_p*(S_r-S_p*Ktr_p_r_S);
 #export { format: SBML, filepath: sbml };
 #export { format: Simbio, filepath: simbio };
 #export { format: Mrgsolve, filepath: mrg };
-#export { format: Julia, filepath: julia };
+#export { format: SimSolver, filepath: julia };
 #export { format: Matlab, filepath: matlab };
