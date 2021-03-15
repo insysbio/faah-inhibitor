@@ -1394,6 +1394,14 @@
         >
       </parameter>
       <parameter
+        id="m_per_n"
+        constant="true"
+        value="1000000"
+        units="_1n6UL"
+        metaid="m_per_n"
+        >
+      </parameter>
+      <parameter
         id="PLD_b"
         constant="true"
         value="10000000"
@@ -2984,7 +2992,7 @@
       variable="dose_amount"
       metaid="dose_amount::ode_"
       >
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><times/><apply><times/><apply><times/><ci>F_PFM</ci><cn>1000000</cn></apply><ci>Dose</ci></apply><ci>F_PFM</ci></apply></math>
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><times/><apply><times/><apply><times/><ci>F_PFM</ci><ci>m_per_n</ci></apply><ci>Dose</ci></apply><ci>F_PFM</ci></apply></math>
     </assignmentRule>
     <assignmentRule
       variable="PF_p"
@@ -3092,11 +3100,13 @@
         >
         <trigger>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
+            
             <apply>
               <gt/>
               <csymbol definitionURL="http://www.sbml.org/sbml/symbols/time">t</csymbol>
               <cn>0</cn>
             </apply>
+            
           </math>
         </trigger>
         <listOfEventAssignments>
@@ -3185,6 +3195,11 @@
   <listOfUnits>
     <unit kind="kilogram" exponent="1" scale="-12" multiplier="1"/>
     <unit kind="litre" exponent="-1" scale="0" multiplier="1"/>
+  </listOfUnits>
+</unitDefinition>
+  <unitDefinition id="_1n6UL" name="(1e-6 UL)">
+  <listOfUnits>
+    <unit kind="dimensionless" exponent="1" scale="-6" multiplier="1"/>
   </listOfUnits>
 </unitDefinition>
 </listOfUnitDefinitions>

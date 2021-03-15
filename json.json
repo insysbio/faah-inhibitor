@@ -5,246 +5,6 @@
     "content": "\n    # A systems pharmacology perspective on the clinical development\n    of Fatty Acid amide hydrolase inhibitors for pain.\n\n    CPT Pharmacometrics Syst Pharmacol 2014; 3: e91\n\n    Benson N, Metelkin E, Demin O, Li GL, Nichols D, van der Graaf PH.\n\n    The level of the endocannabinoid anandamide is controlled by fatty acid \n    amide hydrolase (FAAH). In 2011, PF-04457845, an irreversible inhibitor of \n    FAAH, was progressed to phase II clinical trials for osteoarthritic pain. \n    This article discusses a prospective, integrated systems pharmacology model \n    evaluation of FAAH as a target for pain in humans, using physiologically based \n    pharmacokinetic and systems biology approaches. The model integrated physiological \n    compartments; endocannabinoid production, degradation, and disposition data; \n    PF-04457845 pharmacokinetics and pharmacodynamics, and cannabinoid receptor \n    CB1-binding kinetics. The modeling identified clear gaps in our understanding \n    and highlighted key risks going forward, in particular relating to whether methods \n    are in place to demonstrate target engagement and pharmacological effect. The value \n    of this modeling exercise will be discussed in detail and in the context of the \n    clinical phase II data, together with recommendations to enable optimal future \n    evaluation of FAAH inhibitors.\n    \n    CPT: Pharmacometrics Systems Pharmacology (2014) 3, e91; \n    doi:10.1038/psp.2013.72; published online 15 January 2014.\n"
   },
   {
-    "class": "UnitDef",
-    "id": "fmole",
-    "units": "(1e-15 mole)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "pmole",
-    "units": "(1e-12 mole)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "nmole",
-    "units": "(1e-9 mole)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "umole",
-    "units": "(1e-6 mole)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "mmole",
-    "units": "(1e-3 mole)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "fM",
-    "units": "(1e-15 mole)/litre"
-  },
-  {
-    "class": "UnitDef",
-    "id": "pM",
-    "units": "(1e-12 mole)/litre"
-  },
-  {
-    "class": "UnitDef",
-    "id": "nM",
-    "units": "(1e-9 mole)/litre"
-  },
-  {
-    "class": "UnitDef",
-    "id": "uM",
-    "units": "(1e-6 mole)/litre"
-  },
-  {
-    "class": "UnitDef",
-    "id": "mM",
-    "units": "(1e-3 mole)/litre"
-  },
-  {
-    "class": "UnitDef",
-    "id": "M",
-    "units": "mole/litre"
-  },
-  {
-    "class": "UnitDef",
-    "id": "kM",
-    "units": "(1e+3 mole)/litre"
-  },
-  {
-    "class": "UnitDef",
-    "id": "fL",
-    "units": "(1e-15 litre)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "pL",
-    "units": "(1e-12 litre)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "nL",
-    "units": "(1e-9 litre)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "uL",
-    "units": "(1e-6 litre)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "mL",
-    "units": "(1e-3 litre)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "dL",
-    "units": "(1e-1 litre)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "L",
-    "units": "litre"
-  },
-  {
-    "class": "UnitDef",
-    "id": "fs",
-    "units": "(1e-15 second)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "ps",
-    "units": "(1e-12 second)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "ns",
-    "units": "(1e-9 second)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "us",
-    "units": "(1e-6 second)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "ms",
-    "units": "(1e-3 second)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "s",
-    "units": "second"
-  },
-  {
-    "class": "UnitDef",
-    "id": "h",
-    "units": "hour"
-  },
-  {
-    "class": "UnitDef",
-    "id": "week",
-    "units": "(7e+0 day)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "fg",
-    "units": "(1e-18 kilogram)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "pg",
-    "units": "(1e-15 kilogram)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "ng",
-    "units": "(1e-12 kilogram)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "ug",
-    "units": "(1e-9 kilogram)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "mg",
-    "units": "(1e-6 kilogram)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "g",
-    "units": "(1e-3 kilogram)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "kg",
-    "units": "kilogram"
-  },
-  {
-    "class": "UnitDef",
-    "id": "kat",
-    "units": "katal"
-  },
-  {
-    "class": "UnitDef",
-    "id": "cell",
-    "units": "item"
-  },
-  {
-    "class": "UnitDef",
-    "id": "kcell",
-    "units": "(1e+3 item)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "cal",
-    "units": "(4.1868e+0 joule)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "kcal",
-    "units": "(4.1868e+3 joule)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "fm",
-    "units": "(1e-15 metre)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "pm",
-    "units": "(1e-12 metre)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "nm",
-    "units": "(1e-9 metre)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "um",
-    "units": "(1e-6 metre)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "mm",
-    "units": "(1e-13 metre)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "cm",
-    "units": "(1e-2 metre)"
-  },
-  {
-    "class": "UnitDef",
-    "id": "m",
-    "units": "metre"
-  },
-  {
-    "class": "UnitDef",
-    "id": "UL",
-    "units": "dimensionless"
-  },
-  {
-    "class": "UnitDef",
-    "id": "percent",
-    "units": "(1e-2 dimensionless)"
-  },
-  {
     "class": "Const",
     "id": "Vmax_NAT",
     "units": "nM/h",
@@ -853,6 +613,7 @@
     "assignments": {
       "start_": "0"
     },
+    "output": true,
     "compartment": "PLASMA",
     "isAmount": true
   },
@@ -875,11 +636,17 @@
     }
   },
   {
+    "class": "Const",
+    "id": "m_per_n",
+    "units": "(1e-6 UL)",
+    "num": 1000000
+  },
+  {
     "class": "Record",
     "id": "dose_amount",
     "units": "ng",
     "assignments": {
-      "ode_": "F_PFM * 1e+6 * Dose * F_PFM"
+      "ode_": "F_PFM * m_per_n * Dose * F_PFM"
     }
   },
   {
@@ -917,9 +684,6 @@
   {
     "class": "Reaction",
     "id": "absorp",
-    "aux": {
-      "reversible": false
-    },
     "units": "ng/h",
     "assignments": {
       "ode_": "kabs_PFM * PFM_gut"
@@ -933,14 +697,12 @@
         "target": "PFM_p",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "dist",
-    "aux": {
-      "reversible": true
-    },
     "units": "ng/h",
     "assignments": {
       "ode_": "kout_PFM * PFM_p - kin_PFM * PFM_r"
@@ -959,9 +721,6 @@
   {
     "class": "Reaction",
     "id": "elim",
-    "aux": {
-      "reversible": false
-    },
     "units": "ng/h",
     "assignments": {
       "ode_": "klinear_PFM * PFM_p + (Vm_PFM * PFM_p / Vss_PFM) / (Km_PFM + PFM_p / Vss_PFM)"
@@ -971,7 +730,8 @@
         "target": "PFM_p",
         "stoichiometry": -1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "TimeSwitcher",
@@ -1115,9 +875,6 @@
   {
     "class": "Reaction",
     "id": "vA_degr_b",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "BRAIN * FAAH_b * kcat_FAAH * a_FAAH_A * A_b / (Km_FAAH_A * FAAH_D_b)"
@@ -1128,6 +885,7 @@
         "stoichiometry": -1
       }
     ],
+    "reversible": false,
     "modifiers": [
       {
         "target": "FAAH_b"
@@ -1137,9 +895,6 @@
   {
     "class": "Reaction",
     "id": "vO_degr_b",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "BRAIN * FAAH_b * kcat_FAAH * a_FAAH_O * O_b / (Km_FAAH_O * FAAH_D_b)"
@@ -1150,6 +905,7 @@
         "stoichiometry": -1
       }
     ],
+    "reversible": false,
     "modifiers": [
       {
         "target": "FAAH_b"
@@ -1159,9 +915,6 @@
   {
     "class": "Reaction",
     "id": "vP_degr_b",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "BRAIN * FAAH_b * kcat_FAAH * a_FAAH_P * P_b / (Km_FAAH_P * FAAH_D_b)"
@@ -1172,6 +925,7 @@
         "stoichiometry": -1
       }
     ],
+    "reversible": false,
     "modifiers": [
       {
         "target": "FAAH_b"
@@ -1181,9 +935,6 @@
   {
     "class": "Reaction",
     "id": "vL_degr_b",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "BRAIN * FAAH_b * kcat_FAAH * a_FAAH_L * L_b / (Km_FAAH_L * FAAH_D_b)"
@@ -1194,6 +945,7 @@
         "stoichiometry": -1
       }
     ],
+    "reversible": false,
     "modifiers": [
       {
         "target": "FAAH_b"
@@ -1203,9 +955,6 @@
   {
     "class": "Reaction",
     "id": "vS_degr_b",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "BRAIN * FAAH_b * kcat_FAAH * a_FAAH_S * S_b / (Km_FAAH_S * FAAH_D_b)"
@@ -1216,6 +965,7 @@
         "stoichiometry": -1
       }
     ],
+    "reversible": false,
     "modifiers": [
       {
         "target": "FAAH_b"
@@ -1225,9 +975,6 @@
   {
     "class": "Reaction",
     "id": "vNAPE_syn_b",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "BRAIN * Vmax_NAT * p_A * a_NAT_A * b_NAT_Brain"
@@ -1237,14 +984,12 @@
         "target": "NAPE_b",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vNOPE_syn_b",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "BRAIN * Vmax_NAT * p_O * a_NAT_O * b_NAT_Brain"
@@ -1254,14 +999,12 @@
         "target": "NOPE_b",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vNPPE_syn_b",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "BRAIN * Vmax_NAT * p_P * a_NAT_P * b_NAT_Brain"
@@ -1271,14 +1014,12 @@
         "target": "NPPE_b",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vNLPE_syn_b",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "BRAIN * Vmax_NAT * p_L * a_NAT_L * b_NAT_Brain"
@@ -1288,14 +1029,12 @@
         "target": "NLPE_b",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vNSPE_syn_b",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "BRAIN * Vmax_NAT * p_S * a_NAT_S * b_NAT_Brain"
@@ -1305,7 +1044,8 @@
         "target": "NSPE_b",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Record",
@@ -1334,9 +1074,6 @@
   {
     "class": "Reaction",
     "id": "vA_syn_b",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "BRAIN * PLD_b * k_NA_PE * NAPE_b / Km_NA_PE / den_b"
@@ -1350,14 +1087,12 @@
         "target": "A_b",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vO_syn_b",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "BRAIN * PLD_b * k_NO_PE * NOPE_b / Km_NO_PE / den_b"
@@ -1371,14 +1106,12 @@
         "target": "O_b",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vP_syn_b",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "BRAIN * PLD_b * k_NP_PE * NPPE_b / Km_NP_PE / den_b"
@@ -1392,14 +1125,12 @@
         "target": "P_b",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vL_syn_b",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "BRAIN * PLD_b * k_NL_PE * NLPE_b / Km_NL_PE / den_b"
@@ -1413,14 +1144,12 @@
         "target": "L_b",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vS_syn_b",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "BRAIN * PLD_b * k_NS_PE * NSPE_b / Km_NS_PE / den_b"
@@ -1434,14 +1163,12 @@
         "target": "S_b",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vFAAH_syn_b",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "BRAIN * FAAH_t * b_FAAH_Brain * k_deg_FAAH"
@@ -1451,14 +1178,12 @@
         "target": "FAAH_b",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vFAAH_degr_b",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "BRAIN * k_deg_FAAH * FAAH_b"
@@ -1468,14 +1193,12 @@
         "target": "FAAH_b",
         "stoichiometry": -1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vFAAH_inh_b",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "BRAIN * k_inh * FAAH_b * PF_b"
@@ -1489,14 +1212,12 @@
         "target": "FAAHinh_b",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vFAAH_inh_degr_b",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "BRAIN * k_deg_FAAH * FAAHinh_b"
@@ -1506,14 +1227,12 @@
         "target": "FAAHinh_b",
         "stoichiometry": -1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vA_UE_b",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "BRAIN * b_FAAH_Brain * kcl_A * A_b"
@@ -1523,14 +1242,12 @@
         "target": "A_b",
         "stoichiometry": -1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vO_UE_b",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "BRAIN * b_FAAH_Brain * kcl_O * O_b"
@@ -1540,14 +1257,12 @@
         "target": "O_b",
         "stoichiometry": -1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vP_UE_b",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "BRAIN * b_FAAH_Brain * kcl_P * P_b"
@@ -1557,14 +1272,12 @@
         "target": "P_b",
         "stoichiometry": -1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vL_UE_b",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "BRAIN * b_FAAH_Brain * kcl_L * L_b"
@@ -1574,14 +1287,12 @@
         "target": "L_b",
         "stoichiometry": -1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vS_UE_b",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "BRAIN * b_FAAH_Brain * kcl_S * S_b"
@@ -1591,7 +1302,8 @@
         "target": "S_b",
         "stoichiometry": -1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Const",
@@ -1789,9 +1501,6 @@
   {
     "class": "Reaction",
     "id": "vA_degr_r",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "ROB * FAAH_r * kcat_FAAH * a_FAAH_A * A_r / (Km_FAAH_A * FAAH_D_r)"
@@ -1802,6 +1511,7 @@
         "stoichiometry": -1
       }
     ],
+    "reversible": false,
     "modifiers": [
       {
         "target": "FAAH_r"
@@ -1811,9 +1521,6 @@
   {
     "class": "Reaction",
     "id": "vO_degr_r",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "ROB * FAAH_r * kcat_FAAH * a_FAAH_O * O_r / (Km_FAAH_O * FAAH_D_r)"
@@ -1824,6 +1531,7 @@
         "stoichiometry": -1
       }
     ],
+    "reversible": false,
     "modifiers": [
       {
         "target": "FAAH_r"
@@ -1833,9 +1541,6 @@
   {
     "class": "Reaction",
     "id": "vP_degr_r",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "ROB * FAAH_r * kcat_FAAH * a_FAAH_P * P_r / (Km_FAAH_P * FAAH_D_r)"
@@ -1846,6 +1551,7 @@
         "stoichiometry": -1
       }
     ],
+    "reversible": false,
     "modifiers": [
       {
         "target": "FAAH_r"
@@ -1855,9 +1561,6 @@
   {
     "class": "Reaction",
     "id": "vL_degr_r",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "ROB * FAAH_r * kcat_FAAH * a_FAAH_L * L_r / (Km_FAAH_L * FAAH_D_r)"
@@ -1868,6 +1571,7 @@
         "stoichiometry": -1
       }
     ],
+    "reversible": false,
     "modifiers": [
       {
         "target": "FAAH_r"
@@ -1877,9 +1581,6 @@
   {
     "class": "Reaction",
     "id": "vS_degr_r",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "ROB * FAAH_r * kcat_FAAH * a_FAAH_S * S_r / (Km_FAAH_S * FAAH_D_r)"
@@ -1890,6 +1591,7 @@
         "stoichiometry": -1
       }
     ],
+    "reversible": false,
     "modifiers": [
       {
         "target": "FAAH_r"
@@ -1907,9 +1609,6 @@
   {
     "class": "Reaction",
     "id": "vNAPE_syn_r",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "Vmax_NAT * p_A * a_NAT_A * c_NAT_ROB"
@@ -1919,14 +1618,12 @@
         "target": "NAPE_r",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vNOPE_syn_r",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "Vmax_NAT * p_O * a_NAT_O * c_NAT_ROB"
@@ -1936,14 +1633,12 @@
         "target": "NOPE_r",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vNPPE_syn_r",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "Vmax_NAT * p_P * a_NAT_P * c_NAT_ROB"
@@ -1953,14 +1648,12 @@
         "target": "NPPE_r",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vNLPE_syn_r",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "Vmax_NAT * p_L * a_NAT_L * c_NAT_ROB"
@@ -1970,14 +1663,12 @@
         "target": "NLPE_r",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vNSPE_syn_r",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "Vmax_NAT * p_S * a_NAT_S * c_NAT_ROB"
@@ -1987,7 +1678,8 @@
         "target": "NSPE_r",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Record",
@@ -2016,9 +1708,6 @@
   {
     "class": "Reaction",
     "id": "vA_syn_r",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "ROB * PLD_r * k_NA_PE * NAPE_r / Km_NA_PE / den_r"
@@ -2032,14 +1721,12 @@
         "target": "A_r",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vO_syn_r",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "ROB * PLD_r * k_NO_PE * NOPE_r / Km_NO_PE / den_r"
@@ -2053,14 +1740,12 @@
         "target": "O_r",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vP_syn_r",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "ROB * PLD_r * k_NP_PE * NPPE_r / Km_NP_PE / den_r"
@@ -2074,14 +1759,12 @@
         "target": "P_r",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vL_syn_r",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "ROB * PLD_r * k_NL_PE * NLPE_r / Km_NL_PE / den_r"
@@ -2095,14 +1778,12 @@
         "target": "L_r",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vS_syn_r",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "ROB * PLD_r * k_NS_PE * NSPE_r / Km_NS_PE / den_r"
@@ -2116,7 +1797,8 @@
         "target": "S_r",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Record",
@@ -2129,9 +1811,6 @@
   {
     "class": "Reaction",
     "id": "vFAAH_syn_r",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "FAAH_t * c_FAAH_ROB * k_deg_FAAH"
@@ -2141,14 +1820,12 @@
         "target": "FAAH_r",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vFAAH_degr_r",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "ROB * k_deg_FAAH * FAAH_r"
@@ -2158,14 +1835,12 @@
         "target": "FAAH_r",
         "stoichiometry": -1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vFAAH_inh_r",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "ROB * k_inh * FAAH_r * PF_r"
@@ -2179,14 +1854,12 @@
         "target": "FAAHinh_r",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vFAAH_inh_degr_r",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "ROB * k_deg_FAAH * FAAHinh_r"
@@ -2196,7 +1869,8 @@
         "target": "FAAHinh_r",
         "stoichiometry": -1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Record",
@@ -2209,9 +1883,6 @@
   {
     "class": "Reaction",
     "id": "vA_UE_r",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "c_NAAA_ROB * kcl_A * A_r"
@@ -2221,14 +1892,12 @@
         "target": "A_r",
         "stoichiometry": -1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vO_UE_r",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "c_NAAA_ROB * kcl_O * O_r"
@@ -2238,14 +1907,12 @@
         "target": "O_r",
         "stoichiometry": -1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vP_UE_r",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "c_NAAA_ROB * kcl_P * P_r"
@@ -2255,14 +1922,12 @@
         "target": "P_r",
         "stoichiometry": -1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vL_UE_r",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "c_NAAA_ROB * kcl_L * L_r"
@@ -2272,14 +1937,12 @@
         "target": "L_r",
         "stoichiometry": -1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vS_UE_r",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "c_NAAA_ROB * kcl_S * S_r"
@@ -2289,7 +1952,8 @@
         "target": "S_r",
         "stoichiometry": -1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Compartment",
@@ -2374,9 +2038,6 @@
   {
     "class": "Reaction",
     "id": "vA_degr_m",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "MEC * FAAH_m * kcat_FAAH * a_FAAH_A * A_m / (Km_FAAH_A * FAAH_D_m)"
@@ -2387,6 +2048,7 @@
         "stoichiometry": -1
       }
     ],
+    "reversible": false,
     "modifiers": [
       {
         "target": "FAAH_m"
@@ -2396,9 +2058,6 @@
   {
     "class": "Reaction",
     "id": "vO_degr_m",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "MEC * FAAH_m * kcat_FAAH * a_FAAH_O * O_m / (Km_FAAH_O * FAAH_D_m)"
@@ -2409,6 +2068,7 @@
         "stoichiometry": -1
       }
     ],
+    "reversible": false,
     "modifiers": [
       {
         "target": "FAAH_m"
@@ -2418,9 +2078,6 @@
   {
     "class": "Reaction",
     "id": "vP_degr_m",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "MEC * FAAH_m * kcat_FAAH * a_FAAH_P * P_m / (Km_FAAH_P * FAAH_D_m)"
@@ -2431,6 +2088,7 @@
         "stoichiometry": -1
       }
     ],
+    "reversible": false,
     "modifiers": [
       {
         "target": "FAAH_m"
@@ -2440,9 +2098,6 @@
   {
     "class": "Reaction",
     "id": "vL_degr_m",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "MEC * FAAH_m * kcat_FAAH * a_FAAH_L * L_m / (Km_FAAH_L * FAAH_D_m)"
@@ -2453,6 +2108,7 @@
         "stoichiometry": -1
       }
     ],
+    "reversible": false,
     "modifiers": [
       {
         "target": "FAAH_m"
@@ -2462,9 +2118,6 @@
   {
     "class": "Reaction",
     "id": "vS_degr_m",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "MEC * FAAH_m * kcat_FAAH * a_FAAH_S * S_m / (Km_FAAH_S * FAAH_D_m)"
@@ -2475,6 +2128,7 @@
         "stoichiometry": -1
       }
     ],
+    "reversible": false,
     "modifiers": [
       {
         "target": "FAAH_m"
@@ -2484,9 +2138,6 @@
   {
     "class": "Reaction",
     "id": "vFAAH_syn_m",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "MEC * FAAH_t * b_FAAH_MEC * k_deg_FAAH"
@@ -2496,14 +2147,12 @@
         "target": "FAAH_m",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vFAAH_degr_m",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "MEC * k_deg_FAAH * FAAH_m"
@@ -2513,14 +2162,12 @@
         "target": "FAAH_m",
         "stoichiometry": -1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vFAAH_inh_m",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "MEC * k_inh * FAAH_m * PF_m"
@@ -2534,14 +2181,12 @@
         "target": "FAAHinh_m",
         "stoichiometry": 1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Reaction",
     "id": "vFAAH_inh_degr_m",
-    "aux": {
-      "reversible": false
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "MEC * k_deg_FAAH * FAAHinh_m"
@@ -2551,7 +2196,8 @@
         "target": "FAAHinh_m",
         "stoichiometry": -1
       }
-    ]
+    ],
+    "reversible": false
   },
   {
     "class": "Const",
@@ -2565,6 +2211,7 @@
     "assignments": {
       "start_": "0.8740574"
     },
+    "output": true,
     "compartment": "PLASMA"
   },
   {
@@ -2574,6 +2221,7 @@
     "assignments": {
       "start_": "5.085073"
     },
+    "output": true,
     "compartment": "PLASMA"
   },
   {
@@ -2583,6 +2231,7 @@
     "assignments": {
       "start_": "4.849307"
     },
+    "output": true,
     "compartment": "PLASMA"
   },
   {
@@ -2714,9 +2363,6 @@
   {
     "class": "Reaction",
     "id": "vA_m_p",
-    "aux": {
-      "reversible": true
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "MEC * ktr_m_p_A * (A_m - A_p * Ktr_p_m_A) / (A_m + A_p + Km_p_m_A)"
@@ -2735,9 +2381,6 @@
   {
     "class": "Reaction",
     "id": "vO_m_p",
-    "aux": {
-      "reversible": true
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "MEC * ktr_m_p_O * (O_m - O_p * Ktr_p_m_O)"
@@ -2756,9 +2399,6 @@
   {
     "class": "Reaction",
     "id": "vP_m_p",
-    "aux": {
-      "reversible": true
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "MEC * ktr_m_p_P * (P_m - P_p * Ktr_p_m_P)"
@@ -2777,9 +2417,6 @@
   {
     "class": "Reaction",
     "id": "vL_m_p",
-    "aux": {
-      "reversible": true
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "MEC * ktr_m_p_L * (L_m - L_p * Ktr_p_m_L)"
@@ -2798,9 +2435,6 @@
   {
     "class": "Reaction",
     "id": "vS_m_p",
-    "aux": {
-      "reversible": true
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "MEC * ktr_m_p_S * (S_m - S_p * Ktr_p_m_S)"
@@ -2819,9 +2453,6 @@
   {
     "class": "Reaction",
     "id": "vA_b_m",
-    "aux": {
-      "reversible": true
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "MEC * ktr_m_p_A * (A_b - A_m) / (A_m + A_b + Km_p_m_A)"
@@ -2840,9 +2471,6 @@
   {
     "class": "Reaction",
     "id": "vO_b_m",
-    "aux": {
-      "reversible": true
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "MEC * ktr_m_p_O * (O_b - O_m)"
@@ -2861,9 +2489,6 @@
   {
     "class": "Reaction",
     "id": "vP_b_m",
-    "aux": {
-      "reversible": true
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "MEC * ktr_m_p_P * (P_b - P_m)"
@@ -2882,9 +2507,6 @@
   {
     "class": "Reaction",
     "id": "vL_b_m",
-    "aux": {
-      "reversible": true
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "MEC * ktr_m_p_L * (L_b - L_m)"
@@ -2903,9 +2525,6 @@
   {
     "class": "Reaction",
     "id": "vS_b_m",
-    "aux": {
-      "reversible": true
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "MEC * ktr_m_p_S * (S_b - S_m)"
@@ -2924,9 +2543,6 @@
   {
     "class": "Reaction",
     "id": "vA_r_p",
-    "aux": {
-      "reversible": true
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "PLASMA * ktr_r_p_A * (A_r - A_p * Ktr_p_r_A) / (A_r + A_p + Km_p_m_A)"
@@ -2945,9 +2561,6 @@
   {
     "class": "Reaction",
     "id": "vO_r_p",
-    "aux": {
-      "reversible": true
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "PLASMA * ktr_r_p * (O_r - O_p * Ktr_p_r_O)"
@@ -2966,9 +2579,6 @@
   {
     "class": "Reaction",
     "id": "vP_r_p",
-    "aux": {
-      "reversible": true
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "PLASMA * ktr_r_p * (P_r - P_p * Ktr_p_r_P)"
@@ -2987,9 +2597,6 @@
   {
     "class": "Reaction",
     "id": "vL_r_p",
-    "aux": {
-      "reversible": true
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "PLASMA * ktr_r_p * (L_r - L_p * Ktr_p_r_L)"
@@ -3008,9 +2615,6 @@
   {
     "class": "Reaction",
     "id": "vS_r_p",
-    "aux": {
-      "reversible": true
-    },
     "units": "nmole/h",
     "assignments": {
       "ode_": "PLASMA * ktr_r_p * (S_r - S_p * Ktr_p_r_S)"
@@ -3025,5 +2629,245 @@
         "stoichiometry": 1
       }
     ]
+  },
+  {
+    "id": "fmole",
+    "units": "(1e-15 mole)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "pmole",
+    "units": "(1e-12 mole)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "nmole",
+    "units": "(1e-9 mole)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "umole",
+    "units": "(1e-6 mole)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "mmole",
+    "units": "(1e-3 mole)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "fM",
+    "units": "(1e-15 mole)/litre",
+    "action": "defineUnit"
+  },
+  {
+    "id": "pM",
+    "units": "(1e-12 mole)/litre",
+    "action": "defineUnit"
+  },
+  {
+    "id": "nM",
+    "units": "(1e-9 mole)/litre",
+    "action": "defineUnit"
+  },
+  {
+    "id": "uM",
+    "units": "(1e-6 mole)/litre",
+    "action": "defineUnit"
+  },
+  {
+    "id": "mM",
+    "units": "(1e-3 mole)/litre",
+    "action": "defineUnit"
+  },
+  {
+    "id": "M",
+    "units": "mole/litre",
+    "action": "defineUnit"
+  },
+  {
+    "id": "kM",
+    "units": "(1e+3 mole)/litre",
+    "action": "defineUnit"
+  },
+  {
+    "id": "fL",
+    "units": "(1e-15 litre)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "pL",
+    "units": "(1e-12 litre)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "nL",
+    "units": "(1e-9 litre)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "uL",
+    "units": "(1e-6 litre)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "mL",
+    "units": "(1e-3 litre)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "dL",
+    "units": "(1e-1 litre)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "L",
+    "units": "litre",
+    "action": "defineUnit"
+  },
+  {
+    "id": "fs",
+    "units": "(1e-15 second)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "ps",
+    "units": "(1e-12 second)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "ns",
+    "units": "(1e-9 second)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "us",
+    "units": "(1e-6 second)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "ms",
+    "units": "(1e-3 second)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "s",
+    "units": "second",
+    "action": "defineUnit"
+  },
+  {
+    "id": "h",
+    "units": "hour",
+    "action": "defineUnit"
+  },
+  {
+    "id": "week",
+    "units": "(7e+0 day)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "fg",
+    "units": "(1e-18 kilogram)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "pg",
+    "units": "(1e-15 kilogram)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "ng",
+    "units": "(1e-12 kilogram)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "ug",
+    "units": "(1e-9 kilogram)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "mg",
+    "units": "(1e-6 kilogram)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "g",
+    "units": "(1e-3 kilogram)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "kg",
+    "units": "kilogram",
+    "action": "defineUnit"
+  },
+  {
+    "id": "kat",
+    "units": "katal",
+    "action": "defineUnit"
+  },
+  {
+    "id": "cell",
+    "units": "item",
+    "action": "defineUnit"
+  },
+  {
+    "id": "kcell",
+    "units": "(1e+3 item)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "cal",
+    "units": "(4.1868e+0 joule)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "kcal",
+    "units": "(4.1868e+3 joule)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "fm",
+    "units": "(1e-15 metre)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "pm",
+    "units": "(1e-12 metre)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "nm",
+    "units": "(1e-9 metre)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "um",
+    "units": "(1e-6 metre)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "mm",
+    "units": "(1e-13 metre)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "cm",
+    "units": "(1e-2 metre)",
+    "action": "defineUnit"
+  },
+  {
+    "id": "m",
+    "units": "metre",
+    "action": "defineUnit"
+  },
+  {
+    "id": "UL",
+    "units": "dimensionless",
+    "action": "defineUnit"
+  },
+  {
+    "id": "percent",
+    "units": "(1e-2 dimensionless)",
+    "action": "defineUnit"
   }
 ]

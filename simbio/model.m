@@ -1,6 +1,6 @@
 %{
   This model was created by Heta compiler.
-  Additional functions and constants for compatibility see in "fun.m"
+  Additional functions see in the directory
   export from : #export { format: Simbio, namespace: nameless, ...};
 %}
 
@@ -172,6 +172,7 @@ nameless.parameter.R_PF = addparameter(nameless_model, 'R_PF', 'ConstantValue', 
 nameless.parameter.Kp_b_PF = addparameter(nameless_model, 'Kp_b_PF', 'ConstantValue', true, 'Value', 1.3, 'ValueUnits', 'dimensionless', 'Notes', '', 'Tag', '');
 nameless.parameter.Kp_m_PF = addparameter(nameless_model, 'Kp_m_PF', 'ConstantValue', true, 'Value', 1.3, 'ValueUnits', 'dimensionless', 'Notes', '', 'Tag', '');
 nameless.parameter.Kp_r_PF = addparameter(nameless_model, 'Kp_r_PF', 'ConstantValue', true, 'Value', 1.5, 'ValueUnits', 'dimensionless', 'Notes', '', 'Tag', '');
+nameless.parameter.m_per_n = addparameter(nameless_model, 'm_per_n', 'ConstantValue', true, 'Value', 1000000, 'ValueUnits', 'microdimensionless', 'Notes', '', 'Tag', '');
 nameless.parameter.PLD_b = addparameter(nameless_model, 'PLD_b', 'ConstantValue', true, 'Value', 10000000, 'ValueUnits', 'nanomole/litre', 'Notes', '', 'Tag', '');
 nameless.parameter.PLD_r = addparameter(nameless_model, 'PLD_r', 'ConstantValue', true, 'Value', 10000000, 'ValueUnits', 'nanomole/litre', 'Notes', '', 'Tag', '');
 nameless.parameter.LIVER = addparameter(nameless_model, 'LIVER', 'ConstantValue', true, 'Value', 1.69, 'ValueUnits', 'litre', 'Notes', '', 'Tag', '');
@@ -404,7 +405,7 @@ nameless.reaction.vS_r_p = addreaction(nameless_model, 'null -> null', 'Name', '
 
 % Rules
 addrule(nameless_model, 'F_PFM = Emax_PFM * Dose / (ED50 + Dose)', 'repeatedAssignment');
-addrule(nameless_model, 'dose_amount = F_PFM * 1e+6 * Dose * F_PFM', 'repeatedAssignment');
+addrule(nameless_model, 'dose_amount = F_PFM * m_per_n * Dose * F_PFM', 'repeatedAssignment');
 addrule(nameless_model, 'PF_p = PFM_p / M_PF / Vss_PFM', 'repeatedAssignment');
 addrule(nameless_model, 'PF_b = PF_p * Kp_b_PF', 'repeatedAssignment');
 addrule(nameless_model, 'PF_r = PF_p * Kp_r_PF', 'repeatedAssignment');
@@ -425,7 +426,7 @@ addrule(nameless_model, 'FAAH_D_m = 1 + A_m / Km_FAAH_A + O_m / Km_FAAH_O + P_m 
 
 
 % Time Switchers
-nameless.event.evt1 = addevent(nameless_model, 'time > 0', {'PFM_gut = PFM_gut + dose_amount', }, 'Notes', '', 'Tag', '');
+nameless.event.evt1 = addevent(nameless_model, 'time > 0', {'PFM_gut = PFM_gut + dose_amount', }, 'Active', true, 'Notes', '', 'Tag', '');
 
 
 
