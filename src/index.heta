@@ -140,5 +140,5 @@ end
 #export { format: SBML, filepath: sbml };
 #export { format: Simbio, filepath: simbio };
 #export { format: Mrgsolve, filepath: mrg };
-#export { format: SimSolver, filepath: julia };
+#export { format: Julia, filepath: julia };
 #export { format: Matlab, filepath: matlab };
