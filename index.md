@@ -22,8 +22,15 @@ in [master branch](https://github.com/insysbio/faah-inhibitor).
 ## Results of simulations
 
 ### HetaSimulator.jl
+
+#### P_p, A_p, O_p
+
 [![fig1](./julia-plot-1.png)](./julia-plot-1.png)
+
+### PFM_p
+
 [![fig2](./julia-plot-2.png)](./julia-plot-2.png)
 
 ### mrgsolve
+
 [![fig](./mrg.png)](./mrg.png)
