@@ -16,10 +16,14 @@ in [master branch](https://github.com/insysbio/faah-inhibitor).
 - **SBML V2L4** [.XML file](./sbml.xml), [ SbmlViewer](http://sv.insysbio.com/online/?https://insysbio.github.io/faah-inhibitor/sbml.xml)
 - Simbio [.tar.gz file](./simbio.tar.gz)
 - Mrgsolve [.tar.gz file](./mrg.tar.gz)
-- Julia [.tar.gz file](./julia.tar.gz)
+- HetaSimulator.jl/Julia [.tar.gz file](./julia.tar.gz)
 - Matlab [.tar.gz file](./matlab.tar.gz)
 
 ## Results of simulations
+
+### HetaSimulator.jl
+[![fig1](./julia-plot-1.png)](./julia-plot-1.png)
+[![fig2](./julia-plot-2.png)](./julia-plot-2.png)
 
 ### mrgsolve
 [![fig](./mrg.png)](./mrg.png)
