@@ -8,15 +8,17 @@ sbioaddtolibrary(sbiounit('week', 'day', 7));
 
 nameless_model = sbiomodel('nameless');
 
-% Useful parameters
-addparameter(nameless_model, 'timeOne', 1, 'ValueUnits', 'hour');
-
 % Compartments
-nameless.compartment.GUT = addcompartment(nameless_model, 'GUT', 'ConstantCapacity', false, 'Capacity', 1, 'CapacityUnits', 'litre', 'Notes', '<p>Gut compartment</p>', 'Tag', '');
-nameless.compartment.PLASMA = addcompartment(nameless_model, 'PLASMA', 'ConstantCapacity', false, 'Capacity', 2.649, 'CapacityUnits', 'litre', 'Notes', '<p>Blood plasma compartment</p>', 'Tag', '');
-nameless.compartment.ROB = addcompartment(nameless_model, 'ROB', 'ConstantCapacity', false, 'Capacity', 65.3, 'CapacityUnits', 'litre', 'Notes', '<p>Compartment representing &quot;rest of body&quot;</p>', 'Tag', '');
-nameless.compartment.BRAIN = addcompartment(nameless_model, 'BRAIN', 'ConstantCapacity', false, 'Capacity', 1.45, 'CapacityUnits', 'litre', 'Notes', '<p>Volume of brain</p>', 'Tag', '');
-nameless.compartment.MEC = addcompartment(nameless_model, 'MEC', 'ConstantCapacity', false, 'Capacity', 0.000015, 'CapacityUnits', 'litre', 'Notes', '<p>The same as blood brain barrier (BBB)</p>', 'Tag', '');
+nameless.compartment.GUT = addcompartment(nameless_model, 'GUT', 'ConstantCapacity', false, 'Capacity', 1, 'CapacityUnits', 'litre', 'Notes', '<p>Gut compartment</p>
+', 'Tag', '');
+nameless.compartment.PLASMA = addcompartment(nameless_model, 'PLASMA', 'ConstantCapacity', false, 'Capacity', 2.649, 'CapacityUnits', 'litre', 'Notes', '<p>Blood plasma compartment</p>
+', 'Tag', '');
+nameless.compartment.ROB = addcompartment(nameless_model, 'ROB', 'ConstantCapacity', false, 'Capacity', 65.3, 'CapacityUnits', 'litre', 'Notes', '<p>Compartment representing &quot;rest of body&quot;</p>
+', 'Tag', '');
+nameless.compartment.BRAIN = addcompartment(nameless_model, 'BRAIN', 'ConstantCapacity', false, 'Capacity', 1.45, 'CapacityUnits', 'litre', 'Notes', '<p>Volume of brain</p>
+', 'Tag', '');
+nameless.compartment.MEC = addcompartment(nameless_model, 'MEC', 'ConstantCapacity', false, 'Capacity', 0.000015, 'CapacityUnits', 'litre', 'Notes', '<p>The same as blood brain barrier (BBB)</p>
+', 'Tag', '');
 
 % Species
 nameless.species.PFM_gut = addspecies(nameless.compartment.GUT, 'PFM_gut', 'ConstantAmount', false, 'InitialAmount', 0, 'InitialAmountUnits', 'nanogram', 'BoundaryCondition', false, 'Notes', '', 'Tag', '');
@@ -423,12 +425,14 @@ addrule(nameless_model, 'c_FAAH_ROB = LIVER * b_FAAH_Liver + Gut * b_FAAH_Gut + 
 addrule(nameless_model, 'c_NAAA_ROB = LIVER * b_NAAA_Liver + Gut * b_NAAA_Gut + Spleen * b_NAAA_Spleen + Kidney * b_NAAA_Kidney + Heart * b_NAAA_Heart + Lungs * b_NAAA_Lungs + Thymus * b_NAAA_Thymus + Testis * b_NAAA_Testis', 'repeatedAssignment');
 addrule(nameless_model, 'FAAH_D_m = 1 + A_m / Km_FAAH_A + O_m / Km_FAAH_O + P_m / Km_FAAH_P + L_m / Km_FAAH_L + S_m / Km_FAAH_S', 'repeatedAssignment');
 
-
-
-% Time Switchers
-nameless.event.evt1 = addevent(nameless_model, 'time > 0', {'PFM_gut = PFM_gut + dose_amount', }, 'Active', true, 'Notes', '', 'Tag', '');
-
+% Time Events
+nameless.event.evt1 = addevent(nameless_model, 'time >= 0 && (time - 0) /  - floor((time - 0) /  + 0.5) >= 0', {'PFM_gut = PFM_gut + dose_amount', }, 'Active', true, 'Notes', '', 'Tag', '');
 
 
 
 
+
+
+% Update simulation config
+nameless.config = getconfigset(nameless_model)
+set(nameless.config.SolverOptions, 'AbsoluteToleranceScaling', false)

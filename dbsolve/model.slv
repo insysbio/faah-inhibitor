@@ -1122,6 +1122,7 @@ InteractionNetwork
 
 //! Initialization at start_
 if(t==0){
+    // initialization of TimeScales
     // initialization of Records
     GUT = 1;
     F_PFM = Emax_PFM * Dose / (ED50 + Dose);

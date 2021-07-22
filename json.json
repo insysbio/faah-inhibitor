@@ -1,5 +1,9 @@
 [
   {
+    "class": "TimeScale",
+    "id": "t"
+  },
+  {
     "class": "Page",
     "id": "description",
     "content": "\n    # A systems pharmacology perspective on the clinical development\n    of Fatty Acid amide hydrolase inhibitors for pain.\n\n    CPT Pharmacometrics Syst Pharmacol 2014; 3: e91\n\n    Benson N, Metelkin E, Demin O, Li GL, Nichols D, van der Graaf PH.\n\n    The level of the endocannabinoid anandamide is controlled by fatty acid \n    amide hydrolase (FAAH). In 2011, PF-04457845, an irreversible inhibitor of \n    FAAH, was progressed to phase II clinical trials for osteoarthritic pain. \n    This article discusses a prospective, integrated systems pharmacology model \n    evaluation of FAAH as a target for pain in humans, using physiologically based \n    pharmacokinetic and systems biology approaches. The model integrated physiological \n    compartments; endocannabinoid production, degradation, and disposition data; \n    PF-04457845 pharmacokinetics and pharmacodynamics, and cannabinoid receptor \n    CB1-binding kinetics. The modeling identified clear gaps in our understanding \n    and highlighted key risks going forward, in particular relating to whether methods \n    are in place to demonstrate target engagement and pharmacological effect. The value \n    of this modeling exercise will be discussed in detail and in the context of the \n    clinical phase II data, together with recommendations to enable optimal future \n    evaluation of FAAH inhibitors.\n    \n    CPT: Pharmacometrics Systems Pharmacology (2014) 3, e91; \n    doi:10.1038/psp.2013.72; published online 15 January 2014.\n"

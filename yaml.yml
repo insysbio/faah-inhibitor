@@ -1,3 +1,5 @@
+- class: TimeScale
+  id: t
 - class: Page
   id: description
   content: |2

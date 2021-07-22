@@ -3,9 +3,8 @@
   xmlns="http://www.sbml.org/sbml/level2/version4" 
   xmlns:xhtml="http://www.w3.org/1999/xhtml" 
   level="2" version="4"
-
   >
-  <model 
+  <model
     id="nameless" 
     metaid="nameless"
     >
@@ -21,6 +20,7 @@
         <notes>
           <html xmlns="http://www.w3.org/1999/xhtml">
             <p>Gut compartment</p>
+
           </html>
         </notes>
       </compartment>
@@ -34,6 +34,7 @@
         <notes>
           <html xmlns="http://www.w3.org/1999/xhtml">
             <p>Blood plasma compartment</p>
+
           </html>
         </notes>
       </compartment>
@@ -47,6 +48,7 @@
         <notes>
           <html xmlns="http://www.w3.org/1999/xhtml">
             <p>Compartment representing &quot;rest of body&quot;</p>
+
           </html>
         </notes>
       </compartment>
@@ -60,6 +62,7 @@
         <notes>
           <html xmlns="http://www.w3.org/1999/xhtml">
             <p>Volume of brain</p>
+
           </html>
         </notes>
       </compartment>
@@ -73,6 +76,7 @@
         <notes>
           <html xmlns="http://www.w3.org/1999/xhtml">
             <p>The same as blood brain barrier (BBB)</p>
+
           </html>
         </notes>
       </compartment>
@@ -3093,20 +3097,22 @@
   
   </listOfRules>
   
-    <listOfEvents>
+    <listOfEvents>}
       <event
         id="evt1"
         metaid="evt1"
         >
         <trigger>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
-            
-            <apply>
-              <gt/>
-              <csymbol definitionURL="http://www.sbml.org/sbml/symbols/time">t</csymbol>
-              <cn>0</cn>
+            <apply><and/>
+              <true/>
+              <apply><geq/>
+                <csymbol definitionURL="http://www.sbml.org/sbml/symbols/time">t</csymbol>
+                <cn>0</cn>
+              </apply>
+              
+              }
             </apply>
-            
           </math>
         </trigger>
         <listOfEventAssignments>
@@ -3123,44 +3129,6 @@
   
 <!-- UNIT DEFINITIONS -->
 <listOfUnitDefinitions>
-  <unitDefinition id="_L" name="L">
-  <listOfUnits>
-    <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
-  </listOfUnits>
-</unitDefinition>
-  <unitDefinition id="_ng" name="ng">
-  <listOfUnits>
-    <unit kind="kilogram" exponent="1" scale="-12" multiplier="1"/>
-  </listOfUnits>
-</unitDefinition>
-  <unitDefinition id="_UL" name="UL">
-  <listOfUnits>
-    <unit kind="dimensionless" exponent="1" scale="0" multiplier="1"/>
-  </listOfUnits>
-</unitDefinition>
-  <unitDefinition id="_nM" name="nM">
-  <listOfUnits>
-    <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
-    <unit kind="litre" exponent="-1" scale="0" multiplier="1"/>
-  </listOfUnits>
-</unitDefinition>
-  <unitDefinition id="_ng__h" name="ng/h">
-  <listOfUnits>
-    <unit kind="kilogram" exponent="1" scale="-12" multiplier="1"/>
-    <unit kind="second" exponent="-1" scale="3" multiplier="3.6"/>
-  </listOfUnits>
-</unitDefinition>
-  <unitDefinition id="_nM_L" name="nM*L">
-  <listOfUnits>
-    <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
-  </listOfUnits>
-</unitDefinition>
-  <unitDefinition id="_nmole__h" name="nmole/h">
-  <listOfUnits>
-    <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
-    <unit kind="second" exponent="-1" scale="3" multiplier="3.6"/>
-  </listOfUnits>
-</unitDefinition>
   <unitDefinition id="_nM__h" name="nM/h">
   <listOfUnits>
     <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
@@ -3168,9 +3136,20 @@
     <unit kind="second" exponent="-1" scale="3" multiplier="3.6"/>
   </listOfUnits>
 </unitDefinition>
+  <unitDefinition id="_UL" name="UL">
+  <listOfUnits>
+    <unit kind="dimensionless" exponent="1" scale="0" multiplier="1"/>
+  </listOfUnits>
+</unitDefinition>
   <unitDefinition id="__h" name="1/h">
   <listOfUnits>
     <unit kind="second" exponent="-1" scale="3" multiplier="3.6"/>
+  </listOfUnits>
+</unitDefinition>
+  <unitDefinition id="_nM" name="nM">
+  <listOfUnits>
+    <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
+    <unit kind="litre" exponent="-1" scale="0" multiplier="1"/>
   </listOfUnits>
 </unitDefinition>
   <unitDefinition id="__nM__h" name="1/h/nM">
@@ -3191,15 +3170,42 @@
     <unit kind="kilogram" exponent="1" scale="-6" multiplier="1"/>
   </listOfUnits>
 </unitDefinition>
+  <unitDefinition id="_L" name="L">
+  <listOfUnits>
+    <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
+  </listOfUnits>
+</unitDefinition>
+  <unitDefinition id="_ng__h" name="ng/h">
+  <listOfUnits>
+    <unit kind="kilogram" exponent="1" scale="-12" multiplier="1"/>
+    <unit kind="second" exponent="-1" scale="3" multiplier="3.6"/>
+  </listOfUnits>
+</unitDefinition>
   <unitDefinition id="_ng__L" name="ng/L">
   <listOfUnits>
     <unit kind="kilogram" exponent="1" scale="-12" multiplier="1"/>
     <unit kind="litre" exponent="-1" scale="0" multiplier="1"/>
   </listOfUnits>
 </unitDefinition>
+  <unitDefinition id="_ng" name="ng">
+  <listOfUnits>
+    <unit kind="kilogram" exponent="1" scale="-12" multiplier="1"/>
+  </listOfUnits>
+</unitDefinition>
   <unitDefinition id="_1n6UL" name="(1e-6 UL)">
   <listOfUnits>
     <unit kind="dimensionless" exponent="1" scale="-6" multiplier="1"/>
+  </listOfUnits>
+</unitDefinition>
+  <unitDefinition id="_nM_L" name="nM*L">
+  <listOfUnits>
+    <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
+  </listOfUnits>
+</unitDefinition>
+  <unitDefinition id="_nmole__h" name="nmole/h">
+  <listOfUnits>
+    <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
+    <unit kind="second" exponent="-1" scale="3" multiplier="3.6"/>
   </listOfUnits>
 </unitDefinition>
 </listOfUnitDefinitions>
