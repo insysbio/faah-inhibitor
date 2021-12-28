@@ -20,7 +20,7 @@ NLPE_b @Species { compartment: BRAIN, units: nM };
 NSPE_b @Species { compartment: BRAIN, units: nM };
 FAAH_b @Species { compartment: BRAIN, units: nM };
 FAAHinh_b @Species { compartment: BRAIN, units: nM };
-
+ 
 // XEA degradation
 FAAH_D_b @Record {units: UL} := 1 
     + A_b/Km_FAAH_A 
