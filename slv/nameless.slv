@@ -1486,8 +1486,6 @@ F[38] = ( 1*vL_m_p+1*vL_r_p ) / PLASMA;
 //!! S_p  @Species  {units: nM}
 F[39] = ( 1*vS_m_p+1*vS_r_p ) / PLASMA;
 
-
-
 #
 
 <RHS 2

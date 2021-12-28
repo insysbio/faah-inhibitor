@@ -12,260 +12,262 @@ $PROB
 $SET end=120, delta=0.1, hmax=0.01, hmin=0, rtol=1e-3, atol=1e-6
 
 $PARAM @annotated
-// @Const ''
+// @Const 
 Vmax_NAT : 300 : (nM/h)
-// @Const ''
+// @Const 
 p_A : 0.051 : (UL)
-// @Const ''
+// @Const 
 p_O : 0.098 : (UL)
-// @Const ''
+// @Const 
 p_P : 0.615 : (UL)
-// @Const ''
+// @Const 
 p_L : 0.016 : (UL)
-// @Const ''
+// @Const 
 p_S : 0.191 : (UL)
-// @Const ''
+// @Const 
 a_NAT_A : 1 : (UL)
-// @Const ''
+// @Const 
 a_NAT_O : 13 : (UL)
-// @Const ''
+// @Const 
 a_NAT_P : 0.42 : (UL)
-// @Const ''
+// @Const 
 a_NAT_L : 8.6 : (UL)
-// @Const ''
+// @Const 
 a_NAT_S : 1 : (UL)
-// @Const ''
+// @Const 
 b_NAT_Brain : 1.667 : (UL)
-// @Const ''
+// @Const 
 b_NAT_Pancreas : 0.333 : (UL)
-// @Const ''
+// @Const 
 b_NAT_Kidney : 0.667 : (UL)
-// @Const ''
+// @Const 
 b_NAT_Heart : 1 : (UL)
-// @Const ''
+// @Const 
 b_NAT_Lungs : 0.033 : (UL)
-// @Const ''
+// @Const 
 b_NAT_Muscles : 0.333 : (UL)
-// @Const ''
+// @Const 
 b_NAT_Testis : 0.667 : (UL)
-// @Const ''
+// @Const 
 b_NAT_Leucocytes : 0 : (UL)
-// @Const ''
+// @Const 
 k_NA_PE : 202 : (1/h)
-// @Const ''
+// @Const 
 k_NO_PE : 230 : (1/h)
-// @Const ''
+// @Const 
 k_NP_PE : 270 : (1/h)
-// @Const ''
+// @Const 
 k_NL_PE : 100 : (1/h)
-// @Const ''
+// @Const 
 k_NS_PE : 280 : (1/h)
-// @Const ''
+// @Const 
 Km_NA_PE : 2800 : (nM)
-// @Const ''
+// @Const 
 Km_NO_PE : 2900 : (nM)
-// @Const ''
+// @Const 
 Km_NP_PE : 3300 : (nM)
-// @Const ''
+// @Const 
 Km_NL_PE : 1000 : (nM)
-// @Const ''
+// @Const 
 Km_NS_PE : 3400 : (nM)
-// @Const ''
+// @Const 
 Ki_A : 230 : (nM)
-// @Const ''
+// @Const 
 Ki_O : 240 : (nM)
-// @Const ''
+// @Const 
 Ki_P : 6700 : (nM)
-// @Const ''
+// @Const 
 Ki_L : 1000 : (nM)
-// @Const ''
+// @Const 
 Ki_S : 840 : (nM)
-// @Const ''
+// @Const 
 kcat_FAAH : 18000 : (1/h)
-// @Const ''
+// @Const 
 FAAH_t : 78 : (nM)
-// @Const ''
+// @Const 
 a_FAAH_A : 1 : (UL)
-// @Const ''
+// @Const 
 a_FAAH_O : 5.7 : (UL)
-// @Const ''
+// @Const 
 a_FAAH_P : 37.8 : (UL)
-// @Const ''
+// @Const 
 a_FAAH_L : 1.15 : (UL)
-// @Const ''
+// @Const 
 a_FAAH_S : 1 : (UL)
-// @Const ''
+// @Const 
 b_FAAH_Liver : 1 : (UL)
-// @Const ''
+// @Const 
 b_FAAH_Brain : 0.197 : (UL)
-// @Const ''
+// @Const 
 b_FAAH_Gut : 0.034 : (UL)
-// @Const ''
+// @Const 
 b_FAAH_Spleen : 0.03 : (UL)
-// @Const ''
+// @Const 
 b_FAAH_Kidney : 0.069 : (UL)
-// @Const ''
+// @Const 
 b_FAAH_Lungs : 0.032 : (UL)
-// @Const ''
+// @Const 
 b_FAAH_Testis : 0.126 : (UL)
-// @Const ''
+// @Const 
 b_FAAH_MEC : 0.137 : (UL)
-// @Const ''
+// @Const 
 b_FAAH_Leucocytes : 0 : (UL)
-// @Const ''
+// @Const 
 Km_FAAH_A : 8200 : (nM)
-// @Const ''
+// @Const 
 Km_FAAH_O : 52200 : (nM)
-// @Const ''
+// @Const 
 Km_FAAH_P : 543000 : (nM)
-// @Const ''
+// @Const 
 Km_FAAH_L : 10800 : (nM)
-// @Const ''
+// @Const 
 Km_FAAH_S : 10000 : (nM)
-// @Const ''
+// @Const 
 k_deg_FAAH : 0.0051 : (1/h)
-// @Const ''
+// @Const 
 k_inh : 1.1 : (1/h/nM)
-// @Const ''
+// @Const 
 kcl_A : 1.74 : (1/h)
-// @Const ''
+// @Const 
 kcl_O : 2.5 : (1/h)
-// @Const ''
+// @Const 
 kcl_P : 2.61 : (1/h)
-// @Const ''
+// @Const 
 kcl_L : 1.25 : (1/h)
-// @Const ''
+// @Const 
 kcl_S : 1.2 : (1/h)
-// @Const ''
+// @Const 
 b_NAAA_Liver : 1 : (UL)
-// @Const ''
+// @Const 
 b_NAAA_Gut : 0.2 : (UL)
-// @Const ''
+// @Const 
 b_NAAA_Spleen : 8 : (UL)
-// @Const ''
+// @Const 
 b_NAAA_Kidney : 0.6 : (UL)
-// @Const ''
+// @Const 
 b_NAAA_Heart : 0.2 : (UL)
-// @Const ''
+// @Const 
 b_NAAA_Lungs : 14 : (UL)
-// @Const ''
+// @Const 
 b_NAAA_Thymus : 4 : (UL)
-// @Const ''
+// @Const 
 b_NAAA_Testis : 0.6 : (UL)
-// @Const ''
+// @Const 
 b_NAAA_Brain : 0.6 : (UL)
-// @Const ''
+// @Const 
 M_A : 347.5 : (g/mole)
-// @Const ''
+// @Const 
 M_O : 325.5 : (g/mole)
-// @Const ''
+// @Const 
 M_P : 299.5 : (g/mole)
-// @Const ''
+// @Const 
 M_L : 323.5 : (g/mole)
-// @Const ''
+// @Const 
 M_S : 321.5 : (g/mole)
-// @Const ''
+// @Const 
 Kd_CB1_A : 239.2 : (nM)
-// @Const ''
+// @Const 
 Kd_AG2 : 3424 : (nM)
-// @Const ''
+// @Const 
 AG2_b : 0 : 
-// @Const ''
+// @Const 
 Dose : 10 : (mg)
-// @Const ''
+// @Const 
 M_PF : 455.4 : (g/mole)
-// @Const ''
+// @Const 
 Vss_PFM : 58.328 : (L)
-// @Const ''
+// @Const 
 Emax_PFM : 0.773 : (UL)
-// @Const ''
+// @Const 
 ED50 : 0.53 : (mg)
-// @Const ''
+// @Const 
 kabs_PFM : 2.2 : (1/h)
-// @Const ''
+// @Const 
 kout_PFM : 0.18 : (1/h)
-// @Const ''
+// @Const 
 kin_PFM : 0.117 : (1/h)
-// @Const ''
+// @Const 
 klinear_PFM : 0.0803 : (1/h)
-// @Const ''
+// @Const 
 Vm_PFM : 1511 : (ng/h)
-// @Const ''
+// @Const 
 Km_PFM : 26.1 : (ng/L)
 // @Const 'blood/plasma'
 R_PF : 0.6 : (UL)
-// @Const ''
+// @Const 
 Kp_b_PF : 1.3 : (UL)
-// @Const ''
+// @Const 
 Kp_m_PF : 1.3 : (UL)
-// @Const ''
+// @Const 
 Kp_r_PF : 1.5 : (UL)
-// @Const ''
+// @Const 
 m_per_n : 1000000 : ((1e-6 UL))
-// @Const ''
+// @Const 
 PLD_b : 10000000 : (nM)
-// @Const ''
+// @Const 
 PLD_r : 10000000 : (nM)
-// @Const ''
+// @Const 
 LIVER : 1.69 : (L)
-// @Const ''
+// @Const 
 Gut : 1.65 : (L)
-// @Const ''
+// @Const 
 Spleen : 0.192 : (L)
-// @Const ''
+// @Const 
 Kidney : 0.28 : (L)
-// @Const ''
+// @Const 
 Lungs : 1.172 : (L)
-// @Const ''
+// @Const 
 Testis : 0.036 : (L)
-// @Const ''
+// @Const 
 Leucocytes : 0.025 : (L)
-// @Const ''
+// @Const 
 Pancreas : 0.077 : (L)
-// @Const ''
+// @Const 
 Heart : 0.31 : (L)
-// @Const ''
+// @Const 
 Muscles : 35 : (L)
-// @Const ''
+// @Const 
 Thymus : 0.029 : (L)
-// @Const ''
+// @Const 
 H : 0.48 : 
-// @Const ''
+// @Const 
 ktr_m_p_A : 150 : (nM/h)
-// @Const ''
+// @Const 
 Ktr_p_m_A : 1.89 : (UL)
-// @Const ''
+// @Const 
 Km_p_m_A : 1 : (nM)
-// @Const ''
+// @Const 
 ktr_m_p_O : 10 : (1/h)
-// @Const ''
+// @Const 
 Ktr_p_m_O : 9.07 : (UL)
-// @Const ''
+// @Const 
 ktr_m_p_P : 10 : (1/h)
-// @Const ''
+// @Const 
 Ktr_p_m_P : 2.65 : (UL)
-// @Const ''
+// @Const 
 ktr_m_p_L : 0 : (1/h)
-// @Const ''
+// @Const 
 Ktr_p_m_L : 2.77 : (UL)
-// @Const ''
+// @Const 
 ktr_m_p_S : 10 : (1/h)
-// @Const ''
+// @Const 
 Ktr_p_m_S : 30.01 : (UL)
-// @Const ''
+// @Const 
 ktr_r_p_A : 100 : (nM/h)
-// @Const ''
+// @Const 
 ktr_r_p : 100 : (1/h)
-// @Const ''
+// @Const 
 Ktr_p_r_A : 0.62 : (UL)
-// @Const ''
+// @Const 
 Ktr_p_r_O : 2.8 : (UL)
-// @Const ''
+// @Const 
 Ktr_p_r_P : 0.85 : (UL)
-// @Const ''
+// @Const 
 Ktr_p_r_L : 0.89 : (UL)
-// @Const ''
+// @Const 
 Ktr_p_r_S : 9.19 : (UL)
+// @TimeSwitcher 
+evt1_ : 1 :
 
 $CMT @annotated
 // @Species ''
@@ -430,6 +432,7 @@ double MEC = 1.5e-5;
 //double L_p = 1.916254;
 //double S_p = 0.273772;
 double PLASMA = 2.649;
+self.mevent(0, 10);
 
 $MAIN
 PFM_gut_0 = (0.0);
@@ -471,6 +474,16 @@ O_p_amt__0 = (5.085073) * PLASMA;
 P_p_amt__0 = (4.849307) * PLASMA;
 L_p_amt__0 = (1.916254) * PLASMA;
 S_p_amt__0 = (0.273772) * PLASMA;
+
+$TABLE
+// evt1 @TimeSwitcher
+if (evt1_ && EVID==10 && TIME>0.0) { 
+  mrg::evdata evt_PFM_gut_(TIME, 8);
+  evt_PFM_gut_.amt = PFM_gut + dose_amount;
+  evt_PFM_gut_.cmt = 1;
+  evt_PFM_gut_.now = true;
+  self.mevector.push_back(evt_PFM_gut_);
+}
 
 $ODE
 // @Record ''

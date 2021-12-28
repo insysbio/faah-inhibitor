@@ -9,6 +9,91 @@
     metaid="nameless"
     >
     
+<!-- BEGIN UNIT DEFINITIONS -->
+    <listOfUnitDefinitions>
+    <unitDefinition id="_nM__h" name="nM/h">
+  <listOfUnits>
+    <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
+    <unit kind="litre" exponent="-1" scale="0" multiplier="1"/>
+    <unit kind="second" exponent="-1" scale="3" multiplier="3.6"/>
+  </listOfUnits>
+</unitDefinition>
+    <unitDefinition id="_UL" name="UL">
+  <listOfUnits>
+    <unit kind="dimensionless" exponent="1" scale="0" multiplier="1"/>
+  </listOfUnits>
+</unitDefinition>
+    <unitDefinition id="__h" name="1/h">
+  <listOfUnits>
+    <unit kind="second" exponent="-1" scale="3" multiplier="3.6"/>
+  </listOfUnits>
+</unitDefinition>
+    <unitDefinition id="_nM" name="nM">
+  <listOfUnits>
+    <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
+    <unit kind="litre" exponent="-1" scale="0" multiplier="1"/>
+  </listOfUnits>
+</unitDefinition>
+    <unitDefinition id="__nM__h" name="1/h/nM">
+  <listOfUnits>
+    <unit kind="second" exponent="-1" scale="3" multiplier="3.6"/>
+    <unit kind="mole" exponent="-1" scale="-9" multiplier="1"/>
+    <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
+  </listOfUnits>
+</unitDefinition>
+    <unitDefinition id="__mole_g" name="g/mole">
+  <listOfUnits>
+    <unit kind="kilogram" exponent="1" scale="-3" multiplier="1"/>
+    <unit kind="mole" exponent="-1" scale="0" multiplier="1"/>
+  </listOfUnits>
+</unitDefinition>
+    <unitDefinition id="_mg" name="mg">
+  <listOfUnits>
+    <unit kind="kilogram" exponent="1" scale="-6" multiplier="1"/>
+  </listOfUnits>
+</unitDefinition>
+    <unitDefinition id="_L" name="L">
+  <listOfUnits>
+    <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
+  </listOfUnits>
+</unitDefinition>
+    <unitDefinition id="_ng__h" name="ng/h">
+  <listOfUnits>
+    <unit kind="kilogram" exponent="1" scale="-12" multiplier="1"/>
+    <unit kind="second" exponent="-1" scale="3" multiplier="3.6"/>
+  </listOfUnits>
+</unitDefinition>
+    <unitDefinition id="_ng__L" name="ng/L">
+  <listOfUnits>
+    <unit kind="kilogram" exponent="1" scale="-12" multiplier="1"/>
+    <unit kind="litre" exponent="-1" scale="0" multiplier="1"/>
+  </listOfUnits>
+</unitDefinition>
+    <unitDefinition id="_ng" name="ng">
+  <listOfUnits>
+    <unit kind="kilogram" exponent="1" scale="-12" multiplier="1"/>
+  </listOfUnits>
+</unitDefinition>
+    <unitDefinition id="_1n6UL" name="(1e-6 UL)">
+  <listOfUnits>
+    <unit kind="dimensionless" exponent="1" scale="-6" multiplier="1"/>
+  </listOfUnits>
+</unitDefinition>
+    <unitDefinition id="_nM_L" name="nM*L">
+  <listOfUnits>
+    <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
+  </listOfUnits>
+</unitDefinition>
+    <unitDefinition id="_nmole__h" name="nmole/h">
+  <listOfUnits>
+    <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
+    <unit kind="second" exponent="-1" scale="3" multiplier="3.6"/>
+  </listOfUnits>
+</unitDefinition>
+    </listOfUnitDefinitions>
+<!-- END UNIT DEFINITIONS -->
+  
+  
     <listOfCompartments>
       <compartment
         id="GUT"
@@ -20,7 +105,6 @@
         <notes>
           <html xmlns="http://www.w3.org/1999/xhtml">
             <p>Gut compartment</p>
-
           </html>
         </notes>
       </compartment>
@@ -34,7 +118,6 @@
         <notes>
           <html xmlns="http://www.w3.org/1999/xhtml">
             <p>Blood plasma compartment</p>
-
           </html>
         </notes>
       </compartment>
@@ -48,7 +131,6 @@
         <notes>
           <html xmlns="http://www.w3.org/1999/xhtml">
             <p>Compartment representing &quot;rest of body&quot;</p>
-
           </html>
         </notes>
       </compartment>
@@ -62,7 +144,6 @@
         <notes>
           <html xmlns="http://www.w3.org/1999/xhtml">
             <p>Volume of brain</p>
-
           </html>
         </notes>
       </compartment>
@@ -76,7 +157,6 @@
         <notes>
           <html xmlns="http://www.w3.org/1999/xhtml">
             <p>The same as blood brain barrier (BBB)</p>
-
           </html>
         </notes>
       </compartment>
@@ -1662,6 +1742,120 @@
       </parameter>
     </listOfParameters>
   
+<!-- BEGIN RULES -->
+  <listOfRules>
+    <assignmentRule
+      variable="F_PFM"
+      metaid="F_PFM::ode_"
+      >
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><divide/><apply><times/><ci>Emax_PFM</ci><ci>Dose</ci></apply><apply><plus/><ci>ED50</ci><ci>Dose</ci></apply></apply></math>
+    </assignmentRule>
+    <assignmentRule
+      variable="dose_amount"
+      metaid="dose_amount::ode_"
+      >
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><times/><apply><times/><apply><times/><ci>F_PFM</ci><ci>m_per_n</ci></apply><ci>Dose</ci></apply><ci>F_PFM</ci></apply></math>
+    </assignmentRule>
+    <assignmentRule
+      variable="PF_p"
+      metaid="PF_p::ode_"
+      >
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><divide/><apply><divide/><ci>PFM_p</ci><ci>M_PF</ci></apply><ci>Vss_PFM</ci></apply></math>
+    </assignmentRule>
+    <assignmentRule
+      variable="PF_b"
+      metaid="PF_b::ode_"
+      >
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><times/><ci>PF_p</ci><ci>Kp_b_PF</ci></apply></math>
+    </assignmentRule>
+    <assignmentRule
+      variable="PF_r"
+      metaid="PF_r::ode_"
+      >
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><times/><ci>PF_p</ci><ci>Kp_r_PF</ci></apply></math>
+    </assignmentRule>
+    <assignmentRule
+      variable="PF_m"
+      metaid="PF_m::ode_"
+      >
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><times/><ci>PF_p</ci><ci>Kp_m_PF</ci></apply></math>
+    </assignmentRule>
+    <assignmentRule
+      variable="FAAH_D_b"
+      metaid="FAAH_D_b::ode_"
+      >
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><cn>1</cn><apply><divide/><ci>A_b</ci><ci>Km_FAAH_A</ci></apply></apply><apply><divide/><ci>O_b</ci><ci>Km_FAAH_O</ci></apply></apply><apply><divide/><ci>P_b</ci><ci>Km_FAAH_P</ci></apply></apply><apply><divide/><ci>L_b</ci><ci>Km_FAAH_L</ci></apply></apply><apply><divide/><ci>S_b</ci><ci>Km_FAAH_S</ci></apply></apply></math>
+    </assignmentRule>
+    <assignmentRule
+      variable="slag1_b"
+      metaid="slag1_b::ode_"
+      >
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><divide/><ci>NAPE_b</ci><ci>Km_NA_PE</ci></apply><apply><divide/><ci>NOPE_b</ci><ci>Km_NO_PE</ci></apply></apply><apply><divide/><ci>NPPE_b</ci><ci>Km_NP_PE</ci></apply></apply><apply><divide/><ci>NLPE_b</ci><ci>Km_NL_PE</ci></apply></apply><apply><divide/><ci>NSPE_b</ci><ci>Km_NS_PE</ci></apply></apply></math>
+    </assignmentRule>
+    <assignmentRule
+      variable="slag2_b"
+      metaid="slag2_b::ode_"
+      >
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><divide/><ci>A_b</ci><ci>Ki_A</ci></apply><apply><divide/><ci>O_b</ci><ci>Ki_O</ci></apply></apply><apply><divide/><ci>P_b</ci><ci>Ki_P</ci></apply></apply><apply><divide/><ci>L_b</ci><ci>Ki_L</ci></apply></apply><apply><divide/><ci>S_b</ci><ci>Ki_S</ci></apply></apply></math>
+    </assignmentRule>
+    <assignmentRule
+      variable="den_b"
+      metaid="den_b::ode_"
+      >
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><cn>1</cn><ci>slag1_b</ci></apply><ci>slag2_b</ci></apply></math>
+    </assignmentRule>
+    <assignmentRule
+      variable="FAAH_D_r"
+      metaid="FAAH_D_r::ode_"
+      >
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><cn>1</cn><apply><divide/><ci>A_r</ci><ci>Km_FAAH_A</ci></apply></apply><apply><divide/><ci>O_r</ci><ci>Km_FAAH_O</ci></apply></apply><apply><divide/><ci>P_r</ci><ci>Km_FAAH_P</ci></apply></apply><apply><divide/><ci>L_r</ci><ci>Km_FAAH_L</ci></apply></apply><apply><divide/><ci>S_r</ci><ci>Km_FAAH_S</ci></apply></apply></math>
+    </assignmentRule>
+    <assignmentRule
+      variable="c_NAT_ROB"
+      metaid="c_NAT_ROB::ode_"
+      >
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><times/><ci>Pancreas</ci><ci>b_NAT_Pancreas</ci></apply><apply><times/><ci>Kidney</ci><ci>b_NAT_Kidney</ci></apply></apply><apply><times/><ci>Heart</ci><ci>b_NAT_Heart</ci></apply></apply><apply><times/><ci>Lungs</ci><ci>b_NAT_Lungs</ci></apply></apply><apply><times/><ci>Muscles</ci><ci>b_NAT_Muscles</ci></apply></apply><apply><times/><ci>Testis</ci><ci>b_NAT_Testis</ci></apply></apply><apply><times/><ci>Leucocytes</ci><ci>b_NAT_Leucocytes</ci></apply></apply></math>
+    </assignmentRule>
+    <assignmentRule
+      variable="slag1_r"
+      metaid="slag1_r::ode_"
+      >
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><divide/><ci>NAPE_r</ci><ci>Km_NA_PE</ci></apply><apply><divide/><ci>NOPE_r</ci><ci>Km_NO_PE</ci></apply></apply><apply><divide/><ci>NPPE_r</ci><ci>Km_NP_PE</ci></apply></apply><apply><divide/><ci>NLPE_r</ci><ci>Km_NL_PE</ci></apply></apply><apply><divide/><ci>NSPE_r</ci><ci>Km_NS_PE</ci></apply></apply></math>
+    </assignmentRule>
+    <assignmentRule
+      variable="slag2_r"
+      metaid="slag2_r::ode_"
+      >
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><divide/><ci>A_r</ci><ci>Ki_A</ci></apply><apply><divide/><ci>O_r</ci><ci>Ki_O</ci></apply></apply><apply><divide/><ci>P_r</ci><ci>Ki_P</ci></apply></apply><apply><divide/><ci>L_r</ci><ci>Ki_L</ci></apply></apply><apply><divide/><ci>S_r</ci><ci>Ki_S</ci></apply></apply></math>
+    </assignmentRule>
+    <assignmentRule
+      variable="den_r"
+      metaid="den_r::ode_"
+      >
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><cn>1</cn><ci>slag1_r</ci></apply><ci>slag2_r</ci></apply></math>
+    </assignmentRule>
+    <assignmentRule
+      variable="c_FAAH_ROB"
+      metaid="c_FAAH_ROB::ode_"
+      >
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><times/><ci>LIVER</ci><ci>b_FAAH_Liver</ci></apply><apply><times/><ci>Gut</ci><ci>b_FAAH_Gut</ci></apply></apply><apply><times/><ci>Spleen</ci><ci>b_FAAH_Spleen</ci></apply></apply><apply><times/><ci>Kidney</ci><ci>b_FAAH_Kidney</ci></apply></apply><apply><times/><ci>Lungs</ci><ci>b_FAAH_Lungs</ci></apply></apply><apply><times/><ci>Testis</ci><ci>b_FAAH_Testis</ci></apply></apply><apply><times/><ci>Leucocytes</ci><ci>b_FAAH_Leucocytes</ci></apply></apply></math>
+    </assignmentRule>
+    <assignmentRule
+      variable="c_NAAA_ROB"
+      metaid="c_NAAA_ROB::ode_"
+      >
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><times/><ci>LIVER</ci><ci>b_NAAA_Liver</ci></apply><apply><times/><ci>Gut</ci><ci>b_NAAA_Gut</ci></apply></apply><apply><times/><ci>Spleen</ci><ci>b_NAAA_Spleen</ci></apply></apply><apply><times/><ci>Kidney</ci><ci>b_NAAA_Kidney</ci></apply></apply><apply><times/><ci>Heart</ci><ci>b_NAAA_Heart</ci></apply></apply><apply><times/><ci>Lungs</ci><ci>b_NAAA_Lungs</ci></apply></apply><apply><times/><ci>Thymus</ci><ci>b_NAAA_Thymus</ci></apply></apply><apply><times/><ci>Testis</ci><ci>b_NAAA_Testis</ci></apply></apply></math>
+    </assignmentRule>
+    <assignmentRule
+      variable="FAAH_D_m"
+      metaid="FAAH_D_m::ode_"
+      >
+      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><cn>1</cn><apply><divide/><ci>A_m</ci><ci>Km_FAAH_A</ci></apply></apply><apply><divide/><ci>O_m</ci><ci>Km_FAAH_O</ci></apply></apply><apply><divide/><ci>P_m</ci><ci>Km_FAAH_P</ci></apply></apply><apply><divide/><ci>L_m</ci><ci>Km_FAAH_L</ci></apply></apply><apply><divide/><ci>S_m</ci><ci>Km_FAAH_S</ci></apply></apply></math>
+    </assignmentRule>
+  
+  </listOfRules>
+<!-- BEGIN RULES -->
+  
     <listOfReactions>
       <reaction
         id="absorp"
@@ -2985,119 +3179,7 @@
       </reaction>
     </listOfReactions>
   
-  <listOfRules>
-    <assignmentRule
-      variable="F_PFM"
-      metaid="F_PFM::ode_"
-      >
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><divide/><apply><times/><ci>Emax_PFM</ci><ci>Dose</ci></apply><apply><plus/><ci>ED50</ci><ci>Dose</ci></apply></apply></math>
-    </assignmentRule>
-    <assignmentRule
-      variable="dose_amount"
-      metaid="dose_amount::ode_"
-      >
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><times/><apply><times/><apply><times/><ci>F_PFM</ci><ci>m_per_n</ci></apply><ci>Dose</ci></apply><ci>F_PFM</ci></apply></math>
-    </assignmentRule>
-    <assignmentRule
-      variable="PF_p"
-      metaid="PF_p::ode_"
-      >
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><divide/><apply><divide/><ci>PFM_p</ci><ci>M_PF</ci></apply><ci>Vss_PFM</ci></apply></math>
-    </assignmentRule>
-    <assignmentRule
-      variable="PF_b"
-      metaid="PF_b::ode_"
-      >
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><times/><ci>PF_p</ci><ci>Kp_b_PF</ci></apply></math>
-    </assignmentRule>
-    <assignmentRule
-      variable="PF_r"
-      metaid="PF_r::ode_"
-      >
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><times/><ci>PF_p</ci><ci>Kp_r_PF</ci></apply></math>
-    </assignmentRule>
-    <assignmentRule
-      variable="PF_m"
-      metaid="PF_m::ode_"
-      >
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><times/><ci>PF_p</ci><ci>Kp_m_PF</ci></apply></math>
-    </assignmentRule>
-    <assignmentRule
-      variable="FAAH_D_b"
-      metaid="FAAH_D_b::ode_"
-      >
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><cn>1</cn><apply><divide/><ci>A_b</ci><ci>Km_FAAH_A</ci></apply></apply><apply><divide/><ci>O_b</ci><ci>Km_FAAH_O</ci></apply></apply><apply><divide/><ci>P_b</ci><ci>Km_FAAH_P</ci></apply></apply><apply><divide/><ci>L_b</ci><ci>Km_FAAH_L</ci></apply></apply><apply><divide/><ci>S_b</ci><ci>Km_FAAH_S</ci></apply></apply></math>
-    </assignmentRule>
-    <assignmentRule
-      variable="slag1_b"
-      metaid="slag1_b::ode_"
-      >
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><divide/><ci>NAPE_b</ci><ci>Km_NA_PE</ci></apply><apply><divide/><ci>NOPE_b</ci><ci>Km_NO_PE</ci></apply></apply><apply><divide/><ci>NPPE_b</ci><ci>Km_NP_PE</ci></apply></apply><apply><divide/><ci>NLPE_b</ci><ci>Km_NL_PE</ci></apply></apply><apply><divide/><ci>NSPE_b</ci><ci>Km_NS_PE</ci></apply></apply></math>
-    </assignmentRule>
-    <assignmentRule
-      variable="slag2_b"
-      metaid="slag2_b::ode_"
-      >
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><divide/><ci>A_b</ci><ci>Ki_A</ci></apply><apply><divide/><ci>O_b</ci><ci>Ki_O</ci></apply></apply><apply><divide/><ci>P_b</ci><ci>Ki_P</ci></apply></apply><apply><divide/><ci>L_b</ci><ci>Ki_L</ci></apply></apply><apply><divide/><ci>S_b</ci><ci>Ki_S</ci></apply></apply></math>
-    </assignmentRule>
-    <assignmentRule
-      variable="den_b"
-      metaid="den_b::ode_"
-      >
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><cn>1</cn><ci>slag1_b</ci></apply><ci>slag2_b</ci></apply></math>
-    </assignmentRule>
-    <assignmentRule
-      variable="FAAH_D_r"
-      metaid="FAAH_D_r::ode_"
-      >
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><cn>1</cn><apply><divide/><ci>A_r</ci><ci>Km_FAAH_A</ci></apply></apply><apply><divide/><ci>O_r</ci><ci>Km_FAAH_O</ci></apply></apply><apply><divide/><ci>P_r</ci><ci>Km_FAAH_P</ci></apply></apply><apply><divide/><ci>L_r</ci><ci>Km_FAAH_L</ci></apply></apply><apply><divide/><ci>S_r</ci><ci>Km_FAAH_S</ci></apply></apply></math>
-    </assignmentRule>
-    <assignmentRule
-      variable="c_NAT_ROB"
-      metaid="c_NAT_ROB::ode_"
-      >
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><times/><ci>Pancreas</ci><ci>b_NAT_Pancreas</ci></apply><apply><times/><ci>Kidney</ci><ci>b_NAT_Kidney</ci></apply></apply><apply><times/><ci>Heart</ci><ci>b_NAT_Heart</ci></apply></apply><apply><times/><ci>Lungs</ci><ci>b_NAT_Lungs</ci></apply></apply><apply><times/><ci>Muscles</ci><ci>b_NAT_Muscles</ci></apply></apply><apply><times/><ci>Testis</ci><ci>b_NAT_Testis</ci></apply></apply><apply><times/><ci>Leucocytes</ci><ci>b_NAT_Leucocytes</ci></apply></apply></math>
-    </assignmentRule>
-    <assignmentRule
-      variable="slag1_r"
-      metaid="slag1_r::ode_"
-      >
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><divide/><ci>NAPE_r</ci><ci>Km_NA_PE</ci></apply><apply><divide/><ci>NOPE_r</ci><ci>Km_NO_PE</ci></apply></apply><apply><divide/><ci>NPPE_r</ci><ci>Km_NP_PE</ci></apply></apply><apply><divide/><ci>NLPE_r</ci><ci>Km_NL_PE</ci></apply></apply><apply><divide/><ci>NSPE_r</ci><ci>Km_NS_PE</ci></apply></apply></math>
-    </assignmentRule>
-    <assignmentRule
-      variable="slag2_r"
-      metaid="slag2_r::ode_"
-      >
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><divide/><ci>A_r</ci><ci>Ki_A</ci></apply><apply><divide/><ci>O_r</ci><ci>Ki_O</ci></apply></apply><apply><divide/><ci>P_r</ci><ci>Ki_P</ci></apply></apply><apply><divide/><ci>L_r</ci><ci>Ki_L</ci></apply></apply><apply><divide/><ci>S_r</ci><ci>Ki_S</ci></apply></apply></math>
-    </assignmentRule>
-    <assignmentRule
-      variable="den_r"
-      metaid="den_r::ode_"
-      >
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><cn>1</cn><ci>slag1_r</ci></apply><ci>slag2_r</ci></apply></math>
-    </assignmentRule>
-    <assignmentRule
-      variable="c_FAAH_ROB"
-      metaid="c_FAAH_ROB::ode_"
-      >
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><times/><ci>LIVER</ci><ci>b_FAAH_Liver</ci></apply><apply><times/><ci>Gut</ci><ci>b_FAAH_Gut</ci></apply></apply><apply><times/><ci>Spleen</ci><ci>b_FAAH_Spleen</ci></apply></apply><apply><times/><ci>Kidney</ci><ci>b_FAAH_Kidney</ci></apply></apply><apply><times/><ci>Lungs</ci><ci>b_FAAH_Lungs</ci></apply></apply><apply><times/><ci>Testis</ci><ci>b_FAAH_Testis</ci></apply></apply><apply><times/><ci>Leucocytes</ci><ci>b_FAAH_Leucocytes</ci></apply></apply></math>
-    </assignmentRule>
-    <assignmentRule
-      variable="c_NAAA_ROB"
-      metaid="c_NAAA_ROB::ode_"
-      >
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><times/><ci>LIVER</ci><ci>b_NAAA_Liver</ci></apply><apply><times/><ci>Gut</ci><ci>b_NAAA_Gut</ci></apply></apply><apply><times/><ci>Spleen</ci><ci>b_NAAA_Spleen</ci></apply></apply><apply><times/><ci>Kidney</ci><ci>b_NAAA_Kidney</ci></apply></apply><apply><times/><ci>Heart</ci><ci>b_NAAA_Heart</ci></apply></apply><apply><times/><ci>Lungs</ci><ci>b_NAAA_Lungs</ci></apply></apply><apply><times/><ci>Thymus</ci><ci>b_NAAA_Thymus</ci></apply></apply><apply><times/><ci>Testis</ci><ci>b_NAAA_Testis</ci></apply></apply></math>
-    </assignmentRule>
-    <assignmentRule
-      variable="FAAH_D_m"
-      metaid="FAAH_D_m::ode_"
-      >
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><apply><plus/><apply><plus/><apply><plus/><apply><plus/><apply><plus/><cn>1</cn><apply><divide/><ci>A_m</ci><ci>Km_FAAH_A</ci></apply></apply><apply><divide/><ci>O_m</ci><ci>Km_FAAH_O</ci></apply></apply><apply><divide/><ci>P_m</ci><ci>Km_FAAH_P</ci></apply></apply><apply><divide/><ci>L_m</ci><ci>Km_FAAH_L</ci></apply></apply><apply><divide/><ci>S_m</ci><ci>Km_FAAH_S</ci></apply></apply></math>
-    </assignmentRule>
-  
-  </listOfRules>
-  
-    <listOfEvents>}
+    <listOfEvents>
       <event
         id="evt1"
         metaid="evt1"
@@ -3111,7 +3193,7 @@
                 <cn>0</cn>
               </apply>
               
-              }
+              
             </apply>
           </math>
         </trigger>
@@ -3127,88 +3209,6 @@
       </event>
     </listOfEvents>
   
-<!-- UNIT DEFINITIONS -->
-<listOfUnitDefinitions>
-  <unitDefinition id="_nM__h" name="nM/h">
-  <listOfUnits>
-    <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
-    <unit kind="litre" exponent="-1" scale="0" multiplier="1"/>
-    <unit kind="second" exponent="-1" scale="3" multiplier="3.6"/>
-  </listOfUnits>
-</unitDefinition>
-  <unitDefinition id="_UL" name="UL">
-  <listOfUnits>
-    <unit kind="dimensionless" exponent="1" scale="0" multiplier="1"/>
-  </listOfUnits>
-</unitDefinition>
-  <unitDefinition id="__h" name="1/h">
-  <listOfUnits>
-    <unit kind="second" exponent="-1" scale="3" multiplier="3.6"/>
-  </listOfUnits>
-</unitDefinition>
-  <unitDefinition id="_nM" name="nM">
-  <listOfUnits>
-    <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
-    <unit kind="litre" exponent="-1" scale="0" multiplier="1"/>
-  </listOfUnits>
-</unitDefinition>
-  <unitDefinition id="__nM__h" name="1/h/nM">
-  <listOfUnits>
-    <unit kind="second" exponent="-1" scale="3" multiplier="3.6"/>
-    <unit kind="mole" exponent="-1" scale="-9" multiplier="1"/>
-    <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
-  </listOfUnits>
-</unitDefinition>
-  <unitDefinition id="__mole_g" name="g/mole">
-  <listOfUnits>
-    <unit kind="kilogram" exponent="1" scale="-3" multiplier="1"/>
-    <unit kind="mole" exponent="-1" scale="0" multiplier="1"/>
-  </listOfUnits>
-</unitDefinition>
-  <unitDefinition id="_mg" name="mg">
-  <listOfUnits>
-    <unit kind="kilogram" exponent="1" scale="-6" multiplier="1"/>
-  </listOfUnits>
-</unitDefinition>
-  <unitDefinition id="_L" name="L">
-  <listOfUnits>
-    <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
-  </listOfUnits>
-</unitDefinition>
-  <unitDefinition id="_ng__h" name="ng/h">
-  <listOfUnits>
-    <unit kind="kilogram" exponent="1" scale="-12" multiplier="1"/>
-    <unit kind="second" exponent="-1" scale="3" multiplier="3.6"/>
-  </listOfUnits>
-</unitDefinition>
-  <unitDefinition id="_ng__L" name="ng/L">
-  <listOfUnits>
-    <unit kind="kilogram" exponent="1" scale="-12" multiplier="1"/>
-    <unit kind="litre" exponent="-1" scale="0" multiplier="1"/>
-  </listOfUnits>
-</unitDefinition>
-  <unitDefinition id="_ng" name="ng">
-  <listOfUnits>
-    <unit kind="kilogram" exponent="1" scale="-12" multiplier="1"/>
-  </listOfUnits>
-</unitDefinition>
-  <unitDefinition id="_1n6UL" name="(1e-6 UL)">
-  <listOfUnits>
-    <unit kind="dimensionless" exponent="1" scale="-6" multiplier="1"/>
-  </listOfUnits>
-</unitDefinition>
-  <unitDefinition id="_nM_L" name="nM*L">
-  <listOfUnits>
-    <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
-  </listOfUnits>
-</unitDefinition>
-  <unitDefinition id="_nmole__h" name="nmole/h">
-  <listOfUnits>
-    <unit kind="mole" exponent="1" scale="-9" multiplier="1"/>
-    <unit kind="second" exponent="-1" scale="3" multiplier="3.6"/>
-  </listOfUnits>
-</unitDefinition>
-</listOfUnitDefinitions>
   
   </model>
 </sbml>
