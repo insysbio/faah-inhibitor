@@ -1,6 +1,6 @@
 using HetaSimulator, Plots
 
-model = load_jlmodel("./dist/julia/model.jl")
+model = load_jlmodel("../dist/julia/model.jl")
 
 res = Scenario(model; tspan = (0,340)) |> sim
 
