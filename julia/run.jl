@@ -1,9 +1,10 @@
 using HetaSimulator, Plots
 ENV["GKSwstype"] = "100"
 
-model = load_jlmodel("../dist/julia/model.jl")
+p = load_platform("..")
+model = models(p)[:nameless]
 
-res = Scenario(model; tspan = (0,340)) |> sim
+res = Scenario(model, (0,340)) |> sim
 
 plotd = plot(res; vars = [:P_p, :A_p, :O_p])
 savefig(plotd, "julia-plot-1.png")
