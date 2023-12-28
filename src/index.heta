@@ -37,14 +37,14 @@ description @Page { content: "
     doi:10.1038/psp.2013.72; published online 15 January 2014.
 " };
 
-include ./qsp-units.heta
+include ./qsp-units.heta;
 
-include ./constants.heta
-include ./pk.heta
-include ./brain.heta
-include ./rob.heta
-include ./core.heta
-include ./plasma.heta
+include ./constants.heta;
+include ./pk.heta;
+include ./brain.heta;
+include ./rob.heta;
+include ./core.heta;
+include ./plasma.heta;
 
 // === TRANSPORT ===
 // From MEC to Plasma, Brain to MEC

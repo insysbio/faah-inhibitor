@@ -16,7 +16,7 @@ jobs:
   build:
     strategy:
       matrix:
-        node-version: [ 8.x ]
+        node-version: [ 16.x ]
         heta-version: [ latest ]
         platform: [ ubuntu-latest ]
 
@@ -24,15 +24,15 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         persist-credentials: false
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
     - name: Install and build
       run: |
-        npm i -g heta-compiler@${{ matrix.heta-version }}
+        npm ci -g heta-compiler@${{ matrix.heta-version }}
         heta -v
         heta build

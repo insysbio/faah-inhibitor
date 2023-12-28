@@ -3,8 +3,8 @@
   "id": "faah-inhibitor",
   "title": "Model describing inhibition of FAAH in human",
   "notes": "This is Quantitative Systems Pharmacology (QSP) modeling platform describing Fatty Acid Amide Hydrolase inhibition in human.",
-  "builderVersion": "^0.6.9",
-  "version": "1.0.1",
+  "builderVersion": "^0.7.1",
+  "version": "1.0.2",
   "keywords": ["human", "qsp", "faah-inhibitor"],
   "homepage": "https://insysbio.github.io/faah-inhibitor/",
   "repository": {
@@ -22,7 +22,6 @@
   ],
   "options": {
     "logLevel": "info",
-    "debuggingMode": false,
     "skipExport": false,
     "unitsCheck": true
   },

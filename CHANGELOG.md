@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.0.2
+
+- update compiler version
+
 ## 1.0.1
 
 - add HetaSimulator support
