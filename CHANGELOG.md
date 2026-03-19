@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.0.3
+
+- update Heta-compiler to 0.10.0
+- check for updated dependences
+
 ## 1.0.2
 
 - update compiler version
