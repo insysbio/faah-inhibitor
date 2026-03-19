@@ -1,6 +1,14 @@
+- action: hasMeta
+  toolName: heta-compiler
+  toolVersion: 0.10.0
+  createdAt: '2026-03-19T15:46:09.015Z'
+  platformId: faah-inhibitor
+  platformVersion: 1.0.2
+  format: YAML
 - id: t
-- class: Page
-  id: description
+  units: h
+- id: description
+  class: Page
   content: |2
 
         # A systems pharmacology perspective on the clinical development
@@ -27,459 +35,459 @@
         
         CPT: Pharmacometrics Systems Pharmacology (2014) 3, e91; 
         doi:10.1038/psp.2013.72; published online 15 January 2014.
-- class: Const
-  id: Vmax_NAT
+- id: Vmax_NAT
+  class: Const
   units: nM/h
   num: 300
-- class: Const
-  id: p_A
+- id: p_A
+  class: Const
   units: UL
   num: 0.051
-- class: Const
-  id: p_O
+- id: p_O
+  class: Const
   units: UL
   num: 0.098
-- class: Const
-  id: p_P
+- id: p_P
+  class: Const
   units: UL
   num: 0.615
-- class: Const
-  id: p_L
+- id: p_L
+  class: Const
   units: UL
   num: 0.016
-- class: Const
-  id: p_S
+- id: p_S
+  class: Const
   units: UL
   num: 0.191
-- class: Const
-  id: a_NAT_A
+- id: a_NAT_A
+  class: Const
   units: UL
   num: 1
-- class: Const
-  id: a_NAT_O
+- id: a_NAT_O
+  class: Const
   units: UL
   num: 13
-- class: Const
-  id: a_NAT_P
+- id: a_NAT_P
+  class: Const
   units: UL
   num: 0.42
-- class: Const
-  id: a_NAT_L
+- id: a_NAT_L
+  class: Const
   units: UL
   num: 8.6
-- class: Const
-  id: a_NAT_S
+- id: a_NAT_S
+  class: Const
   units: UL
   num: 1
-- class: Const
-  id: b_NAT_Brain
+- id: b_NAT_Brain
+  class: Const
   units: UL
   num: 1.667
-- class: Const
-  id: b_NAT_Pancreas
+- id: b_NAT_Pancreas
+  class: Const
   units: UL
   num: 0.333
-- class: Const
-  id: b_NAT_Kidney
+- id: b_NAT_Kidney
+  class: Const
   units: UL
   num: 0.667
-- class: Const
-  id: b_NAT_Heart
+- id: b_NAT_Heart
+  class: Const
   units: UL
   num: 1
-- class: Const
-  id: b_NAT_Lungs
+- id: b_NAT_Lungs
+  class: Const
   units: UL
   num: 0.033
-- class: Const
-  id: b_NAT_Muscles
+- id: b_NAT_Muscles
+  class: Const
   units: UL
   num: 0.333
-- class: Const
-  id: b_NAT_Testis
+- id: b_NAT_Testis
+  class: Const
   units: UL
   num: 0.667
-- class: Const
-  id: b_NAT_Leucocytes
+- id: b_NAT_Leucocytes
+  class: Const
   units: UL
   num: 0
-- class: Const
-  id: k_NA_PE
+- id: k_NA_PE
+  class: Const
   units: 1/h
   num: 202
-- class: Const
-  id: k_NO_PE
+- id: k_NO_PE
+  class: Const
   units: 1/h
   num: 230
-- class: Const
-  id: k_NP_PE
+- id: k_NP_PE
+  class: Const
   units: 1/h
   num: 270
-- class: Const
-  id: k_NL_PE
+- id: k_NL_PE
+  class: Const
   units: 1/h
   num: 100
-- class: Const
-  id: k_NS_PE
+- id: k_NS_PE
+  class: Const
   units: 1/h
   num: 280
-- class: Const
-  id: Km_NA_PE
+- id: Km_NA_PE
+  class: Const
   units: nM
   num: 2800
-- class: Const
-  id: Km_NO_PE
+- id: Km_NO_PE
+  class: Const
   units: nM
   num: 2900
-- class: Const
-  id: Km_NP_PE
+- id: Km_NP_PE
+  class: Const
   units: nM
   num: 3300
-- class: Const
-  id: Km_NL_PE
+- id: Km_NL_PE
+  class: Const
   units: nM
   num: 1000
-- class: Const
-  id: Km_NS_PE
+- id: Km_NS_PE
+  class: Const
   units: nM
   num: 3400
-- class: Const
-  id: Ki_A
+- id: Ki_A
+  class: Const
   units: nM
   num: 230
-- class: Const
-  id: Ki_O
+- id: Ki_O
+  class: Const
   units: nM
   num: 240
-- class: Const
-  id: Ki_P
+- id: Ki_P
+  class: Const
   units: nM
   num: 6700
-- class: Const
-  id: Ki_L
+- id: Ki_L
+  class: Const
   units: nM
   num: 1000
-- class: Const
-  id: Ki_S
+- id: Ki_S
+  class: Const
   units: nM
   num: 840
-- class: Const
-  id: kcat_FAAH
+- id: kcat_FAAH
+  class: Const
   units: 1/h
   num: 18000
-- class: Const
-  id: FAAH_t
+- id: FAAH_t
+  class: Const
   units: nM
   num: 78
-- class: Const
-  id: a_FAAH_A
+- id: a_FAAH_A
+  class: Const
   units: UL
   num: 1
-- class: Const
-  id: a_FAAH_O
+- id: a_FAAH_O
+  class: Const
   units: UL
   num: 5.7
-- class: Const
-  id: a_FAAH_P
+- id: a_FAAH_P
+  class: Const
   units: UL
   num: 37.8
-- class: Const
-  id: a_FAAH_L
+- id: a_FAAH_L
+  class: Const
   units: UL
   num: 1.15
-- class: Const
-  id: a_FAAH_S
+- id: a_FAAH_S
+  class: Const
   units: UL
   num: 1
-- class: Const
-  id: b_FAAH_Liver
+- id: b_FAAH_Liver
+  class: Const
   units: UL
   num: 1
-- class: Const
-  id: b_FAAH_Brain
+- id: b_FAAH_Brain
+  class: Const
   units: UL
   num: 0.197
-- class: Const
-  id: b_FAAH_Gut
+- id: b_FAAH_Gut
+  class: Const
   units: UL
   num: 0.034
-- class: Const
-  id: b_FAAH_Spleen
+- id: b_FAAH_Spleen
+  class: Const
   units: UL
   num: 0.03
-- class: Const
-  id: b_FAAH_Kidney
+- id: b_FAAH_Kidney
+  class: Const
   units: UL
   num: 0.069
-- class: Const
-  id: b_FAAH_Lungs
+- id: b_FAAH_Lungs
+  class: Const
   units: UL
   num: 0.032
-- class: Const
-  id: b_FAAH_Testis
+- id: b_FAAH_Testis
+  class: Const
   units: UL
   num: 0.126
-- class: Const
-  id: b_FAAH_MEC
+- id: b_FAAH_MEC
+  class: Const
   units: UL
   num: 0.137
-- class: Const
-  id: b_FAAH_Leucocytes
+- id: b_FAAH_Leucocytes
+  class: Const
   units: UL
   num: 0
-- class: Const
-  id: Km_FAAH_A
+- id: Km_FAAH_A
+  class: Const
   units: nM
   num: 8200
-- class: Const
-  id: Km_FAAH_O
+- id: Km_FAAH_O
+  class: Const
   units: nM
   num: 52200
-- class: Const
-  id: Km_FAAH_P
+- id: Km_FAAH_P
+  class: Const
   units: nM
   num: 543000
-- class: Const
-  id: Km_FAAH_L
+- id: Km_FAAH_L
+  class: Const
   units: nM
   num: 10800
-- class: Const
-  id: Km_FAAH_S
+- id: Km_FAAH_S
+  class: Const
   units: nM
   num: 10000
-- class: Const
-  id: k_deg_FAAH
+- id: k_deg_FAAH
+  class: Const
   units: 1/h
   num: 0.0051
-- class: Const
-  id: k_inh
+- id: k_inh
+  class: Const
   units: 1/h/nM
   num: 1.1
-- class: Const
-  id: kcl_A
+- id: kcl_A
+  class: Const
   units: 1/h
   num: 1.74
-- class: Const
-  id: kcl_O
+- id: kcl_O
+  class: Const
   units: 1/h
   num: 2.5
-- class: Const
-  id: kcl_P
+- id: kcl_P
+  class: Const
   units: 1/h
   num: 2.61
-- class: Const
-  id: kcl_L
+- id: kcl_L
+  class: Const
   units: 1/h
   num: 1.25
-- class: Const
-  id: kcl_S
+- id: kcl_S
+  class: Const
   units: 1/h
   num: 1.2
-- class: Const
-  id: b_NAAA_Liver
+- id: b_NAAA_Liver
+  class: Const
   units: UL
   num: 1
-- class: Const
-  id: b_NAAA_Gut
+- id: b_NAAA_Gut
+  class: Const
   units: UL
   num: 0.2
-- class: Const
-  id: b_NAAA_Spleen
+- id: b_NAAA_Spleen
+  class: Const
   units: UL
   num: 8
-- class: Const
-  id: b_NAAA_Kidney
+- id: b_NAAA_Kidney
+  class: Const
   units: UL
   num: 0.6
-- class: Const
-  id: b_NAAA_Heart
+- id: b_NAAA_Heart
+  class: Const
   units: UL
   num: 0.2
-- class: Const
-  id: b_NAAA_Lungs
+- id: b_NAAA_Lungs
+  class: Const
   units: UL
   num: 14
-- class: Const
-  id: b_NAAA_Thymus
+- id: b_NAAA_Thymus
+  class: Const
   units: UL
   num: 4
-- class: Const
-  id: b_NAAA_Testis
+- id: b_NAAA_Testis
+  class: Const
   units: UL
   num: 0.6
-- class: Const
-  id: b_NAAA_Brain
+- id: b_NAAA_Brain
+  class: Const
   units: UL
   num: 0.6
-- class: Const
-  id: M_A
+- id: M_A
+  class: Const
   units: g/mole
   num: 347.5
-- class: Const
-  id: M_O
+- id: M_O
+  class: Const
   units: g/mole
   num: 325.5
-- class: Const
-  id: M_P
+- id: M_P
+  class: Const
   units: g/mole
   num: 299.5
-- class: Const
-  id: M_L
+- id: M_L
+  class: Const
   units: g/mole
   num: 323.5
-- class: Const
-  id: M_S
+- id: M_S
+  class: Const
   units: g/mole
   num: 321.5
-- class: Const
-  id: Kd_CB1_A
+- id: Kd_CB1_A
+  class: Const
   units: nM
   num: 239.2
-- class: Const
-  id: Kd_AG2
+- id: Kd_AG2
+  class: Const
   units: nM
   num: 3424
-- class: Const
-  id: AG2_b
+- id: AG2_b
+  class: Const
   num: 0
-- class: Const
-  id: Dose
+- id: Dose
+  class: Const
   units: mg
   num: 10
-- class: Const
-  id: M_PF
+- id: M_PF
+  class: Const
   units: g/mole
   num: 455.4
-- class: Const
-  id: Vss_PFM
+- id: Vss_PFM
+  class: Const
   units: L
   num: 58.328
-- class: Const
-  id: Emax_PFM
+- id: Emax_PFM
+  class: Const
   units: UL
   num: 0.773
-- class: Const
-  id: ED50
+- id: ED50
+  class: Const
   units: mg
   num: 0.53
-- class: Const
-  id: kabs_PFM
+- id: kabs_PFM
+  class: Const
   units: 1/h
   num: 2.2
-- class: Const
-  id: kout_PFM
+- id: kout_PFM
+  class: Const
   units: 1/h
   num: 0.18
-- class: Const
-  id: kin_PFM
+- id: kin_PFM
+  class: Const
   units: 1/h
   num: 0.117
-- class: Const
-  id: klinear_PFM
+- id: klinear_PFM
+  class: Const
   units: 1/h
   num: 0.0803
-- class: Const
-  id: Vm_PFM
+- id: Vm_PFM
+  class: Const
   units: ng/h
   num: 1511
-- class: Const
-  id: Km_PFM
+- id: Km_PFM
+  class: Const
   units: ng/L
   num: 26.1
-- class: Const
-  id: R_PF
+- id: R_PF
+  class: Const
   title: blood/plasma
   units: UL
   num: 0.6
-- class: Const
-  id: Kp_b_PF
+- id: Kp_b_PF
+  class: Const
   units: UL
   num: 1.3
-- class: Const
-  id: Kp_m_PF
+- id: Kp_m_PF
+  class: Const
   units: UL
   num: 1.3
-- class: Const
-  id: Kp_r_PF
+- id: Kp_r_PF
+  class: Const
   units: UL
   num: 1.5
-- class: Compartment
-  id: GUT
+- id: GUT
+  class: Compartment
   notes: Gut compartment
   units: L
   assignments:
     start_: '1'
-- class: Compartment
-  id: PLASMA
+- id: PLASMA
+  class: Compartment
   notes: Blood plasma compartment
   units: L
   assignments:
     start_: '2.649'
-- class: Compartment
-  id: ROB
+- id: ROB
+  class: Compartment
   notes: Compartment representing "rest of body"
   units: L
   assignments:
     start_: '65.3'
-- class: Species
-  id: PFM_gut
+- id: PFM_gut
+  class: Species
   units: ng
   assignments:
     start_: '0'
     evt1: PFM_gut + dose_amount
   compartment: GUT
   isAmount: true
-- class: Species
-  id: PFM_p
+- id: PFM_p
+  class: Species
   units: ng
   assignments:
     start_: '0'
   output: true
   compartment: PLASMA
   isAmount: true
-- class: Species
-  id: PFM_r
+- id: PFM_r
+  class: Species
   units: ng
   assignments:
     start_: '0'
   compartment: ROB
   isAmount: true
-- class: Record
-  id: F_PFM
+- id: F_PFM
+  class: Record
   units: UL
   assignments:
     ode_: Emax_PFM * Dose / (ED50 + Dose)
-- class: Const
-  id: m_per_n
+- id: m_per_n
+  class: Const
   units: (1e-6 UL)
   num: 1000000
-- class: Record
-  id: dose_amount
+- id: dose_amount
+  class: Record
   units: ng
   assignments:
     ode_: F_PFM * m_per_n * Dose * F_PFM
-- class: Record
-  id: PF_p
+- id: PF_p
+  class: Record
   units: nM
   assignments:
     ode_: PFM_p / M_PF / Vss_PFM
-- class: Record
-  id: PF_b
+- id: PF_b
+  class: Record
   units: nM
   assignments:
     ode_: PF_p * Kp_b_PF
-- class: Record
-  id: PF_r
+- id: PF_r
+  class: Record
   units: nM
   assignments:
     ode_: PF_p * Kp_r_PF
-- class: Record
-  id: PF_m
+- id: PF_m
+  class: Record
   units: nM
   assignments:
     ode_: PF_p * Kp_m_PF
-- class: Reaction
-  id: absorp
+- id: absorp
+  class: Reaction
   units: ng/h
   assignments:
     ode_: kabs_PFM * PFM_gut
@@ -487,116 +495,116 @@
     - {target: PFM_gut, stoichiometry: -1}
     - {target: PFM_p, stoichiometry: 1}
   reversible: false
-- class: Reaction
-  id: dist
+- id: dist
+  class: Reaction
   units: ng/h
   assignments:
     ode_: kout_PFM * PFM_p - kin_PFM * PFM_r
   actors:
     - {target: PFM_p, stoichiometry: -1}
     - {target: PFM_r, stoichiometry: 1}
-- class: Reaction
-  id: elim
+- id: elim
+  class: Reaction
   units: ng/h
   assignments:
     ode_: klinear_PFM * PFM_p + (Vm_PFM * PFM_p / Vss_PFM) / (Km_PFM + PFM_p / Vss_PFM)
   actors:
     - {target: PFM_p, stoichiometry: -1}
   reversible: false
-- class: TimeSwitcher
-  id: evt1
+- id: evt1
+  class: TimeSwitcher
   start: 0
-- class: Const
-  id: PLD_b
+- id: PLD_b
+  class: Const
   units: nM
   num: 10000000
-- class: Compartment
-  id: BRAIN
+- id: BRAIN
+  class: Compartment
   notes: Volume of brain
   aux:
     source: measured
   units: L
   assignments:
     start_: '1.45'
-- class: Species
-  id: A_b
+- id: A_b
+  class: Species
   units: nM
   assignments:
     start_: '0.7493309'
   compartment: BRAIN
-- class: Species
-  id: O_b
+- id: O_b
+  class: Species
   units: nM
   assignments:
     start_: '20.77858'
   compartment: BRAIN
-- class: Species
-  id: P_b
+- id: P_b
+  class: Species
   units: nM
   assignments:
     start_: '6.541209'
   compartment: BRAIN
-- class: Species
-  id: L_b
+- id: L_b
+  class: Species
   units: nM
   assignments:
     start_: '2.319571'
   compartment: BRAIN
-- class: Species
-  id: S_b
+- id: S_b
+  class: Species
   units: nM
   assignments:
     start_: '3.427807'
   compartment: BRAIN
-- class: Species
-  id: NAPE_b
+- id: NAPE_b
+  class: Species
   units: nM
   assignments:
     start_: '3.879041e-5'
   compartment: BRAIN
-- class: Species
-  id: NOPE_b
+- id: NOPE_b
+  class: Species
   units: nM
   assignments:
     start_: '8.814287e-4'
   compartment: BRAIN
-- class: Species
-  id: NPPE_b
+- id: NPPE_b
+  class: Species
   units: nM
   assignments:
     start_: '1.732296e-4'
   compartment: BRAIN
-- class: Species
-  id: NLPE_b
+- id: NLPE_b
+  class: Species
   units: nM
   assignments:
     start_: '7.550331e-5'
   compartment: BRAIN
-- class: Species
-  id: NSPE_b
+- id: NSPE_b
+  class: Species
   units: nM
   assignments:
     start_: '1.272629e-4'
   compartment: BRAIN
-- class: Species
-  id: FAAH_b
+- id: FAAH_b
+  class: Species
   units: nM
   assignments:
     start_: '15.366'
   compartment: BRAIN
-- class: Species
-  id: FAAHinh_b
+- id: FAAHinh_b
+  class: Species
   units: nM
   assignments:
     start_: '0'
   compartment: BRAIN
-- class: Record
-  id: FAAH_D_b
+- id: FAAH_D_b
+  class: Record
   units: UL
   assignments:
     ode_: 1 + A_b / Km_FAAH_A + O_b / Km_FAAH_O + P_b / Km_FAAH_P + L_b / Km_FAAH_L + S_b / Km_FAAH_S
-- class: Reaction
-  id: vA_degr_b
+- id: vA_degr_b
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: BRAIN * FAAH_b * kcat_FAAH * a_FAAH_A * A_b / (Km_FAAH_A * FAAH_D_b)
@@ -605,8 +613,8 @@
   reversible: false
   modifiers:
     - {target: FAAH_b}
-- class: Reaction
-  id: vO_degr_b
+- id: vO_degr_b
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: BRAIN * FAAH_b * kcat_FAAH * a_FAAH_O * O_b / (Km_FAAH_O * FAAH_D_b)
@@ -615,8 +623,8 @@
   reversible: false
   modifiers:
     - {target: FAAH_b}
-- class: Reaction
-  id: vP_degr_b
+- id: vP_degr_b
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: BRAIN * FAAH_b * kcat_FAAH * a_FAAH_P * P_b / (Km_FAAH_P * FAAH_D_b)
@@ -625,8 +633,8 @@
   reversible: false
   modifiers:
     - {target: FAAH_b}
-- class: Reaction
-  id: vL_degr_b
+- id: vL_degr_b
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: BRAIN * FAAH_b * kcat_FAAH * a_FAAH_L * L_b / (Km_FAAH_L * FAAH_D_b)
@@ -635,8 +643,8 @@
   reversible: false
   modifiers:
     - {target: FAAH_b}
-- class: Reaction
-  id: vS_degr_b
+- id: vS_degr_b
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: BRAIN * FAAH_b * kcat_FAAH * a_FAAH_S * S_b / (Km_FAAH_S * FAAH_D_b)
@@ -645,63 +653,63 @@
   reversible: false
   modifiers:
     - {target: FAAH_b}
-- class: Reaction
-  id: vNAPE_syn_b
+- id: vNAPE_syn_b
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: BRAIN * Vmax_NAT * p_A * a_NAT_A * b_NAT_Brain
   actors:
     - {target: NAPE_b, stoichiometry: 1}
   reversible: false
-- class: Reaction
-  id: vNOPE_syn_b
+- id: vNOPE_syn_b
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: BRAIN * Vmax_NAT * p_O * a_NAT_O * b_NAT_Brain
   actors:
     - {target: NOPE_b, stoichiometry: 1}
   reversible: false
-- class: Reaction
-  id: vNPPE_syn_b
+- id: vNPPE_syn_b
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: BRAIN * Vmax_NAT * p_P * a_NAT_P * b_NAT_Brain
   actors:
     - {target: NPPE_b, stoichiometry: 1}
   reversible: false
-- class: Reaction
-  id: vNLPE_syn_b
+- id: vNLPE_syn_b
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: BRAIN * Vmax_NAT * p_L * a_NAT_L * b_NAT_Brain
   actors:
     - {target: NLPE_b, stoichiometry: 1}
   reversible: false
-- class: Reaction
-  id: vNSPE_syn_b
+- id: vNSPE_syn_b
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: BRAIN * Vmax_NAT * p_S * a_NAT_S * b_NAT_Brain
   actors:
     - {target: NSPE_b, stoichiometry: 1}
   reversible: false
-- class: Record
-  id: slag1_b
+- id: slag1_b
+  class: Record
   units: UL
   assignments:
     ode_: NAPE_b / Km_NA_PE + NOPE_b / Km_NO_PE + NPPE_b / Km_NP_PE + NLPE_b / Km_NL_PE + NSPE_b / Km_NS_PE
-- class: Record
-  id: slag2_b
+- id: slag2_b
+  class: Record
   units: UL
   assignments:
     ode_: A_b / Ki_A + O_b / Ki_O + P_b / Ki_P + L_b / Ki_L + S_b / Ki_S
-- class: Record
-  id: den_b
+- id: den_b
+  class: Record
   units: UL
   assignments:
     ode_: 1 + slag1_b + slag2_b
-- class: Reaction
-  id: vA_syn_b
+- id: vA_syn_b
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: BRAIN * PLD_b * k_NA_PE * NAPE_b / Km_NA_PE / den_b
@@ -709,8 +717,8 @@
     - {target: NAPE_b, stoichiometry: -1}
     - {target: A_b, stoichiometry: 1}
   reversible: false
-- class: Reaction
-  id: vO_syn_b
+- id: vO_syn_b
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: BRAIN * PLD_b * k_NO_PE * NOPE_b / Km_NO_PE / den_b
@@ -718,8 +726,8 @@
     - {target: NOPE_b, stoichiometry: -1}
     - {target: O_b, stoichiometry: 1}
   reversible: false
-- class: Reaction
-  id: vP_syn_b
+- id: vP_syn_b
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: BRAIN * PLD_b * k_NP_PE * NPPE_b / Km_NP_PE / den_b
@@ -727,8 +735,8 @@
     - {target: NPPE_b, stoichiometry: -1}
     - {target: P_b, stoichiometry: 1}
   reversible: false
-- class: Reaction
-  id: vL_syn_b
+- id: vL_syn_b
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: BRAIN * PLD_b * k_NL_PE * NLPE_b / Km_NL_PE / den_b
@@ -736,8 +744,8 @@
     - {target: NLPE_b, stoichiometry: -1}
     - {target: L_b, stoichiometry: 1}
   reversible: false
-- class: Reaction
-  id: vS_syn_b
+- id: vS_syn_b
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: BRAIN * PLD_b * k_NS_PE * NSPE_b / Km_NS_PE / den_b
@@ -745,24 +753,24 @@
     - {target: NSPE_b, stoichiometry: -1}
     - {target: S_b, stoichiometry: 1}
   reversible: false
-- class: Reaction
-  id: vFAAH_syn_b
+- id: vFAAH_syn_b
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: BRAIN * FAAH_t * b_FAAH_Brain * k_deg_FAAH
   actors:
     - {target: FAAH_b, stoichiometry: 1}
   reversible: false
-- class: Reaction
-  id: vFAAH_degr_b
+- id: vFAAH_degr_b
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: BRAIN * k_deg_FAAH * FAAH_b
   actors:
     - {target: FAAH_b, stoichiometry: -1}
   reversible: false
-- class: Reaction
-  id: vFAAH_inh_b
+- id: vFAAH_inh_b
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: BRAIN * k_inh * FAAH_b * PF_b
@@ -770,186 +778,186 @@
     - {target: FAAH_b, stoichiometry: -1}
     - {target: FAAHinh_b, stoichiometry: 1}
   reversible: false
-- class: Reaction
-  id: vFAAH_inh_degr_b
+- id: vFAAH_inh_degr_b
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: BRAIN * k_deg_FAAH * FAAHinh_b
   actors:
     - {target: FAAHinh_b, stoichiometry: -1}
   reversible: false
-- class: Reaction
-  id: vA_UE_b
+- id: vA_UE_b
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: BRAIN * b_FAAH_Brain * kcl_A * A_b
   actors:
     - {target: A_b, stoichiometry: -1}
   reversible: false
-- class: Reaction
-  id: vO_UE_b
+- id: vO_UE_b
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: BRAIN * b_FAAH_Brain * kcl_O * O_b
   actors:
     - {target: O_b, stoichiometry: -1}
   reversible: false
-- class: Reaction
-  id: vP_UE_b
+- id: vP_UE_b
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: BRAIN * b_FAAH_Brain * kcl_P * P_b
   actors:
     - {target: P_b, stoichiometry: -1}
   reversible: false
-- class: Reaction
-  id: vL_UE_b
+- id: vL_UE_b
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: BRAIN * b_FAAH_Brain * kcl_L * L_b
   actors:
     - {target: L_b, stoichiometry: -1}
   reversible: false
-- class: Reaction
-  id: vS_UE_b
+- id: vS_UE_b
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: BRAIN * b_FAAH_Brain * kcl_S * S_b
   actors:
     - {target: S_b, stoichiometry: -1}
   reversible: false
-- class: Const
-  id: PLD_r
+- id: PLD_r
+  class: Const
   units: nM
   num: 10000000
-- class: Const
-  id: LIVER
+- id: LIVER
+  class: Const
   units: L
   num: 1.69
-- class: Const
-  id: Gut
+- id: Gut
+  class: Const
   units: L
   num: 1.65
-- class: Const
-  id: Spleen
+- id: Spleen
+  class: Const
   units: L
   num: 0.192
-- class: Const
-  id: Kidney
+- id: Kidney
+  class: Const
   units: L
   num: 0.28
-- class: Const
-  id: Lungs
+- id: Lungs
+  class: Const
   units: L
   num: 1.172
-- class: Const
-  id: Testis
+- id: Testis
+  class: Const
   units: L
   num: 0.036
-- class: Const
-  id: Leucocytes
+- id: Leucocytes
+  class: Const
   units: L
   num: 0.025
-- class: Const
-  id: Pancreas
+- id: Pancreas
+  class: Const
   units: L
   num: 0.077
-- class: Const
-  id: Heart
+- id: Heart
+  class: Const
   units: L
   num: 0.31
-- class: Const
-  id: Muscles
+- id: Muscles
+  class: Const
   units: L
   num: 35
-- class: Const
-  id: Thymus
+- id: Thymus
+  class: Const
   units: L
   num: 0.029
-- class: Species
-  id: A_r
+- id: A_r
+  class: Species
   title: AEA in rest of body
   units: nM
   assignments:
     start_: '0.5419204'
   compartment: ROB
-- class: Species
-  id: O_r
+- id: O_r
+  class: Species
   title: OEA in rest of body
   units: nM
   assignments:
     start_: '14.23822'
   compartment: ROB
-- class: Species
-  id: P_r
+- id: P_r
+  class: Species
   title: PEA in rest of body
   units: nM
   assignments:
     start_: '4.121915'
   compartment: ROB
-- class: Species
-  id: L_r
+- id: L_r
+  class: Species
   title: LEA in rest of body
   units: nM
   assignments:
     start_: '1.705466'
   compartment: ROB
-- class: Species
-  id: S_r
+- id: S_r
+  class: Species
   title: SEA in rest of body
   units: nM
   assignments:
     start_: '2.515968'
   compartment: ROB
-- class: Species
-  id: NAPE_r
+- id: NAPE_r
+  class: Species
   units: nM
   assignments:
     start_: '4.241633e-6'
   compartment: ROB
-- class: Species
-  id: NOPE_r
+- id: NOPE_r
+  class: Species
   units: nM
   assignments:
     start_: '9.638198e-5'
   compartment: ROB
-- class: Species
-  id: NPPE_r
+- id: NPPE_r
+  class: Species
   units: nM
   assignments:
     start_: '1.894222e-5'
   compartment: ROB
-- class: Species
-  id: NLPE_r
+- id: NLPE_r
+  class: Species
   units: nM
   assignments:
     start_: '8.256095e-6'
   compartment: ROB
-- class: Species
-  id: NSPE_r
+- id: NSPE_r
+  class: Species
   units: nM
   assignments:
     start_: '1.391587e-5'
   compartment: ROB
-- class: Species
-  id: FAAH_r
+- id: FAAH_r
+  class: Species
   units: nM
   assignments:
     start_: '2.165868'
   compartment: ROB
-- class: Species
-  id: FAAHinh_r
+- id: FAAHinh_r
+  class: Species
   units: nM
   assignments:
     start_: '0'
   compartment: ROB
-- class: Record
-  id: FAAH_D_r
+- id: FAAH_D_r
+  class: Record
   units: UL
   assignments:
     ode_: 1 + A_r / Km_FAAH_A + O_r / Km_FAAH_O + P_r / Km_FAAH_P + L_r / Km_FAAH_L + S_r / Km_FAAH_S
-- class: Reaction
-  id: vA_degr_r
+- id: vA_degr_r
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: ROB * FAAH_r * kcat_FAAH * a_FAAH_A * A_r / (Km_FAAH_A * FAAH_D_r)
@@ -958,8 +966,8 @@
   reversible: false
   modifiers:
     - {target: FAAH_r}
-- class: Reaction
-  id: vO_degr_r
+- id: vO_degr_r
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: ROB * FAAH_r * kcat_FAAH * a_FAAH_O * O_r / (Km_FAAH_O * FAAH_D_r)
@@ -968,8 +976,8 @@
   reversible: false
   modifiers:
     - {target: FAAH_r}
-- class: Reaction
-  id: vP_degr_r
+- id: vP_degr_r
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: ROB * FAAH_r * kcat_FAAH * a_FAAH_P * P_r / (Km_FAAH_P * FAAH_D_r)
@@ -978,8 +986,8 @@
   reversible: false
   modifiers:
     - {target: FAAH_r}
-- class: Reaction
-  id: vL_degr_r
+- id: vL_degr_r
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: ROB * FAAH_r * kcat_FAAH * a_FAAH_L * L_r / (Km_FAAH_L * FAAH_D_r)
@@ -988,8 +996,8 @@
   reversible: false
   modifiers:
     - {target: FAAH_r}
-- class: Reaction
-  id: vS_degr_r
+- id: vS_degr_r
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: ROB * FAAH_r * kcat_FAAH * a_FAAH_S * S_r / (Km_FAAH_S * FAAH_D_r)
@@ -998,68 +1006,68 @@
   reversible: false
   modifiers:
     - {target: FAAH_r}
-- class: Record
-  id: c_NAT_ROB
+- id: c_NAT_ROB
+  class: Record
   units: L
   assignments:
     ode_: Pancreas * b_NAT_Pancreas + Kidney * b_NAT_Kidney + Heart * b_NAT_Heart + Lungs * b_NAT_Lungs + Muscles * b_NAT_Muscles + Testis * b_NAT_Testis + Leucocytes * b_NAT_Leucocytes
-- class: Reaction
-  id: vNAPE_syn_r
+- id: vNAPE_syn_r
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: Vmax_NAT * p_A * a_NAT_A * c_NAT_ROB
   actors:
     - {target: NAPE_r, stoichiometry: 1}
   reversible: false
-- class: Reaction
-  id: vNOPE_syn_r
+- id: vNOPE_syn_r
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: Vmax_NAT * p_O * a_NAT_O * c_NAT_ROB
   actors:
     - {target: NOPE_r, stoichiometry: 1}
   reversible: false
-- class: Reaction
-  id: vNPPE_syn_r
+- id: vNPPE_syn_r
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: Vmax_NAT * p_P * a_NAT_P * c_NAT_ROB
   actors:
     - {target: NPPE_r, stoichiometry: 1}
   reversible: false
-- class: Reaction
-  id: vNLPE_syn_r
+- id: vNLPE_syn_r
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: Vmax_NAT * p_L * a_NAT_L * c_NAT_ROB
   actors:
     - {target: NLPE_r, stoichiometry: 1}
   reversible: false
-- class: Reaction
-  id: vNSPE_syn_r
+- id: vNSPE_syn_r
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: Vmax_NAT * p_S * a_NAT_S * c_NAT_ROB
   actors:
     - {target: NSPE_r, stoichiometry: 1}
   reversible: false
-- class: Record
-  id: slag1_r
+- id: slag1_r
+  class: Record
   units: UL
   assignments:
     ode_: NAPE_r / Km_NA_PE + NOPE_r / Km_NO_PE + NPPE_r / Km_NP_PE + NLPE_r / Km_NL_PE + NSPE_r / Km_NS_PE
-- class: Record
-  id: slag2_r
+- id: slag2_r
+  class: Record
   units: UL
   assignments:
     ode_: A_r / Ki_A + O_r / Ki_O + P_r / Ki_P + L_r / Ki_L + S_r / Ki_S
-- class: Record
-  id: den_r
+- id: den_r
+  class: Record
   units: UL
   assignments:
     ode_: 1 + slag1_r + slag2_r
-- class: Reaction
-  id: vA_syn_r
+- id: vA_syn_r
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: ROB * PLD_r * k_NA_PE * NAPE_r / Km_NA_PE / den_r
@@ -1067,8 +1075,8 @@
     - {target: NAPE_r, stoichiometry: -1}
     - {target: A_r, stoichiometry: 1}
   reversible: false
-- class: Reaction
-  id: vO_syn_r
+- id: vO_syn_r
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: ROB * PLD_r * k_NO_PE * NOPE_r / Km_NO_PE / den_r
@@ -1076,8 +1084,8 @@
     - {target: NOPE_r, stoichiometry: -1}
     - {target: O_r, stoichiometry: 1}
   reversible: false
-- class: Reaction
-  id: vP_syn_r
+- id: vP_syn_r
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: ROB * PLD_r * k_NP_PE * NPPE_r / Km_NP_PE / den_r
@@ -1085,8 +1093,8 @@
     - {target: NPPE_r, stoichiometry: -1}
     - {target: P_r, stoichiometry: 1}
   reversible: false
-- class: Reaction
-  id: vL_syn_r
+- id: vL_syn_r
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: ROB * PLD_r * k_NL_PE * NLPE_r / Km_NL_PE / den_r
@@ -1094,8 +1102,8 @@
     - {target: NLPE_r, stoichiometry: -1}
     - {target: L_r, stoichiometry: 1}
   reversible: false
-- class: Reaction
-  id: vS_syn_r
+- id: vS_syn_r
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: ROB * PLD_r * k_NS_PE * NSPE_r / Km_NS_PE / den_r
@@ -1103,29 +1111,29 @@
     - {target: NSPE_r, stoichiometry: -1}
     - {target: S_r, stoichiometry: 1}
   reversible: false
-- class: Record
-  id: c_FAAH_ROB
+- id: c_FAAH_ROB
+  class: Record
   units: L
   assignments:
     ode_: LIVER * b_FAAH_Liver + Gut * b_FAAH_Gut + Spleen * b_FAAH_Spleen + Kidney * b_FAAH_Kidney + Lungs * b_FAAH_Lungs + Testis * b_FAAH_Testis + Leucocytes * b_FAAH_Leucocytes
-- class: Reaction
-  id: vFAAH_syn_r
+- id: vFAAH_syn_r
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: FAAH_t * c_FAAH_ROB * k_deg_FAAH
   actors:
     - {target: FAAH_r, stoichiometry: 1}
   reversible: false
-- class: Reaction
-  id: vFAAH_degr_r
+- id: vFAAH_degr_r
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: ROB * k_deg_FAAH * FAAH_r
   actors:
     - {target: FAAH_r, stoichiometry: -1}
   reversible: false
-- class: Reaction
-  id: vFAAH_inh_r
+- id: vFAAH_inh_r
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: ROB * k_inh * FAAH_r * PF_r
@@ -1133,114 +1141,114 @@
     - {target: FAAH_r, stoichiometry: -1}
     - {target: FAAHinh_r, stoichiometry: 1}
   reversible: false
-- class: Reaction
-  id: vFAAH_inh_degr_r
+- id: vFAAH_inh_degr_r
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: ROB * k_deg_FAAH * FAAHinh_r
   actors:
     - {target: FAAHinh_r, stoichiometry: -1}
   reversible: false
-- class: Record
-  id: c_NAAA_ROB
+- id: c_NAAA_ROB
+  class: Record
   units: L
   assignments:
     ode_: LIVER * b_NAAA_Liver + Gut * b_NAAA_Gut + Spleen * b_NAAA_Spleen + Kidney * b_NAAA_Kidney + Heart * b_NAAA_Heart + Lungs * b_NAAA_Lungs + Thymus * b_NAAA_Thymus + Testis * b_NAAA_Testis
-- class: Reaction
-  id: vA_UE_r
+- id: vA_UE_r
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: c_NAAA_ROB * kcl_A * A_r
   actors:
     - {target: A_r, stoichiometry: -1}
   reversible: false
-- class: Reaction
-  id: vO_UE_r
+- id: vO_UE_r
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: c_NAAA_ROB * kcl_O * O_r
   actors:
     - {target: O_r, stoichiometry: -1}
   reversible: false
-- class: Reaction
-  id: vP_UE_r
+- id: vP_UE_r
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: c_NAAA_ROB * kcl_P * P_r
   actors:
     - {target: P_r, stoichiometry: -1}
   reversible: false
-- class: Reaction
-  id: vL_UE_r
+- id: vL_UE_r
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: c_NAAA_ROB * kcl_L * L_r
   actors:
     - {target: L_r, stoichiometry: -1}
   reversible: false
-- class: Reaction
-  id: vS_UE_r
+- id: vS_UE_r
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: c_NAAA_ROB * kcl_S * S_r
   actors:
     - {target: S_r, stoichiometry: -1}
   reversible: false
-- class: Compartment
-  id: MEC
+- id: MEC
+  class: Compartment
   notes: The same as blood brain barrier (BBB)
   units: L
   assignments:
     start_: '1.5e-5'
-- class: Species
-  id: A_m
+- id: A_m
+  class: Species
   units: nM
   assignments:
     start_: '0.97761'
   compartment: MEC
-- class: Species
-  id: O_m
+- id: O_m
+  class: Species
   units: nM
   assignments:
     start_: '16.3219'
   compartment: MEC
-- class: Species
-  id: P_m
+- id: P_m
+  class: Species
   units: nM
   assignments:
     start_: '5.809415'
   compartment: MEC
-- class: Species
-  id: L_m
+- id: L_m
+  class: Species
   units: nM
   assignments:
     start_: '0'
   compartment: MEC
-- class: Species
-  id: S_m
+- id: S_m
+  class: Species
   units: nM
   assignments:
     start_: '2.968774'
   compartment: MEC
-- class: Species
-  id: FAAH_m
+- id: FAAH_m
+  class: Species
   units: nM
   assignments:
     start_: '10.686'
   compartment: MEC
-- class: Species
-  id: FAAHinh_m
+- id: FAAHinh_m
+  class: Species
   units: nM
   assignments:
     start_: '0'
   compartment: MEC
-- class: Record
-  id: FAAH_D_m
+- id: FAAH_D_m
+  class: Record
   units: UL
   assignments:
     ode_: 1 + A_m / Km_FAAH_A + O_m / Km_FAAH_O + P_m / Km_FAAH_P + L_m / Km_FAAH_L + S_m / Km_FAAH_S
-- class: Reaction
-  id: vA_degr_m
+- id: vA_degr_m
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: MEC * FAAH_m * kcat_FAAH * a_FAAH_A * A_m / (Km_FAAH_A * FAAH_D_m)
@@ -1249,8 +1257,8 @@
   reversible: false
   modifiers:
     - {target: FAAH_m}
-- class: Reaction
-  id: vO_degr_m
+- id: vO_degr_m
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: MEC * FAAH_m * kcat_FAAH * a_FAAH_O * O_m / (Km_FAAH_O * FAAH_D_m)
@@ -1259,8 +1267,8 @@
   reversible: false
   modifiers:
     - {target: FAAH_m}
-- class: Reaction
-  id: vP_degr_m
+- id: vP_degr_m
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: MEC * FAAH_m * kcat_FAAH * a_FAAH_P * P_m / (Km_FAAH_P * FAAH_D_m)
@@ -1269,8 +1277,8 @@
   reversible: false
   modifiers:
     - {target: FAAH_m}
-- class: Reaction
-  id: vL_degr_m
+- id: vL_degr_m
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: MEC * FAAH_m * kcat_FAAH * a_FAAH_L * L_m / (Km_FAAH_L * FAAH_D_m)
@@ -1279,8 +1287,8 @@
   reversible: false
   modifiers:
     - {target: FAAH_m}
-- class: Reaction
-  id: vS_degr_m
+- id: vS_degr_m
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: MEC * FAAH_m * kcat_FAAH * a_FAAH_S * S_m / (Km_FAAH_S * FAAH_D_m)
@@ -1289,24 +1297,24 @@
   reversible: false
   modifiers:
     - {target: FAAH_m}
-- class: Reaction
-  id: vFAAH_syn_m
+- id: vFAAH_syn_m
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: MEC * FAAH_t * b_FAAH_MEC * k_deg_FAAH
   actors:
     - {target: FAAH_m, stoichiometry: 1}
   reversible: false
-- class: Reaction
-  id: vFAAH_degr_m
+- id: vFAAH_degr_m
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: MEC * k_deg_FAAH * FAAH_m
   actors:
     - {target: FAAH_m, stoichiometry: -1}
   reversible: false
-- class: Reaction
-  id: vFAAH_inh_m
+- id: vFAAH_inh_m
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: MEC * k_inh * FAAH_m * PF_m
@@ -1314,383 +1322,383 @@
     - {target: FAAH_m, stoichiometry: -1}
     - {target: FAAHinh_m, stoichiometry: 1}
   reversible: false
-- class: Reaction
-  id: vFAAH_inh_degr_m
+- id: vFAAH_inh_degr_m
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: MEC * k_deg_FAAH * FAAHinh_m
   actors:
     - {target: FAAHinh_m, stoichiometry: -1}
   reversible: false
-- class: Const
-  id: H
+- id: H
+  class: Const
   num: 0.48
-- class: Species
-  id: A_p
+- id: A_p
+  class: Species
   units: nM
   assignments:
     start_: '0.8740574'
   output: true
   compartment: PLASMA
-- class: Species
-  id: O_p
+- id: O_p
+  class: Species
   units: nM
   assignments:
     start_: '5.085073'
   output: true
   compartment: PLASMA
-- class: Species
-  id: P_p
+- id: P_p
+  class: Species
   units: nM
   assignments:
     start_: '4.849307'
   output: true
   compartment: PLASMA
-- class: Species
-  id: L_p
+- id: L_p
+  class: Species
   units: nM
   assignments:
     start_: '1.916254'
   compartment: PLASMA
-- class: Species
-  id: S_p
+- id: S_p
+  class: Species
   units: nM
   assignments:
     start_: '0.273772'
   compartment: PLASMA
-- class: Const
-  id: ktr_m_p_A
+- id: ktr_m_p_A
+  class: Const
   units: nM/h
   num: 150
-- class: Const
-  id: Ktr_p_m_A
+- id: Ktr_p_m_A
+  class: Const
   units: UL
   num: 1.89
-- class: Const
-  id: Km_p_m_A
+- id: Km_p_m_A
+  class: Const
   units: nM
   num: 1
-- class: Const
-  id: ktr_m_p_O
+- id: ktr_m_p_O
+  class: Const
   units: 1/h
   num: 10
-- class: Const
-  id: Ktr_p_m_O
+- id: Ktr_p_m_O
+  class: Const
   units: UL
   num: 9.07
-- class: Const
-  id: ktr_m_p_P
+- id: ktr_m_p_P
+  class: Const
   units: 1/h
   num: 10
-- class: Const
-  id: Ktr_p_m_P
+- id: Ktr_p_m_P
+  class: Const
   units: UL
   num: 2.65
-- class: Const
-  id: ktr_m_p_L
+- id: ktr_m_p_L
+  class: Const
   units: 1/h
   num: 0
-- class: Const
-  id: Ktr_p_m_L
+- id: Ktr_p_m_L
+  class: Const
   units: UL
   num: 2.77
-- class: Const
-  id: ktr_m_p_S
+- id: ktr_m_p_S
+  class: Const
   units: 1/h
   num: 10
-- class: Const
-  id: Ktr_p_m_S
+- id: Ktr_p_m_S
+  class: Const
   units: UL
   num: 30.01
-- class: Const
-  id: ktr_r_p_A
+- id: ktr_r_p_A
+  class: Const
   units: nM/h
   num: 100
-- class: Const
-  id: ktr_r_p
+- id: ktr_r_p
+  class: Const
   units: 1/h
   num: 100
-- class: Const
-  id: Ktr_p_r_A
+- id: Ktr_p_r_A
+  class: Const
   units: UL
   num: 0.62
-- class: Const
-  id: Ktr_p_r_O
+- id: Ktr_p_r_O
+  class: Const
   units: UL
   num: 2.8
-- class: Const
-  id: Ktr_p_r_P
+- id: Ktr_p_r_P
+  class: Const
   units: UL
   num: 0.85
-- class: Const
-  id: Ktr_p_r_L
+- id: Ktr_p_r_L
+  class: Const
   units: UL
   num: 0.89
-- class: Const
-  id: Ktr_p_r_S
+- id: Ktr_p_r_S
+  class: Const
   units: UL
   num: 9.19
-- class: Reaction
-  id: vA_m_p
+- id: vA_m_p
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: MEC * ktr_m_p_A * (A_m - A_p * Ktr_p_m_A) / (A_m + A_p + Km_p_m_A)
   actors:
     - {target: A_m, stoichiometry: -1}
     - {target: A_p, stoichiometry: 1}
-- class: Reaction
-  id: vO_m_p
+- id: vO_m_p
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: MEC * ktr_m_p_O * (O_m - O_p * Ktr_p_m_O)
   actors:
     - {target: O_m, stoichiometry: -1}
     - {target: O_p, stoichiometry: 1}
-- class: Reaction
-  id: vP_m_p
+- id: vP_m_p
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: MEC * ktr_m_p_P * (P_m - P_p * Ktr_p_m_P)
   actors:
     - {target: P_m, stoichiometry: -1}
     - {target: P_p, stoichiometry: 1}
-- class: Reaction
-  id: vL_m_p
+- id: vL_m_p
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: MEC * ktr_m_p_L * (L_m - L_p * Ktr_p_m_L)
   actors:
     - {target: L_m, stoichiometry: -1}
     - {target: L_p, stoichiometry: 1}
-- class: Reaction
-  id: vS_m_p
+- id: vS_m_p
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: MEC * ktr_m_p_S * (S_m - S_p * Ktr_p_m_S)
   actors:
     - {target: S_m, stoichiometry: -1}
     - {target: S_p, stoichiometry: 1}
-- class: Reaction
-  id: vA_b_m
+- id: vA_b_m
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: MEC * ktr_m_p_A * (A_b - A_m) / (A_m + A_b + Km_p_m_A)
   actors:
     - {target: A_b, stoichiometry: -1}
     - {target: A_m, stoichiometry: 1}
-- class: Reaction
-  id: vO_b_m
+- id: vO_b_m
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: MEC * ktr_m_p_O * (O_b - O_m)
   actors:
     - {target: O_b, stoichiometry: -1}
     - {target: O_m, stoichiometry: 1}
-- class: Reaction
-  id: vP_b_m
+- id: vP_b_m
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: MEC * ktr_m_p_P * (P_b - P_m)
   actors:
     - {target: P_b, stoichiometry: -1}
     - {target: P_m, stoichiometry: 1}
-- class: Reaction
-  id: vL_b_m
+- id: vL_b_m
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: MEC * ktr_m_p_L * (L_b - L_m)
   actors:
     - {target: L_b, stoichiometry: -1}
     - {target: L_m, stoichiometry: 1}
-- class: Reaction
-  id: vS_b_m
+- id: vS_b_m
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: MEC * ktr_m_p_S * (S_b - S_m)
   actors:
     - {target: S_b, stoichiometry: -1}
     - {target: S_m, stoichiometry: 1}
-- class: Reaction
-  id: vA_r_p
+- id: vA_r_p
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: PLASMA * ktr_r_p_A * (A_r - A_p * Ktr_p_r_A) / (A_r + A_p + Km_p_m_A)
   actors:
     - {target: A_r, stoichiometry: -1}
     - {target: A_p, stoichiometry: 1}
-- class: Reaction
-  id: vO_r_p
+- id: vO_r_p
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: PLASMA * ktr_r_p * (O_r - O_p * Ktr_p_r_O)
   actors:
     - {target: O_r, stoichiometry: -1}
     - {target: O_p, stoichiometry: 1}
-- class: Reaction
-  id: vP_r_p
+- id: vP_r_p
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: PLASMA * ktr_r_p * (P_r - P_p * Ktr_p_r_P)
   actors:
     - {target: P_r, stoichiometry: -1}
     - {target: P_p, stoichiometry: 1}
-- class: Reaction
-  id: vL_r_p
+- id: vL_r_p
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: PLASMA * ktr_r_p * (L_r - L_p * Ktr_p_r_L)
   actors:
     - {target: L_r, stoichiometry: -1}
     - {target: L_p, stoichiometry: 1}
-- class: Reaction
-  id: vS_r_p
+- id: vS_r_p
+  class: Reaction
   units: nmole/h
   assignments:
     ode_: PLASMA * ktr_r_p * (S_r - S_p * Ktr_p_r_S)
   actors:
     - {target: S_r, stoichiometry: -1}
     - {target: S_p, stoichiometry: 1}
-- id: fmole
+- action: defineUnit
+  id: fmole
   units: (1e-15 mole)
-  action: defineUnit
-- id: pmole
+- action: defineUnit
+  id: pmole
   units: (1e-12 mole)
-  action: defineUnit
-- id: nmole
+- action: defineUnit
+  id: nmole
   units: (1e-9 mole)
-  action: defineUnit
-- id: umole
+- action: defineUnit
+  id: umole
   units: (1e-6 mole)
-  action: defineUnit
-- id: mmole
+- action: defineUnit
+  id: mmole
   units: (1e-3 mole)
-  action: defineUnit
-- id: fM
+- action: defineUnit
+  id: fM
   units: (1e-15 mole)/litre
-  action: defineUnit
-- id: pM
+- action: defineUnit
+  id: pM
   units: (1e-12 mole)/litre
-  action: defineUnit
-- id: nM
+- action: defineUnit
+  id: nM
   units: (1e-9 mole)/litre
-  action: defineUnit
-- id: uM
+- action: defineUnit
+  id: uM
   units: (1e-6 mole)/litre
-  action: defineUnit
-- id: mM
+- action: defineUnit
+  id: mM
   units: (1e-3 mole)/litre
-  action: defineUnit
-- id: M
+- action: defineUnit
+  id: M
   units: mole/litre
-  action: defineUnit
-- id: kM
+- action: defineUnit
+  id: kM
   units: (1e+3 mole)/litre
-  action: defineUnit
-- id: fL
+- action: defineUnit
+  id: fL
   units: (1e-15 litre)
-  action: defineUnit
-- id: pL
+- action: defineUnit
+  id: pL
   units: (1e-12 litre)
-  action: defineUnit
-- id: nL
+- action: defineUnit
+  id: nL
   units: (1e-9 litre)
-  action: defineUnit
-- id: uL
+- action: defineUnit
+  id: uL
   units: (1e-6 litre)
-  action: defineUnit
-- id: mL
+- action: defineUnit
+  id: mL
   units: (1e-3 litre)
-  action: defineUnit
-- id: dL
+- action: defineUnit
+  id: dL
   units: (1e-1 litre)
-  action: defineUnit
-- id: L
+- action: defineUnit
+  id: L
   units: litre
-  action: defineUnit
-- id: fs
+- action: defineUnit
+  id: fs
   units: (1e-15 second)
-  action: defineUnit
-- id: ps
+- action: defineUnit
+  id: ps
   units: (1e-12 second)
-  action: defineUnit
-- id: ns
+- action: defineUnit
+  id: ns
   units: (1e-9 second)
-  action: defineUnit
-- id: us
+- action: defineUnit
+  id: us
   units: (1e-6 second)
-  action: defineUnit
-- id: ms
+- action: defineUnit
+  id: ms
   units: (1e-3 second)
-  action: defineUnit
-- id: s
+- action: defineUnit
+  id: s
   units: second
-  action: defineUnit
-- id: h
+- action: defineUnit
+  id: h
   units: hour
-  action: defineUnit
-- id: week
+- action: defineUnit
+  id: week
   units: (7e+0 day)
-  action: defineUnit
-- id: fg
+- action: defineUnit
+  id: fg
   units: (1e-18 kilogram)
-  action: defineUnit
-- id: pg
+- action: defineUnit
+  id: pg
   units: (1e-15 kilogram)
-  action: defineUnit
-- id: ng
+- action: defineUnit
+  id: ng
   units: (1e-12 kilogram)
-  action: defineUnit
-- id: ug
+- action: defineUnit
+  id: ug
   units: (1e-9 kilogram)
-  action: defineUnit
-- id: mg
+- action: defineUnit
+  id: mg
   units: (1e-6 kilogram)
-  action: defineUnit
-- id: g
+- action: defineUnit
+  id: g
   units: (1e-3 kilogram)
-  action: defineUnit
-- id: kg
+- action: defineUnit
+  id: kg
   units: kilogram
-  action: defineUnit
-- id: kat
+- action: defineUnit
+  id: kat
   units: katal
-  action: defineUnit
-- id: cell
+- action: defineUnit
+  id: cell
   units: item
-  action: defineUnit
-- id: kcell
+- action: defineUnit
+  id: kcell
   units: (1e+3 item)
-  action: defineUnit
-- id: cal
+- action: defineUnit
+  id: cal
   units: (4.1868e+0 joule)
-  action: defineUnit
-- id: kcal
+- action: defineUnit
+  id: kcal
   units: (4.1868e+3 joule)
-  action: defineUnit
-- id: fm
+- action: defineUnit
+  id: fm
   units: (1e-15 metre)
-  action: defineUnit
-- id: pm
+- action: defineUnit
+  id: pm
   units: (1e-12 metre)
-  action: defineUnit
-- id: nm
+- action: defineUnit
+  id: nm
   units: (1e-9 metre)
-  action: defineUnit
-- id: um
+- action: defineUnit
+  id: um
   units: (1e-6 metre)
-  action: defineUnit
-- id: mm
+- action: defineUnit
+  id: mm
   units: (1e-13 metre)
-  action: defineUnit
-- id: cm
+- action: defineUnit
+  id: cm
   units: (1e-2 metre)
-  action: defineUnit
-- id: m
+- action: defineUnit
+  id: m
   units: metre
-  action: defineUnit
-- id: UL
+- action: defineUnit
+  id: UL
   units: dimensionless
-  action: defineUnit
-- id: percent
+- action: defineUnit
+  id: percent
   units: (1e-2 dimensionless)
-  action: defineUnit
