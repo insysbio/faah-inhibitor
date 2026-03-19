@@ -1,6 +1,6 @@
 ### settings
 model_path <- './dist/mrg/nameless.cpp'
-fig_path <- './dist/mrg.png'
+fig_path <- './dist/mrgsolve-plot-1.png'
 library(mrgsolve)
 
 ### doses

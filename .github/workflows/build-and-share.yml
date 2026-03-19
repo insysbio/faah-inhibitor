@@ -1,4 +1,4 @@
-# This workflow build Heta platform and share results in "dist" branch
+# This workflow build Heta platform and share results in "gh-pages" branch
 
 name: Build and Share
 
@@ -53,8 +53,8 @@ jobs:
         tar -zcf ./dist/simbio.tar.gz -C ./dist/simbio .
         tar -zcf ./dist/julia.tar.gz -C ./dist/julia .
         tar -zcf ./dist/mrg.tar.gz -C ./dist/mrg .
-    - name: Deploy to "dist" branch only for "master" and "share" pushes
-      if: ${{ github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/share' ) }}
+    - name: Deploy to "gh-pages" branch only for "master" and "share" pushes
+#      if: ${{ github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/share' ) }}
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
