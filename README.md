@@ -2,8 +2,6 @@
 [![GH Build](https://github.com/insysbio/faah-inhibitor/workflows/Build/badge.svg)](https://github.com/insysbio/faah-inhibitor/actions?query=workflow%3ABuild)
 [![Build and Share](https://github.com/insysbio/faah-inhibitor/workflows/Build%20and%20Share/badge.svg)](https://github.com/insysbio/faah-inhibitor/actions?query=workflow%3A%22Build+and+Share%22)
 [![gh-pages](https://img.shields.io/badge/gh.pages-ready-blue.svg)](https://insysbio.github.io/faah-inhibitor/)
-[![sbml-viewer](https://img.shields.io/badge/SbmlViewer-ready-blue.svg)](http://sv.insysbio.com/online/?https://insysbio.github.io/faah-inhibitor/sbml.xml)
-[![GitHub release](https://img.shields.io/github/release/insysbio/faah-inhibitor.svg)](https://github.com/insysbio/faah-inhibitor/releases/)
 [![GitHub license](https://img.shields.io/github/license/insysbio/faah-inhibitor.svg)](https://github.com/insysbio/faah-inhibitor/blob/master/LICENSE)
 [![DOI:10.13140/RG.2.2.18935.06563](https://zenodo.org/badge/DOI/10.1038/psp.2013.72.svg)](https://doi.org/10.1038/psp.2013.72)
 
