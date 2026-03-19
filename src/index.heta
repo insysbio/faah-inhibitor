@@ -46,6 +46,9 @@ include ./rob.heta;
 include ./core.heta;
 include ./plasma.heta;
 
+// time
+t { units: h };
+
 // === TRANSPORT ===
 // From MEC to Plasma, Brain to MEC
 ktr_m_p_A @Const = 1.5e2 {units: nM/h}; // fitted Thromb Haemost 2006; 95: 117–127
@@ -131,14 +134,3 @@ block {output: true} begin
     O_p;
 end
 
-// exports
-#export { format: JSON, filepath: json };
-#export { format: YAML, filepath: yaml };
-#export { format: XLSX, filepath: table };
-#export { format: SLV, filepath: slv };
-#export { format: DBSolve, filepath: dbsolve };
-#export { format: SBML, filepath: sbml };
-#export { format: Simbio, filepath: simbio };
-#export { format: Mrgsolve, filepath: mrg };
-#export { format: Julia, filepath: julia };
-#export { format: Matlab, filepath: matlab };

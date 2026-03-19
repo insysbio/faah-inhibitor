@@ -3,7 +3,7 @@
   "id": "faah-inhibitor",
   "title": "Model describing inhibition of FAAH in human",
   "notes": "This is Quantitative Systems Pharmacology (QSP) modeling platform describing Fatty Acid Amide Hydrolase inhibition in human.",
-  "builderVersion": "^0.7.1",
+  "builderVersion": "^0.10.0",
   "version": "1.0.2",
   "keywords": ["human", "qsp", "faah-inhibitor"],
   "homepage": "https://insysbio.github.io/faah-inhibitor/",
@@ -21,12 +21,22 @@
     "Piet van der Graaf"
   ],
   "options": {
-    "logLevel": "info",
-    "skipExport": false,
     "unitsCheck": true
   },
   "importModule": {
     "type": "heta",
     "source": "src/index.heta"
-  }
+  },
+  export: [
+    { "format": "JSON", "filepath": "json" },
+    { "format": "YAML", "filepath": "yaml" },
+    { "format": "XLSX", "filepath": "table" },
+    { "format": "SLV", "filepath": "slv" },
+    { "format": "DBSolve", "filepath": "dbsolve" },
+    { "format": "SBML", "filepath": "sbml" },
+    { "format": "Simbio", "filepath": "simbio" },
+    { "format": "Mrgsolve", "filepath": "mrg" },
+    { "format": "Julia", "filepath": "julia" },
+    { "format": "Matlab", "filepath": "matlab" }
+  ]
 }
