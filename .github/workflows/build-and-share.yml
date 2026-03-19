@@ -46,7 +46,7 @@ jobs:
         julia ./julia/run.jl
     - name: Copy distributive files to dist directory
       run: |
-        cp -f ./static/index.md ./dist/
+        cp -r ./static/* ./dist/
         cp ./julia-plot-1.png ./dist/
         cp ./julia-plot-2.png ./dist/
         tar -zcf ./dist/matlab.tar.gz -C ./dist/matlab .
